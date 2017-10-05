@@ -1,0 +1,150 @@
+\documentclass[11pt,english,german]{report}
+
+% Package import, Document Settings
+\usepackage[a4paper,inner=3.5cm,outer=2.5cm]{geometry}
+\usepackage[english,ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+% Packages
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[xindy]{glossaries}
+\usepackage{hyperref}
+\usepackage{lastpage}
+
+% clear default
+\fancyhead{}
+\fancyfoot{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} % optional
+\fancyfoot[L]{Chapter: \nouppercase{\leftmark}}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+
+% Redefine the plain page style, Chpater page
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt} % optional
+  \fancyfoot[R]{\thepage/\pageref{LastPage}}
+}
+
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+
+% Glossar
+\newglossaryentry{ATAS}
+{
+    name=ATAS,
+    description={Aplinist Tracker \& Alerting System}
+}
+
+\theoremstyle{definition}
+\newtheorem{exmp}{Beispiel}[subsection]
+
+
+\makeglossaries
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+\pagestyle{empty} %Keine Kopf-/Fusszeilen auf den ersten Seiten.
+\begin{titlepage}
+\begin{center}
+
+% Oberer Teil der Titelseite:
+\includegraphics[width=0.08\textwidth]{img/bfh_logo.png}\\[1cm]    
+\textsc{\LARGE Bern University of Applied Sciences}\\[1.5cm]
+\textsc{\Large Bachelor Thesis}\\[0.2cm]
+\textsc{\Large Informatik}\\[0.5cm]
+
+% Title
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
+\HRule \\[0.4cm]
+{\huge Alpinist Tracker \& Alerting System}\\[0.3cm]
+{\huge \bfseries  ATAS}
+\HRule \\[2cm]
+
+\includegraphics[width=0.2\textwidth]{img/atas_logo.png}\\[3cm]    
+
+% Author und Lehrer
+\begin{minipage}{0.32\textwidth}
+\begin{flushleft} \large
+\emph{Autor:}\\
+Martin \textsc{Schmidli}\\
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\textwidth}
+\begin{flushleft} \large
+\emph{Dozent:} \\
+Mohamed \textsc{Mokdad}
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\textwidth}
+\begin{flushleft} \large
+\emph{Experte:}\\
+Daniel \textsc{Voisard}\\
+\end{flushleft}
+\end{minipage}
+
+\vspace{20mm}
+
+% Unterer Teil der Seite
+Bern, {\large \today}
+\end{center}
+\end{titlepage}
+\pagestyle{fancy}
+
+
+\tableofcontents
+
+
+\chapter{Einführung}
+Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger, nachfolgend Gateway genannt. Der Gateway wird bei der Talstation oder im nächsten Bergdorf montiert. Der Gateway sendet die empfangenen Daten der Tracker an eine zentrale Stelle irgendwo im Internet. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
+
+\section{Aufgabenstellung}
+Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute System intensiv zu testen und zu verbessern. Die Arbeit umfasst zwei Hauptaufgaben. Zum einen Teil soll der Tracker in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analyisert. Zum anderen soll der Tracker Prototyp verbessert werden; Reichweite, Aufbau, Verlässlichkeit usw. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können ob das erdachte System praxistauglich ist.
+
+\section{Aufgaben}
+
+\section{Projektziel}
+
+\chapter*{Selbständigkeitserklärung}
+\label{chap:selbstaendigkeitserklaerung}
+
+\vspace*{10mm} 
+
+Ich bestätige, dass ich die vorliegende Arbeit selbstständig und ohne Benutzung anderer als der im Literaturverzeichnis angegebenen Quellen und Hilfsmittel angefertigt habe. Sämtliche Textstellen, die nicht von mir stammen, sind als Zitate gekennzeichnet und mit dem genauen Hinweis auf ihre Herkunft versehen. 
+
+\vspace{15mm}
+
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\kill
+Ort, Datum:\> Bern, 15.01.2018 \\ \\
+Namen Vornamen:\> Martin Schmidli  \\ \\ \\ \\ 
+Unterschriften:\> ...................................... \\
+\end{tabbing}
+
+\chapter*{Anhang}
+\section{Software}
+Es wird kein Code direkt an dieses Dokument angehängt. Jegliche Commits vor dem 16.09.2017 gehören zur Projekt 2 Arbeit. Commits nach diesem Datum wurden im Zuge der Bachelor Thesis erstellt. Der Code der ATAS Softwarekomponenten wurde auf die Plattform github hochgeladen. Folgend Sie den Links um den Sourcecode einzusehen.
+\subsection{Atas-Webapp}
+\url{https://github.com/schmm2/atas-webapp}
+\subsection{Atas-Node}
+\url{https://github.com/schmm2/atas-node}
+\subsection{Atas-Service}
+\url{https://github.com/schmm2/atas-service}
+
+
+\printglossaries
+
+\end{document}
