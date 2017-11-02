@@ -108,15 +108,152 @@ Bern, {\large \today}
 \tableofcontents
 
 
-\chapter{Einführung}
+\chapter{Einleitung}
 Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger, nachfolgend Gateway genannt. Der Gateway wird bei der Talstation oder im nächsten Bergdorf montiert. Der Gateway sendet die empfangenen Daten der Tracker an eine zentrale Stelle irgendwo im Internet. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
 
 \section{Aufgabenstellung}
 Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute System intensiv zu testen und zu verbessern. Die Arbeit umfasst zwei Hauptaufgaben. Zum einen Teil soll der Tracker in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analyisert. Zum anderen soll der Tracker Prototyp verbessert werden; Reichweite, Aufbau, Verlässlichkeit usw. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können ob das erdachte System praxistauglich ist.
 
-\section{Aufgaben}
 
-\section{Projektziel}
+\section{Rahmenbedingungen}
+Die Rahmenbedingungen dieses Projektes wurden gemeinsam mit dem Betreuer definiert
+\begin{itemize}
+\item Die Bachelorarbeit baut auf der Arbeits des Projekt 2 auf. Die erstellete Hard und Software wird weiterverwendet.
+\item The Things Network dient als Plattform für die Kommunikation unter den Komponenten.
+\item Als Programmiersprache soll C/C++ verwendet werden
+\item Auf den Einsatz eines Betriebsystememes auf dem Tracker Node soll verzichtet werden
+\end{itemize}
+
+\chapter{Systembeschreibung}
+Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im vergleich zum Projekt 2 um einige Komponenten ergänzt.
+
+\section{Grobe Systemarchitektur}
+Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponeneten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seite detailiert beschrieben.
+
+\newpage
+\subsection{Aufbau}
+\subsection{Diagram}
+
+\subsection{Benutzer}
+Die nachfolgenden Gruppen wurden als Benutzer des Systems identifiziert.
+\subsubsection{Aplinist}
+Alpinist wird als Generalisierung für Personen, welche sich in den Bergen aufhalten verwendet. Dazu gehören bspw. Wanderer, Skifahrer, Bergbauer usw.
+\subsubsection{Überwacher}
+Rettungsdienste wie bspw. die Rega oder die AirGlacier. Spitäler oder die lokalen Tourismusbehörden.
+
+\subsection{Komponenten}
+Das ATAS System besteht aus den nachfolgenden Komponenten. Komponenten sind als Hardware und Software zu verstehen.
+\subsubsection{Tracker}
+Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend genannt Tracker. Der Alpinist trägt den Tracker bei sich bspw. in einem Rucksack.\\ \bigskip
+Der Tracker verfügt über ein Display, Taste und ein Lautsprecher. Mit dem druck auf den Knopf können die Überwacher über eine Notsituation aufmerksam gemacht werden. Bspw. Wenn der Alpinist einen Unfall hatte und nun bewegungsunfähig ist.\\ \bigskip
+Über den Lautsprecher kann der Aplinist über eine Gefahrenquelle mit einem akustischen Signal aufmerksam gemacht werden. Bspw. Wenn sich der Aplinist in einem Bereich am Berg mit erhöhter Gefahr für Lawinen aufhält. \\ \bigskip
+Über ein Display können mehr Informationen zum Tracker und den Gefahrenzonen agezeigt werden. \\ \bigskip
+Der Tracker verfügt über ein GPS Modul. Mit dem GPS Modul kann die Position des Tracker auf der Erde ermittelt werden.
+
+\subsubsection{Gateway}
+
+\subsubsection{Broker}
+
+\subsubsection{Wepapplikation}
+
+\subsubsection{Business Logik}
+
+\chapter{Vorgehen}
+Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}.
+\section{Testing}
+Ein Teil des Systemaufbaus aus dem vorgängigen Projekt soll getestet werden.\\[0.3cm]
+In diesem Kapitel wird genau beschrieben, wie beim Testing des Systems vorgegangen wird.
+Das Testing erfolgt in den in der nächsten Abbildung beschriebenenen Schritten.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{img/projectFlow_testing.jpg}
+	\caption[Flowchart Testing]
+	{Ablauf Testing}
+\end{figure}
+\\ 
+Wie genau das Testing definiert wurde, wird in den nächsten Abschnitten beschrieben.
+
+\newpage
+\subsection{Definition}
+Es muss definiert werden
+\begin{itemize}
+	\item welche Komponenten geprüft werden bspw. Atas-Node. Atas-Service
+	\item welcher Teil der Komponente geprüft werden soll bspw. Kommunikation, Software ..
+	\item welche Aspekte betrachtet werden bspw. Sicherheit, Zuverlässigkeit usw.
+	\item mit welchen Mitteln resp. Messinstrumenten gemessen wird
+\end{itemize}
+Während der Arbeit soll die Kommunikation zwischen Atas-Node und Atas-Gateway getestet werden. Der Fokus liegt auf der Zuverlässigkeit der Übertragung. Mich interessiert, wie sicher es ist, dass eine Meldung ihr Ziel erreicht.\\[0.3cm]
+Ausgehend von den Definitionen müssen verschiedene Testszenarios erstellt werden. 
+
+\subsection{Standort}
+Ausgehend von den vorangegangen Definitionen muss folgendes definiert werden.
+\begin{itemize}
+	\item Es muss ein Ort gefunden werden, wo der Gateway platziert werden soll. Der Standort kann frei gewählt werden. Einzige Vorraussetzungen ist ein Zugang zum Internet.
+	\item Für die Tests sollen mind. 2 Wege / Pfade definiert werden. Da die Zielgruppe des Trackers die Alpinisten sind, sollten die Pfade  Auf dem Pfad selbst werden 5 Orte definiert wo die Verbindungstests durcheführt werden.
+\end{itemize}
+	
+\subsection{Messungen}
+Die vorgängig definierten Routen werden abgelaufen und die Messungen werden an den definierten Standorten durchgeführt.
+
+\subsection{Auswertung}
+Die erhobenen Daten werden analysiert.
+
+\newpage
+\section{Prototyp 2}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{img/projectFlow_hardware.jpg}
+	\caption[Flowchart Prototyp 2]
+	{Ablauf für den Aufbau des zweiten Prototyps}
+\end{figure}
+
+
+
+
+- Portieren der Software auf ES32
+- 
+- TTN als Platform
+- SPI Schnittstelle analyse, was schickt die Lorwan library
+- Bitrate + laufzeit Analyse
+- Minimierung 
+
+
+\chapter{Testing}
+\section{Aufbau Gateway}
+Code:
+apt-get update
+apt-get upgrade
+
+%sudo dpkg-reconfigure locales // de_CH
+sudo dpkg-reconfigure tzdata // Europe/Zurich
+
+sudo raspi-config // Enable SPI
+
+git clone https://github.com/ttn-zh/ic880a-gateway.git ~/ic880a-gateway
+cd ~/ic880a-gateway
+
+change EUI Source to Wireless
+%GATEWAY_EUI_NIC="wlan0"
+
+sudo ./install.sh spi
+
+
+\chapter{Prototyp}
+\section{Entwicklungsumgebung}
+Installation gemäss Anleitung auf dieser Webseite:\\
+\url{https://dl.espressif.com/doc/esp-idf/latest/get-started/index.html}\\
+Treiber für MacOs:\\
+\url{https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers}
+\section{Hardware}
+Für den Aufbau des Prototypen wurde die nachfolgende Hardware verwendet
+
+\begin{table}[htbp]
+    \centering
+	\begin{tabularx}{\textwidth}{lll}
+		Name & Gerätetyp & Bild \\ \hline
+		Espressfif ESP32 & Entwicklungbaord & to be created\\ \hline
+	\end{tabularx}
+\end{table}
 
 \chapter*{Selbständigkeitserklärung}
 \label{chap:selbstaendigkeitserklaerung}
