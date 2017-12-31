@@ -1,12 +1,20 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Atas Schema Grob}}{10}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart Testing}}{8}{figure.caption.9}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces TTN Messages\relax }}{9}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Flowchart Prototyp 2}}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces System\IeC {\"u}bersicht Detail}}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Tracker Detail}}{15}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Gateway Detail}}{16}{figure.caption.15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces TTN Detail}}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces TTN Detail}}{18}{figure.caption.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces OTAA Ablauf}}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces OTAA Ablauf}}{21}{figure.caption.20}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Flowchart Prototyp 2}}{23}{figure.caption.22}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Prototyping Ablauf}}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Prototyp2 Schema}}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Prototyp 2}}{31}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Prototyp2 Schema}}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Flowchart Testing}}{34}{figure.caption.27}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces TTN Messages\relax }}{35}{figure.6.2}

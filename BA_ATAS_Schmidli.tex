@@ -19,6 +19,9 @@
 \usepackage[xindy]{glossaries}
 \usepackage{hyperref}
 \usepackage{lastpage}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage[paper=A4,pagesize]{typearea}
 
 % clear default
 \fancyhead{}
@@ -113,13 +116,49 @@ Bern, {\large \today}
 
 \tableofcontents
 
+% Mgmt Summary
+% GLOSSAR, 3
+
+% Bilder Atas-Node2, 2
+% Bilder einzelner Atas-Node2 Module, 2
+% Atas-Node2, Antenna Design, Short 3
+
+
+% Testdaten, Vorbereitung SFP7-SFP12, 2
+%  Aufbau Gateway Doku, 1
+% Testing erweitern was soll getestet werden 1
+% Testszenarien, Wanderungen dokumentieren 1
+
+% LoraWan Airtime, 1
+% LoraWan ADR, 3
+% Prototyp Display, 3
+
+% OK OK OK 
+% Einleitung Projekt 2, 1
+% Projekt einleitung detailiert, 1
+
+\chapter*{Management Summary}
+
+\chapter*{Motivation}
+
+\chapter*{Danksagung}
 
 \chapter{Einleitung}
 Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger, nachfolgend Gateway genannt. Der Gateway wird bei der Talstation oder im nächsten Bergdorf montiert. Der Gateway sendet die empfangenen Daten der Tracker an eine zentrale Stelle irgendwo im Internet. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
 
-\section{Aufgabenstellung}
-Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute System intensiv zu testen und zu verbessern. Die Arbeit umfasst zwei Hauptaufgaben. Zum einen Teil soll der Tracker in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analyisert. Zum anderen soll der Tracker Prototyp verbessert werden; Reichweite, Aufbau, Verlässlichkeit usw. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können ob das erdachte System praxistauglich ist.
+\section{Vorarbeiten}
+Das Projekt 2 ist eine Projektarbeit welche im Laufe des Informatikstudiums absolviert werden muss. Diese Arbeit habe ich im vorhergehenden Semester (Frühlingssemester 2017) durchgeführt. Ziel dieses Projektes, war es das in der Einleitung beschriebene System technisch umzusetzen.\\[0.3cm]
+Diese Bachelor Thesis baut auf den Erkenntnissen und Resultaten aus dem Projekt 2 auf.
 
+\section{Aufgabenstellung}
+Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute System intensiv zu testen und zu verbessern. Die Arbeit umfasst die folgenden Aufgaben.
+\begin{itemize}
+\item
+Der Tracker soll in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analyisert.
+\item Der Tracker Prototyp soll verbessert werden. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können ob das erdachte System praxistauglich ist
+\item
+Die während dieser Arbeit geleisteten Arbeiten sollen in einem Bericht dokumentiert werden.
+\end{itemize}
 
 \section{Rahmenbedingungen}
 Die Rahmenbedingungen dieses Projektes wurden gemeinsam mit dem Betreuer definiert
@@ -130,26 +169,48 @@ Die Rahmenbedingungen dieses Projektes wurden gemeinsam mit dem Betreuer definie
 \item Auf den Einsatz eines Betriebsystememes auf dem Tracker Node soll verzichtet werden
 \end{itemize}
 
-\section{Abgrenzungen}
-Sie als Leser denken nun vielleicht: "Das ist überflüssig. Ich habe doch mein Handy für so etwas? Schreib doch eine App!". Diese Aussage mag auf die touristischen Wander- und Skigebiete zutreffen. Der Empfang ist meistens wunderbar. Verlasssen wir diese "sicheren" Orte und bewegen uns aber in höheren Lagen, wird der Empfang mit dem Handy immer schlechter oder existiert gar nicht. \bigskip \\
+\section{Technologien}
+Sie als Leser denken nun vielleicht: "Das ist überflüssig. Ich habe doch mein Handy für so etwas? Schreib doch eine App!". Diese Aussage mag auf die touristischen Wander- und Skigebiete zutreffen. Der Empfang ist meistens wunderbar. Verlasssen wir diese 'sicheren' Orte und bewegen uns aber in höheren Lagen, wird der Empfang mit dem Handy immer schlechter oder existiert gar nicht. \bigskip \\
 Aus diesem Grund mussten für dieses Projekt andere Technologien gefunden werden. In diesem Projekt werden folgende Technologien eingesetzt:
 MQTT, LoRa, LoRaWAN\bigskip \\
-Die verwendetedn Technologien werden in einem späteren Abschnitt genauer erklärt.
+Die verwendeten Technologien und der Grund für deren Einsatz werden in einem späteren Abschnitt genauer erklärt.
 
-\chapter{Systembeschreibung}
-Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im vergleich zum Projekt 2 um einige Komponenten ergänzt.
+\section{Anwendungsfälle}
+Dieses Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
+\begin{itemize}
+	\item 
+	Wenn in den Bergen eine Lawine ausgelöst wird, kann deren Position mit den Positionen der Tracker verglichen werden. Befindet sich ein Tracker in der Gefahrenzone, kann die Rettungsmannschaft sofort reagieren und ausrücken. Dieser Prozess läuft sofort ab und kann dabei die Überlebenschance der Opfer erhöhen. 
+	\item 
+	Wurden Personen von der Lawine begraben und der Tracker hat überlebt, könnte das Gerät weiterhin die Position senden. Kombiniert mit modernen Lawinensuchgeräten können die Einsatzkräfte gezielter nach Überlebenden suchen. Wenn keine Übertragung mehr möglich ist, wissen die Überwacher zumindest den letzten Aufenthaltsort. Das ATAS System hat nicht das Ziel Lawinensuchgeräte zu ersetzen, es ist eher als Ergänzung zu verstehen. 
+	\item 
+	Bewegt sich Tracker auf eine Gefahrenzone zu, beispielsweise ein Gebiet mit erhöhter Steinschlaggefahr, könnte die Person frühzeitig davor gewarnt werden. 
+	\item 
+	Ist es zu einem Unfall gekommen, kann der Alpinist mittels Tracker ein Notsignal absetzen. Dazu muss der Benutzer nur auf den Notfallknopf drücken.
+\end{itemize}
+
+\chapter{Systembeschreibung - Grob}
+Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im Vergleich zum Projekt 2 um einige Komponenten ergänzt.
 
 \section{Grobe Systemarchitektur}
-Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponeneten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seite detailiert beschrieben.
+Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponeneten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seite detailliert beschrieben.
 
 \newpage
-\subsection{Aufbau}
+\section{Aufbau}
 \subsection{Diagram}
+Grobes Schema des ATAS Systems. Auf der nachfolgenden Seiten sind die einzelnen Komponenten im Detail beschrieben.\\[0.3cm]
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Abstract_BA.png}
+	\caption[Atas Schema Grob]
+	{Atas Schema Grob}
+\end{figure}
+
+\newpage
 
 \subsection{Benutzer}
 Die nachfolgenden Gruppen wurden als Benutzer des Systems identifiziert.
 \subsubsection{Aplinist}
-Alpinist wird als Generalisierung für Personen, welche sich in den Bergen aufhalten verwendet. Dazu gehören bspw. Wanderer, Skifahrer, Bergbauer usw.
+Alpinist wird als Generalisierung für Personen, welche sich in den Bergen aufhalten verwendet. Dazu gehören bspw. Wanderer, Skifahrer, Bergbauern usw.
 \subsubsection{Überwacher}
 Rettungsdienste wie bspw. die Rega oder die AirGlacier. Spitäler oder die lokalen Tourismusbehörden.
 
@@ -185,27 +246,288 @@ Die Notfalldienste resp. Überwacher nutzen eine Webapp zum interagieren mit dem
 		Zeigt die Position der Tracker auf einer Karte an 
 	\item
 		Mittels der Webapp können Gefahrenzonen hinterlegt werden.
+	\item 
+		Zeigt an ob sich ein Tracker in einer Gefahrenzone aufhält.	
 \end{itemize}
 
 \subsubsection{Business Logik}
-Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Broker und dem Gateway zum Tracker.
+Die BusinessLogik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Broker und dem Gateway zum Tracker.
 
-\section{Anwendungsfälle}
-Dieses Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
-\begin{itemize}
-	\item 
-	Wenn in den Bergen eine Lawine ausgelöst wird, kann deren Position mit den Positionen der Tracker verglichen werden. Befindet sich ein Tracker in der Gefahrenzone, kann die Rettungsmannschaft sofort reagieren und ausrücken. Dieser Prozess läuft sofort ab und kann dabei die Überlebenschance der Opfer erhöhen. 
-	\item 
-	Wurden Personen von der Lawine begraben und der Tracker hat überlebt, könnte das Gerät weiterhin die Position senden. Kombiniert mit modernen Lawinensuchgeräten können die Einsatzkräfte gezielter nach Überlebenden suchen. Wenn keine Übertragung mehr möglich ist, wissen die Überwacher zumindest den letzten Aufenthaltsort. Das ATAS System hat nicht das Ziel Lawinensuchgeräte zu ersetzen, es ist eher als Ergänzung zu verstehen. 
-	\item 
-	Bewegt sich Tracker auf eine Gefahrenzone zu, beispielsweise ein Gebiet mit erhöhter Steinschlaggefahr, könnte die Person frühzeitig davor gewarnt werden. 
-	\item 
-	Ist es zu einem Unfall gekommen, kann der Alpinist mittels Tracker ein Notsignal absetzen. Dazu muss der Benutzer nur auf den Notfallknopf drücken.
-\end{itemize}
+\newpage
+\chapter{Systembeschreibung - Detail}
+Die vorhergegangene grobe Architekturbeschreibung gibt einen guten ersten Überblick über das System. Technische Details zu  den verwendeten Technologien oder den genauen Fluss der Kommunikation ist nicht ersichtlich. In diesem Abschnitt soll nun intensiv auf diese Thematik eingegangen werden.\\[0.3cm]
+Auf der nachfolgenden Seite finden Sie ein Schema welches einen genauen Überblick über das System liefert.\\[0.3cm]
+Die Komponenten werden in 2 Kategorien eingeteilt. Komponenten mit einem blauen Kästchen wurden im Rahmen dieser Arbeit selbständig programmiert. Gelbe Kästchen markieren einen bestehenden Service welcher für den Aufbau des Systems implementiert wurde. 
 
-\chapter{Vorgehen}
-Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}.
-\section{Testing}
+\newpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Detail_BA.png}
+	\caption[Systemübersicht Detail]
+	{Systemübersicht Detail}
+\end{figure}
+\newpage
+
+\section{Tracker}
+Wie in der untenstehenden Grafik ersichtlich, besteht der Tracker aus mehreren Komponenten/Modulen. Welche Komponenten verbaut und wie diese untereinander kommunizieren, wird im Kapitel 'Prototyp' genauer behandelt. Der Tracker besteht aus einem GPS Modul, einer Batterie, einem Notfallknopf, einem Lautsprecher, einem Display und einem Lora Modul.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Tracker_BA.png}
+	\caption[Tracker Detail]
+	{Tracker Detail}
+\end{figure}
+\noindent
+Die Komponenten haben die folgenden Funktionen und Aufgaben\\[0.3cm]
+\textbf{Mikocontroller:} Steuert die Komponenten\\[0.3cm] 
+\textbf{GPS Modul:} Ermittlung der Position des Trackers via GPS\\[0.3cm]
+\textbf{Notfallknopf:} Aktiviert den Notfallmodus\\[0.3cm]
+\textbf{Lora Modul:} Übermittelt die Positionsdaten per Lora und ob ein Notfall vorliegt. \\Empfang von Gefahrenzoneninformationen per Lora\\[0.3cm]
+\textbf{Display:} Informiert den Alpinist über mögliche Gefahrenquellen\\[0.3cm]
+\textbf{Lautsprecher: }Informiert den Alpinisten über mögliche Gefahrenquellen mittels Signalton
+
+\newpage
+\section{Gateway}
+Der Gateway verbindet die Tracker mit dem TTN Netzwerk. Er sendet Daten zu den Trackern (Downlink) und empfängt Daten von den Trackern (Uplink). Was genau das TTN für eine Rolle übernimmt, wird später im Detail beschrieben.
+\subsection{Diagramm}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Detail_Gateway_BA.png}
+	\caption[Gateway Detail]
+	{Gateway Detail}
+\end{figure}
+
+\newpage
+\section{Broker}
+The broker has been split up in subcomponents. The broker service hasn’t been developed
+by myself. I use two platforms the Things Network (TTN) and CloudMQTT.
+
+\subsection{The Things Network (TTN)}
+The Things Network short TTN is an internet platform whichs allows us to connect Lo-
+RaWan devices. TTN will send (Downlink) and receive (Uplink) data from the trackers
+via gateway. TTN will collect and store all the data which the gateways send to it. TTN
+provies a MQTT Broker to access the data more easily.\\[0.3cm]
+\textbf{Diagramm}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_TTN_BA.png}
+	\caption[TTN Detail]
+	{TTN Detail}
+\end{figure}
+
+\newpage
+\subsection{CloudMQTT}
+Der MQTT Broker des TTN Netzwerkes bietet nur die Möglichkeiten die Daten via MQTT abzurufen. Ein Zugriff via MQTT über Websockets wird nicht unterstützt. Im Internet fand ich recht schnell den Service 'Cloud' MQTT.   CloudMQTT spiegelt den TTN MQTT Broker, bietet aber zusätzlich ein Websocket Interface. Atas-Web und Atas-Service können nun via CloudMQTT Daten an die Tracker senden und empfangen.\\[0.3cm]
+Alle Daten welche zu CloudMQTT publiziert werden, werden nun auch automatisch zum TTN MQTT Broker publiziert (Published). Alle MQTT Topics welche vom CloudMQTT abonniert werden, werden auch vom TTN MQTT Broker abonniert (Subscribe).  \\[0.3cm]
+\textbf{Diagramm}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/system/ATAS_SystemOverview_CloudMQTT_BA.png}
+	\caption[TTN Detail]
+	{TTN Detail}
+\end{figure}
+
+\newpage
+\chapter{Technologien}
+\section{LoraWan}
+Um das Projekt durchzuführen, musste ich mir mehr Wissen zum Thema LoraWan aneignen. Das im Projekt 2 aufgebaute System ist lauffähig, verwendet aber gewisse Standardeinstellungen welche ich einfach übernommen habe. Das Wissen, ob und wie man das System optimieren könnte ist nicht vorhanden.
+\subsection{Begriffserklärung}
+Zunächst ist es nötig einige Begriffe aus dem LoraWan Umfeld zu verstehen\\[0.5cm]
+\begin{tabularx}{\textwidth}{ l|X }
+	\textbf{Begriff} & \textbf{Erklärung} \\ \hline
+	Endgerät & LoraWan Endgerät. Atas-Node ist ein LoraWan Endgerät.\\ \hline
+	AppEUI& Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen.\\ \hline
+	DevEUI& Eindeutige ID eines Endgerätes. \\ \hline
+	DevAddr & Logische Geräte Adresse, analog einer IP Adresse in einem IP Netzwerk.\\ \hline
+	NetSKey & Wird für die Verschlüsselung der Kommunikation zwischen Endgerät und Netzwerkanbieter bspw. TTN verwendet. Mittels Schlüssel kann die Datenintegrität sichergestellt werden d.H. Manipulierte Nachrichten werden erkannt.\\ \hline
+	AppSKey & Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite{ttnsecurity}\\ \hline
+	Downlink & Kommunikation vom Gateway zu Endgerät\\ \hline
+	Uplink & Kommunikation vom Endgerät zum Gateway
+\end{tabularx}
+
+\newpage
+\subsection{Endgerät Verbindungsmethoden}
+OTAA (Over-The-Air-Activation) und ABP (Activation By Personalization) sind Verbindungsmethoden für LoraWan Endgeräte in einem LoraWan Netzwerk.\cite{jaguar}. Die verwendete Methode definiert also wie sich ein Endgerät mit dem LoraWan Netzwerk verbindet. \\[0.3cm]
+Die beiden Methoden bieten verschiedene Vor und Nachteile.
+
+\subsubsection{ABP}
+ABP ist das simplere aber \textbf{weniger sichere} Verfahren. Die Adresse DevAdr sowie die Schlüssel NetSKey und des AppSKey werden für jedes Endgerät \textbf{einmalig} generiert und fix auf dem Endgerät hinterlegt. Gelingt es einem Angreifer sich Zugang zum Endgerät zu verschaffen, kann er die Schlüssel stellen, ein zweites Gerät am Netzwerk registrieren, die Identität des Originals annehmen und damit die Daten verfälschen.\\[0.3cm]
+Das Gerät muss sich nicht am Netzwerk anmelden. Das Endgerät kann direkt Daten senden. Empfängt ein Gateway die Daten, werden die Keys geprüft und die Kommunikation entsprechend an oder abgelehnt.
+
+\subsubsection{OTAA}
+Das Gerät muss sich am Netzwerk anmelden. Dieser Vorgang wird auch Join Prozedur genannt. Die DevAddr sowie die Keys NetSKey und AppSKey werden bei jeder Aktivierung des Gerätes \textbf{neu generiert} und an das Endgerät übertragen. Dieses Verfahren ist sicherer. Da es sich hier um eine bidirektionale Kommunikation handelt, müssen die Komponenten (Gateway \& Endgerät) Downlinks unterstützen.\\[0.3cm]
+Das Installieren (Deployment) von Endgeräten wird vereinfacht. Das generieren vom AppSKey und NetSKey pro Endgerät entfällt. 
+
+\newpage
+\noindent
+Die nachfolgende Grafik zeigt auf, wie der Kommunikationsaufbau via OTAA abläuft \cite{jaguar}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/otaa_schema.png}
+	\caption[OTAA Ablauf]
+	{OTAA Ablauf}
+\end{figure}
+
+\begin{enumerate}
+	\item Gerät sendet einen Join Request.
+	\item Die Gateways empfangen die Anfrage
+	\item Das LoRaWan Netzwerk  bspw. TTN prüft die Angaben
+	\item Session Keys werden generiert
+	\item Keys werden an das Endgerät gesendet und für die zukünftige Kommunikation verwendet
+\end{enumerate}
+
+\newpage
+\subsubsection{Schlussfolgerung}
+Obschon die Sicherheit während diesem Projekt nicht im Vordergrund steht, ist es sicher zukunftsorientierter direkt OTAA einzusetzen. Systeme welche zum Schutz von Personen eingesetzt werden, müssen so sicher wie nur möglich konzeptioniert sein.\\[0.3cm]
+Sowohl Endgerät als auch Gateway unterstützen Downlinks, damit gibt es keine technische Hürde der den Einsatz von OTAA verhindern würde. Aus diesem Grund habe ich während dem Projekt die Verbindungsmethodik von ABP auf OTAA umgestellt und konnte damit die Sicherheit des Systems verbessern.
+
+\subsection{Frame Counters}
+Ein Endgerät besitzt zwei Zähler (FCntUp, FCntDown). Die Zähler werden bei einer Downlinkmessage (FCntDown) resp. Uplinkmessage (FCntUp) erhöht (+1).\\[0.3cm]
+Wird eine Reply Attacke durchgeführt d.H. ein Paket nochmals gesendet, wird dieses Paket vom System verworfen. Dies geschieht deshalb, weil das System bereits eine Nachricht mit dem gleichen Framecounter erhalten hat.\\[0.3cm]
+Diese zusätzliche Information wird mir beim Testen der Übertragung überaus nützlich sein. Anhand der Nummerierung, kann sehr schnell erkannt werden, ob ein Paket nicht sauber empfangen werden konnte. Bspw. Erhalten wir die Pakete 4,5,7 $\rightarrow$ Paket 6 wurde nicht korrekt übertragen.
+
+\subsection{Adaptive Data Rate (ADR)}
+Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll. Gemäss TTN \cite{ADRTTN} sollte ADR nur für statische Nodes oder für mobile Nodes zur Erkennung von Stops (keine Bewegung) verwendet werden. Gemäss TTN ist ADR also nicht unbedingt für die Atas-Tracker geeignet. Die Tracker sind ja meistens in Bewegung bspw. durch Laufen, Ski fahren usw. Dennoch wurde mein Interesse geweckt und ich wollte genauer wissen warum dieses Feature nicht empfohlen wird.\\[0.3cm]
+Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Es folgt ein Beispiel von der TTN Webseite:
+
+
+\chapter{Prototyp}
+Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim Aufbau des Prototypen 2 vorgegangen bin.
+
+\section{Ablauf Vorgehen}
+Der im Projekt 2 erstellte Prototyp wurde mit sehr simplen vorgefertigten Elektronikkomponenten umgesetzt. Ziel dieser Arbeit war es in möglichst kurzer Zeit einen Prototypen aufzubauen. Während dieser Arbeit sollen nun neue Komponenten evaluiert und ein zweiter Prototyp erstellt werden. Der Ablauf dieser Phasen sieht wie folgt aus:\\[0.3cm]
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{img/projectFlow_hardware.jpg}
+	\caption[Flowchart Prototyp 2]
+	{Ablauf für den Aufbau des zweiten Prototyps}
+\end{figure}
+\noindent
+Die einzelnen Schritte werden auf den kommenden Seiten detailliert erklärt.
+
+\subsection{Evaluation Hardware}
+Auf Grundlage der bestehenden Prototyps soll neue Hardware evaluiert werden. Der Funktionsumfang des Prototyps soll gleichwertig bleiben. Sind die Komponenten erst definiert, wird das Material bestellt.
+
+\subsection{Zusammenbau Hardware}
+Die Komponenten werden zusammengebaut und untereinander verbunden. Zur besseren Übersicht wird ein Schema  der Elektronik erstellt.
+
+\subsection{Software Module}
+Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.\\[0.3cm]
+Pro Hardware Modul wird ein separates Software Modul erstellt.
+
+\subsection{Finalisierung}
+Die Erstellten Softwaremodule werden miteinander verknüpft und die Software fertiggestellt. Abschließend werden einige Testszenarien durchgeführt. 
+
+\newpage
+\section{Begründung neuer Prototyp}
+Es gibt diverse Gründe für diesen Schritt
+\begin{enumerate}
+	\item Auf dem Prototyp 1 wird ein vollwertiges Betriebssystem (Raspian, Linux Derivat) eingesetzt. Einige Funktionen bspw. das Lesen der GPS Daten werden vom System sehr vereinfacht. Dies ermöglichte mir einen raschen und unkomplizierten Aufbau der Software. Obschon ein solches 'High Level' OS eine grosse Hilfe in der Entwicklung darstellt, ist es in der Industrialisierung der Lösung eher hinderlich. Der Einsatz eines OS hat diverse Nachteile
+	\begin{itemize}
+		\item Vom OS selbst benötigen wir für den Betrieb der Atas-Node Software nur einen Bruchteil der Funktionalität. Speicher, Memory und Systemperformance wird für Systemprozesse verschwendet. 
+		\item Durch die hohe Auslastung des Systems werden stärkere Prozessoren benötigt. Der Energieverbrauch der Lösung steigt.
+		\item Mehr Software bedeutet Zwangsläufig mehr Fehlerquellen. Obschon das eingesetzte System (Raspian) als Stabil gilt, kann es aufgrund der Softwarekomplexität zu Fehlern kommen.
+		\item Durch den Einsatz eines OS reduzieren wir die Sicherheit des ganzen Systems. Je mehr Interfaces ein System anbietet, desto anfälliger wird es für den unerlaubten Zugriff.
+	\end{itemize}
+	\item Der Prototyp 1 bietet und viele Anschlussmöglichkeiten. Bspw. für ein Display, USB, oder eine RJ45 Buchse. Funktionen die wiederum welche Entwicklung stark vereinfachen, aber den Energieverbrauch erhöhen und die Grösse des Systems unnötig vergrößert. 
+	\item Die Verbauten Komponenten sind nicht für eine Industrialisierte Lösung geeignet. Man könnte sogar von einem 'Bastelprojekt' sprechen. Die Komponenten hindern das Projekt daran eine professionelle Form anzunehmen.
+\end{enumerate}
+\newpage
+\section{Ablauf Prototyping}
+Aus meiner Sicht bildet während der Arbeit zu konstruierende Prototyp 2 nur einen Zwischenschritt bis zu Finalen Version. Eine Visualisierung meiner Vorstellung:\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/projectFlow_Prototype.png}
+	\caption[Prototyping Ablauf]
+	{Prototyping Ablauf}
+\end{figure}
+\noindent
+Mein Ziel ist es mit dem Umstieg auf anderen Komponenten, den Grundstein für den Prototypen 3 zu legen. Der Prototyp 3 ist nicht Bestandteil dieser Arbeit. Prototyp 3 bildet die finale Prototyp Version. Die Einzelnen Komponenten vom Prototyp 2 werden auf einen eigens designeten PCB installiert. Durch diesen Schritt würde sich das System in Sachen Platzbedarf nochmals massiv verbessern.
+
+%- Portieren der Software auf ES32, DONE
+%- TTN als Platform, DONE, 
+% SPI Schnittstelle analyse, was schickt die Lorwan library
+%- Bitrate + laufzeit Analyse
+%- Minimierung 
+
+\newpage
+\section{Evaluation Hardware}
+
+Für den Aufbau des zweiten Prototypen wurde die nachfolgende Hardware beschafft. 
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{lll}
+		Gerätetyp & Model & Bild \\ \hline
+		Entwicklungsboard + Mikrocontroller & Espressfif ESP-WROOM-32 Core Dev Kit  &TODO \\ \hline
+		GPS Module& ublox Neo 6M & TODO \\ \hline
+		Lora Modul & RFM96 & TODO \\ \hline
+		Speaker & Piezo Speaker & TODO \\ \hline
+		Display & eink Display Waveshare 1.54  Zoll 200x 200 & TODO \\ \hline
+		Schalter & gewöhnlicher 4 Pin Schalter & TODO \\ \hline
+	\end{tabularx}
+\end{table}
+
+\newpage
+\section{Zusammenbau Hardware}
+\subsection{Schema}
+Die Kommunikation unter den Komponenten wurde im Laufe der Projektarbeit  für mich immer unübersichtlicher. Um mir die Arbeit zu erleichtern, habe ich ein Schema %TODO welches Schema) 
+erstellt. Vor der Arbeit hatte ich noch nie ein Schema gezeichnet und musste mich zuerst einige Stunden in die Materie einarbeiten. Auf anraten einiger Kollegen, mit Erfahrung im Elektronik Umfeld, sowie der frei verfügbaren Lernressourcen und Vorlagen, fiel meine Wahl auf das Programm \textbf{Eagle} der Firma Autodesk \cite{autodesk}. Dank der guten Dokumentation und den Lernvideos auf diversen Plattformen bspw. Youtube kam ich sehr schnell vorwärts. \\[0.3cm] 
+Ich begann damit Vorlagen der Elektronischen Bausteine/Chips finden. Die Vorlagen zu Lora, GPS, ESP, Schalter und Piezo Lautsprecher konnte ich teilweise vom Hersteller oder von der Community herunterladen und in Eagle importieren. Für das Display musste ich ein bestehende Vorlage eines Displays anpassen. Ich habe dabei die Größe und die Pinbelegung verändert, damit das Element so ähnlich wie nur möglich wie das verwendete Display (Waveshare eInk 200x200) aussieht. \\[0.3cm]
+Das Schema ist auf der nachfolgenden Seite abgebildet.
+\newpage
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/prototyp_schema.png}
+	\caption[Prototyp2 Schema]
+	{Prototyp Schema}
+\end{figure}
+
+\newpage
+\subsection{Mikrocontroller - Pinbelegung}
+Die nachfolgende Pinbelegung wurde verwendet um den ESP32 mit den übrigen Komponenten zu verbinden. Zu meiner Überraschung sind die Pins nicht fix durch den ESP32 festgelegt. Die Pins können meist für jegliche Funktion bspw. PWM, SPI verwendet werden. Durch diese Freiheit wird die Verkabelung massiv vereinfacht und die Anzahl der möglichen Fehlerquellen wird reduziert.\\[0.5cm]
+%Todo tabular header
+\begin{tabularx}{\textwidth}{ l|l|X }
+	MCU Pin & Modul & Funktion\\ \hline
+	IO02 & Lora & SPI ChipSelect (CS)\\\hline
+	IO04 & Lora + Display& SPI Busy\\ \hline
+	IO05 & Displayl& SPI ChipSelect(CS)\\\hline
+	IO15 & Switch & -\\ \hline
+	IO16 & Lora + Display & SPI Reset\\\hline
+	IO17 & Display&  DataCommand (DC)\\ \hline
+	IO18 & Lora + Display & SPI Clock (CLK)\\ \hline
+	IO19 & Lora + Display & Master In Slave Out (MISO) \\\hline
+	IO21 & Piezo Speaker & - \\ \hline
+	IO23 & Lora + Display & SPI Master Out Slave In (MOSI) \\\hline
+	IO26 & GPS & UART RX\\ \hline
+	IO27 & GPS & UART TX\\ \hline
+	IO32 & Lora & DIO0\\ \hline
+	IO33 & Lora & DIO1\\ \hline
+\end{tabularx}
+
+\subsection{Zusammenbau}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/prototyp2.jpg}
+	\caption[Prototyp 2]
+	{Prototyp 2}
+\end{figure}
+
+
+\newpage
+\section{Software Module}
+\subsection{Entwicklungsumgebung}
+Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. Ich habe mich in Absprache meines Betreuers für die ESP-IDF Umgebung entschieden und mein System entsprechend vorbereitet. Die Installation der Entwicklungsumgebung ist nicht schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
+Ich verzichte an dieser Stelle auf eine detaillierte Auflistung aller Installationsschritte. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
+Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
+
+\newpage
+\section{Finalisierung}
+
+\chapter{Testing}
+
+\section{Ablauf Vorgehen}
 Ein Teil des Systemaufbaus aus dem vorgängigen Projekt soll getestet werden. In diesem Kapitel wird genau beschrieben, wie beim Testing des Systems vorgegangen wird.\\[0.3cm]
 In der nächsten Abbildung sind die geplanten Schritte aufgeführt.
 \begin{figure}[h]
@@ -255,7 +577,7 @@ Ausgehend von den vorangegangen Definitionen muss folgendes definiert werden.
 	\item Für die Tests sollten mind. 3 Routen/Wanderungen definiert werden. Dies garantiert eine vernünftige Anzahl an Messwerten.
 	\item Auf dem Pfad selbst werden mind. 5 Orte definiert wo die Verbindungstests durchgeführt werden.
 \end{itemize}
-	
+
 \subsection{Messungen}
 Die vorgängig definierten Routen werden abgelaufen und die Messungen werden an den definierten Standorten durchgeführt.
 
@@ -268,123 +590,15 @@ Die erhobenen Daten werden analysiert und kategorisiert. Messungen sollen in 3 K
 \end{enumerate}
 
 \newpage
-\section{Prototyp 2}
-Der im Projekt 2 erstellte Prototyp wurde mit sehr simplen vorgefertigten Elektronikkomponenten umgesetzt. Ziel dieser Arbeit war es in möglichst kurzer Zeit einen Prototypen aufzubauen. Während dieser Arbeit sollen nun neue Komponenten evaluiert und ein zweiter Prototyp erstellt werden. Der Ablauf dieser Phasen sieht wie folgt aus:\\[0.3cm]
+\section{Definition}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{img/projectFlow_hardware.jpg}
-	\caption[Flowchart Prototyp 2]
-	{Ablauf für den Aufbau des zweiten Prototyps}
-\end{figure}
+\section{Standort}
 
-Die einzelnen Schritte werden auf den kommenden Seiten detailliert erklärt.
+\section{Messungen}
 
-\subsection{Evaluation Hardware}
-Auf Grundlage der bestehenden Prototyps soll neue Hardware evaluiert werden. Der Funktionsumfang des Prototyps soll gleichwertig bleiben. Sind die Komponenten erst definiert, wird das Material bestellt.
-
-\subsection{Zusammenbau Hardware}
-Die Komponenten werden zusammengebaut und untereinander verbunden. Zur besseren Übersicht wird ein Schema  der Elektronik erstellt.
-
-\subsection{Software Module}
-Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.\\[0.3cm]
-Pro Hardware Modul wird ein separates Software Modul erstellt.
-
-\subsection{Finalisierung}
-Die Erstellten Softwaremodule werden miteinander verknüpft und die Software fertiggestellt. Abschließend werden einige Testszenarien durchgeführt. 
-
-\subsection{Begründung}
-Es gibt diverse Gründe für diesen Schritt
-\begin{enumerate}
-	\item Auf dem Prototyp 1 wird ein vollwertiges Betriebssystem (Raspian, Linux Derivat) eingesetzt. Einige Funktionen bspw. das Lesen der GPS Daten werden vom System sehr vereinfacht. Dies ermöglichte mir einen raschen und unkomplizierten Aufbau der Software. Obschon ein solches 'High Level' OS eine grosse Hilfe in der Entwicklung darstellt, ist es in der Industrialisierung der Lösung eher hinderlich. Der Einsatz eines OS hat diverse Nachteile
-	\begin{itemize}
-		\item Vom OS selbst benötigen wir für den Betrieb der Atas-Node Software nur einen Bruchteil der Funktionalität. Speicher, Memory und Systemperformance wird für Systemprozesse verschwendet. 
-		\item Durch die hohe Auslastung des Systems werden stärkere Prozessoren benötigt. Der Energieverbrauch der Lösung steigt.
-		\item Mehr Software bedeutet Zwangsläufig mehr Fehlerquellen. Obschon das eingesetzte System (Raspian) als Stabil gilt, kann es aufgrund der Softwarekomplexität zu Fehlern kommen.
-		\item Durch den Einsatz eines OS reduzieren wir die Sicherheit des ganzen Systems. Je mehr Interfaces ein System anbietet, desto anfälliger wird es für den unerlaubten Zugriff.
-	\end{itemize}
-	\item Der Prototyp 1 bietet und viele Anschlussmöglichkeiten. Bspw. für ein Display, USB, oder eine RJ45 Buchse. Funktionen die wiederum welche Entwicklung stark vereinfachen, aber den Energieverbrauch erhöhen und die Grösse des Systems unnötig vergrößert. 
-	\item Die Verbauten Komponenten sind nicht für eine Industrialisierte Lösung geeignet. Man könnte sogar von einem 'Bastelprojekt' sprechen. Die Komponenten hindern das Projekt daran eine professionelle Form anzunehmen.
-\end{enumerate}
-\newpage
-Aus meiner Sicht bildet während der Arbeit zu konstruierende Prototyp 2 nur einen Zwischenschritt bis zu Finalen Version. Eine Visualisierung meiner Vorstellung:\\
-% TODO BILD
-Mein Ziel ist es mit dem Umstieg auf anderen Komponenten, den Grundstein für den Prototypen 3 zu legen. Der Prototyp 3 ist nicht Bestandteil dieser Arbeit.
-
-%- Portieren der Software auf ES32
-%- TTN als Platform
-% SPI Schnittstelle analyse, was schickt die Lorwan library
-%- Bitrate + laufzeit Analyse
-%- Minimierung 
-
-\chapter{LoraWan}
-Um das nachfolgende Testing durchzuführen, musste ich mir mehr Wissen zum Thema LoraWan aneignen. Das im Projekt 2 aufgebaute System ist lauffähig, verwendet aber die Standardeinstellungen welche ich einfach übernommen habe. Das Wissen, ob und wie man das System optimieren könnte ist nicht vorhanden.
-\section{Begriffserklärung}
-Zunächst ist es nötig einige Begriffe aus dem LoraWan Umfeld zu verstehen\\[0.5cm]
-\begin{tabularx}{\textwidth}{ l|X }
-	\textbf{Begriff} & \textbf{Erklärung} \\ \hline
-	Endgerät & LoraWan Endgerät. Atas-Node ist ein LoraWan Endgerät.\\ \hline
-	AppEUI& Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen.\\ \hline
-	DevEUI& Eindeutige ID eines Endgerätes. \\ \hline
-	DevAddr & Logische Geräte Adresse, analog einer IP Adresse in einem IP Netzwerk.\\ \hline
-	NetSKey & Wird für die Verschlüsselung der Kommunikation zwischen Endgerät und Netzwerkanbieter bspw. TTN verwendet. Mittels Schlüssel kann die Datenintegrität sichergestellt werden d.H. Manipulierte Nachrichten werden erkannt.\\ \hline
-	AppSKey & Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite{ttnsecurity}\\ \hline
-	Downlink & Kommunikation vom Gateway zu Endgerät\\ \hline
-	Uplink & Kommunikation vom Endgerät zum Gateway
-\end{tabularx}
-
-\newpage
-\section{Security}
-\subsection{Engerät Verbindungsmethoden}
-OTAA (Over-The-Air-Activation) und ABP (Activation By Personalization) sind Verbindungsmethoden für LoraWan Endgeräte in einem LoraWan Netzwerk.\cite{jaguar}.\\[0.3cm]
-Die beiden Methoden bieten verschiedene Vor und Nachteile.
-
-\subsubsection{ABP}
-ABP ist das simplere aber \textbf{weniger sichere} Verfahren. Die Adresse DevAdr sowie die Schlüssel NetSKey und des AppSKey werden für jedes Endgerät \textbf{einmalig} generiert und fix auf dem Endgerät hinterlegt. Gelingt es einem Angreifer sich Zugang zum Endgerät zu verschaffen, kann er die Schlüssel stellen, ein zweites Gerät am Netzwerk registrieren, die Identität des Originals annehmen und damit die Daten verfälschen.
-
-\subsubsection{Kommunikation}
-Das Gerät muss sich nicht am Netzwerk anmelden. Das Endgerät kann direkt Daten senden. Empfängt ein Gateway die Daten, werden die Keys geprüft und die Kommunikation entsprechend an oder abgelehnt.
-
-\subsubsection{OTAA}
-Das Gerät muss sich am Netzwerk anmelden. Dieser Vorgang wird auch Join Prozedur genannt. Die DevAddr sowie die Keys NetSKey und AppSKey werden bei jeder Aktivierung des Gerätes \textbf{neu generiert} und an das Endgerät übertragen. Dieses Verfahren ist sicherer. Da es sich hier um eine bidirektionale Kommunikation handelt, müssen die Komponenten (Gateway \& Endgerät) Downlinks unterstützen.\\[0.3cm]
-Das Installieren (Deployment) von Endgeräten wird vereinfacht. Das generieren vom AppSKey und NetSKey pro Endgerät entfällt. 
-
-\newpage
-\subsubsection{Kommunikation}
-Die nachfolgende Grafik zeigt auf, wie der Kommunikationsaufbau via OTAA abläuft \cite{jaguar}.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{img/otaa_schema.png}
-	\caption[OTAA Ablauf]
-	{OTAA Ablauf}
-\end{figure}
-
-\begin{enumerate}
-	\item Gerät sendet einen Join Request.
-	\item Die Gateways empfangen die Anfrage
-	\item Das LoRaWan Netzwerk  bspw. TTN prüft die Angaben
-	\item Session Keys werden generiert
-	\item Keys werden an das Endgerät gesendet und für die zukünftige Kommunikation verwendet
-\end{enumerate}
-
-\newpage
-\subsection{Schlussfolgerung}
-Obschon die Sicherheit während diesem Projekt nicht im Vordergrund steht, ist es sicher zukunftsorientierter direkt OTAA einzusetzen. Systeme welche zum Schutz von Personen eingesetzt werden, müssen so sicher wie nur möglich konzeptioniert sein.\\[0.3cm]
-Sowohl Endgerät als auch Gateway unterstützen Downlinks, damit gibt es keine technische Hürde der den Einsatz von OTAA verhindern würde.
-
-\section{Frame Counters}
-Ein Endgerät besitzt zwei Zähler (FCntUp, FCntDown). Die Zähler werden bei einer Downlinkmessage (FCntDown) resp. Uplinkmessage (FCntUp) erhöht (+1).\\[0.3cm]
-Wird eine Reply Attacke durchgeführt d.H. ein Paket nochmals gesendet, wird dieses Paket vom System verworfen. Dies geschieht deshalb, weil das System bereits eine Nachricht mit dem gleichen Framecounter erhalten hat.\\[0.3cm]
-Diese zusätzliche Information wird mir beim Testen der Übertragung überaus nützlich sein. Anhand der Nummerierung, kann sehr schnell erkannt werden, ob ein Paket nicht sauber empfangen werden konnte. Bspw. Erhalten wir die Pakete 4,5,7 $\rightarrow$ Paket 6 wurde nicht korrekt übertragen.
-
-\section{Adaptive Data Rate (ADR)}
-Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll. Gemäss TTN \cite{ADRTTN} sollte ADR nur für statische Nodes oder für mobile Nodes zur Erkennung von Stops (keine Bewegung) verwendet werden. Gemäss TTN ist ADR also nicht unbedingt für die Atas-Tracker geeignet. Die Tracker sind ja meistens in Bewegung bspw. durch Laufen, Ski fahren usw. Dennoch wurde mein Interesse geweckt und ich wollte genauer wissen warum dieses Feature nicht empfohlen wird.\\[0.3cm]
-Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Es folgt ein Beispiel von der TTN Webseite:
+\section{Auswertung}
 
 
-
-\chapter{Testing}
-\section{Aufbau Gateway}
 \subsection{Installation Software}
 Die Installation der Gateway Software wird von TTN bereitgestellt und von der Community aktiv verwaltet und verbessert. Die TTN Community Gruppe aus Zürich hat ein sehr simples Installationsskript zusammengestellt um die Gateway Software automatisiert zu installieren.
 
@@ -411,65 +625,6 @@ change EUI Source to Wireless
 sudo ./install.sh spi
 
 
-\chapter{Prototyp}
-Während  im Projekt 2 aufgebaute Prototyp 
-
-- prot schnell gebaut, bestehende koponenten, lego
-- Gründe: Energie, Komponenten volle kontrolle, 
-
-\section{Entwicklungsumgebung}
-Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. Ich habe mich in Absprache meines Betreuers für die ESP-IDF Umgebung entschieden und mein System entsprechend vorbereitet. Die Installation der Entwicklungsumgebung ist nicht schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
-Ich verzichte an dieser Stelle auf eine detaillierte Auflistung aller Installationsschritte. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
-Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
-\newpage
-
-\section{Hardware}
-Für den Aufbau des zweiten Prototypen wurde die nachfolgende Hardware verwendet. 
-
-\begin{table}[htbp]
-    \centering
-	\begin{tabularx}{\textwidth}{lll}
-		Name & Gerätetyp & Bild \\ \hline
-		Espressfif ESP32 & Entwicklungbaord & to be created\\ \hline
-	\end{tabularx}
-\end{table}
-
-\newpage
-\section{Schema}
-Die Kommunikation unter den Komponenten wurde im Laufe der Projektarbeit  für mich immer unübersichtlicher. Um mir die Arbeit zu erleichtern, habe ich ein Schema %TODO welches Schema) 
-erstellt. Vor der Arbeit hatte ich noch nie ein Schema gezeichnet und musste mich zuerst einige Stunden in die Materie einarbeiten. Auf anraten einiger Kollegen, mit Erfahrung im Elektronik Umfeld, sowie der frei verfügbaren Lernressourcen und Vorlagen, fiel meine Wahl auf das Programm \textbf{Eagle} der Firma Autodesk \cite{autodesk}. Dank der guten Dokumentation und den Lernvideos auf diversen Plattformen bspw. Youtube kam ich sehr schnell vorwärts. \\[0.3cm] 
-Ich begann damit Vorlagen der Elektronischen Bausteine/Chips finden. Die Vorlagen zu Lora, GPS, ESP, Schalter und Piezo Lautsprecher konnte ich teilweise vom Hersteller oder von der Community herunterladen und in Eagle importieren. Für das Display musste ich ein bestehende Vorlage eines Displays anpassen. Ich habe dabei die Größe und die Pinbelegung verändert, damit das Element so ähnlich wie nur möglich wie das verwendete Display (Waveshare eInk 200x200) aussieht. \\[0.3cm]
-Das Schema ist auf der nachfolgenden Seite abgebildet.
-\newpage
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{img/prototyp_schema.png}
-	\caption[Prototyp2 Schema]
-	{Prototyp Schema}
-\end{figure}
-
-\newpage
-\subsection{Mikrocontroller - Pinbelegung}
-Die nachfolgende Pinbelegung wurde verwendet um den ESP32 mit den übrigen Komponenten zu verbinden. Zu meiner Überraschung sind die Pins nicht fix durch den ESP32 festgelegt. Die Pins können meist für jegliche Funktion bspw. PWM, SPI verwendet werden. Durch diese Freiheit wird die Verkabelung massiv vereinfacht und die Anzahl der möglichen Fehlerquellen wird reduziert.\\[0.5cm]
-%Todo tabular header
-\begin{tabularx}{\textwidth}{ l|l|X }
-		MCU Pin & Modul & Funktion\\ \hline
-		IO02 & Lora & SPI ChipSelect (CS)\\\hline
-		IO04 & Lora + Display& SPI Busy\\ \hline
-		IO05 & Displayl& SPI ChipSelect(CS)\\\hline
-		IO15 & Switch & -\\ \hline
-		IO16 & Lora + Display & SPI Reset\\\hline
-		IO17 & Display&  DataCommand (DC)\\ \hline
-		IO18 & Lora + Display & SPI Clock (CLK)\\ \hline
-		IO19 & Lora + Display & Master In Slave Out (MISO) \\\hline
-		IO21 & Piezo Speaker & - \\ \hline
-		IO23 & Lora + Display & SPI Master Out Slave In (MOSI) \\\hline
-		IO26 & GPS & UART RX\\ \hline
-		IO27 & GPS & UART TX\\ \hline
-		IO32 & Lora & DIO0\\ \hline
-		IO33 & Lora & DIO1\\ \hline
-\end{tabularx}
 
 \chapter*{Selbständigkeitserklärung}
 \label{chap:selbstaendigkeitserklaerung}
