@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.28)  2 JAN 2018 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.28)  2 JAN 2018 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1017,20 +1017,6 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 164.
  [2]
-
-! Package inputenc Error: Unicode char \u8:̈ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 ...rungen beim Prototypen sowie die Datenü
-                                                  bertragung zwischen den Ko...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 169.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1039,9 +1025,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 169.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 169.
-[3
+ [3
 
-] <img/alps_panorama.jpg, id=228, 4471.104pt x 767.86874pt>
+]
+<img/alps_panorama.jpg, id=228, 4471.104pt x 767.86874pt>
 File: img/alps_panorama.jpg Graphic file (type jpg)
 
 <use img/alps_panorama.jpg>
@@ -2078,10 +2065,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 806.
  ) 
 Here is how much of TeX's memory you used:
- 14540 strings out of 493089
- 222967 string characters out of 6134841
+ 14539 strings out of 493089
+ 222962 string characters out of 6134841
  412275 words of memory out of 5000000
- 17496 multiletter control sequences out of 15000+600000
+ 17495 multiletter control sequences out of 15000+600000
  18801 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,15n,75p,1825b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2102,7 +2089,7 @@ e/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on BA_ATAS_Schmidli.pdf (52 pages, 50784280 bytes).
+Output written on BA_ATAS_Schmidli.pdf (52 pages, 50754612 bytes).
 PDF statistics:
  762 PDF objects out of 1000 (max. 8388607)
  636 compressed objects within 7 object streams
