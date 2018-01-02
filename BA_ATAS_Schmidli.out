@@ -16,20 +16,22 @@
 \BOOKMARK [1][-]{section.3.5}{Webapplikation}{chapter.3}% 16
 \BOOKMARK [0][-]{chapter.4}{Technologien}{}% 17
 \BOOKMARK [1][-]{section.4.1}{LoraWan}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Prototyp}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Begr\374ndung neuer Prototyp}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.2}{Ablauf Prototyping}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.3}{Ablauf Vorgehen}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.4}{Evaluation Hardware}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.5}{Zusammenbau Hardware}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.6}{Kommunikation}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.7}{Software Module}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.8}{Finalisierung}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{Testing}{}% 28
-\BOOKMARK [1][-]{section.6.1}{Ablauf Vorgehen}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.2}{Definition}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.3}{Standort}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.4}{Aufbau}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.5}{Messungen}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.6}{Auswertung}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.7}{Software}{chapter.6}% 35
+\BOOKMARK [1][-]{section.4.2}{The Things Network}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{MQTT}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Prototyp}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Begr\374ndung neuer Prototyp}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{Ablauf Prototyping}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.3}{Ablauf Vorgehen}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.4}{Evaluation Hardware}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.5}{Zusammenbau Hardware}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.6}{Kommunikation}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.7}{Software Module}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.8}{Finalisierung}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Testing}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Ablauf Vorgehen}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{Definition}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.3}{Standort}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.4}{Aufbau}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.5}{Messungen}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.6}{Auswertung}{chapter.6}% 36
+\BOOKMARK [1][-]{section.6.7}{Software}{chapter.6}% 37

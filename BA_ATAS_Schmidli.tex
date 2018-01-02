@@ -62,6 +62,8 @@
 		Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen
 		oder abzubrechen. In der Regel sind die Betroffenen unverletzt.}}
 
+\newglossaryentry{mqtt}{name={mqtt},description={Message Queuing Telemetry Transport)}}
+
 \theoremstyle{definition}
 \newtheorem{exmp}{Beispiel}[subsection]
 
@@ -161,8 +163,8 @@ Bern, {\large \today}
 
 \chapter*{Management Summary}
 % 
-Viele Bereiche des öffentlichen Lebens wurden durch eine digitale Revolution umgekrempelt. Waschmaschinen werden Smart, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfälle in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten gar tödlich \cite{sacaccident}. Was werden dort für Fortschritte gemacht um das Risiko zu minimieren? Wie schreitet dort die Digitalisierung vorwärts? Nur selten spricht jemand von diesem Bereich. Der Fokus der großen Konzerne liegt wohl eher auf den angesprochenen Bereichen, dort wo es viel Geld zu holen gibt, dem Massenmarkt. Wäre es aber nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert, wie viele Leben gerettet werden?\\[0.3cm]
-Genau hier setzt das ATAS Projekt an. ATAS ist ein von mir erdachtes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einem groben System-beschrieb und wird später immer detaillierter. Im Vordergrund stehen hier die  Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekte aufgebaute Prototyp weißt einige Schwachstellen auf und muss verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
+Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution transformiert. Waschmaschinen werden intelligent, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfällen in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten sogar tödlich \cite{sacaccident}. Welche Fortschritte sind zu erwarten um in der Bergwelt das Risiko zu minimieren? Wie schreitet in der Bergwelt die Digitalisierung voran? Nur selten wird darüber gesprochen wie sich die Digitalisierung in der Bergwelt entwickelt. Der Fokus der großen Konzerne die im Bereich Iot und Mobile Computing aktiv sind liegt auf den Bereichen in denen ein grosser Umsatz zu erwarten ist. Wäre es nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert werden und wie viele Leben gerettet werden?\\[0.3cm]
+Genau bei diesem Punkt setzt das ATAS Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detailierter. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und muss verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
 
 \chapter*{Motivation}
 21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war unser Lohn.
@@ -452,6 +454,15 @@ Diese zusätzliche Information wird mir beim Testen der Übertragung überaus n�
 Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll. Gemäss TTN \cite{ADRTTN} sollte ADR nur für statische Nodes oder für mobile Nodes zur Erkennung von Stops (keine Bewegung) verwendet werden. Gemäss TTN ist ADR also nicht unbedingt für die Atas-Tracker geeignet. Die Tracker sind ja meistens in Bewegung bspw. durch Laufen, Ski fahren usw. Dennoch wurde mein Interesse geweckt und ich wollte genauer wissen warum dieses Feature nicht empfohlen wird.\\[0.3cm]
 Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Es folgt ein Beispiel von der TTN Webseite:
 
+\newpage
+\section{The Things Network}
+TODO PRIO 2
+
+\newpage
+\section{MQTT}
+TODO WARUM MQTT Technolgie, PRIO 3
+
+Durch die Wahl vom TTN Netzwerk wurde mir die Datenübertragungsart MQTT quasi aufgezwungen. Wird der TTN Handler nicht selber verwaltet, ist der Zugriff auf die Daten (API) nur per MQTT möglich. Das Protokoll war für mich nicht neu. Während dem Studium konnte ich bereits positive Erfahrung mit MQTT sammeln. Das Protokoll ist einfach zu verstehen und hat sich sehr einfach in mein System eingliedern lassen.
 
 \chapter{Prototyp}
 Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim Aufbau des Prototypen 2 vorgegangen bin.
