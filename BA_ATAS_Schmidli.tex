@@ -50,7 +50,7 @@
 \newglossaryentry{ATAS}
 {
     name={ATAS},
-    description={Aplinist Tracker \& Alerting System}
+    description={Aplinist Tracking \& Alerting System}
 }
 \newglossaryentry{entry}
 {
@@ -86,7 +86,7 @@
 % Title
 \newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
 \HRule \\[0.4cm]
-{\huge Alpinist Tracker \& Alerting System}\\[0.3cm]
+{\huge Alpinist Tracking \& Alerting System}\\[0.3cm]
 {\huge \bfseries  ATAS}
 \HRule \\[2cm]
 
@@ -146,6 +146,7 @@ Bern, {\large \today}
 % LoraWan Airtime, 1
 % LoraWan ADR, 3
 % Prototyp Display, 3
+% Technologien, Alternative, Warum LORA? 2
 
 % OK OK OK 
 % Atas-Node2, Antenna Design, Short 3
@@ -156,13 +157,12 @@ Bern, {\large \today}
 % Bilder einzelner Atas-Node2 Module, 2 OK
 %  Aufbau Gateway Doku, 1
 
-% Technologien, Alternative, Warum LORA? 2
+
 
 \chapter*{Management Summary}
 % 
-Im Jahr 2016 kam es zu über 2800 Unfälle in den Schweizer Alpen. Viele Personen wurden verletzt 178 endeten gar tödlich \cite{sacaccident}. In vielen Bereichen des öffentlichen Lebens hält heute die Moderne Einzug. Waschmaschinen werden Smart, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Wie schreitet dort die Digitalisierung vorwärts? Nur selten spricht jemand von diesem Bereich. Der Fokus der großen Konzerne liegt wohl eher auf den angesprochenen Bereichen, dort wo es viel Geld zu holen gibt, dem Massenmarkt. Wäre es aber nicht auch wichtig in Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert, wie viele Leben gerettet werden?\\[0.3cm]
-Diese Thesis baut sehr stark auf dem Vorprojekt (Projekt 2) auf. Das während der Projekt 2 Arbeit erstellte Konzept 'ATAS - Alpinist Tracking and Alerting System' wird während dieser Arbeit nochmals  
-
+Viele Bereiche des öffentlichen Lebens wurden durch eine digitale Revolution umgekrempelt. Waschmaschinen werden Smart, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfälle in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten gar tödlich \cite{sacaccident}. Was werden dort für Fortschritte gemacht um das Risiko zu minimieren? Wie schreitet dort die Digitalisierung vorwärts? Nur selten spricht jemand von diesem Bereich. Der Fokus der großen Konzerne liegt wohl eher auf den angesprochenen Bereichen, dort wo es viel Geld zu holen gibt, dem Massenmarkt. Wäre es aber nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert, wie viele Leben gerettet werden?\\[0.3cm]
+Genau hier setzt das ATAS Projekt an. ATAS ist ein von mir erdachtes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einem groben System-beschrieb und wird später immer detaillierter. Im Vordergrund stehen hier die  Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekte aufgebaute Prototyp weißt einige Schwachstellen auf und muss verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
 
 \chapter*{Motivation}
 21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war unser Lohn.
@@ -453,7 +453,7 @@ Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständ
 Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Es folgt ein Beispiel von der TTN Webseite:
 
 
-\chapter{Hardware}
+\chapter{Prototyp}
 Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim Aufbau des Prototypen 2 vorgegangen bin.
 
 \section{Begründung neuer Prototyp}
@@ -598,6 +598,8 @@ Pro Hardware Modul wird ein separates Software Modul erstellt.
 Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. Ich habe mich in Absprache meines Betreuers für die ESP-IDF Umgebung entschieden und mein System entsprechend vorbereitet. Die Installation der Entwicklungsumgebung ist nicht schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
 Ich verzichte an dieser Stelle auf eine detaillierte Auflistung aller Installationsschritte. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
 Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
+
+\subsection{Display}
 
 \newpage
 \section{Finalisierung}
