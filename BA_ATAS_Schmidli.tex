@@ -20,8 +20,11 @@
 \usepackage{hyperref}
 \usepackage{lastpage}
 \usepackage{float}
-\usepackage{afterpage}
-\usepackage[paper=A4,pagesize]{typearea}
+\usepackage{makecell}
+\usepackage{ltablex}
+\keepXColumns
+
+\newcommand{\pb}[1]{\parbox[t][][t]{1.0\linewidth}{#1} \vspace{-2pt}}
 
 % clear default
 \fancyhead{}
@@ -119,13 +122,19 @@ Bern, {\large \today}
 % Mgmt Summary
 % GLOSSAR, 3
 
-% Bilder Atas-Node2, 2
-% Bilder einzelner Atas-Node2 Module, 2
+
+%- Portieren der Software auf ES32, DONE
+%- TTN als Platform, DONE, 
+% SPI Schnittstelle analyse, was schickt die Lorwan library
+%- Bitrate + laufzeit Analyse
+%- Minimierung 
+
+
+
 % Atas-Node2, Antenna Design, Short 3
 
-
 % Testdaten, Vorbereitung SFP7-SFP12, 2
-%  Aufbau Gateway Doku, 1
+
 % Testing erweitern was soll getestet werden 1
 % Testszenarien, Wanderungen dokumentieren 1
 
@@ -134,14 +143,32 @@ Bern, {\large \today}
 % Prototyp Display, 3
 
 % OK OK OK 
-% Einleitung Projekt 2, 1
-% Projekt einleitung detailiert, 1
+% Motivation, 3, OK
+% Einleitung Projekt 2, 1 OK
+% Projekt einleitung detailiert, 1 OK
+% Bilder Atas-Node2, 2 OK
+% Bilder einzelner Atas-Node2 Module, 2 OK
+%  Aufbau Gateway Doku, 1
 
 \chapter*{Management Summary}
 
 \chapter*{Motivation}
+21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war unser Lohn.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/alps_panorama.jpg}
+	\caption[Motvation Alpen Panorama]
+	{Motivation Alpen Panorama}
+\end{figure}
+\noindent
+Ich bin kein extrem Bergsteiger. Ich genieße die Schweizer Alpen, bin aber nie in hohen(3000m+) und gefährlichen Regionen unterwegs. Die Schneebedingungen wärend meiner Touren sind meist ideal. Die Gefahr ist minimal. Nur selten werden Themen wie Lawinen und daraus resultierendes Unfallverhalten in der Gruppe diskutiert.\\[0.3cm]
+An eben diesem Tag stellten wir uns die Frage: Was wäre wenn?. Was wäre passiert wenn wir von einer Lawine verschüttet worden wären? Wer hätte uns gesucht, hätte uns überhaupt jemand gesucht. Falls meine Kollegin verschüttet wäre, wie lange würde es dauern bis die Rettungskräfte eintreffen würden? Wäre das Handynetz verfügbar gewesen? Und so weiter...\\[0.3cm]\
+Diese Thematik beschäftigte mich noch lange. Als es schließlich darum ging ein Thema für das Bachelor Thesis Vorprojekt (Projekt 2) auszusuchen, wollte ich mich weiter mit diesen Fragen auseinandersetzen. Dank meinem Studium und der gewählten Fachrichtung 'Mobile Computing' hatte ich bereits ein, zwei Idee wie man diese Problematik angehen könnte. Das Projekt ATAS war geboren. Meine Vorstellung war es ein System zu erstellen, welches Personen in solchen Situation unterstützen, mehr noch solche Situationen verhindern sollte.\\[0.3cm]
 
 \chapter*{Danksagung}
+TODO
+PRIO 3
+
 
 \chapter{Einleitung}
 Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger, nachfolgend Gateway genannt. Der Gateway wird bei der Talstation oder im nächsten Bergdorf montiert. Der Gateway sendet die empfangenen Daten der Tracker an eine zentrale Stelle irgendwo im Internet. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
@@ -390,35 +417,9 @@ Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständ
 Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Es folgt ein Beispiel von der TTN Webseite:
 
 
-\chapter{Prototyp}
+\chapter{Hardware}
 Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim Aufbau des Prototypen 2 vorgegangen bin.
 
-\section{Ablauf Vorgehen}
-Der im Projekt 2 erstellte Prototyp wurde mit sehr simplen vorgefertigten Elektronikkomponenten umgesetzt. Ziel dieser Arbeit war es in möglichst kurzer Zeit einen Prototypen aufzubauen. Während dieser Arbeit sollen nun neue Komponenten evaluiert und ein zweiter Prototyp erstellt werden. Der Ablauf dieser Phasen sieht wie folgt aus:\\[0.3cm]
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{img/projectFlow_hardware.jpg}
-	\caption[Flowchart Prototyp 2]
-	{Ablauf für den Aufbau des zweiten Prototyps}
-\end{figure}
-\noindent
-Die einzelnen Schritte werden auf den kommenden Seiten detailliert erklärt.
-
-\subsection{Evaluation Hardware}
-Auf Grundlage der bestehenden Prototyps soll neue Hardware evaluiert werden. Der Funktionsumfang des Prototyps soll gleichwertig bleiben. Sind die Komponenten erst definiert, wird das Material bestellt.
-
-\subsection{Zusammenbau Hardware}
-Die Komponenten werden zusammengebaut und untereinander verbunden. Zur besseren Übersicht wird ein Schema  der Elektronik erstellt.
-
-\subsection{Software Module}
-Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.\\[0.3cm]
-Pro Hardware Modul wird ein separates Software Modul erstellt.
-
-\subsection{Finalisierung}
-Die Erstellten Softwaremodule werden miteinander verknüpft und die Software fertiggestellt. Abschließend werden einige Testszenarien durchgeführt. 
-
-\newpage
 \section{Begründung neuer Prototyp}
 Es gibt diverse Gründe für diesen Schritt
 \begin{enumerate}
@@ -432,7 +433,7 @@ Es gibt diverse Gründe für diesen Schritt
 	\item Der Prototyp 1 bietet und viele Anschlussmöglichkeiten. Bspw. für ein Display, USB, oder eine RJ45 Buchse. Funktionen die wiederum welche Entwicklung stark vereinfachen, aber den Energieverbrauch erhöhen und die Grösse des Systems unnötig vergrößert. 
 	\item Die Verbauten Komponenten sind nicht für eine Industrialisierte Lösung geeignet. Man könnte sogar von einem 'Bastelprojekt' sprechen. Die Komponenten hindern das Projekt daran eine professionelle Form anzunehmen.
 \end{enumerate}
-\newpage
+
 \section{Ablauf Prototyping}
 Aus meiner Sicht bildet während der Arbeit zu konstruierende Prototyp 2 nur einen Zwischenschritt bis zu Finalen Version. Eine Visualisierung meiner Vorstellung:\\
 \begin{figure}[H]
@@ -444,36 +445,62 @@ Aus meiner Sicht bildet während der Arbeit zu konstruierende Prototyp 2 nur ein
 \noindent
 Mein Ziel ist es mit dem Umstieg auf anderen Komponenten, den Grundstein für den Prototypen 3 zu legen. Der Prototyp 3 ist nicht Bestandteil dieser Arbeit. Prototyp 3 bildet die finale Prototyp Version. Die Einzelnen Komponenten vom Prototyp 2 werden auf einen eigens designeten PCB installiert. Durch diesen Schritt würde sich das System in Sachen Platzbedarf nochmals massiv verbessern.
 
-%- Portieren der Software auf ES32, DONE
-%- TTN als Platform, DONE, 
-% SPI Schnittstelle analyse, was schickt die Lorwan library
-%- Bitrate + laufzeit Analyse
-%- Minimierung 
+\newpage
+\section{Ablauf Vorgehen}
+Der im Projekt 2 erstellte Prototyp wurde mit sehr simplen vorgefertigten Elektronikkomponenten umgesetzt. Ziel dieser Arbeit war es in möglichst kurzer Zeit einen Prototypen aufzubauen. Während dieser Arbeit sollen nun neue Komponenten evaluiert und ein zweiter Prototyp erstellt werden. Der Ablauf dieser Phasen sieht wie folgt aus:\\[0.3cm]
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/projectFlow_hardware.jpg}
+	\caption[Flowchart Prototyp 2]
+	{Ablauf für den Aufbau des zweiten Prototyps}
+\end{figure}
+\noindent
+Die einzelnen Schritte werden auf den kommenden Seiten detailliert erklärt.
 
 \newpage
 \section{Evaluation Hardware}
-
-Für den Aufbau des zweiten Prototypen wurde die nachfolgende Hardware beschafft. 
-
-\begin{table}[htbp]
-	\centering
-	\begin{tabularx}{\textwidth}{lll}
-		Gerätetyp & Model & Bild \\ \hline
-		Entwicklungsboard + Mikrocontroller & Espressfif ESP-WROOM-32 Core Dev Kit  &TODO \\ \hline
-		GPS Module& ublox Neo 6M & TODO \\ \hline
-		Lora Modul & RFM96 & TODO \\ \hline
-		Speaker & Piezo Speaker & TODO \\ \hline
-		Display & eink Display Waveshare 1.54  Zoll 200x 200 & TODO \\ \hline
-		Schalter & gewöhnlicher 4 Pin Schalter & TODO \\ \hline
-	\end{tabularx}
-\end{table}
-
+Auf Grundlage der bestehenden Prototyps soll neue Hardware evaluiert werden. Der Funktionsumfang des Prototyps soll gleichwertig bleiben. Sind die Komponenten erst definiert, wird das Material bestellt.\\
+Für den Aufbau des zweiten Prototypen wurde die nachfolgende Hardware verwendet.\\[0.5cm]
+\begin{tabularx}{\linewidth}{XXX}
+		\textbf{Gerätetyp} & \textbf{Model} & \textbf{Bild} \\ \hline
+		Entwicklungsboard & \makecell[l]{Espressfif ESP-WROOM-32\\ Core Dev Kit}  & \parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/system/esp32.png}\vspace{8pt}} \\ \hline
+		GPS Module& ublox Neo 6M & \parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/system/gps.png}\vspace{8pt}} \\ \hline
+		Lora Modul & RFM96 & \parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.18\textwidth]{img/system/lora.png}\vspace{8pt}} \\ \hline
+		Speaker & Piezo Speaker  & \parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.15\textwidth]{img/system/speaker.png}\vspace{8pt}} \\ \hline
+		Display & \makecell[l]{eink Display Waveshare \\ 1.54  Zoll 200x 200}  &\parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/system/display.png}\vspace{8pt}} \\ \hline
+		Schalter & gewöhnlicher 4 Pin Schalter & \parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.07\textwidth]{img/system/schalter.png}\vspace{8pt}} \\ \hline
+\end{tabularx} 
+\noindent
+Aus Zeitgründen habe ich mich bei den Komponenten von bestehenden Projekten resp. Einträge im Internet inspirieren lassen. Es gab kein spezielles Auswahlverfahren für die restlichen Komponenten. Meiner Meinung nach nicht das beste Vorgehen. Bei einem erneuten Projekt in dieser Richtung müsste ich vorher die Kriterien für die Komponenten festlegen.
+\newpage
+\subsection{Lora-Antenne}
+Ich beging den Fehler, anzunehmen, dass beim Kauf des Lora-Moduls eine Antenne mitgeliefert wird. Da ich über sehr wenig Erfahrungen in der Telekommunikationswelt verfügte, wollte ich mich auch mit diesem Thema etwas genauer befassen. Ich entschied mich gegen eine erneute Bestellung und baute mir die Antenne einfach selbst. Nach einer kurzen Internetrecherche fand ich heraus wie mit einfachen Mitteln eine zuverlässige Antenne für 868Mhz gebaut werden kann \cite{wavelengthTTN}. Ein einfaches Kabel genügt. Das Kabel muss die Länge der Wellenlänge oder einen Bruchteil bspw. 1/2 oder 1/4 der Wellenlänge haben. Die Berechnung der Wellenlänge ist mit der nachfolgenden Formel möglich \cite{wavelength}.\\[0.3cm]
+Es gilt $\lambda$ = Wellenlänge, v = Übertragungsgeschwindigkeit (Lichtgeschwindigkeit), f = Durchschnitt der Frequenz (Lora Frequenz in Europa)
+\begin{center}
+	\begin{eqnarray*}
+		\lambda &=& \frac{v}{f}\\
+		\lambda &=& \frac{299.792.458 m/s}{868.000.000} = 34,54cm\\
+		\frac{\lambda}{2} &=& \frac{34,53cm}{2} = 17,27cm\\
+		\frac{\lambda}{4} &=& \frac{17,27cm}{2} = 8,63cm \\
+	\end{eqnarray*}
+\end{center}
+17,27cm sind für meinen Prototypen zu lange. Ich entschied mich 1/4 der Wellenlänge zu verwenden. Für eine Antenne musste also nur ein Kabel mit der Länge \textbf{8.63cm} vorbereitet und mit dem Antennenport des Lora Moduls verbunden werden.\\[0.3cm]
+Das Resultat\\
+TODO BILD\\[0.3cm]
+Die Kommunikation funktioniert einwandfrei und ist mit der des ersten Prototypen vergleichbar. Mir ist bewusst, dass der Empfang mit einer professionellen Antenne noch besser werden würde. Die Thematik 'Antenne' müsste bei einer Weiterführung des Projektes nochmals beleuchtet werden.
 \newpage
 \section{Zusammenbau Hardware}
+Die Komponenten werden zusammengebaut und untereinander verbunden. Zur besseren Übersicht wird ein Schema  der Elektronik erstellt.
 \subsection{Schema}
-Die Kommunikation unter den Komponenten wurde im Laufe der Projektarbeit  für mich immer unübersichtlicher. Um mir die Arbeit zu erleichtern, habe ich ein Schema %TODO welches Schema) 
-erstellt. Vor der Arbeit hatte ich noch nie ein Schema gezeichnet und musste mich zuerst einige Stunden in die Materie einarbeiten. Auf anraten einiger Kollegen, mit Erfahrung im Elektronik Umfeld, sowie der frei verfügbaren Lernressourcen und Vorlagen, fiel meine Wahl auf das Programm \textbf{Eagle} der Firma Autodesk \cite{autodesk}. Dank der guten Dokumentation und den Lernvideos auf diversen Plattformen bspw. Youtube kam ich sehr schnell vorwärts. \\[0.3cm] 
-Ich begann damit Vorlagen der Elektronischen Bausteine/Chips finden. Die Vorlagen zu Lora, GPS, ESP, Schalter und Piezo Lautsprecher konnte ich teilweise vom Hersteller oder von der Community herunterladen und in Eagle importieren. Für das Display musste ich ein bestehende Vorlage eines Displays anpassen. Ich habe dabei die Größe und die Pinbelegung verändert, damit das Element so ähnlich wie nur möglich wie das verwendete Display (Waveshare eInk 200x200) aussieht. \\[0.3cm]
+Die Kommunikation unter den Komponenten wurde im Laufe der Projektarbeit  für mich immer unübersichtlicher. Um mir die Arbeit zu erleichtern, habe ich ein Schema mit den Komponenten erstellt. Vor der Arbeit hatte ich noch nie ein Schema gezeichnet und musste mich zuerst einige Stunden in die Materie einarbeiten. Auf anraten einiger Kollegen, mit Erfahrung im Elektronik Umfeld, sowie der frei verfügbaren Lernressourcen und Vorlagen, fiel meine Wahl auf das Programm \textbf{Eagle} der Firma Autodesk \cite{autodesk}. Dank der guten Dokumentation und den Lernvideos auf diversen Plattformen bspw. Youtube kam ich beim Zeichnen schnell vorwärts. \\[0.3cm] 
+Ich begann damit Vorlagen der Elektronischen Bausteine/Chips finden. Die Vorlagen zu Lora, GPS, ESP, Schalter und Piezo Lautsprecher konnte ich teilweise vom Hersteller oder von der Community herunterladen und in Eagle importieren. Für das Display musste ich ein bestehende Vorlage eines Displays anpassen. Ich habe dabei die Größe und die Pinbelegung verändert, damit das Element wie das verwendete Display (Waveshare eInk 200x200) aussieht. \\[0.3cm]
 Das Schema ist auf der nachfolgenden Seite abgebildet.
 \newpage
 
@@ -481,15 +508,14 @@ Das Schema ist auf der nachfolgenden Seite abgebildet.
 	\centering
 	\includegraphics[width=\textwidth]{img/prototyp_schema.png}
 	\caption[Prototyp2 Schema]
-	{Prototyp Schema}
+	{Prototyp 2 Schema}
 \end{figure}
 
 \newpage
 \subsection{Mikrocontroller - Pinbelegung}
-Die nachfolgende Pinbelegung wurde verwendet um den ESP32 mit den übrigen Komponenten zu verbinden. Zu meiner Überraschung sind die Pins nicht fix durch den ESP32 festgelegt. Die Pins können meist für jegliche Funktion bspw. PWM, SPI verwendet werden. Durch diese Freiheit wird die Verkabelung massiv vereinfacht und die Anzahl der möglichen Fehlerquellen wird reduziert.\\[0.5cm]
-%Todo tabular header
+Die nachfolgende Pinbelegung wurde verwendet um den ESP32 mit den übrigen Komponenten zu verbinden. Zu meiner Überraschung sind die Pins nicht fix durch den ESP32 festgelegt. Die Pins können meist für jegliche Funktion bspw. PWM, SPI verwendet werden. Durch diese Freiheit wird die Verkabelung massiv vereinfacht und die Anzahl der möglichen Fehlerquellen wird reduziert.\\
 \begin{tabularx}{\textwidth}{ l|l|X }
-	MCU Pin & Modul & Funktion\\ \hline
+	\textbf{MCU Pin} & \textbf{Modul} & \textbf{Funktion}\\ \hline
 	IO02 & Lora & SPI ChipSelect (CS)\\\hline
 	IO04 & Lora + Display& SPI Busy\\ \hline
 	IO05 & Displayl& SPI ChipSelect(CS)\\\hline
@@ -506,7 +532,19 @@ Die nachfolgende Pinbelegung wurde verwendet um den ESP32 mit den übrigen Kompo
 	IO33 & Lora & DIO1\\ \hline
 \end{tabularx}
 
+\section{Kommunikation}
+In der nachfolgenden Übersicht wird die Kommunikationsart zwischen den Komponenten aufgezeigt.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/ATASNode2_Kommunikation.png}
+	\caption[Kommunikationsart Prototyp 2]
+	{Kommunikationsart Prototyp 2}
+\end{figure}
+
+
+\newpage
 \subsection{Zusammenbau}
+Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert und verlötet resp. angeschraubt. Der Mikrocontroller wurde absichtlich nicht im Zentrum platziert, damit der Zugang zum USB Anschluss frei blieb. Abschließend wurde gemäß Schema die Komponenten untereinander verkabelt.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/system/prototyp2.jpg}
@@ -514,9 +552,12 @@ Die nachfolgende Pinbelegung wurde verwendet um den ESP32 mit den übrigen Kompo
 	{Prototyp 2}
 \end{figure}
 
-
 \newpage
+
 \section{Software Module}
+Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.\\[0.3cm]
+Pro Hardware Modul wird ein separates Software Modul erstellt.
+
 \subsection{Entwicklungsumgebung}
 Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. Ich habe mich in Absprache meines Betreuers für die ESP-IDF Umgebung entschieden und mein System entsprechend vorbereitet. Die Installation der Entwicklungsumgebung ist nicht schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
 Ich verzichte an dieser Stelle auf eine detaillierte Auflistung aller Installationsschritte. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
@@ -524,9 +565,9 @@ Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP korrek
 
 \newpage
 \section{Finalisierung}
+Die Erstellten Softwaremodule werden miteinander verknüpft und die Software fertiggestellt. Abschließend werden einige Testszenarien durchgeführt. 
 
 \chapter{Testing}
-
 \section{Ablauf Vorgehen}
 Ein Teil des Systemaufbaus aus dem vorgängigen Projekt soll getestet werden. In diesem Kapitel wird genau beschrieben, wie beim Testing des Systems vorgegangen wird.\\[0.3cm]
 In der nächsten Abbildung sind die geplanten Schritte aufgeführt.
@@ -539,7 +580,7 @@ In der nächsten Abbildung sind die geplanten Schritte aufgeführt.
 \\ 
 Die einzelnen Schritte werden auf den kommenden Seiten detailliert erklärt.
 \newpage
-\subsection{Definition}
+\section{Definition}
 Es muss definiert werden
 \begin{itemize}
 	\item welche Komponenten geprüft werden sollen\\[0.3cm]
@@ -565,38 +606,73 @@ Es muss definiert werden
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{Schlussfolgerung}
+\subsection{Schlussfolgerung}
 Abgeleitet aus der vorhergehenden Definitionen ergibt sich die folgende Aufgabenstellung im Bereich Testing. Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut. Anschließend werden mehrere Wanderungen auf verschiedenen Routen durchgeführt. Die Verbindung wird aufgebaut und mittels TTN Dashboard geprüft.
 
 \newpage
-\subsection{Standort}
+\section{Standort}
 Ausgehend von den vorangegangen Definitionen muss folgendes definiert werden.
 \begin{itemize}
 	\item Es muss ein Ort gefunden werden, wo der Gateway platziert werden kann.\\[0.3cm]
-	Der Standort kann frei gewählt werden. Einzige Voraussetzungen ist ein Zugang zum Internet. Der Gateway empfängt die Daten der Endgeräte und muss diese dem TTN Netzwerk über das Internet weiterleiten können. Eine erhöhte Position ist von Vorteil.
+	Der Standort kann frei gewählt werden. Zwei Kriterien müssen zwingend erfüllt sein. 
+	\begin{enumerate}
+		\item
+		Der Gateway empfängt die Daten der Endgeräte und muss diese dem TTN Netzwerk über das Internet weiterleiten können. Eine stabile Internetverbindung ist nötig. 
+		\item 
+		Der Standort sollte in der nähe von möglichen Wanderrouten resp. Testbereichen liegen.
+	\end{enumerate}
 	\item Für die Tests sollten mind. 3 Routen/Wanderungen definiert werden. Dies garantiert eine vernünftige Anzahl an Messwerten.
 	\item Auf dem Pfad selbst werden mind. 5 Orte definiert wo die Verbindungstests durchgeführt werden.
 \end{itemize}
 
-\subsection{Messungen}
-Die vorgängig definierten Routen werden abgelaufen und die Messungen werden an den definierten Standorten durchgeführt.
-
-\subsection{Auswertung}
-Die erhobenen Daten werden analysiert und kategorisiert. Messungen sollen in 3 Kategorien eingeteilt werden.
-\begin{enumerate}
-	\item Kein Sichtkontakt zwischen Empfänger und Sender.
-	\item Wenig Sichtkontakt resp. teilweise blockiert. Bspw. durch Bewaldung oder Steinformationen
-	\item Direkter Sichtkontakt
-\end{enumerate}
+\newpage
+\subsection{Gateway}
+Der Standort für den LoRa Gateway war schnell gefunden. Ich arbeite momentan als Informatik Systemengineer bei der Hoffmann Neopad AG. Die Firma besitzt eine Niederlassung in der Nähe der Stadt Thun (BE). Das Gebäude ist 2 Stockwerke hoch und die Adresse liegt in unmittelbarer nähe der Voralpen. Hohe Berge für einen möglichen Testlauf sind max. 20km entfernt. Dazu zählen beispielsweise das Stockhorn, Niesen sowie das Niederhorn.\\[0.1cm]
+\begin{tabularx}{\textwidth}{ l|X }
+		\textbf{Beschreibung} & \textbf{Bild} \\ \hline
+		Standort Hoffmann Neopac AG & \parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/gateway/gateway_map.png}\vspace{8pt}} \\ \hline
+		Standort Gateway auf Gebäude &  \parbox[c]{1em}{
+			\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/gateway/gateway_building_front.jpg}\vspace{8pt}} \\ \hline
+\end{tabularx}
 
 \newpage
-\section{Definition}
+\subsection{Testregionen}
+Im ersten Teil meiner Arbeit konzentrierte ich mich stark auf den Aufbau des Prototypen. Das Testing hatte für mich eher eine kleinere Priorität. Ein Fehler wie sich später herausstellen sollte. Der Winter ließ, wie sonst nicht üblich, nicht lange auf sich warten. Bereits Mitte Oktober beginn es zu schneien. Wanderrouten welche ich für das Testing verwenden wollte, bspw. der Nordaufstieg Stockhorn, wurden wegen zu hoher Lawinengefahr geschlossen.\\[0.3cm]
+Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglich und soweit gefahrlos passierbar waren.
+\begin{tabularx}{\textwidth}{ l|X }
+	\textbf{Niederhorn} & \textbf{Bild} \\ \hline
+	Region &  \parbox[c]{1em}{
+		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/niederhorn.png}\vspace{8pt}} \\ \hline
+	Höhenunterschied zum Gateway&\parbox[c]{1em}{
+		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/niederhorn_altitude.png}\vspace{8pt}} \\ \hline
+\end{tabularx}
 
-\section{Standort}
+\newpage
+\begin{tabularx}{\textwidth}{ l|X }
+	\textbf{Heiligenschwendi} & \textbf{Bild} \\ \hline
+	Region & \parbox[c]{1em}{
+		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/heiligenschwendi.png}\vspace{8pt}} \\ \hline
+	Höhenunterschied zum Gateway&\parbox[c]{1em}{
+		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/heiligenschwendi_altitude.png}\vspace{8pt}} \\ \hline
+\end{tabularx}
 
+\newpage
+\section{Aufbau}
+\subsection{Gateway}
+\includegraphics[width=0.6\textwidth]{img/gateway/gateway.jpg}
+
+\newpage
 \section{Messungen}
+Die vorgängig definierten Routen werden abgelaufen und die Messungen werden an den definierten Standorten durchgeführt.
 
 \section{Auswertung}
+Die erhobenen Daten werden analysiert und kategorisiert. Messungen sollen in 3 Kategorien eingeteilt werden.
+\begin{enumerate}
+	\item Direkter Sichtkontakt
+	\item Wenig Sichtkontakt resp. teilweise blockiert. Bspw. durch Bewaldung oder Steinformationen
+	\item kein ein Sichtkontakt zwischen Empfänger und Sender.
+\end{enumerate}
 
 
 \subsection{Installation Software}
@@ -664,6 +740,9 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 \listoffigures
 
 \begin{thebibliography}{1}
+	\bibitem{wavelengthTTN} \url{https://www.thethingsnetwork.org/forum/t/antenna-length-for-868-and-433-mhz/5378} 2.1.2018
+	\bibitem{wavelength} \url{https://en.m.wikipedia.org/wiki/Wavelength} 2.1.2018\\
+	\bibitem{avalanche} \url{http://www.oegan.at/notfallmedizin/index.php?option=com_content&view=article&id=76:unterkuehlung-als-ueberlebenschance&catid=42&Itemid=118} 1.01.2018
 	\bibitem{ttnsecuirty} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/Security} 27.07.2017
 	\bibitem{jaguar} \url{https://www.jaguar-network.com/en/news/lorawan-in-a-nutshell-2-internet-of-things-iot}, 27.07.2017
 	\bibitem{ADRTTN} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/ADR} 27.07.2017
