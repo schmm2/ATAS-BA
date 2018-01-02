@@ -23,6 +23,7 @@
 \usepackage{makecell}
 \usepackage{ltablex}
 \keepXColumns
+\usepackage{csquotes}
 
 \newcommand{\pb}[1]{\parbox[t][][t]{1.0\linewidth}{#1} \vspace{-2pt}}
 
@@ -57,10 +58,15 @@
 	description={The Things Network, LoraWan Netzwerk}
 }
 
+\newglossaryentry{Blockierung}{name={Blockierung},description={Als Blockierung werden alle Notfälle bezeichnet, bei denen BerggängerInnen infolge Erschöpfung, Überforderung,
+		Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen
+		oder abzubrechen. In der Regel sind die Betroffenen unverletzt.}}
+
 \theoremstyle{definition}
 \newtheorem{exmp}{Beispiel}[subsection]
 
-
+\newglossaryentry{bergnotfall}{name={bergnotfall},description={Der Begriff „Bergnotfall“ umfasst alle Vorkommnisse, bei denen BerggängerInnen die Hilfe der Bergrettungsdienste beanspruchen. Dies betrifft auch Erkrankungen und Evakuationen von unverletzten Personen}}
+	
 \makeglossaries
 
 \setcounter{secnumdepth}{2}
@@ -75,7 +81,7 @@
 \includegraphics[width=0.08\textwidth]{img/bfh_logo.png}\\[1cm]    
 \textsc{\LARGE Bern University of Applied Sciences}\\[1.5cm]
 \textsc{\Large Bachelor Thesis}\\[0.2cm]
-\textsc{\Large Informatik}\\[0.5cm]
+\textsc{\Large Studiengang Informatik}\\[0.5cm]
 
 % Title
 \newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
@@ -84,27 +90,27 @@
 {\huge \bfseries  ATAS}
 \HRule \\[2cm]
 
-\includegraphics[width=0.2\textwidth]{img/atas_logo.png}\\[3cm]    
+\includegraphics[width=0.2\textwidth]{img/atas_logo.png}\\[2.5cm]    
 
 % Author und Lehrer
-\begin{minipage}{0.32\textwidth}
+\begin{minipage}{0.3\textwidth}
 \begin{flushleft} \large
 \emph{Autor:}\\
 Martin \textsc{Schmidli}\\
 \end{flushleft}
 \end{minipage}
 \hfill
-\begin{minipage}{0.32\textwidth}
+\begin{minipage}{0.3\textwidth}
 \begin{flushleft} \large
-\emph{Dozent:} \\
+\emph{Betreuer:} \\
 Mohamed \textsc{Mokdad}
 \end{flushleft}
 \end{minipage}
 \hfill
-\begin{minipage}{0.32\textwidth}
+\begin{minipage}{0.38\textwidth}
 \begin{flushleft} \large
 \emph{Experte:}\\
-Daniel \textsc{Voisard}\\
+Daniel \textsc{Voisard}, BAKOM\\
 \end{flushleft}
 \end{minipage}
 
@@ -130,8 +136,7 @@ Bern, {\large \today}
 %- Minimierung 
 
 
-
-% Atas-Node2, Antenna Design, Short 3
+% Management Summary, 1
 
 % Testdaten, Vorbereitung SFP7-SFP12, 2
 
@@ -143,6 +148,7 @@ Bern, {\large \today}
 % Prototyp Display, 3
 
 % OK OK OK 
+% Atas-Node2, Antenna Design, Short 3
 % Motivation, 3, OK
 % Einleitung Projekt 2, 1 OK
 % Projekt einleitung detailiert, 1 OK
@@ -150,7 +156,13 @@ Bern, {\large \today}
 % Bilder einzelner Atas-Node2 Module, 2 OK
 %  Aufbau Gateway Doku, 1
 
+% Technologien, Alternative, Warum LORA? 2
+
 \chapter*{Management Summary}
+% 
+Im Jahr 2016 kam es zu über 2800 Unfälle in den Schweizer Alpen. Viele Personen wurden verletzt 178 endeten gar tödlich \cite{sacaccident}. In vielen Bereichen des öffentlichen Lebens hält heute die Moderne Einzug. Waschmaschinen werden Smart, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Wie schreitet dort die Digitalisierung vorwärts? Nur selten spricht jemand von diesem Bereich. Der Fokus der großen Konzerne liegt wohl eher auf den angesprochenen Bereichen, dort wo es viel Geld zu holen gibt, dem Massenmarkt. Wäre es aber nicht auch wichtig in Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert, wie viele Leben gerettet werden?\\[0.3cm]
+Diese Thesis baut sehr stark auf dem Vorprojekt (Projekt 2) auf. Das während der Projekt 2 Arbeit erstellte Konzept 'ATAS - Alpinist Tracking and Alerting System' wird während dieser Arbeit nochmals  
+
 
 \chapter*{Motivation}
 21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war unser Lohn.
@@ -171,6 +183,21 @@ PRIO 3
 
 
 \chapter{Einleitung}
+Ein Gipfel gehört dir erst, wenn du wieder unten bist - denn vorher gehörst du ihm.\\[0.3cm]
+\textbf{Hans lander, Italienischer Bergsteiger\cite{kammerlander}} \\[0.5cm]
+\noindent
+Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski fahren oder gehen Eisklettern. Die Anzahl der möglichen Aktivitäten ist schier grenzenlos. Immer wieder kommt es in dieser Idylle aber zu schweren Unfällen. Ausgelöst durch Steinschläge, Lawinen, Abstürze der Bergsteigenden/Alpinisten und vielen weiteren möglichen Ursachen. Der Schweizer Alpenclub (SAC) führt dazu eine Statistik \cite{sacaccident}. Nachfolgend ein kleiner Auszug aus der Bergunfallstatistik 2016. Die Grafik zeigt eine Übersicht der Anzahl Situationen wo eine Rettungsdienst ausrücken musste. Zu den Rettungsdiensten gehört beispielsweise die REGA.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/sac_accidentstatistic_2016_reason.png}
+	\caption[Bergunfallstatistik 2016 - Notfallsituationen nach Unrsachen]
+	{Bergunfallstatistik 2016 - Notfallsituationen nach Ursachen}
+\end{figure}
+\noindent
+Die Vorfälle sind nach Ursache gegliedert. Zusammengefasst ergeben sich 2828 Notsituationen, wovon 178 tödlich endeten.
+
+\newpage
+\section{Projektidee}
 Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger, nachfolgend Gateway genannt. Der Gateway wird bei der Talstation oder im nächsten Bergdorf montiert. Der Gateway sendet die empfangenen Daten der Tracker an eine zentrale Stelle irgendwo im Internet. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
 
 \section{Vorarbeiten}
@@ -354,6 +381,15 @@ Alle Daten welche zu CloudMQTT publiziert werden, werden nun auch automatisch zu
 \end{figure}
 
 \newpage
+\section{Logik}
+\subsection{Atas-Service}
+TODO, PRIO 2
+
+\newpage
+\section{Webapplikation}
+\subsection{Atas-Web}
+TODO, PRIO 2
+
 \chapter{Technologien}
 \section{LoraWan}
 Um das Projekt durchzuführen, musste ich mir mehr Wissen zum Thema LoraWan aneignen. Das im Projekt 2 aufgebaute System ist lauffähig, verwendet aber gewisse Standardeinstellungen welche ich einfach übernommen habe. Das Wissen, ob und wie man das System optimieren könnte ist nicht vorhanden.
@@ -740,6 +776,8 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 \listoffigures
 
 \begin{thebibliography}{1}
+	\bibitem{kammerlander} \url{https://www.bergwelten.com/a/die-schoensten-zitate-rund-ums-bergsteigen} 1.2.2018
+	\bibitem{sacaccident} \url{http://www.sac-cas.ch/unterwegs/sicherheit/bergnotfallstatistik.html} 1.2.2018
 	\bibitem{wavelengthTTN} \url{https://www.thethingsnetwork.org/forum/t/antenna-length-for-868-and-433-mhz/5378} 2.1.2018
 	\bibitem{wavelength} \url{https://en.m.wikipedia.org/wiki/Wavelength} 2.1.2018\\
 	\bibitem{avalanche} \url{http://www.oegan.at/notfallmedizin/index.php?option=com_content&view=article&id=76:unterkuehlung-als-ueberlebenschance&catid=42&Itemid=118} 1.01.2018
