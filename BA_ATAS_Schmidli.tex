@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 
 % Packages
+\usepackage[hyphens]{url}
 \usepackage{caption}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
@@ -17,15 +18,14 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage[xindy]{glossaries}
-\usepackage{hyperref}
 \usepackage{lastpage}
 \usepackage{float}
 \usepackage{makecell}
 \usepackage{ltablex}
 \keepXColumns
+\usepackage{listings}
 \usepackage{csquotes}
 
-\newcommand{\pb}[1]{\parbox[t][][t]{1.0\linewidth}{#1} \vspace{-2pt}}
 
 % clear default
 \fancyhead{}
@@ -124,47 +124,44 @@ Bern, {\large \today}
 \end{titlepage}
 \pagestyle{fancy}
 
-
 \tableofcontents
 
-% Mgmt Summary
-% GLOSSAR, 3
-
-
-%- Portieren der Software auf ES32, DONE
-%- TTN als Platform, DONE, 
 % SPI Schnittstelle analyse, was schickt die Lorwan library
 %- Bitrate + laufzeit Analyse
 %- Minimierung 
 
 
-% Management Summary, 1
-
 % Testdaten, Vorbereitung SFP7-SFP12, 2
-
-% Testing erweitern was soll getestet werden 1
 % Testszenarien, Wanderungen dokumentieren 1
 
 % LoraWan Airtime, 1
-% LoraWan ADR, 3
+% Airtime, Payload optimierung
+
 % Prototyp Display, 3
+
 % Technologien, Alternative, Warum LORA? 2
+% Technologien, MQTT, 
+
+% Testing, Batterielaufzeit
+
 
 % OK OK OK 
+% LoraWan ADR, 3
+% Testing erweitern was soll getestet werden 1
+% Management Summary, 1
 % Atas-Node2, Antenna Design, Short 3
 % Motivation, 3, OK
 % Einleitung Projekt 2, 1 OK
 % Projekt einleitung detailiert, 1 OK
 % Bilder Atas-Node2, 2 OK
 % Bilder einzelner Atas-Node2 Module, 2 OK
-%  Aufbau Gateway Doku, 1
-
+% Aufbau Gateway Doku, 1
 
 
 \chapter*{Management Summary}
 % 
-Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution transformiert. Waschmaschinen werden intelligent, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfällen in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten sogar tödlich \cite{sacaccident}. Welche Fortschritte sind zu erwarten um in der Bergwelt das Risiko zu minimieren? Wie schreitet in der Bergwelt die Digitalisierung voran? Nur selten wird darüber gesprochen. Der Fokus der großen Konzerne, die im Bereich IoT und Mobile Computing aktiv sind, liegt auf den Bereichen in denen ein grosser Umsatz zu erwarten ist. Wäre es nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert werden und wie viele Leben gerettet werden?\\[0.3cm]
-Genau bei diesem Punkt setzt das ATAS Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detailierter. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
+Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution transformiert. Waschmaschinen werden intelligent, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfällen in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten sogar tödlich \cite{sacaccident}. Welche Fortschritte sind zu erwarten um in der Bergwelt das Risiko zu minimieren? Wie schreitet in der Bergwelt die Digitalisierung voran? Nur selten wird darüber gesprochen. Der Fokus der großen Konzerne, die im Bereich IoT und Mobile Computing aktiv sind, liegt auf den Bereichen in denen ein grosser Umsatz zu erwarten ist. Wäre es nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert und wie viele Leben gerettet werden?\\[0.3cm]
+Genau bei diesem Punkt setzt das ATAS Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
 
 \chapter*{Motivation}
 21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war unser Lohn.
@@ -450,9 +447,60 @@ Ein Endgerät besitzt zwei Zähler (FCntUp, FCntDown). Die Zähler werden bei ei
 Wird eine Reply Attacke durchgeführt d.H. ein Paket nochmals gesendet, wird dieses Paket vom System verworfen. Dies geschieht deshalb, weil das System bereits eine Nachricht mit dem gleichen Framecounter erhalten hat.\\[0.3cm]
 Diese zusätzliche Information wird mir beim Testen der Übertragung überaus nützlich sein. Anhand der Nummerierung, kann sehr schnell erkannt werden, ob ein Paket nicht sauber empfangen werden konnte. Bspw. Erhalten wir die Pakete 4,5,7 $\rightarrow$ Paket 6 wurde nicht korrekt übertragen.
 
+\subsection{Airtime \& Spreadingfactor}
+TODO
+
+\newpage
+\subsection{Geräteklassen}
+LoRaWan Endgeräte werden in drei Geräteklassen unterteilt \cite{lorawan_classes}. Alle Geräte unterstützen eine bidirektionale Kommunikation. Es können also Daten zum Gateway gesendet wie auch empfangen werden.
+\subsubsection{Klasse A}
+Alle Geräte der Klasse B und C haben die Funktionalität von Klasse A implementiert. Das Endgerät kann immer Senden. Für den Empfang der Daten gibt es bestimmte Regeln. Nach einem Senden öffnet das Endgerät zwei sogenannte Download Receive Fenster. Während dieser Zeit können Daten Empfangen werden. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/lorawan_class_a.png}
+	\caption[LoRaWan Class A]
+	{LoRaWan Class A}
+\end{figure}
+TODO eigenes BILD\\
+Werden Daten außerhalb dieses Zeitfensters geschickt, werden diese nie vom Endgerät empfangen.
+
+\subsubsection{Klasse B}
+Ein Klasse B Gerät kann zusätzliche Download Receive Fenster zu definierten Zeiten öffnen. Der Gateway sendet ein Datenpaket (Beacon) an die Endgeräte um die Zeiten zu synchronisieren. Sind die Zeiten synchronisiert, weiss das LoRaWan Netzwerk ganz genau wann ein Endgerät bereit ist Daten zu empfangen. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/lorawan_class_a.png}
+	\caption[LoRaWan Class B]
+	{LoRaWan Class B}
+\end{figure}
+TODO eigenes BILD\\
+
+\subsubsection{Klasse C}
+Klasse C Geräte haben ein nahezu permanent geöffnetes Receive Zeitfenster. Nur während einem Sendevorgang wird dieses kurzzeitig geschlossen. Durch diese Eigenschaften ist der Energievierbauch von Klasse C Geräten im Vergleich zu A \& B sehr viel größer.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/lorawan_class_c.png}
+	\caption[LoRaWan Class C]
+	{LoRaWan Class C}
+\end{figure}
+TODO eigenes BILD\\ 
+
+\subsubsection{Entscheid}
+Klasse B und A werden vom TTN System noch nicht unterstützt. Der Energieverbrauch von Klasse A Geräte ist im Vergleich von B \& C geringer. Diese Tatsachen machen den Entscheid sehr einfach. Für die ATAS Tracker werden wir also die Klasse A verwenden. 
+
 \subsection{Adaptive Data Rate (ADR)}
 Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll. Gemäss TTN \cite{ADRTTN} sollte ADR nur für statische Nodes oder für mobile Nodes zur Erkennung von Stops (keine Bewegung) verwendet werden. Gemäss TTN ist ADR also nicht unbedingt für die Atas-Tracker geeignet. Die Tracker sind ja meistens in Bewegung bspw. durch Laufen, Ski fahren usw. Dennoch wurde mein Interesse geweckt und ich wollte genauer wissen warum dieses Feature nicht empfohlen wird.\\[0.3cm]
-Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Es folgt ein Beispiel von der TTN Webseite:
+Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Ist der Node nahe dem Gateway wird der Spreadingfactor (SF) heruntergeschraubt bspw. von SF10 auf SF7. Damit wird Airtime und Energie gespart. Entfernt sich der Node vom Gateway wird SNR und damit RSSI schlechter. Das System erhöht nun automatisch  den SF um eine bessere Übertragung sicherzustellen.\\[0.3cm]
+Der Einsatz von ADR macht im ATAS System meiner Meinung nach wenig Sinn. Dafür gibt es zwei Gründe
+\begin{itemize}
+\item Die ADR Kommunikation generiert einen Overhead \cite{adroverhead}. Die ADR Kommunikation benötigt jeweils zwei Uplink und eine Downlink Message. 
+\item In der Zeit welche zwischen zwei Uplinks vergeht, kann sich die Umgebung drastisch verändern. Bspw. Der Wanderer hat direkten Sichtkontakt mit dem Gateway. Das System reduziert den Spreadingfactor. 2 Minuten später befindet er sich in einem Waldstück mit einem schlechteren Empfang. Die nun gesendeten Uplink erreichen möglicherweise das Ziel nicht.
+\end{itemize}Meine Empfehlung wäre die Entwicklung eines eigenen ADR Systems. Der SF ist grundsätzlich hoch (SF11-SF12) zu halten um eine Übertragung der Daten zu garantieren. Mittels Auswertung der letzten GPS Punkte könnte das System die Geschwindigkeit der Person erkennen. Bewegt er sich langsam (laufen), könnte die Zeit zwischen den einzelnen Uplinks erhöht werden. Damit sparen wir Energie. Bewegt er sich schneller (Ski Fahren) kann die Zeit reduziert werden. 
+
+\subsection{Regulation}
+Für die Schweiz und in vielen Teilen Europas gilt die Regelung ERC/REC 70-03 \cite{regulations}. Dieses Dokument beschreibt die verwendbaren Frequenzen und die maximale Übertragungsleitung (dbm).
 
 \newpage
 \section{The Things Network}
@@ -465,7 +513,7 @@ TODO WARUM MQTT Technolgie, PRIO 3
 Durch die Wahl vom TTN Netzwerk wurde mir die Datenübertragungsart MQTT quasi aufgezwungen. Wird der TTN Handler nicht selber verwaltet, ist der Zugriff auf die Daten (API) nur per MQTT möglich. Das Protokoll war für mich nicht neu. Während dem Studium konnte ich bereits positive Erfahrung mit MQTT sammeln. Das Protokoll ist einfach zu verstehen und hat sich sehr einfach in mein System eingliedern lassen.
 
 \chapter{Prototyp}
-Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim Aufbau des Prototypen 2 vorgegangen bin.
+Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim des Prototypen 2 vorgegangen bin.
 
 \section{Begründung neuer Prototyp}
 Es gibt diverse Gründe für diesen Schritt
@@ -588,7 +636,6 @@ In der nachfolgenden Übersicht wird die Kommunikationsart zwischen den Komponen
 	{Kommunikationsart Prototyp 2}
 \end{figure}
 
-
 \newpage
 \subsection{Zusammenbau}
 Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert und verlötet resp. angeschraubt. Der Mikrocontroller wurde absichtlich nicht im Zentrum platziert, damit der Zugang zum USB Anschluss frei blieb. Abschließend wurde gemäß Schema die Komponenten untereinander verkabelt.\\
@@ -600,7 +647,6 @@ Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert 
 \end{figure}
 
 \newpage
-
 \section{Software Module}
 Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.\\[0.3cm]
 Pro Hardware Modul wird ein separates Software Modul erstellt.
@@ -612,17 +658,24 @@ Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP korrek
 
 \subsection{Display}
 
-\newpage
-\section{Finalisierung}
-Die Erstellten Softwaremodule werden miteinander verknüpft und die Software fertiggestellt. Abschließend werden einige Testszenarien durchgeführt. 
+\subsection{Abschlussarbeiten}
+Die Erstellten Softwaremodule werden miteinander verknüpft und die Software fertiggestellt.
 
+\newpage
+\section{Testing
+Abschließend werden einige Tests mit dem neuen Tracker durchgeführt.
+
+\section{Energieversorgung}
+TODO, PRIO 1
+
+% ***** TESTING *****
 \chapter{Testing}
 \section{Ablauf Vorgehen}
 Ein Teil des Systemaufbaus aus dem vorgängigen Projekt soll getestet werden. In diesem Kapitel wird genau beschrieben, wie beim Testing des Systems vorgegangen wird.\\[0.3cm]
 In der nächsten Abbildung sind die geplanten Schritte aufgeführt.
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{img/projectFlow_testing.jpg}
+	\includegraphics[width=\textwidth]{img/projectFlow_testing.png}
 	\caption[Flowchart Testing]
 	{Ablauf Testing}
 \end{figure}
@@ -645,7 +698,7 @@ Es muss definiert werden
 		\captionof{figure}{TTN Messages}
 	\end{minipage}
 	
-	\item welche Daten sollen untersucht werden\\[0.3cm]
+	\item welche Daten können untersucht werden\\[0.3cm]
 	Für die Messungen sind mehre Daten von Interesse. Dazu gehören 
 	\begin{itemize}
 		\item Signalstärke
@@ -656,7 +709,7 @@ Es muss definiert werden
 \end{itemize}
 
 \subsection{Schlussfolgerung}
-Abgeleitet aus der vorhergehenden Definitionen ergibt sich die folgende Aufgabenstellung im Bereich Testing. Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut. Anschließend werden mehrere Wanderungen auf verschiedenen Routen durchgeführt. Die Verbindung wird aufgebaut und mittels TTN Dashboard geprüft.
+Abgeleitet aus der vorhergehenden Definitionen ergibt sich die folgende Aufgabenstellung im Bereich Testing. Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut. Anschließend werden mehrere Tests durchgeführt. Die Verbindung wird aufgebaut und mittels TTN Dashboard geprüft.
 
 \newpage
 \section{Standort}
@@ -671,7 +724,7 @@ Ausgehend von den vorangegangen Definitionen muss folgendes definiert werden.
 		Der Standort sollte in der nähe von möglichen Wanderrouten resp. Testbereichen liegen.
 	\end{enumerate}
 	\item Für die Tests sollten mind. 3 Routen/Wanderungen definiert werden. Dies garantiert eine vernünftige Anzahl an Messwerten.
-	\item Auf dem Pfad selbst werden mind. 5 Orte definiert wo die Verbindungstests durchgeführt werden.
+	\item Auf dem Pfad selbst werden Orte definiert wo die Verbindungstests durchgeführt werden.
 \end{itemize}
 
 \newpage
@@ -687,7 +740,7 @@ Der Standort für den LoRa Gateway war schnell gefunden. Ich arbeite momentan al
 
 \newpage
 \subsection{Testregionen}
-Im ersten Teil meiner Arbeit konzentrierte ich mich stark auf den Aufbau des Prototypen. Das Testing hatte für mich eher eine kleinere Priorität. Ein Fehler wie sich später herausstellen sollte. Der Winter ließ, wie sonst nicht üblich, nicht lange auf sich warten. Bereits Mitte Oktober beginn es zu schneien. Wanderrouten welche ich für das Testing verwenden wollte, bspw. der Nordaufstieg Stockhorn, wurden wegen zu hoher Lawinengefahr geschlossen.\\[0.3cm]
+Im ersten Teil meiner Arbeit konzentrierte ich mich stark auf den Aufbau des Prototypen. Das Testing hatte für mich eher eine kleinere Priorität. Ein Fehler wie sich später herausstellen sollte. Der Winter ließ, wie sonst nicht üblich, nicht lange auf sich warten. Bereits Mitte Oktober beginn es zu schneien. Wanderrouten/ Regionen welche ich für das Testing verwenden wollte, bspw. der Nordaufstieg Stockhorn, wurden wegen zu hoher Lawinengefahr geschlossen.\\[0.3cm]
 Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglich und soweit gefahrlos passierbar waren.
 \begin{tabularx}{\textwidth}{ l|X }
 	\textbf{Niederhorn} & \textbf{Bild} \\ \hline
@@ -695,6 +748,7 @@ Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglic
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/niederhorn.png}\vspace{8pt}} \\ \hline
 	Höhenunterschied zum Gateway&\parbox[c]{1em}{
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/niederhorn_altitude.png}\vspace{8pt}} \\ \hline
+	Mittlere Distanz zum Gateway & Xm \\ \hline
 \end{tabularx}
 
 \newpage
@@ -704,53 +758,120 @@ Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglic
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/heiligenschwendi.png}\vspace{8pt}} \\ \hline
 	Höhenunterschied zum Gateway&\parbox[c]{1em}{
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/heiligenschwendi_altitude.png}\vspace{8pt}} \\ \hline
+	Mittlere Distanz zum Gateway & Xm \\ \hline
 \end{tabularx}
 
 \newpage
 \section{Aufbau}
 \subsection{Gateway}
-\includegraphics[width=0.6\textwidth]{img/gateway/gateway.jpg}
+In diesem Abschnitt ist der Aufbau des LoRaWan Gateways beschrieben. Der Gateway besteht aus den folgenden Komponenten
+\begin{itemize}
+	\item A: Raspberry Pi 3
+	\item B: IMST iC880a Board \cite{ic880}
+	\item C: IP67-Box
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{img/gateway/gateway.png}\\[0.3cm]
+	\caption[Gateway]
+	{Gateway}
+\end{figure}
+Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub und Wasser geschützt. Leider habe ich auch hier zu wenig Zeit in die Planung investiert. Wie sollte ich den Pi mit Strom versorgen? Ein zusätzlicher Anschluss musste gebohrt werden um das Kabel verlegen zu können. Um nur ein Kabel verlegen zu müssen, habe ich mir einen POE Splitter organisiert. Damit lässt sich die Energieversorgung wie auch die Datenübertragung über ein einzelnes CAT. 6 Ethernetkabel mit RJ-45 Steckern sicherstellen.
+
+% TODO BILD
+
+\subsubsection{Installation}
+Die Webressourcen der TTN Community von Zürich waren bei der Installation eine große Hilfe \cite{ttnzürich}. Das Raspberry PI und das iC880 Board wurden gemäß der Webseite verkabelt.\\[0.3cm]
+Die Community hat ein sehr simples Installationsskript zusammengestellt um die Gateway Software automatisiert zu installieren. Folgende Schritte wurden auf dem Raspberr PI durchgeführt.
+\lstset{language=C++}
+\begin{lstlisting}
+// update software
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+
+// set local & timezone
+sudo dpkg-reconfigure locales // de_CH
+sudo dpkg-reconfigure tzdata // Europe/Zurich
+
+// Enable SPI, Interfacing options -> P4 SPI
+sudo raspi-config
+
+// Reboot
+reboot
+
+// Install Gateway Software
+git clone https://github.com/ttn-zh/ic880a-gateway.git ~/ic880a-gateway
+cd ~/ic880a-gateway
+sudo ./install.sh spi
+\end{lstlisting}
+Alles in allem eine sehr einfache Prozedur die nicht viel zeit in Anspruch genommen hat. Anhand der Mac Adresse des Raspberry PI wird im Abschluss des Skripts eine EUI generiert.
+\newpage
+\subsubsection{TTN Registrierung}
+Mit der vorher generierten EUI kann der Gateway nun auf dem TTN Dashboard registriert werden.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/gateway/ttn_gateway.png}
+	\caption[TTN Dashboard Gateway]
+	{TTN Dashboard Gateway}
+\end{figure}
+\noindent
+Der Gateway ist nun online und leitet Datenpakete weiter.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/gateway/ttn_gateway_done.png}
+	\caption[TTN Dashboard Gateway Registriert]
+	{TTN Dashboard Gateway Registriert}
+\end{figure}
 
 \newpage
 \section{Messungen}
-Die vorgängig definierten Routen werden abgelaufen und die Messungen werden an den definierten Standorten durchgeführt.
+Es werden verschiedene Testszenarien definiert.
+
+\subsection{Praxistest}
+\subsubsection{Vorgehen}
+Das ATAS System soll geprüft werden ob es praxistauglich ist. Um dies zu überprüfen werden in den vorher definierten Testregionen Messungen durchgeführt. Es soll getestet werden, wie zuverlässig die Übertragung funktioniert.\\[0.3cm]
+Für diesen Test werden die folgenden Daten erhoben
+\begin{enumerate}
+	\item Distanz zwischen Sender und Empfänger
+	\item Signal to Noise Ratio (SNR)
+	\item RSSI
+	\item Sichtverhältnisse zwischen Sender und Empfänger
+\end{enumerate}	
+Die erhobenen Daten werden nach Sichtverhältnissen kategorisiert. Messungen sollen in 3 Kategorien eingeteilt werden.
+\begin{enumerate}
+	\item A: Direkter Sichtkontakt
+	\item B: Wenig Sichtkontakt resp. teilweise blockiert. Bspw. durch Bewaldung oder Steinformationen
+	\item C: kein ein Sichtkontakt zwischen Empfänger und Sender.
+\end{enumerate}
+Die Tests werden mit einem fixen Einstellungen durchgeführt
+\begin{enumerate}
+	\item Spreadingfactor SF12
+	\item Bandbreite 125KHz
+	\item Coding Rate 4/5
+\end{enumerate}
+\newpage
+\subsubsection{Resultate}
+TODO, PRIO 1
+
+\newpage
+\subsection{Spreadingfactor}
+Es soll geprüft werden, wie sich der Spreadingfactor auf die Übertragung auswirkt.
+Für diesen Test werden die folgenden Daten erhoben
+\begin{enumerate}
+	\item Spreading Factor
+	\item Signal to Noise Ratio
+	\item RSSI
+\end{enumerate}
+
+\subsection{Isolation Schnee}
 
 \section{Auswertung}
-Die erhobenen Daten werden analysiert und kategorisiert. Messungen sollen in 3 Kategorien eingeteilt werden.
-\begin{enumerate}
-	\item Direkter Sichtkontakt
-	\item Wenig Sichtkontakt resp. teilweise blockiert. Bspw. durch Bewaldung oder Steinformationen
-	\item kein ein Sichtkontakt zwischen Empfänger und Sender.
-\end{enumerate}
+
+\subsection{Praxistest}
 
 
-\subsection{Installation Software}
-Die Installation der Gateway Software wird von TTN bereitgestellt und von der Community aktiv verwaltet und verbessert. Die TTN Community Gruppe aus Zürich hat ein sehr simples Installationsskript zusammengestellt um die Gateway Software automatisiert zu installieren.
-
-Vorgehen auf dem Gateway
-\begin{enumerate}
-	\item Paketdefinitionen geupdated
-	
-\end{enumerate}
-Code:
-apt-get update
-apt-get upgrade
-
-%sudo dpkg-reconfigure locales // de_CH
-sudo dpkg-reconfigure tzdata // Europe/Zurich
-
-sudo raspi-config // Enable SPI
-
-git clone https://github.com/ttn-zh/ic880a-gateway.git ~/ic880a-gateway
-cd ~/ic880a-gateway
-
-change EUI Source to Wireless
-%GATEWAY_EUI_NIC="wlan0"
-
-sudo ./install.sh spi
-
-
-
+\chapter{Abschluss}
 \chapter*{Selbständigkeitserklärung}
 \label{chap:selbstaendigkeitserklaerung}
 
@@ -789,6 +910,11 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 \listoffigures
 
 \begin{thebibliography}{1}
+	\bibitem{lorawan_classes} \url{https://www.rs-online.com/designspark/learning-lorawan-basics} 1.2.2019
+	\bibitem{adroverhead} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/ADR} 1.2.2018
+	\bibitem{regulations} \url{http://www.erodocdb.dk/Docs/doc98/official/pdf/REC7003e.pdf} 1.2.2018
+	\bibitem{ttnzürich} \url{https://github.com/ttn-zh/ic880a-gateway/wiki} 1.2.2018
+	\bibitem{ic880} \url{https://wireless-solutions.de/products/radiomodules/ic880a} 1.2.2018
 	\bibitem{kammerlander} \url{https://www.bergwelten.com/a/die-schoensten-zitate-rund-ums-bergsteigen} 1.2.2018
 	\bibitem{sacaccident} \url{http://www.sac-cas.ch/unterwegs/sicherheit/bergnotfallstatistik.html} 1.2.2018
 	\bibitem{wavelengthTTN} \url{https://www.thethingsnetwork.org/forum/t/antenna-length-for-868-and-433-mhz/5378} 2.1.2018
@@ -802,5 +928,6 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 	\bibitem{espidfinstallation} \url{https://dl.espressif.com/doc/esp-idf/latest/get-started/index.html} 27.12.2017
 	\bibitem{espidfdriver} \url{https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers} 27.12.2017
 \end{thebibliography}
+
 
 \end{document}
