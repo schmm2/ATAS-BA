@@ -1,0 +1,360 @@
+\ifglsentryexists{ATAS}{}%
+{%
+\gls@defglossaryentry{ATAS}%
+{%
+name={ATAS},%
+sort={ATAS},%
+type={main},%
+first={ATAS},%
+firstplural={ATASs},%
+text={ATAS},%
+plural={ATASs},%
+description={Aplinist Tracking \& Alerting System},%
+descriptionplural={Aplinist Tracking \& Alerting System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{TTN}{}%
+{%
+\gls@defglossaryentry{TTN}%
+{%
+name={TTN},%
+sort={TTN},%
+type={main},%
+first={TTN},%
+firstplural={TTNs},%
+text={TTN},%
+plural={TTNs},%
+description={The Things Network, LoraWan Netzwerk},%
+descriptionplural={The Things Network, LoraWan Netzwerk},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Blockierung}{}%
+{%
+\gls@defglossaryentry{Blockierung}%
+{%
+name={Blockierung},%
+sort={Blockierung},%
+type={main},%
+first={Blockierung},%
+firstplural={Blockierungs},%
+text={Blockierung},%
+plural={Blockierungs},%
+description={Als Blockierung werden alle Notfälle bezeichnet, bei denen BerggängerInnen infolge Erschöpfung, Überforderung, Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen oder abzubrechen. In der Regel sind die Betroffenen unverletzt.},%
+descriptionplural={Als Blockierung werden alle Notfälle bezeichnet, bei denen BerggängerInnen infolge Erschöpfung, Überforderung, Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen oder abzubrechen. In der Regel sind die Betroffenen unverletzt.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mqtt}{}%
+{%
+\gls@defglossaryentry{mqtt}%
+{%
+name={MQTT},%
+sort={MQTT},%
+type={main},%
+first={MQTT},%
+firstplural={MQTTs},%
+text={MQTT},%
+plural={MQTTs},%
+description={Message Queuing Telemetry Transport)},%
+descriptionplural={Message Queuing Telemetry Transport)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bergnotfall}{}%
+{%
+\gls@defglossaryentry{bergnotfall}%
+{%
+name={Bergnotfall},%
+sort={Bergnotfall},%
+type={main},%
+first={Bergnotfall},%
+firstplural={Bergnotfalls},%
+text={Bergnotfall},%
+plural={Bergnotfalls},%
+description={Der Begriff „Bergnotfall“ umfasst alle Vorkommnisse, bei denen BerggängerInnen die Hilfe der Bergrettungsdienste beanspruchen. Dies betrifft auch Erkrankungen und Evakuationen von unverletzten Personen},%
+descriptionplural={Der Begriff „Bergnotfall“ umfasst alle Vorkommnisse, bei denen BerggängerInnen die Hilfe der Bergrettungsdienste beanspruchen. Dies betrifft auch Erkrankungen und Evakuationen von unverletzten Personen},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{AppEUI}{}%
+{%
+\gls@defglossaryentry{AppEUI}%
+{%
+name={AppEUI},%
+sort={AppEUI},%
+type={main},%
+first={AppEUI},%
+firstplural={AppEUIs},%
+text={AppEUI},%
+plural={AppEUIs},%
+description={Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen},%
+descriptionplural={Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{DevEUI}{}%
+{%
+\gls@defglossaryentry{DevEUI}%
+{%
+name={DevEUI},%
+sort={DevEUI},%
+type={main},%
+first={DevEUI},%
+firstplural={DevEUIs},%
+text={DevEUI},%
+plural={DevEUIs},%
+description={Eindeutige ID eines Endgerätes.},%
+descriptionplural={Eindeutige ID eines Endgerätes.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{DevAddr}{}%
+{%
+\gls@defglossaryentry{DevAddr}%
+{%
+name={DevAddr},%
+sort={DevAddr},%
+type={main},%
+first={DevAddr},%
+firstplural={DevAddrs},%
+text={DevAddr},%
+plural={DevAddrs},%
+description={Logische Geräte Adresse, analog einer IP Adresse in einem IP Netzwerk.},%
+descriptionplural={Logische Geräte Adresse, analog einer IP Adresse in einem IP Netzwerk.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{NetSKey }{}%
+{%
+\gls@defglossaryentry{NetSKey }%
+{%
+name={NetSKey},%
+sort={NetSKey},%
+type={main},%
+first={NetSKey},%
+firstplural={NetSKeys},%
+text={NetSKey},%
+plural={NetSKeys},%
+description={Wird für die Verschlüsselung der Kommunikation zwischen Endgerät und Netzwerkanbieter bspw. TTN verwendet. Mittels Schlüssel kann die Datenintegrität sichergestellt werden d.H. Manipulierte Nachrichten werden erkannt},%
+descriptionplural={Wird für die Verschlüsselung der Kommunikation zwischen Endgerät und Netzwerkanbieter bspw. TTN verwendet. Mittels Schlüssel kann die Datenintegrität sichergestellt werden d.H. Manipulierte Nachrichten werden erkannt},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{AppSKey }{}%
+{%
+\gls@defglossaryentry{AppSKey }%
+{%
+name={AppSKey},%
+sort={AppSKey},%
+type={main},%
+first={AppSKey},%
+firstplural={AppSKeys},%
+text={AppSKey},%
+plural={AppSKeys},%
+description={Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite {ttnsecurity}},%
+descriptionplural={Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite {ttnsecurity}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Downlink}{}%
+{%
+\gls@defglossaryentry{Downlink}%
+{%
+name={Downlink},%
+sort={Downlink},%
+type={main},%
+first={Downlink},%
+firstplural={Downlinks},%
+text={Downlink},%
+plural={Downlinks},%
+description={Kommunikation vom Gateway zu Endgerät},%
+descriptionplural={Kommunikation vom Gateway zu Endgerät},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Uplink}{}%
+{%
+\gls@defglossaryentry{Uplink}%
+{%
+name={Uplink},%
+sort={Uplink},%
+type={main},%
+first={Uplink},%
+firstplural={Uplinks},%
+text={Uplink},%
+plural={Uplinks},%
+description={Kommunikation vom Endgerät zum Gateway},%
+descriptionplural={Kommunikation vom Endgerät zum Gateway},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

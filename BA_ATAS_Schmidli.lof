@@ -5,26 +5,30 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Atas Schema Grob}}{11}{figure.caption.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces System\IeC {\"u}bersicht Detail}}{15}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Tracker Detail}}{16}{figure.caption.16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Gateway Detail}}{17}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces TTN Detail}}{18}{figure.caption.18}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces TTN Detail}}{19}{figure.caption.19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces System\IeC {\"u}bersicht Detail}}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Tracker Detail}}{16}{figure.caption.17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Gateway Detail}}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces TTN Detail}}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces MQTT Struktur}}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces TTN Detail}}{20}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces OTAA Ablauf}}{24}{figure.caption.22}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces LoRaWan Class A}}{26}{figure.caption.25}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces LoRaWan Class B}}{26}{figure.caption.27}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces LoRaWan Class C}}{27}{figure.caption.29}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces OTAA Ablauf}}{26}{figure.caption.25}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LoRaWan Class A}}{28}{figure.caption.28}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces LoRaWan Class B}}{28}{figure.caption.30}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces LoRaWan Class C}}{29}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Prototyping Ablauf}}{32}{figure.caption.31}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Flowchart Prototyp 2}}{33}{figure.caption.32}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Prototyp2 Schema}}{38}{figure.caption.33}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Kommunikationsart Prototyp 2}}{39}{figure.caption.34}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Prototyp 2}}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Prototyping Ablauf}}{34}{figure.caption.34}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Flowchart Prototyp 2}}{35}{figure.caption.35}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Prototyp2 Schema}}{40}{figure.caption.36}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Kommunikationsart Prototyp 2}}{41}{figure.caption.37}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Prototyp 2}}{42}{figure.caption.38}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces LMIC Problem}}{44}{figure.caption.39}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Notfallalarm}}{46}{figure.caption.45}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Klassendiagramm}}{47}{figure.caption.46}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Flowchart Testing}}{43}{figure.caption.37}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces TTN Messages\relax }}{44}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Gateway}}{49}{figure.caption.38}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces TTN Dashboard Gateway}}{51}{figure.caption.41}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces TTN Dashboard Gateway Registriert}}{51}{figure.caption.42}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Flowchart Testing}}{49}{figure.caption.49}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces TTN Messages\relax }}{50}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Gateway}}{55}{figure.caption.50}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces TTN Dashboard Gateway}}{57}{figure.caption.53}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces TTN Dashboard Gateway Registriert}}{57}{figure.caption.54}
 \addvspace {10\p@ }

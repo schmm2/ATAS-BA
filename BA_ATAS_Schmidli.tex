@@ -25,7 +25,8 @@
 \keepXColumns
 \usepackage{listings}
 \usepackage{csquotes}
-
+\usepackage{subcaption}
+\usepackage{glossaries}
 
 % clear default
 \fancyhead{}
@@ -46,35 +47,17 @@
 
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
 
-% Glossar
-\newglossaryentry{ATAS}
-{
-    name={ATAS},
-    description={Aplinist Tracking \& Alerting System}
-}
-\newglossaryentry{entry}
-{
-	name={TTN},
-	description={The Things Network, LoraWan Netzwerk}
-}
-
-\newglossaryentry{Blockierung}{name={Blockierung},description={Als Blockierung werden alle Notfälle bezeichnet, bei denen BerggängerInnen infolge Erschöpfung, Überforderung,
-		Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen
-		oder abzubrechen. In der Regel sind die Betroffenen unverletzt.}}
-
-\newglossaryentry{mqtt}{name={mqtt},description={Message Queuing Telemetry Transport)}}
-
 \theoremstyle{definition}
 \newtheorem{exmp}{Beispiel}[subsection]
 
-\newglossaryentry{bergnotfall}{name={bergnotfall},description={Der Begriff „Bergnotfall“ umfasst alle Vorkommnisse, bei denen BerggängerInnen die Hilfe der Bergrettungsdienste beanspruchen. Dies betrifft auch Erkrankungen und Evakuationen von unverletzten Personen}}
-	
-\makeglossaries
+% Generate the glossary
+\makeglossaries	
 
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{1}
 
 \begin{document}
+
 \pagestyle{empty} %Keine Kopf-/Fusszeilen auf den ersten Seiten.
 \begin{titlepage}
 \begin{center}
@@ -89,7 +72,7 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
 \HRule \\[0.4cm]
 {\huge Alpinist Tracking \& Alerting System}\\[0.3cm]
-{\huge \bfseries  ATAS}
+{\huge \bfseries  }
 \HRule \\[2cm]
 
 \includegraphics[width=0.2\textwidth]{img/atas_logo.png}\\[2.5cm]    
@@ -126,26 +109,19 @@ Bern, {\large \today}
 
 \tableofcontents
 
-% SPI Schnittstelle analyse, was schickt die Lorwan library
-%- Bitrate + laufzeit Analyse
-%- Minimierung 
-
-
-% Testdaten, Vorbereitung SFP7-SFP12, 2
 % Testszenarien, Wanderungen dokumentieren 1
 
 % LoraWan Airtime, 1
 % Airtime, Payload optimierung
 
-% Prototyp Display, 3
-
 % Technologien, Alternative, Warum LORA? 2
-% Technologien, MQTT, 
-
 % Testing, Batterielaufzeit
 
 
 % OK OK OK 
+% Technologien, MQTT, 
+% Testdaten, Vorbereitung SFP7-SFP12, 2
+% Prototyp Display, 3
 % LoraWan ADR, 3
 % Testing erweitern was soll getestet werden 1
 % Management Summary, 1
@@ -159,9 +135,8 @@ Bern, {\large \today}
 
 
 \chapter*{Management Summary}
-% 
 Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution transformiert. Waschmaschinen werden intelligent, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfällen in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten sogar tödlich \cite{sacaccident}. Welche Fortschritte sind zu erwarten um in der Bergwelt das Risiko zu minimieren? Wie schreitet in der Bergwelt die Digitalisierung voran? Nur selten wird darüber gesprochen. Der Fokus der großen Konzerne, die im Bereich IoT und Mobile Computing aktiv sind, liegt auf den Bereichen in denen ein grosser Umsatz zu erwarten ist. Wäre es nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert und wie viele Leben gerettet werden?\\[0.3cm]
-Genau bei diesem Punkt setzt das ATAS Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
+Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
 
 \chapter*{Motivation}
 21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war unser Lohn.
@@ -207,26 +182,27 @@ Diese Bachelor Thesis baut auf den Erkenntnissen und Resultaten aus dem Projekt 
 Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute System intensiv zu testen und zu verbessern. Die Arbeit umfasst die folgenden Aufgaben.
 \begin{itemize}
 \item
-Der Tracker soll in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analyisert.
+Der Tracker soll in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analysiert.
 \item Der Tracker Prototyp soll verbessert werden. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können ob das erdachte System praxistauglich ist
 \item
 Die während dieser Arbeit geleisteten Arbeiten sollen in einem Bericht dokumentiert werden.
+\item Das Wissen rund um die verwendeten Technologien soll vertieft werden.
 \end{itemize}
 
 \section{Rahmenbedingungen}
 Die Rahmenbedingungen dieses Projektes wurden gemeinsam mit dem Betreuer definiert
 \begin{itemize}
-\item Die Bachelorarbeit baut auf der Arbeits des Projekt 2 auf. Die erstellete Hard und Software wird weiterverwendet.
-\item The Things Network dient als Plattform für die Kommunikation unter den Komponenten.
+\item Die Bachelorarbeit baut auf der Arbeits des Projekt 2 auf. Die erstellte Hard und Software wird weiterverwendet.
+\item The Things Network dient als Plattform für die LoRaWan Backen
 \item Als Programmiersprache soll C/C++ verwendet werden
-\item Auf den Einsatz eines Betriebsystememes auf dem Tracker Node soll verzichtet werden
+\item Auf den Einsatz eines Betriebsystemes soll zugunsten des Energieverbrauchs auf dem Tracker Node verzichtet werden
 \end{itemize}
 
 \section{Technologien}
-Sie als Leser denken nun vielleicht: "Das ist überflüssig. Ich habe doch mein Handy für so etwas? Schreib doch eine App!". Diese Aussage mag auf die touristischen Wander- und Skigebiete zutreffen. Der Empfang ist meistens wunderbar. Verlasssen wir diese 'sicheren' Orte und bewegen uns aber in höheren Lagen, wird der Empfang mit dem Handy immer schlechter oder existiert gar nicht. \bigskip \\
-Aus diesem Grund mussten für dieses Projekt andere Technologien gefunden werden. In diesem Projekt werden folgende Technologien eingesetzt:
-MQTT, LoRa, LoRaWAN\bigskip \\
-Die verwendeten Technologien und der Grund für deren Einsatz werden in einem späteren Abschnitt genauer erklärt.
+Sie als Leser denken nun vielleicht: "Das ist überflüssig. Ich habe doch mein Handy für so etwas? Schreib doch eine App!". Diese Aussage mag auf die touristischen Wander- und Skigebiete zutreffen. Der Empfang ist meistens wunderbar. Verlassen wir diese 'sicheren' Orte und bewegen uns aber in höheren Lagen, wird der Empfang mit dem Handy immer schlechter oder existiert gar nicht. \bigskip \\
+Aus diesem Grund mussten für dieses Projekt andere Technologien gefunden werden. In diesem Projekt werden folgenden Technologien eingesetzt:
+MQTT, LoRa, LoRaWAN, The Things Network\bigskip \\
+Die verwendeten Technologien und der Grund für deren Einsatz werden im Kapitel 'Technologien ' genauer erklärt.
 
 \section{Anwendungsfälle}
 Dieses Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
@@ -271,19 +247,7 @@ Rettungsdienste wie bspw. die Rega oder die AirGlacier. Spitäler oder die lokal
 Das ATAS System besteht aus den nachfolgenden Komponenten. Komponenten sind als Hardware und Software zu verstehen.
 \subsubsection{Tracker}
 Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend genannt Tracker. Der Alpinist trägt den Tracker bei sich bspw. in einem Rucksack.\bigskip \\ 
-Der Tracker verfügt über ein Display, Taste, GPS Modul, Kommunikationsmodul (Lora) und ein Lautsprecher.
-\begin{itemize}
-\item
-Taste: Mit dem Druck auf den Knopf können die Überwacher über eine Notsituation aufmerksam gemacht werden. Bspw. Wenn der Alpinist einen Unfall hatte und nun bewegungsunfähig ist.
-\item
-Lautsprecher: Über den Lautsprecher kann der Alpinist über eine Gefahrenquelle mit einem akustischen Signal aufmerksam gemacht werden. Bspw. Wenn sich der Alpinist in einem Bereich am Berg mit erhöhter Gefahr für Lawinen aufhält. Der Lautsprecher dient zur Information, \textbf{dass ein Problem besteht}.
-\item
-Display: Über ein Display können mehr Informationen zum Tracker und den Gefahrenzonen angezeigt werden. Das Display dient zur Information, \textbf{was für ein Problem besteht}.
-\item
-GPS Modul: Der Tracker verfügt über ein GPS Modul. Mit dem GPS Modul kann die Position des Tracker auf der Erde ermittelt werden.
-\item 
-Lora Modul: Mittels Lora Modul können Daten an einen Empfänger, nachfolgend \textbf{Atas-Gateway} genannt, gesendet werden.
-\end{itemize}
+Der Tracker verfügt über ein Display, Taste, GPS Modul, Kommunikationsmodul und ein Lautsprecher.
 
 \subsubsection{Gateway}
 Ein Gerät welches mit den Trackern bidirektional kommuniziert. Der Gateway wird an einem Ort nahe den Bergen installiert. Als mögliche Orte kommt ein Dorf im Tal oder eine Talstation in Frage.\bigskip \\
@@ -306,6 +270,16 @@ Die Notfalldienste resp. Überwacher nutzen eine Webapp zum interagieren mit dem
 \subsubsection{Business Logik}
 Die BusinessLogik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Broker und dem Gateway zum Tracker.
 
+\subsection{Begriffe}
+\subsubsection{Gefahrenzonen}
+Wie in der Einleitung beschrieben, stellt der Schweizer Alpenclub Informationen zu Rettungseinsätzen zur Verfügung. Aufgrund der Statistiken wurden die folgenden Gefahren identifiziert vor welchen das ATAS System informieren soll.
+\begin{itemize}
+	\item Lawinen
+	\item Steinschlag
+	\item Spalte, bspw. Gletscher
+	\item Schneestürme
+\end{itemize}
+
 \newpage
 \chapter{Systembeschreibung - Detail}
 Die vorhergegangene grobe Architekturbeschreibung gibt einen guten ersten Überblick über das System. Technische Details zu  den verwendeten Technologien oder den genauen Fluss der Kommunikation ist nicht ersichtlich. In diesem Abschnitt soll nun intensiv auf diese Thematik eingegangen werden.\\[0.3cm]
@@ -322,21 +296,26 @@ Die Komponenten werden in 2 Kategorien eingeteilt. Komponenten mit einem blauen 
 \newpage
 
 \section{Tracker}
-Wie in der untenstehenden Grafik ersichtlich, besteht der Tracker aus mehreren Komponenten/Modulen. Welche Komponenten verbaut und wie diese untereinander kommunizieren, wird im Kapitel 'Prototyp' genauer behandelt. Der Tracker besteht aus einem GPS Modul, einer Batterie, einem Notfallknopf, einem Lautsprecher, einem Display und einem Lora Modul.
+Wie in der untenstehenden Grafik ersichtlich, besteht der Tracker aus mehreren Komponenten/Modulen. Welche Komponenten verbaut und wie diese untereinander kommunizieren, wird im Kapitel 'Prototyp' genauer behandelt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Tracker_BA.png}
 	\caption[Tracker Detail]
 	{Tracker Detail}
 \end{figure}
-\noindent
-Die Komponenten haben die folgenden Funktionen und Aufgaben\\[0.3cm]
-\textbf{Mikocontroller:} Steuert die Komponenten\\[0.3cm] 
-\textbf{GPS Modul:} Ermittlung der Position des Trackers via GPS\\[0.3cm]
-\textbf{Notfallknopf:} Aktiviert den Notfallmodus\\[0.3cm]
-\textbf{Lora Modul:} Übermittelt die Positionsdaten per Lora und ob ein Notfall vorliegt. \\Empfang von Gefahrenzoneninformationen per Lora\\[0.3cm]
-\textbf{Display:} Informiert den Alpinist über mögliche Gefahrenquellen\\[0.3cm]
-\textbf{Lautsprecher: }Informiert den Alpinisten über mögliche Gefahrenquellen mittels Signalton
+
+\begin{itemize}
+	\item
+	Schalter: Mit dem Druck auf den Knopf können die Überwacher über eine Notsituation aufmerksam gemacht werden. Bspw. Wenn der Alpinist einen Unfall hatte und nun bewegungsunfähig ist.
+	\item
+	Lautsprecher: Über den Lautsprecher kann der Alpinist über eine Gefahrenquelle mit einem akustischen Signal aufmerksam gemacht werden. Bspw. Wenn sich der Alpinist in einem Bereich am Berg mit erhöhter Gefahr für Lawinen aufhält. Der Lautsprecher dient zur Information, \textbf{dass ein Problem besteht}.
+	\item
+	Display: Über ein Display können mehr Informationen zum Tracker und den Gefahrenzonen angezeigt werden. Das Display dient zur Information, \textbf{was für ein Problem besteht}.
+	\item
+	GPS Modul: Der Tracker verfügt über ein GPS Modul. Mit dem GPS Modul kann die Position des Tracker auf der Erde ermittelt werden.
+	\item 
+	Lora Modul: Mittels Lora Modul können Daten an einen Empfänger, nachfolgend \textbf{Atas-Gateway} genannt, gesendet werden.
+\end{itemize}
 
 \newpage
 \section{Gateway}
@@ -368,6 +347,16 @@ provies a MQTT Broker to access the data more easily.\\[0.3cm]
 \end{figure}
 
 \newpage
+\subsection{MQTT}
+Für das ATAS Projekt wurde die nachfolgende MQTT Struktur verwendet. Einige Topics sind durch das TTN fest vergeben und konnten nicht selber gewählt werden.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/ATAS_MQTT_Topic_BA.png}
+	\caption[MQTT Struktur]
+	{MQTT Struktur}
+\end{figure}
+
+\newpage
 \subsection{CloudMQTT}
 Der MQTT Broker des TTN Netzwerkes bietet nur die Möglichkeiten die Daten via MQTT abzurufen. Ein Zugriff via MQTT über Websockets wird nicht unterstützt. Im Internet fand ich recht schnell den Service 'Cloud' MQTT.   CloudMQTT spiegelt den TTN MQTT Broker, bietet aber zusätzlich ein Websocket Interface. Atas-Web und Atas-Service können nun via CloudMQTT Daten an die Tracker senden und empfangen.\\[0.3cm]
 Alle Daten welche zu CloudMQTT publiziert werden, werden nun auch automatisch zum TTN MQTT Broker publiziert (Published). Alle MQTT Topics welche vom CloudMQTT abonniert werden, werden auch vom TTN MQTT Broker abonniert (Subscribe).  \\[0.3cm]
@@ -390,21 +379,30 @@ TODO, PRIO 2
 TODO, PRIO 2
 
 \chapter{Technologien}
-\section{LoraWan}
-Um das Projekt durchzuführen, musste ich mir mehr Wissen zum Thema LoraWan aneignen. Das im Projekt 2 aufgebaute System ist lauffähig, verwendet aber gewisse Standardeinstellungen welche ich einfach übernommen habe. Das Wissen, ob und wie man das System optimieren könnte ist nicht vorhanden.
-\subsection{Begriffserklärung}
-Zunächst ist es nötig einige Begriffe aus dem LoraWan Umfeld zu verstehen\\[0.5cm]
-\begin{tabularx}{\textwidth}{ l|X }
-	\textbf{Begriff} & \textbf{Erklärung} \\ \hline
-	Endgerät & LoraWan Endgerät. Atas-Node ist ein LoraWan Endgerät.\\ \hline
-	AppEUI& Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen.\\ \hline
-	DevEUI& Eindeutige ID eines Endgerätes. \\ \hline
-	DevAddr & Logische Geräte Adresse, analog einer IP Adresse in einem IP Netzwerk.\\ \hline
-	NetSKey & Wird für die Verschlüsselung der Kommunikation zwischen Endgerät und Netzwerkanbieter bspw. TTN verwendet. Mittels Schlüssel kann die Datenintegrität sichergestellt werden d.H. Manipulierte Nachrichten werden erkannt.\\ \hline
-	AppSKey & Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite{ttnsecurity}\\ \hline
-	Downlink & Kommunikation vom Gateway zu Endgerät\\ \hline
-	Uplink & Kommunikation vom Endgerät zum Gateway
-\end{tabularx}
+In diesem Kapitel möchte ich auf die eingesetzten genauer Technologien eingehen. Ich werde beschreiben wofür diese eingesetzt werden und weshalb ich mich gerade für diese Technologien entschieden habe.
+
+\section{LoraWan \& LoRa}
+Wer sich mit LoRa beschäftigt stößt früher oder später auf den Begriff LoRaWan. LoRaWan ist ein Protokoll welches auf LoRA als Übertragungsart aufsetzt. Diese beiden Begriffe werden hier gemeinsam analysiert. Um das Projekt durchzuführen, musste ich mir mehr Wissen zum Thema LoRA \& LoraWan aneignen. Das im Projekt 2 aufgebaute System ist lauffähig, verwendet aber gewisse Standardeinstellungen welche ich einfach übernommen habe. Das Wissen, ob und wie man das System optimieren könnte war nicht vorhanden.
+\subsection{Vorteile}
+\begin{itemize}
+	\item Durch bereits eingebaute Sicherheitsmechanismen in LoRaWan sind die übertragenen Daten geschützt
+	\item Durch den kleinen Energiebedarf halten Batteriebetriebene Geräte länger
+	\item Die Kosten für die Installation eines LoRaWan Gateways sind gering +- 300.-
+	\item Grosse Reichweite in nicht bebauten Gebiten (+-15km)
+	\item Geringe Störanfälligkeit durch LoRa Chrip 
+\end{itemize}
+
+\subsection{Nachteile}
+
+\subsection{Verbreitung}
+TODO, PRIO 3
+SWISSCOM
+
+\subsection{Airtime \& Duty Cycle}
+TODO, PRIO 2
+
+\subsubsection{Spreading Factor}
+TODO, PRIO 2
 
 \newpage
 \subsection{Endgerät Verbindungsmethoden}
@@ -447,9 +445,6 @@ Ein Endgerät besitzt zwei Zähler (FCntUp, FCntDown). Die Zähler werden bei ei
 Wird eine Reply Attacke durchgeführt d.H. ein Paket nochmals gesendet, wird dieses Paket vom System verworfen. Dies geschieht deshalb, weil das System bereits eine Nachricht mit dem gleichen Framecounter erhalten hat.\\[0.3cm]
 Diese zusätzliche Information wird mir beim Testen der Übertragung überaus nützlich sein. Anhand der Nummerierung, kann sehr schnell erkannt werden, ob ein Paket nicht sauber empfangen werden konnte. Bspw. Erhalten wir die Pakete 4,5,7 $\rightarrow$ Paket 6 wurde nicht korrekt übertragen.
 
-\subsection{Airtime \& Spreadingfactor}
-TODO
-
 \newpage
 \subsection{Geräteklassen}
 LoRaWan Endgeräte werden in drei Geräteklassen unterteilt \cite{lorawan_classes}. Alle Geräte unterstützen eine bidirektionale Kommunikation. Es können also Daten zum Gateway gesendet wie auch empfangen werden.
@@ -466,7 +461,7 @@ TODO eigenes BILD\\
 Werden Daten außerhalb dieses Zeitfensters geschickt, werden diese nie vom Endgerät empfangen.
 
 \subsubsection{Klasse B}
-Ein Klasse B Gerät kann zusätzliche Download Receive Fenster zu definierten Zeiten öffnen. Der Gateway sendet ein Datenpaket (Beacon) an die Endgeräte um die Zeiten zu synchronisieren. Sind die Zeiten synchronisiert, weiss das LoRaWan Netzwerk ganz genau wann ein Endgerät bereit ist Daten zu empfangen. 
+Ein Klasse B Gerät kann zusätzliche Download Receive Fenster zu definierten Zeiten öffnen. Der Gateway sendet ein Datenpaket (Beacon) an die Endgeräte um die Zeiten zu synchronisieren. Sind die Zeiten synchronisiert, weiß das LoRaWan Netzwerk ganz genau wann ein Endgerät bereit ist Daten zu empfangen. 
 
 \begin{figure}[H]
 	\centering
@@ -500,7 +495,7 @@ Der Einsatz von ADR macht im ATAS System meiner Meinung nach wenig Sinn. Dafür 
 \end{itemize}Meine Empfehlung wäre die Entwicklung eines eigenen ADR Systems. Der SF ist grundsätzlich hoch (SF11-SF12) zu halten um eine Übertragung der Daten zu garantieren. Mittels Auswertung der letzten GPS Punkte könnte das System die Geschwindigkeit der Person erkennen. Bewegt er sich langsam (laufen), könnte die Zeit zwischen den einzelnen Uplinks erhöht werden. Damit sparen wir Energie. Bewegt er sich schneller (Ski Fahren) kann die Zeit reduziert werden. 
 
 \subsection{Regulation}
-Für die Schweiz und in vielen Teilen Europas gilt die Regelung ERC/REC 70-03 \cite{regulations}. Dieses Dokument beschreibt die verwendbaren Frequenzen und die maximale Übertragungsleitung (dbm).
+Für die Schweiz und in vielen Teilen Europas gilt für die Nutzung von LoRa die Regelung ERC/REC 70-03 \cite{regulations}. Dieses Dokument beschreibt die verwendbaren Frequenzen und die maximale Übertragungsleistung (dbm). Während den Tests wurden diese Regulation eingehalten. Die maximale Sendeleistung von 25mW resp. 14dbm wurde nicht überschritten.
 
 \newpage
 \section{The Things Network}
@@ -508,9 +503,7 @@ TODO PRIO 2
 
 \newpage
 \section{MQTT}
-TODO WARUM MQTT Technolgie, PRIO 3
-
-Durch die Wahl vom TTN Netzwerk wurde mir die Datenübertragungsart MQTT quasi aufgezwungen. Wird der TTN Handler nicht selber verwaltet, ist der Zugriff auf die Daten (API) nur per MQTT möglich. Das Protokoll war für mich nicht neu. Während dem Studium konnte ich bereits positive Erfahrung mit MQTT sammeln. Das Protokoll ist einfach zu verstehen und hat sich sehr einfach in mein System eingliedern lassen.
+Durch die Wahl vom TTN Netzwerk wurde mir die Datenübertragungsart MQTT quasi aufgezwungen. Wird der TTN Handler nicht selber verwaltet, ist der Zugriff auf die Daten (API) nur per MQTT möglich  \cite{amqp}. Die Unterstützung von AMQP ist geplant aber noch nicht verfügbar. Das Protokoll war für mich nicht neu. Während dem Studium konnte ich bereits positive Erfahrung mit MQTT sammeln. Das Protokoll ist einfach zu verstehen und hat sich sehr einfach in mein System eingliedern lassen. Die fehlende Websocket Unterstützung konnte mit wenig Aufwand über CloudMQTT realisiert werden.
 
 \chapter{Prototyp}
 Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim des Prototypen 2 vorgegangen bin.
@@ -647,26 +640,121 @@ Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert 
 \end{figure}
 
 \newpage
-\section{Software Module}
+\section{Software}
 Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.\\[0.3cm]
 Pro Hardware Modul wird ein separates Software Modul erstellt.
+
+\subsection{Sourcecode}
+Hinweise wo Sie den Sourcecode einsehen können, finden Sie im Abschnitt 'Anhang'.
 
 \subsection{Entwicklungsumgebung}
 Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. Ich habe mich in Absprache meines Betreuers für die ESP-IDF Umgebung entschieden und mein System entsprechend vorbereitet. Die Installation der Entwicklungsumgebung ist nicht schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
 Ich verzichte an dieser Stelle auf eine detaillierte Auflistung aller Installationsschritte. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
 Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
 
+\newpage
+\subsection{Probleme}
+Infolge der Umstellung auf die ESP32 Umgebung merkte ich relativ schnell, dass es keine extra für ESP32 portierte LMIC Library gab. Für die LoRaWan Kommunikation wurde daher auf eine bestehende Arduino Library (Arduino-LMIC) zurückgegriffen \cite{ArduinoLMIC}. Den Kommunikationsablauf selbständig zu programmieren hätte den Umfang dieser Arbeit gesprengt.\\[0.3cm]
+Leider schient die LMIC Library nicht zu 100\% kompatibel. Nach einigen Websuchen fand ich heraus, dass auch andere User mit Problemen kämpfen. Scheinbar gibt es ein Problem beim Timing der Prozesse im Zusammenspiel mit RTOS.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{img/prototype/lmic_issue.png}
+	\caption[LMIC Problem]
+	{LMIC Problem}
+\end{figure}
+Es kam leider immer wieder vor, dass der Tracker einige für Ihn bestimmte Downlink Nachrichten nicht empfangen konnte. Diese Nachrichten enthalten die Angaben zu Gefahrenzonen uns sind daher sehr wichtig.\\[0.3cm]
+Das Problem besteht bis zum heute (7.1.2018).
+\newpage
 \subsection{Display}
+Um die Alarmierung des Alpinisten zu verbessern wurde beim Tracker ein Display eingebaut. Um die Batterie des Trackers nicht weiter zu belasten wurde ein eInk Display ausgewält. Das Display benötigt nur Energie wenn das angezeigte Bild ändert.\\[0.3cm]
+Das Display hat drei Status.
+\subsubsection{Dashboard}
+Das Dashboard gibt Hinweise zur Lokalisierung (GPS) und der Datenkommunikation (LoRaWan). Das Dashbord ist die Standardansicht, wenn keine Gefahr droht. Im oberen Teil des Bildes werden die GPS Koordinaten und Höhe über Meer angezeigt. Im Unteren Teil finden sich Informationen zur Lora Kommunikation dh. der Verbindungsstand und der Zeitpunkt der letzten Übertragung (Uplink). Diese Informationen sind für den Alpinisten ein Indikator ob das Gerät einwandfrei funktioniert.\\[0.3cm]
+Ein Auszug möglicher Darstellungen auf dem Bildschirm:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.33\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/dashboard_idle.jpg}
+		\caption[Bildschrim - Start]
+		{Startbildschirm}
+	\end{subfigure}%
+	\begin{subfigure}{.33\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/dashboard_joined.jpg}
+		\caption[Bildschirm - LoRaWan Verbunden]
+		{LoRaWan Verbunden}
+	\end{subfigure}%
+	\begin{subfigure}{.33\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/dashboard_gps.jpg}
+		\caption[Bildschirm - GPS Daten]
+		{GPS Daten}
+	\end{subfigure}%
+\end{figure}
 
-\subsection{Abschlussarbeiten}
-Die Erstellten Softwaremodule werden miteinander verknüpft und die Software fertiggestellt.
+\subsubsection{Alarm}
+Der Alarm Bildschirm informiert den Alpinisten über mögliche Gefahren.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/avalanche.jpg}
+		\caption[Lawine]
+		{Lawine}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/landslide.png}
+		\caption[Erdrutch / Steinschlag]
+		{Steinschlag}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/snowflake.jpg}
+		\caption[Schneesturm]
+		{Schneesturm}
+	\end{subfigure}%
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/crack.jpg}
+		\caption[Spalte]
+		{Spalte}
+	\end{subfigure}%
+\end{figure}
+\subsubsection{Notfall}
+Der Notfall Modus wird vom Alpinisten selbst ausgelöst. Der Bildschirm dient der Bestätigung für das erfolgreiche aktivieren des Alarms.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.25\textwidth]{img/prototype/alarmbell.jpg}
+	\caption[Notfallalarm]
+	{Notfallalarm}
+\end{figure}%
 
 \newpage
-\section{Testing
+\subsection{Klassendiagramm}
+Die einzelnen physikalischen Bausteine (GPS, Lora...) werden in Sofware Klassen abgebildet. Die Klassen besitzen entsprechende Methode zum auslesen resp. steuern der Komponenten. Um die Software zu visualisieren wurde ein Klassendiagramm erstellt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/classdiagram.jpg}
+	\caption[Klassendiagramm]
+	{Klassendiagramm}
+\end{figure}
+
+\newpage
+\section{Finalisierung \& Testing}
 Abschließend werden einige Tests mit dem neuen Tracker durchgeführt.
 
-\section{Energieversorgung}
+\subsection{Energieversorgung}
+Einer der Hauptgründe für den Bau eines neuen Prototypen ist der Energieverbrauch. In einem abschließenden Test soll nun festgestellt werden, wie sich der Energiebedarf des ersten zum zweiten Prototypen verändert hat. Folgende Szenarien sollen geprüft werden.
+\subsubsection{Ohne Daten zu senden}
+\subsubsection{Währende dem Senden von Daten}
+
 TODO, PRIO 1
+
+
+
+
 
 % ***** TESTING *****
 \chapter{Testing}
@@ -743,7 +831,7 @@ Der Standort für den LoRa Gateway war schnell gefunden. Ich arbeite momentan al
 Im ersten Teil meiner Arbeit konzentrierte ich mich stark auf den Aufbau des Prototypen. Das Testing hatte für mich eher eine kleinere Priorität. Ein Fehler wie sich später herausstellen sollte. Der Winter ließ, wie sonst nicht üblich, nicht lange auf sich warten. Bereits Mitte Oktober beginn es zu schneien. Wanderrouten/ Regionen welche ich für das Testing verwenden wollte, bspw. der Nordaufstieg Stockhorn, wurden wegen zu hoher Lawinengefahr geschlossen.\\[0.3cm]
 Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglich und soweit gefahrlos passierbar waren.
 \begin{tabularx}{\textwidth}{ l|X }
-	\textbf{Niederhorn} & \textbf{Bild} \\ \hline
+	\textbf{Region 1: Niederhorn} & \textbf{Bild} \\ \hline
 	Region &  \parbox[c]{1em}{
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/niederhorn.png}\vspace{8pt}} \\ \hline
 	Höhenunterschied zum Gateway&\parbox[c]{1em}{
@@ -753,16 +841,16 @@ Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglic
 
 \newpage
 \begin{tabularx}{\textwidth}{ l|X }
-	\textbf{Heiligenschwendi} & \textbf{Bild} \\ \hline
+	\textbf{Region 2: Heiligenschwendi} & \textbf{Bild} \\ \hline
 	Region & \parbox[c]{1em}{
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/heiligenschwendi.png}\vspace{8pt}} \\ \hline
 	Höhenunterschied zum Gateway&\parbox[c]{1em}{
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/heiligenschwendi_altitude.png}\vspace{8pt}} \\ \hline
-	Mittlere Distanz zum Gateway & Xm \\ \hline
+	Mittlere Distanz zum Gateway & 7Km \\ \hline
 \end{tabularx}
 
 \newpage
-\section{Aufbau}
+\section{Aufbau \& Vorbereitungen}
 \subsection{Gateway}
 In diesem Abschnitt ist der Aufbau des LoRaWan Gateways beschrieben. Der Gateway besteht aus den folgenden Komponenten
 \begin{itemize}
@@ -776,7 +864,8 @@ In diesem Abschnitt ist der Aufbau des LoRaWan Gateways beschrieben. Der Gateway
 	\caption[Gateway]
 	{Gateway}
 \end{figure}
-Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub und Wasser geschützt. Leider habe ich auch hier zu wenig Zeit in die Planung investiert. Wie sollte ich den Pi mit Strom versorgen? Ein zusätzlicher Anschluss musste gebohrt werden um das Kabel verlegen zu können. Um nur ein Kabel verlegen zu müssen, habe ich mir einen POE Splitter organisiert. Damit lässt sich die Energieversorgung wie auch die Datenübertragung über ein einzelnes CAT. 6 Ethernetkabel mit RJ-45 Steckern sicherstellen.
+Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub und Wasser geschützt. Leider habe ich auch hier zu wenig Zeit in die Planung investiert. Wie sollte ich den Pi mit Strom versorgen wenn die Box geschlossen ist? Ein zusätzliches Loch musste gebohrt werden um das Kabel verlegen zu können. 
+%Um nur ein Kabel verlegen zu müssen, habe ich mir einen POE Splitter organisiert. Damit lässt sich die Energieversorgung wie auch die Datenübertragung über ein einzelnes CAT. 6 Ethernetkabel mit RJ-45 Steckern sicherstellen.
 
 % TODO BILD
 
@@ -828,7 +917,7 @@ Der Gateway ist nun online und leitet Datenpakete weiter.
 \section{Messungen}
 Es werden verschiedene Testszenarien definiert.
 
-\subsection{Praxistest}
+\subsection{Test 1: Praxistest}
 \subsubsection{Vorgehen}
 Das ATAS System soll geprüft werden ob es praxistauglich ist. Um dies zu überprüfen werden in den vorher definierten Testregionen Messungen durchgeführt. Es soll getestet werden, wie zuverlässig die Übertragung funktioniert.\\[0.3cm]
 Für diesen Test werden die folgenden Daten erhoben
@@ -855,23 +944,45 @@ Die Tests werden mit einem fixen Einstellungen durchgeführt
 TODO, PRIO 1
 
 \newpage
-\subsection{Spreadingfactor}
-Es soll geprüft werden, wie sich der Spreadingfactor auf die Übertragung auswirkt.
+\subsection{Test 2: Spreadingfactor}
+Es soll geprüft werden, wie sich der Spreadingfactor resp. Datenrate auf die Übertragung auswirkt.
 Für diesen Test werden die folgenden Daten erhoben
 \begin{enumerate}
 	\item Spreading Factor
 	\item Signal to Noise Ratio
 	\item RSSI
 \end{enumerate}
+Die Messungen werden in der Region 1 durchgeführt. Der Standort wird nicht gewechselt. Die Dinstanz zwischen Gateway und Tracker bleiben also gleich. Es werden pro Spreading Factor (7-12) 10 Messungen durchgeführt. Pro 10 Messwerte wurden jeweils der mindeste wie auch der maximale Messwert dH. Ausreißer entfernt.\\[0.3cm]
+Gemäß Literatur müsste klar erkennbar werden, dass die SNR Werte und die RSSI Werte mit einem höheren SF besser werden, d.H das Signal stärker beim Gateway eintrifft.\\[0.3cm]
+Die Messresultate:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/testing/testing_sf_snr.png}
+		\caption[Messwerte SNR  pro Spreadingfactor]
+		{Messwerte SNR pro Spreadingfactor}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/testing/testing_sf_rssi.png}
+		\caption[Messwerte RSSI pro Spreadingfactor]
+		{Messwerte RSSI pro Spreadingfactor}
+	\end{subfigure}%
+\end{figure}
+Wie bei den Resultaten ersichtlich, ist die Annahme nicht eingetroffen. Es ist kein Muster erkennbar, das bei einem höheren SF ein besseres Signal zu erwarten ist. Ich gehe davon aus, dass für einen solchen Test mehr Messwerte von Nöten sind. Ich werde den Test also mit mehr Messwerten wiederholen müssen. Für SF7 konnten keine Pakete zugestellt werden. Entweder hatte der Gateway eine Fehlfunktion, oder die Distanz war zu Gross als dass dieser die Daten hätte empfangen können.
 
-\subsection{Isolation Schnee}
+\newpage
+\subsection{Test 3: Isolation Schnee}
 
-\section{Auswertung}
+\chapter{Schlusswort}
+\section{Verbesserungen bestehendes System}
+TODO, Prio 2
+\section{Ausblick ATAS}
+TODO, Prio 2
+\section{Rückblick Projekt}
+TODO, Prio 3
 
-\subsection{Praxistest}
-
-
-\chapter{Abschluss}
 \chapter*{Selbständigkeitserklärung}
 \label{chap:selbstaendigkeitserklaerung}
 
@@ -903,14 +1014,41 @@ Software welche auf dem 1. Prototypen eingesetzt wird\\
 Software welche auf dem 2. Prototypen eingesetzt wird\\
 \url{https://github.com/ATAS-Group/atas-node2}
 
+\newpage
+\section{Libraries}
+Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurückgegriffen. Da ich sehr dankbar für dessen Bereitstellung bin, möchte ich diese hier namentlich erwähnen.
 
-
-\printglossaries
+\subsection{Atas-Node2}
+\begin{tabularx}{\linewidth}{XXX}
+	\textbf{Bibliothek} & \textbf{Verwendungszweck} & \textbf{Url} \\ \hline
+	LMIC-Arduino & LoRaWan Kommunikation & \url{https://github.com/matthijskooijman/arduino-lmic}\\ \hline
+\end{tabularx} 
 
 \listoffigures
 
+% Glossary
+\newglossaryentry{ATAS}{name={ATAS},description={Aplinist Tracking \& Alerting System}}
+\newglossaryentry{TTN}{name={TTN},description={The Things Network, LoraWan Netzwerk}}
+\newglossaryentry{Blockierung}{name={Blockierung},description={Als Blockierung werden alle Notfälle bezeichnet, bei denen BerggängerInnen infolge Erschöpfung, Überforderung, Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen oder abzubrechen. In der Regel sind die Betroffenen unverletzt.}}
+\newglossaryentry{mqtt}{name={MQTT},description={Message Queuing Telemetry Transport)}}
+\newglossaryentry{bergnotfall}{name={Bergnotfall},description={Der Begriff „Bergnotfall“ umfasst alle Vorkommnisse, bei denen BerggängerInnen die Hilfe der Bergrettungsdienste beanspruchen. Dies betrifft auch Erkrankungen und Evakuationen von unverletzten Personen}}
+%\newglossaryentry{lorawanendgeraet}{name={LoRaWan Endgerät},description={LoRaWan Endgerät. Atas-Node ist ein LoRaWan Endgerät}}
+\newglossaryentry{AppEUI}{name={AppEUI},description={Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen}}
+\newglossaryentry{DevEUI}{name={DevEUI},description={Eindeutige ID eines Endgerätes.}}
+\newglossaryentry{DevAddr}{name={DevAddr},description={Logische Geräte Adresse, analog einer IP Adresse in einem IP Netzwerk.}}
+\newglossaryentry{NetSKey }{name={NetSKey },description={Wird für die Verschlüsselung der Kommunikation zwischen Endgerät und Netzwerkanbieter bspw. TTN verwendet. Mittels Schlüssel kann die Datenintegrität sichergestellt werden d.H. Manipulierte Nachrichten werden erkannt}}
+\newglossaryentry{AppSKey }{name={AppSKey },description={Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite{ttnsecurity}}}
+\newglossaryentry{Downlink}{name={Downlink},description={Kommunikation vom Gateway zu Endgerät}}
+\newglossaryentry{Uplink}{name={Uplink},description={Kommunikation vom Endgerät zum Gateway}}
+
+%Print the glossary
+\printglossaries
+
 \begin{thebibliography}{1}
-	\bibitem{lorawan_classes} \url{https://www.rs-online.com/designspark/learning-lorawan-basics} 1.2.2019
+	\bibitem{ArduinoLMIC} \url{https://github.com/matthijskooijman/arduino-lmic} 2.2.2018
+	\bibitem{ttnprivatehandler} \url{https://www.thethingsnetwork.org/article/setting-up-a-private-handler-connected-to-the-public-community-network} 2.2.2018
+	\bibitem{amqp} \url{https://www.thethTTNingsnetwork.org/docs/applications/apis.html} 2.2.2018
+	\bibitem{lorawan_classes} \url{https://www.rs-online.com/designspark/learning-lorawan-basics} 1.2.2018
 	\bibitem{adroverhead} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/ADR} 1.2.2018
 	\bibitem{regulations} \url{http://www.erodocdb.dk/Docs/doc98/official/pdf/REC7003e.pdf} 1.2.2018
 	\bibitem{ttnzürich} \url{https://github.com/ttn-zh/ic880a-gateway/wiki} 1.2.2018
@@ -928,6 +1066,5 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 	\bibitem{espidfinstallation} \url{https://dl.espressif.com/doc/esp-idf/latest/get-started/index.html} 27.12.2017
 	\bibitem{espidfdriver} \url{https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers} 27.12.2017
 \end{thebibliography}
-
 
 \end{document}

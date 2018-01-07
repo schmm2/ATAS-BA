@@ -1,0 +1,20 @@
+;; This logfile was generated automatically by `xindy'
+;; at 08.01.2018  00:16:11
+;; Indexstyle: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/JKMS1pdD89", Rawindex: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/3jPO6LLKXd", Output: "BA_ATAS_Schmidli.gls"
+
+
+Building indexentry-tree:
+Hierdepth of index is :TREE
+
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+
+Forming letter-groups:
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "€Ú€Ð" -> "A"
+
+makeglossaries messages:
+
+Cannot locate xindy module for language ngerman in codepage utf8.
+Retrying using default codepage.
+Cannot locate xindy module for language ngerman.
+Retrying with -L general
