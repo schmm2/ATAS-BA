@@ -79,36 +79,34 @@
 \contentsline {subsection}{\numberline {5.7.5}Klassendiagramm}{47}{subsection.5.7.5}
 \contentsline {section}{\numberline {5.8}Finalisierung \& Testing}{48}{section.5.8}
 \contentsline {subsection}{\numberline {5.8.1}Energieversorgung}{48}{subsection.5.8.1}
-\contentsline {subsubsection}{Ohne Daten zu senden}{48}{section*.47}
-\contentsline {subsubsection}{W\IeC {\"a}hrende dem Senden von Daten}{48}{section*.48}
-\contentsline {subsection}{\numberline {5.8.2}Schlusswort}{48}{subsection.5.8.2}
-\contentsline {chapter}{\numberline {6}Testing}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Ablauf Vorgehen}{49}{section.6.1}
-\contentsline {section}{\numberline {6.2}Definition}{50}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Schlussfolgerung}{50}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Standort}{51}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Gateway}{52}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Testregionen}{53}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}Aufbau \& Vorbereitungen}{55}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Gateway}{55}{subsection.6.4.1}
-\contentsline {subsubsection}{Installation}{55}{section*.51}
-\contentsline {subsubsection}{TTN Registrierung}{57}{section*.52}
-\contentsline {section}{\numberline {6.5}Messungen}{58}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{58}{subsection.6.5.1}
-\contentsline {subsubsection}{Vorgehen}{58}{section*.55}
-\contentsline {subsubsection}{Resultate}{59}{section*.56}
-\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{60}{subsection.6.5.2}
-\contentsline {subsubsection}{Test 2.1}{60}{section*.57}
-\contentsline {subsubsection}{Test 2.2}{62}{section*.60}
-\contentsline {subsection}{\numberline {6.5.3}Test 3: Isolation Schnee}{64}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}Schlusswort}{65}{chapter.7}
-\contentsline {section}{\numberline {7.1}Verbesserungen bestehendes System}{65}{section.7.1}
-\contentsline {section}{\numberline {7.2}Ausblick ATAS}{65}{section.7.2}
-\contentsline {section}{\numberline {7.3}R\IeC {\"u}ckblick Projekt}{65}{section.7.3}
-\contentsline {section}{\numberline {7.4}Software}{67}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{67}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{67}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{67}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{67}{subsection.7.4.4}
-\contentsline {section}{\numberline {7.5}Libraries}{68}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{68}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {5.8.2}Schlusswort}{51}{subsection.5.8.2}
+\contentsline {chapter}{\numberline {6}Testing}{52}{chapter.6}
+\contentsline {section}{\numberline {6.1}Ablauf Vorgehen}{52}{section.6.1}
+\contentsline {section}{\numberline {6.2}Definition}{53}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Schlussfolgerung}{53}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Standort}{54}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Gateway}{55}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Testregionen}{56}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Aufbau \& Vorbereitungen}{58}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Gateway}{58}{subsection.6.4.1}
+\contentsline {subsubsection}{Installation}{58}{section*.51}
+\contentsline {subsubsection}{TTN Registrierung}{60}{section*.52}
+\contentsline {section}{\numberline {6.5}Messungen}{61}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{61}{subsection.6.5.1}
+\contentsline {subsubsection}{Vorgehen}{61}{section*.55}
+\contentsline {subsubsection}{Resultate}{62}{section*.56}
+\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{63}{subsection.6.5.2}
+\contentsline {subsubsection}{Test 2.1}{63}{section*.57}
+\contentsline {subsubsection}{Test 2.2}{65}{section*.60}
+\contentsline {subsection}{\numberline {6.5.3}Test 3: Isolation Schnee}{67}{subsection.6.5.3}
+\contentsline {chapter}{\numberline {7}Schlusswort}{68}{chapter.7}
+\contentsline {section}{\numberline {7.1}Verbesserungen bestehendes System}{68}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ausblick ATAS}{68}{section.7.2}
+\contentsline {section}{\numberline {7.3}R\IeC {\"u}ckblick Projekt}{68}{section.7.3}
+\contentsline {section}{\numberline {7.4}Software}{70}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{70}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{70}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{70}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{70}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Libraries}{71}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{71}{subsection.7.5.1}

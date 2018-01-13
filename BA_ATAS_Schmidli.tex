@@ -114,8 +114,10 @@ Bern, {\large \today}
 % LoraWan Airtime, 1
 % Airtime, Payload optimierung
 % Technologien, Alternative, Warum LORA? 2
-% Testing, Batterielaufzeit
 
+
+% ONGOING
+% Testing, Batterielaufzeit
 
 % OK OK OK 
 % Technologien, MQTT, 
@@ -750,16 +752,46 @@ Die einzelnen physikalischen Bausteine (GPS, Lora...) werden in Sofware Klassen 
 
 \newpage
 \section{Finalisierung \& Testing}
-Abschließend werden einige Tests mit dem neuen Tracker durchgeführt.
+Abschließend werden Tests mit dem neuen Tracker durchgeführt.
 
 \subsection{Energieversorgung}
-Einer der Hauptgründe für den Bau eines neuen Prototypen ist der Energieverbrauch. In einem abschließenden Test soll nun festgestellt werden, wie sich der Energiebedarf des ersten zum zweiten Prototypen verändert hat. Folgende Szenarien sollen geprüft werden.
-\subsubsection{Ohne Daten zu senden}
-\subsubsection{Währende dem Senden von Daten}
+Einer der Hauptgründe für den Bau eines neuen Prototypen, ist der Energieverbrauch. In einem abschließenden Test soll nun festgestellt werden, wie sich der Energiebedarf des ersten zum zweiten Prototypen verändert hat. Folgende Szenarien resp. Systemzustände sollen geprüft werden.
+\begin{itemize}
+	\item Ruhezustand
+	\item Daten senden via LoRa
+	\item Bildschirm aktualisieren
+	\item Lautsprecher ein	
+\end{itemize}
+\textbf{Ausgangslage}: Das Gerät wird an ein Speisegerät angeschlossen. Die Betriebsspannung beträgt bei beiden Geräten 5V. Während des Tests sind alle Module (LoAa, GPS... ) angeschlossen, werden also mit Strom versorgt. Der Prototyp 1 verfügt über kein Display, deshalb können keine Daten für diesen Systemzustand erhoben werden. Die entsprechenden Szenarien werden beim Prototypen einstellt und die benötige Leistung werden vom Speisegerät abgelesen.\\[0.3cm]
+\textbf{Messresultate:} Auf der nächsten Seite zu finden
+\newpage
+\noindent
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/testing/energy_usage.jpg}
+	\caption[Gesamt Energieverbrauch pro Prototyp]
+	{Gesamt Energieverbrauch pro Prototyp}
+\end{figure}
+\noindent
+Diese Grafik zeigt den gesamten Energieverbrauch des Systems während der durchgeführten Aktion.
+Wie in der Grafik ersichtlich, benötigt der Prototyp 1 im Ruhezustand ca. 4 mal soviel Energie wie der neue Prototypen. Durch den Wechsel der Hardware konnte der Energieverbrauch drastisch gesenkt werden.\\[0.3cm]
+Das senden der Daten lässt den Energieverbrauch stark ansteigen. Beim Prototypen 2 wächst der Verbrauch gar um 100\%.
+\newpage
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/testing/energy_usage_perAction.jpg}
+\caption[Veränderung des Energieverbrauchs zum Ruhezustand]
+{Veränderung des Energieverbrauchs zum Ruhezustand}
+\end{figure}
+\noindent
+Der Gesamtverbrauch des Systems während einer Aktion wurde mit dem Verbrauch des Ruhezustandes subtrahiert. Diese Grafik zeigt nun wie die einzelnen Aktionen den Energieverbrauch beeinflussen. Die nachfolgenden Erkenntnisse wurden daraus gewonnen
+\begin{itemize}
+\item Da auf beiden Prototypen der gleiche LoRa Chip verbaut ist, ist es keine Überraschung, dass die benötigte Energie in etwa identisch ist. 
+\item Das Aktualisieren des Displays benötigt, im Vergleich zum Senden via LoRa,  sehr wenig Energie.
+\item Das Aktivieren des Piezo Lautsprechers hat keinen messbaren Einfluss auf den Energieverbrauch.
+\end{itemize}
 
-TODO, PRIO 1
-
-
+\newpage
 \subsection{Schlusswort}
 
 
