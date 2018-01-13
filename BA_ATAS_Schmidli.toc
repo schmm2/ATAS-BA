@@ -63,50 +63,54 @@
 \contentsline {section}{\numberline {5.3}Ablauf Vorgehen}{35}{section.5.3}
 \contentsline {section}{\numberline {5.4}Evaluation Hardware}{36}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Lora-Antenne}{38}{subsection.5.4.1}
-\contentsline {section}{\numberline {5.5}Zusammenbau Hardware}{39}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Schema}{39}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Mikrocontroller - Pinbelegung}{41}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}Kommunikation}{41}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Zusammenbau}{42}{subsection.5.6.1}
-\contentsline {section}{\numberline {5.7}Software}{43}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}Sourcecode}{43}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}Entwicklungsumgebung}{43}{subsection.5.7.2}
-\contentsline {subsection}{\numberline {5.7.3}Probleme}{44}{subsection.5.7.3}
-\contentsline {subsection}{\numberline {5.7.4}Display}{45}{subsection.5.7.4}
-\contentsline {subsubsection}{Dashboard}{45}{section*.40}
-\contentsline {subsubsection}{Alarm}{45}{section*.42}
-\contentsline {subsubsection}{Notfall}{46}{section*.44}
-\contentsline {subsection}{\numberline {5.7.5}Klassendiagramm}{47}{subsection.5.7.5}
-\contentsline {section}{\numberline {5.8}Finalisierung \& Testing}{48}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}Energieversorgung}{48}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}Schlusswort}{51}{subsection.5.8.2}
-\contentsline {chapter}{\numberline {6}Testing}{52}{chapter.6}
-\contentsline {section}{\numberline {6.1}Ablauf Vorgehen}{52}{section.6.1}
-\contentsline {section}{\numberline {6.2}Definition}{53}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Schlussfolgerung}{53}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Standort}{54}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Gateway}{55}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Testregionen}{56}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}Aufbau \& Vorbereitungen}{58}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Gateway}{58}{subsection.6.4.1}
-\contentsline {subsubsection}{Installation}{58}{section*.51}
-\contentsline {subsubsection}{TTN Registrierung}{60}{section*.52}
-\contentsline {section}{\numberline {6.5}Messungen}{61}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{61}{subsection.6.5.1}
-\contentsline {subsubsection}{Vorgehen}{61}{section*.55}
-\contentsline {subsubsection}{Resultate}{62}{section*.56}
-\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{63}{subsection.6.5.2}
-\contentsline {subsubsection}{Test 2.1}{63}{section*.57}
-\contentsline {subsubsection}{Test 2.2}{65}{section*.60}
-\contentsline {subsection}{\numberline {6.5.3}Test 3: Isolation Schnee}{67}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}Schlusswort}{68}{chapter.7}
-\contentsline {section}{\numberline {7.1}Verbesserungen bestehendes System}{68}{section.7.1}
-\contentsline {section}{\numberline {7.2}Ausblick ATAS}{68}{section.7.2}
-\contentsline {section}{\numberline {7.3}R\IeC {\"u}ckblick Projekt}{68}{section.7.3}
-\contentsline {section}{\numberline {7.4}Software}{70}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{70}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{70}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{70}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{70}{subsection.7.4.4}
-\contentsline {section}{\numberline {7.5}Libraries}{71}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{71}{subsection.7.5.1}
+\contentsline {section}{\numberline {5.5}Zusammenbau Hardware}{40}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Schema}{40}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Mikrocontroller - Pinbelegung}{42}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Kommunikation}{42}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Zusammenbau}{43}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}Software}{44}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Entwicklungsumgebung}{44}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Bibliotheken}{44}{subsection.5.7.2}
+\contentsline {subsubsection}{LMIC}{44}{section*.40}
+\contentsline {subsection}{\numberline {5.7.3}Sourcecode}{46}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.4}Klassendiagramm}{46}{subsection.5.7.4}
+\contentsline {subsection}{\numberline {5.7.5}Herausforderung Timing}{47}{subsection.5.7.5}
+\contentsline {subsection}{\numberline {5.7.6}Display}{48}{subsection.5.7.6}
+\contentsline {subsubsection}{Dashboard}{48}{section*.44}
+\contentsline {subsubsection}{Alarm}{48}{section*.46}
+\contentsline {subsubsection}{Notfall}{49}{section*.48}
+\contentsline {section}{\numberline {5.8}Finalisierung \& Testing}{50}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Energieversorgung}{50}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Schlusswort}{53}{subsection.5.8.2}
+\contentsline {chapter}{\numberline {6}Testing}{54}{chapter.6}
+\contentsline {section}{\numberline {6.1}Ablauf Vorgehen}{54}{section.6.1}
+\contentsline {section}{\numberline {6.2}Definition}{55}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Schlussfolgerung}{56}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Standort}{57}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Gateway}{58}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Testregionen}{59}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Aufbau \& Vorbereitungen}{61}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Gateway}{61}{subsection.6.4.1}
+\contentsline {subsubsection}{Installation}{62}{section*.54}
+\contentsline {subsubsection}{TTN Registrierung}{63}{section*.55}
+\contentsline {subsection}{\numberline {6.4.2}Dashboard}{64}{subsection.6.4.2}
+\contentsline {subsubsection}{ATAS-Web}{64}{section*.58}
+\contentsline {section}{\numberline {6.5}Messungen}{66}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{66}{subsection.6.5.1}
+\contentsline {subsubsection}{Vorgehen}{66}{section*.61}
+\contentsline {subsubsection}{Resultate}{67}{section*.62}
+\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{68}{subsection.6.5.2}
+\contentsline {subsubsection}{Test 2.1}{68}{section*.63}
+\contentsline {subsubsection}{Test 2.2}{70}{section*.66}
+\contentsline {subsection}{\numberline {6.5.3}Test 3: Isolation Schnee}{72}{subsection.6.5.3}
+\contentsline {chapter}{\numberline {7}Schlusswort}{73}{chapter.7}
+\contentsline {section}{\numberline {7.1}Verbesserungen bestehendes System}{73}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ausblick ATAS}{73}{section.7.2}
+\contentsline {section}{\numberline {7.3}R\IeC {\"u}ckblick Projekt}{73}{section.7.3}
+\contentsline {section}{\numberline {7.4}Software}{75}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{75}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{75}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{75}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{75}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Libraries}{76}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{76}{subsection.7.5.1}

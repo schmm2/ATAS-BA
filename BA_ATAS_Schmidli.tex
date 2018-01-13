@@ -28,6 +28,7 @@
 \usepackage{subcaption}
 \usepackage{glossaries}
 
+
 % clear default
 \fancyhead{}
 \fancyfoot{}
@@ -155,11 +156,9 @@ Diese Thematik beschäftigte mich noch lange. Als es darum ging ein Thema für d
 \chapter*{Danksagung}
 Ich möchte an dieser Stelle einigen Personen danken, die mich während dieser Arbeit unterstützt haben.\\[0.3cm]
 
--J
+-Josua Röthlisberger
+-Mohamed Mokdad
 -Oliver Kondic
-
-TODO
-PRIO 3
 
 
 \chapter{Einleitung}
@@ -578,7 +577,7 @@ Für den Aufbau des zweiten Prototypen wurde die nachfolgende Hardware verwendet
 Aus Zeitgründen habe ich mich bei den Komponenten von bestehenden Projekten resp. Einträge im Internet inspirieren lassen. Es gab kein spezielles Auswahlverfahren für die restlichen Komponenten. Meiner Meinung nach nicht das beste Vorgehen. Bei einem erneuten Projekt in dieser Richtung müsste ich vorher die Kriterien für die Komponenten festlegen.
 \newpage
 \subsection{Lora-Antenne}
-Ich beging den Fehler, anzunehmen, dass beim Kauf des Lora-Moduls eine Antenne mitgeliefert wird. Da ich über sehr wenig Erfahrungen in der Telekommunikationswelt verfügte, wollte ich mich auch mit diesem Thema etwas genauer befassen. Ich entschied mich gegen eine erneute Bestellung und baute mir die Antenne einfach selbst. Nach einer kurzen Internetrecherche fand ich heraus wie mit einfachen Mitteln eine zuverlässige Antenne für 868Mhz gebaut werden kann \cite{wavelengthTTN}. Ein einfaches Kabel genügt. Das Kabel muss die Länge der Wellenlänge oder einen Bruchteil bspw. 1/2 oder 1/4 der Wellenlänge haben. Die Berechnung der Wellenlänge ist mit der nachfolgenden Formel möglich \cite{wavelength}.\\[0.3cm]
+Es wurde angenommen, dass beim Kauf des Lora-Moduls eine Antenne mitgeliefert wird. Leider war dies nicht der Fall. Dieser Zwischenfall stellte eine gute Gelegenheit dar, das Wissen über die Telekommunikationswelt zu vertiefen. Es wurde entschied keine erneute Bestellung auszulösen und stattdessen  die Antenne einfach selbstständig zu bauen. Nach einer kurzen Internetrecherche stellte sich heraus , dass mit einfachen Mitteln eine zuverlässige Antenne für 868Mhz gebaut werden kann \cite{wavelengthTTN}. Ein einfaches Kabel genügt. Das Kabel muss die Länge der Wellenlänge oder einen Bruchteil bspw. 1/2 oder 1/4 der Wellenlänge haben. Die Berechnung der Wellenlänge ist mit der nachfolgenden Formel möglich \cite{wavelength}.\\[0.3cm]
 Es gilt $\lambda$ = Wellenlänge, v = Übertragungsgeschwindigkeit (Lichtgeschwindigkeit), f = Durchschnitt der Frequenz (Lora Frequenz in Europa)
 \begin{center}
 	\begin{eqnarray*}
@@ -588,15 +587,23 @@ Es gilt $\lambda$ = Wellenlänge, v = Übertragungsgeschwindigkeit (Lichtgeschwi
 		\frac{\lambda}{4} &=& \frac{17,27cm}{2} = 8,63cm \\
 	\end{eqnarray*}
 \end{center}
-17,27cm sind für meinen Prototypen zu lange. Ich entschied mich 1/4 der Wellenlänge zu verwenden. Für eine Antenne musste also nur ein Kabel mit der Länge \textbf{8.63cm} vorbereitet und mit dem Antennenport des Lora Moduls verbunden werden.\\[0.3cm]
-Das Resultat\\
-TODO BILD\\[0.3cm]
-Die Kommunikation funktioniert einwandfrei und ist mit der des ersten Prototypen vergleichbar. Mir ist bewusst, dass der Empfang mit einer professionellen Antenne noch besser werden würde. Die Thematik 'Antenne' müsste bei einer Weiterführung des Projektes nochmals beleuchtet werden.
+17,27cm sind für den Prototypen zu lange. Es wurde entschieden, 1/4 der Wellenlänge zu verwenden. Für eine Antenne musste also nur ein Kabel mit der Länge \textbf{8.63cm} vorbereitet und mit dem Antennenport des Lora Moduls verbunden werden.
+\newpage
+Das Resultat:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.675\textwidth]{img/prototype/antenna.jpg}
+	\caption[Prototyp 2 Antenne]
+	{Prototyp 2 Antenne]}
+\end{figure}
+\noindent
+Die Kommunikation funktioniert einwandfrei und ist mit der des ersten Prototypen vergleichbar. Der Empfang würde mit einer professionellen Antenne noch besser werden. Die Thematik 'Antenne' müsste bei einer Weiterführung des Projektes nochmals beleuchtet werden.
 \newpage
 \section{Zusammenbau Hardware}
 Die Komponenten werden zusammengebaut und untereinander verbunden. Zur besseren Übersicht wird ein Schema  der Elektronik erstellt.
 \subsection{Schema}
-Die Kommunikation unter den Komponenten wurde im Laufe der Projektarbeit  für mich immer unübersichtlicher. Um mir die Arbeit zu erleichtern, habe ich ein Schema mit den Komponenten erstellt. Vor der Arbeit hatte ich noch nie ein Schema gezeichnet und musste mich zuerst einige Stunden in die Materie einarbeiten. Auf anraten einiger Kollegen, mit Erfahrung im Elektronik Umfeld, sowie der frei verfügbaren Lernressourcen und Vorlagen, fiel meine Wahl auf das Programm \textbf{Eagle} der Firma Autodesk \cite{autodesk}. Dank der guten Dokumentation und den Lernvideos auf diversen Plattformen bspw. Youtube kam ich beim Zeichnen schnell vorwärts. \\[0.3cm] 
+Die Kommunikation unter den Komponenten wurde im Laufe der Projektarbeit immer unübersichtlicher. Um mir die Arbeit zu erleichtern, wurde ein Schema mit den Komponenten erstellt.\\[0.3cm]
+Vor der Arbeit hatte ich noch nie ein Schema gezeichnet und musste mich zuerst einige Stunden in die Materie einarbeiten. Auf anraten einiger Kollegen, mit Erfahrung im Elektronik Umfeld, sowie der frei verfügbaren Lernressourcen und Vorlagen, fiel meine Wahl auf das Programm \textbf{Eagle} der Firma Autodesk \cite{autodesk}. Dank der guten Dokumentation und den Lernvideos auf diversen Plattformen bspw. Youtube kam ich beim Zeichnen schnell vorwärts. \\[0.3cm] 
 Ich begann damit Vorlagen der Elektronischen Bausteine/Chips finden. Die Vorlagen zu Lora, GPS, ESP, Schalter und Piezo Lautsprecher konnte ich teilweise vom Hersteller oder von der Community herunterladen und in Eagle importieren. Für das Display musste ich ein bestehende Vorlage eines Displays anpassen. Ich habe dabei die Größe und die Pinbelegung verändert, damit das Element wie das verwendete Display (Waveshare eInk 200x200) aussieht. \\[0.3cm]
 Das Schema ist auf der nachfolgenden Seite abgebildet.
 \newpage
@@ -650,32 +657,51 @@ Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert 
 
 \newpage
 \section{Software}
-Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.\\[0.3cm]
-Pro Hardware Modul wird ein separates Software Modul erstellt.
-
-\subsection{Sourcecode}
-Hinweise wo Sie den Sourcecode einsehen können, finden Sie im Abschnitt 'Anhang'.
+Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.
 
 \subsection{Entwicklungsumgebung}
-Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. Ich habe mich in Absprache meines Betreuers für die ESP-IDF Umgebung entschieden und mein System entsprechend vorbereitet. Die Installation der Entwicklungsumgebung ist nicht schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
-Ich verzichte an dieser Stelle auf eine detaillierte Auflistung aller Installationsschritte. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
-Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
-
-\newpage
-\subsection{Probleme}
-Infolge der Umstellung auf die ESP32 Umgebung merkte ich relativ schnell, dass es keine extra für ESP32 portierte LMIC Library gab. Für die LoRaWan Kommunikation wurde daher auf eine bestehende Arduino Library (Arduino-LMIC) zurückgegriffen \cite{ArduinoLMIC}. Den Kommunikationsablauf selbständig zu programmieren hätte den Umfang dieser Arbeit gesprengt.\\[0.3cm]
-Leider schient die LMIC Library nicht zu 100\% kompatibel. Nach einigen Websuchen fand ich heraus, dass auch andere User mit Problemen kämpfen. Scheinbar gibt es ein Problem beim Timing der Prozesse im Zusammenspiel mit RTOS.
+Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. In Absprache mit dem Betreuer wurde festgelegt, dass die ESP-IDF Umgebung zu verwenden sei. Die Installation der Entwicklungsumgebung ist nicht sonderlich schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
+An dieser Stelle wird auf eine detaillierte Auflistung aller Installationsschritte verzichtet. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
+Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP via USB korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
+\subsection{Bibliotheken}
+Infolge der Umstellung auf die ESP32 Umgebung mussten einige bestehenden Bibliotheken ersetzte werden. Die verwendeten Software Bibliotheken werden im Abschnitt 'Anhang' aufgeführt.
+\subsubsection{LMIC}
+Die LMIC Bibliothek hat den LoRaWan Stack implementiert und wird für die korrekte Kommunikation via LoRa Modul benötigt. Zum Zeitpunkt dieser Arbeit gibt es keine für ESP32 portierte LMIC Bibliothek. Für die LoRaWan Kommunikation wurde daher auf eine bestehende Arduino Library (Arduino-LMIC) zurückgegriffen \cite{ArduinoLMIC}. Der Funktionsumfang bleibt der selbe. Den Kommunikationsablauf selbständig zu programmieren hätte den Umfang dieser Arbeit gesprengt. Einige Entwickler berichten von Timing Problemen während der Kommunikation. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{img/prototype/lmic_issue.png}
-	\caption[LMIC Problem]
-	{LMIC Problem}
+\includegraphics[width=0.8\textwidth]{img/prototype/lmic_issue.png}
+	\caption[Fehlerhafter Bildaufbau Display]
+	{Fehlerhafter Bildaufbau Display}
 \end{figure}
-Es kam leider immer wieder vor, dass der Tracker einige für Ihn bestimmte Downlink Nachrichten nicht empfangen konnte. Diese Nachrichten enthalten die Angaben zu Gefahrenzonen uns sind daher sehr wichtig.\\[0.3cm]
-Das Problem besteht bis zum heute (7.1.2018).
+Bis jetzt konnten beim ATAS Projekt keine Probleme mit der eingesetzten Library festgestellt werden. Die Arduino Library fügt sich problemlos in die ESP-IDF Umgebung ein.
+
+\newpage
+\subsection{Sourcecode}
+Hinweise wo Sie den Sourcecode einsehen können, finden Sie im Abschnitt 'Anhang'.
+ 
+\subsection{Klassendiagramm}
+Die einzelnen physikalischen Bausteine (GPS, Lora...) werden in Sofware Klassen abgebildet. Die Klassen besitzen entsprechende Methode zum auslesen resp. steuern der Komponenten. Um die Software zu visualisieren wurde ein Klassendiagramm erstellt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/classdiagram.jpg}
+	\caption[Klassendiagramm]
+	{Klassendiagramm}
+\end{figure}
+
+\newpage
+\subsection{Herausforderung Timing}
+Die Schaltung des Prototypen wurde  so aufgebaut, dass möglichst wenig Kabel gezogen werden mussten. Infolge dessen wurden der Bildschirm  und das LoRa Modul über einen einzigen SPI Kontroller angesteuert. Relativ schnell machte sich ein Timing Problem bemerkbar. Die Software versuchte das Display zu aktualisieren und im gleichen Moment Daten per LoRa versenden. Die Kommunikation mit dem Bildschirm wurde gestört, der Bildaufbau wurde unterbrochen
+\begin{figure}[H]
+	\centering
+	%\includegraphics[width=\textwidth]{img/prototyp/spi_error.jpg}
+	\caption[Fehlerhafter Bildaufbau Display]
+	{Fehlerhafter Bildaufbau Display}
+\end{figure}
+Um die korrekte Datenübertragung sicherzustellen, wurde ein Mutex implementiert. Die Ansteuerung des Bildschirm und des LoRa Kommunikation wurde in zwei unabhängige Tasks aufgeteilt. Ist ein Task beschäftigt Daten zu senden, wird die Mutex Ressource gesperrt. Der andere Tasks muss warten, bis er wieder Daten senden kann. Mit dieser Lösung kann sichergestellt werden, dass es zukünftig keine Kommunikationskonflikte mehr geben wird.
+
 \newpage
 \subsection{Display}
-Um die Alarmierung des Alpinisten zu verbessern wurde beim Tracker ein Display eingebaut. Um die Batterie des Trackers nicht weiter zu belasten wurde ein eInk Display ausgewält. Das Display benötigt nur Energie wenn das angezeigte Bild ändert.\\[0.3cm]
+Um die Alarmierung des Alpinisten zu verbessern wurde beim Tracker ein Display eingebaut. Um die Batterie des Trackers nicht weiter zu belasten wurde ein eInk Display ausgewält. Das Display benötigt nur Energie wenn das angezeigte Bild ändert, siehe Abschnitt 'Testing'.\\[0.3cm]
 Das Display hat drei Status.
 \subsubsection{Dashboard}
 Das Dashboard gibt Hinweise zur Lokalisierung (GPS) und der Datenkommunikation (LoRaWan). Das Dashbord ist die Standardansicht, wenn keine Gefahr droht. Im oberen Teil des Bildes werden die GPS Koordinaten und Höhe über Meer angezeigt. Im Unteren Teil finden sich Informationen zur Lora Kommunikation dh. der Verbindungsstand und der Zeitpunkt der letzten Übertragung (Uplink). Diese Informationen sind für den Alpinisten ein Indikator ob das Gerät einwandfrei funktioniert.\\[0.3cm]
@@ -732,23 +758,13 @@ Der Alarm Bildschirm informiert den Alpinisten über mögliche Gefahren.
 	\end{subfigure}%
 \end{figure}
 \subsubsection{Notfall}
-Der Notfall Modus wird vom Alpinisten selbst ausgelöst. Der Bildschirm dient der Bestätigung für das erfolgreiche aktivieren des Alarms.
+Der Notfall Modus wird vom Alpinisten, durch einen Druck auf den Notfallknopf, selbst ausgelöst. Der Bildschirm dient der Bestätigung für das erfolgreiche aktivieren des Alarms.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.25\textwidth]{img/prototype/alarmbell.jpg}
 	\caption[Notfallalarm]
 	{Notfallalarm}
 \end{figure}%
-
-\newpage
-\subsection{Klassendiagramm}
-Die einzelnen physikalischen Bausteine (GPS, Lora...) werden in Sofware Klassen abgebildet. Die Klassen besitzen entsprechende Methode zum auslesen resp. steuern der Komponenten. Um die Software zu visualisieren wurde ein Klassendiagramm erstellt.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/classdiagram.jpg}
-	\caption[Klassendiagramm]
-	{Klassendiagramm}
-\end{figure}
 
 \newpage
 \section{Finalisierung \& Testing}
@@ -762,7 +778,7 @@ Einer der Hauptgründe für den Bau eines neuen Prototypen, ist der Energieverbr
 	\item Bildschirm aktualisieren
 	\item Lautsprecher ein	
 \end{itemize}
-\textbf{Ausgangslage}: Das Gerät wird an ein Speisegerät angeschlossen. Die Betriebsspannung beträgt bei beiden Geräten 5V. Während des Tests sind alle Module (LoAa, GPS... ) angeschlossen, werden also mit Strom versorgt. Der Prototyp 1 verfügt über kein Display, deshalb können keine Daten für diesen Systemzustand erhoben werden. Die entsprechenden Szenarien werden beim Prototypen einstellt und die benötige Leistung werden vom Speisegerät abgelesen.\\[0.3cm]
+\textbf{Ausgangslage}: Das Gerät wird an ein Speisegerät angeschlossen. Die Betriebsspannung beträgt bei beiden Geräten 5V. Die beiden Prototypen verfügen über einen eingebauten Spannungswandler welche die Spannung auf 3.3V herunter regelt. Die dabei entstehenden Verlustleistung wird bei den nachfolgenden Tests ignoriert. Während des Tests sind alle Module (LoAa, GPS... ) angeschlossen, werden also mit Strom versorgt. Der Prototyp 1 verfügt über kein Display, deshalb können keine Daten für diesen Systemzustand erhoben werden. Die entsprechenden Szenarien werden beim Prototypen einstellt und die benötige Leistung werden vom Speisegerät abgelesen.\\[0.3cm]
 \textbf{Messresultate:} Auf der nächsten Seite zu finden
 \newpage
 \noindent
@@ -793,7 +809,7 @@ Der Gesamtverbrauch des Systems während einer Aktion wurde mit dem Verbrauch de
 
 \newpage
 \subsection{Schlusswort}
-
+Die Resultate mit dem neuen Prototypen sind zufriedenstellend. Das System konnte optimiert werden. Der Prototyp 2 funktioniert einwandfrei. Dem nächsten Schritt, dem finalen Prototypen steht somit nichts mehr im Weg.
 
 
 % ***** TESTING *****
@@ -814,17 +830,19 @@ Die einzelnen Schritte werden auf den kommenden Seiten detailliert erklärt.
 Es muss definiert werden
 \begin{itemize}
 	\item welche Komponenten geprüft werden sollen\\[0.3cm]
-	Während der Arbeit soll die Kommunikation zwischen Atas-Node und Atas-Gateway getestet werden.
+	Während der Arbeit soll die Kommunikation zwischen dem Tracker (Atas-Node) und dem Gateway getestet werden.
 	\item welche Aspekte der Komponente sollen betrachtet werden\\[0.3cm]
 	Der Fokus liegt auf der \textbf{Zuverlässigkeit} der Übertragung. Mich interessiert, wie sicher es ist, dass eine Meldung ihr Ziel erreicht. 
-	\item mit welchen Mitteln resp. Messinstrumenten gemessen wird\\[0.3cm]
-	Das TTN Netzwerk bietet uns die Möglichkeit mittels Dashboard einzusehen, wann welche Pakete auf dem Gateway eintreffen. So können wir prüfen ob die Verbindung zwischen Gateway und Tracker funktioniert.\bigskip
+	\item mit welchen Mitteln resp. Messinstrumenten gemessen wird\\[0.3cm]	
+	Das TTN Netzwerk bietet uns die Möglichkeit mittels Dashboard einzusehen, wann welche Pakete auf dem Gateway eintreffen.So können wir prüfen ob die Verbindung zwischen Gateway und Tracker funktioniert. \\
 	
 	\begin{minipage}{\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{img/ttn_messages}
 		\captionof{figure}{TTN Messages}
 	\end{minipage}
+
+	Diese Ansicht gibt uns einen guten Überblick. Leider müssen die Daten alle manuell herauskopiert werden um diese analysieren zu können. Es gibt momentan keine Möglichkeit die gesamten Daten von TTN herunterzuladen. Diese Tatsache macht die Auswertung der Daten bspw. mit Excel sehr umständlich.
 	
 	\item welche Daten können untersucht werden\\[0.3cm]
 	Für die Messungen sind mehre Daten von Interesse. Dazu gehören 
@@ -837,7 +855,14 @@ Es muss definiert werden
 \end{itemize}
 
 \subsection{Schlussfolgerung}
-Abgeleitet aus der vorhergehenden Definitionen ergibt sich die folgende Aufgabenstellung im Bereich Testing. Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut. Anschließend werden mehrere Tests durchgeführt. Die Verbindung wird aufgebaut und mittels TTN Dashboard geprüft.
+Abgeleitet aus der vorhergehenden Definitionen ergibt sich die folgende Aufgabenstellung im Bereich Testing.
+\begin{itemize}
+	\item
+	Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut.
+	\item 
+	Da das TTN Dashboard uns keine vernünftige Lösung bietet die Daten auszuwerten, soll eine eigene Lösung entwickelt werden. Die Komponenten Atas-Web und Atas-Service müssen entsprechend erweitert werden.
+	\item Abschließend werden mehrere Tests durchgeführt. Die Verbindung wird aufgebaut und mittels neu entwickeltem Dashboard geprüft.
+\end{itemize}
 
 \newpage
 \section{Standort}
@@ -904,11 +929,12 @@ In diesem Abschnitt ist der Aufbau des LoRaWan Gateways beschrieben. Der Gateway
 	\caption[Gateway]
 	{Gateway}
 \end{figure}
-Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub und Wasser geschützt. Leider habe ich auch hier zu wenig Zeit in die Planung investiert. Wie sollte ich den Pi mit Strom versorgen wenn die Box geschlossen ist? Ein zusätzliches Loch musste gebohrt werden um das Kabel verlegen zu können. 
+Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub und Wasser geschützt. Leider wurde hier zu wenig Zeit in die Planung investiert. Wie sollte der Pi mit Strom versorgt werden, wenn die Box geschlossen ist? Ein zusätzliches Loch musste gebohrt werden um das Kabel verlegen zu können. 
 %Um nur ein Kabel verlegen zu müssen, habe ich mir einen POE Splitter organisiert. Damit lässt sich die Energieversorgung wie auch die Datenübertragung über ein einzelnes CAT. 6 Ethernetkabel mit RJ-45 Steckern sicherstellen.
 
 % TODO BILD
 
+\newpage
 \subsubsection{Installation}
 Die Webressourcen der TTN Community von Zürich waren bei der Installation eine große Hilfe \cite{ttnzürich}. Das Raspberry PI und das iC880 Board wurden gemäß der Webseite verkabelt.\\[0.3cm]
 Die Community hat ein sehr simples Installationsskript zusammengestellt um die Gateway Software automatisiert zu installieren. Folgende Schritte wurden auf dem Raspberr PI durchgeführt.
@@ -951,6 +977,34 @@ Der Gateway ist nun online und leitet Datenpakete weiter.
 	\includegraphics[width=0.9\textwidth]{img/gateway/ttn_gateway_done.png}
 	\caption[TTN Dashboard Gateway Registriert]
 	{TTN Dashboard Gateway Registriert}
+\end{figure}
+
+\newpage
+\subsection{Dashboard}
+Das eingeschränkte TTN Dashboard genügt für das Testing nicht. In diesem Abschnitt wird erklärt, wie die ATAS Software erweitert wurde, um die Testdaten besser analysieren zu können.
+\subsubsection{ATAS-Web}
+Die Webkomponente ATAS-Web wurde um einige Funktionen erweitert. Über den Menüpunkt \textbf{'Data'} kann das Dashboard aufgerufen werden.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/testing/atasweb_menu.jpg}
+	\caption[ATAS-Web Menu]
+	{ATAS-Web Menu}
+\end{figure}
+
+\newpage
+\noindent
+Das Dashboard bietet folgende Funktionen.
+\begin{itemize}
+	\item A: Über ein Dropdown kann der entsprechende Tracker ausgewählt werden.
+	\item B: Da eine Uplink Nachricht von mehreren Gateways empfangen werden kann, ist es nötig die Nachrichten nach Gateway zu filtern.
+	\item C: Die aktuell angezeigten Daten können als CSV Datei heruntergeladen werden
+	\item D: das Dashboard zeigt die empfangenen Uplink Nachrichten an  
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/testing/atasweb_data.jpg}
+	\caption[ATAS-Web Dashboard]
+	{ATAS-Web Dashboard}
 \end{figure}
 
 \newpage
@@ -1026,8 +1080,6 @@ Wie bei den Resultaten ersichtlich, ist die Annahme nicht eingetroffen. Es ist k
 	\caption[Messwerte RSSI pro Spreadingfactor]
 	{Messwerte RSSI pro Spreadingfactor}
 \end{figure}%
-
-%TODO Resultanayse
 
 \newpage
 \subsection{Test 3: Isolation Schnee}

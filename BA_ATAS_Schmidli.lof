@@ -18,22 +18,26 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Prototyping Ablauf}}{34}{figure.caption.34}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Flowchart Prototyp 2}}{35}{figure.caption.35}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Prototyp2 Schema}}{40}{figure.caption.36}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Kommunikationsart Prototyp 2}}{41}{figure.caption.37}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Prototyp 2}}{42}{figure.caption.38}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces LMIC Problem}}{44}{figure.caption.39}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Notfallalarm}}{46}{figure.caption.45}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Klassendiagramm}}{47}{figure.caption.46}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Gesamt Energieverbrauch pro Prototyp}}{49}{figure.caption.47}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Ver\IeC {\"a}nderung des Energieverbrauchs zum Ruhezustand}}{50}{figure.caption.48}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Prototyp 2 Antenne}}{39}{figure.caption.36}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Prototyp2 Schema}}{41}{figure.caption.37}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Kommunikationsart Prototyp 2}}{42}{figure.caption.38}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Prototyp 2}}{43}{figure.caption.39}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Fehlerhafter Bildaufbau Display}}{45}{figure.caption.41}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Klassendiagramm}}{46}{figure.caption.42}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Fehlerhafter Bildaufbau Display}}{47}{figure.caption.43}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Notfallalarm}}{49}{figure.caption.49}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Gesamt Energieverbrauch pro Prototyp}}{51}{figure.caption.50}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ver\IeC {\"a}nderung des Energieverbrauchs zum Ruhezustand}}{52}{figure.caption.51}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Flowchart Testing}}{52}{figure.caption.49}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces TTN Messages\relax }}{53}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Gateway}}{58}{figure.caption.50}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces TTN Dashboard Gateway}}{60}{figure.caption.53}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces TTN Dashboard Gateway Registriert}}{60}{figure.caption.54}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Messwerte SNR pro Spreadingfactor}}{63}{figure.caption.58}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Messwerte RSSI pro Spreadingfactor}}{64}{figure.caption.59}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Messwerte SNR pro Spreadingfactor}}{65}{figure.caption.61}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Messwerte RSSI pro Spreadingfactor}}{66}{figure.caption.62}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Flowchart Testing}}{54}{figure.caption.52}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces TTN Messages\relax }}{55}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Gateway}}{61}{figure.caption.53}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces TTN Dashboard Gateway}}{63}{figure.caption.56}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces TTN Dashboard Gateway Registriert}}{63}{figure.caption.57}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces ATAS-Web Menu}}{64}{figure.caption.59}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces ATAS-Web Dashboard}}{65}{figure.caption.60}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Messwerte SNR pro Spreadingfactor}}{68}{figure.caption.64}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Messwerte RSSI pro Spreadingfactor}}{69}{figure.caption.65}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Messwerte SNR pro Spreadingfactor}}{70}{figure.caption.67}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Messwerte RSSI pro Spreadingfactor}}{71}{figure.caption.68}
 \addvspace {10\p@ }
