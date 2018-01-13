@@ -58,39 +58,9 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{Blockierung}{}%
+\ifglsentryexists{MQTT}{}%
 {%
-\gls@defglossaryentry{Blockierung}%
-{%
-name={Blockierung},%
-sort={Blockierung},%
-type={main},%
-first={Blockierung},%
-firstplural={Blockierungs},%
-text={Blockierung},%
-plural={Blockierungs},%
-description={Als Blockierung werden alle Notfälle bezeichnet, bei denen BerggängerInnen infolge Erschöpfung, Überforderung, Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen oder abzubrechen. In der Regel sind die Betroffenen unverletzt.},%
-descriptionplural={Als Blockierung werden alle Notfälle bezeichnet, bei denen BerggängerInnen infolge Erschöpfung, Überforderung, Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen oder abzubrechen. In der Regel sind die Betroffenen unverletzt.},%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={},%
-longplural={},%
-short={},%
-shortplural={},%
-counter={page},%
-parent={},%
-%
-}%
-}%
-\ifglsentryexists{mqtt}{}%
-{%
-\gls@defglossaryentry{mqtt}%
+\gls@defglossaryentry{MQTT}%
 {%
 name={MQTT},%
 sort={MQTT},%
@@ -118,19 +88,19 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{bergnotfall}{}%
+\ifglsentryexists{LoRa}{}%
 {%
-\gls@defglossaryentry{bergnotfall}%
+\gls@defglossaryentry{LoRa}%
 {%
-name={Bergnotfall},%
-sort={Bergnotfall},%
+name={LoRA},%
+sort={LoRA},%
 type={main},%
-first={Bergnotfall},%
-firstplural={Bergnotfalls},%
-text={Bergnotfall},%
-plural={Bergnotfalls},%
-description={Der Begriff „Bergnotfall“ umfasst alle Vorkommnisse, bei denen BerggängerInnen die Hilfe der Bergrettungsdienste beanspruchen. Dies betrifft auch Erkrankungen und Evakuationen von unverletzten Personen},%
-descriptionplural={Der Begriff „Bergnotfall“ umfasst alle Vorkommnisse, bei denen BerggängerInnen die Hilfe der Bergrettungsdienste beanspruchen. Dies betrifft auch Erkrankungen und Evakuationen von unverletzten Personen},%
+first={LoRA},%
+firstplural={LoRAs},%
+text={LoRA},%
+plural={LoRAs},%
+description={Long Range, Low Power long Range Wireless},%
+descriptionplural={Long Range, Low Power long Range Wireless},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -148,19 +118,19 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{AppEUI}{}%
+\ifglsentryexists{LoRaWan}{}%
 {%
-\gls@defglossaryentry{AppEUI}%
+\gls@defglossaryentry{LoRaWan}%
 {%
-name={AppEUI},%
-sort={AppEUI},%
+name={LoRaWan},%
+sort={LoRaWan},%
 type={main},%
-first={AppEUI},%
-firstplural={AppEUIs},%
-text={AppEUI},%
-plural={AppEUIs},%
-description={Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen},%
-descriptionplural={Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen},%
+first={LoRaWan},%
+firstplural={LoRaWans},%
+text={LoRaWan},%
+plural={LoRaWans},%
+description={Low Power Wide Area Network, MAC Protocl},%
+descriptionplural={Low Power Wide Area Network, MAC Protocl},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -178,19 +148,19 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{DevEUI}{}%
+\ifglsentryexists{LoRaWanEndDevice}{}%
 {%
-\gls@defglossaryentry{DevEUI}%
+\gls@defglossaryentry{LoRaWanEndDevice}%
 {%
-name={DevEUI},%
-sort={DevEUI},%
+name={LoRaWan Endgerät},%
+sort={LoRaWan Endgerät},%
 type={main},%
-first={DevEUI},%
-firstplural={DevEUIs},%
-text={DevEUI},%
-plural={DevEUIs},%
-description={Eindeutige ID eines Endgerätes.},%
-descriptionplural={Eindeutige ID eines Endgerätes.},%
+first={LoRaWan Endger\IeC {\"a}t},%
+firstplural={LoRaWan Endger\IeC {\"a}ts},%
+text={LoRaWan Endger\IeC {\"a}t},%
+plural={LoRaWan Endger\IeC {\"a}ts},%
+description={LoRaWan Endgerät. Atas-Node ist ein LoRaWan Endgerät},%
+descriptionplural={LoRaWan Endgerät. Atas-Node ist ein LoRaWan Endgerät},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -238,9 +208,9 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{NetSKey }{}%
+\ifglsentryexists{NetSKey}{}%
 {%
-\gls@defglossaryentry{NetSKey }%
+\gls@defglossaryentry{NetSKey}%
 {%
 name={NetSKey},%
 sort={NetSKey},%
@@ -268,9 +238,9 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{AppSKey }{}%
+\ifglsentryexists{AppSKey}{}%
 {%
-\gls@defglossaryentry{AppSKey }%
+\gls@defglossaryentry{AppSKey}%
 {%
 name={AppSKey},%
 sort={AppSKey},%

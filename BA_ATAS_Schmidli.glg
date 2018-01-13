@@ -1,16 +1,43 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 08.01.2018  00:16:11
-;; Indexstyle: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/JKMS1pdD89", Rawindex: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/3jPO6LLKXd", Output: "BA_ATAS_Schmidli.gls"
+;; at 08.01.2018  22:38:37
+;; Indexstyle: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/lbjOHGEcEF", Rawindex: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/XFXADNKzbD", Output: "BA_ATAS_Schmidli.gls"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
 Forming letter-groups:
+Letter-group: "€Ú€Ğ" -> "A"
+Letter-group: "»ÊÚÚ" -> "M"
+Letter-group: "´ÃË€" -> "L"
+Letter-group: "´ÃË€æ€¼" -> "L"
+Letter-group: "ÚÚ¼" -> "T"
+Letter-group: "Ãæ¼´¨¼®" -> "D"
+Letter-group: "àÈ´¨¼®" -> "U"
+Letter-group: "´ÃË€æ€¼ —¼—Ë€¤Ú" -> "L"
+Letter-group: "—å€Ë" -> "D"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "€Ú€Ğ" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "—å€Ë" -> "D"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "´ÃË€" -> "L"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "»ÊÚÚ" -> "M"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "ÚÚ¼" -> "T"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "àÈ´¨¼®" -> "U"
 
 makeglossaries messages:
 

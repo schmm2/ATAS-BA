@@ -12,10 +12,9 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces MQTT Struktur}}{19}{figure.caption.20}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces TTN Detail}}{20}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces OTAA Ablauf}}{26}{figure.caption.25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces LoRaWan Class A}}{28}{figure.caption.28}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces LoRaWan Class B}}{28}{figure.caption.30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces LoRaWan Class C}}{29}{figure.caption.32}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces OTAA Ablauf}}{26}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LoRaWan Class A}}{28}{figure.caption.29}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces LoRaWan Class C}}{29}{figure.caption.32}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Prototyping Ablauf}}{34}{figure.caption.34}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Flowchart Prototyp 2}}{35}{figure.caption.35}
@@ -31,4 +30,8 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Gateway}}{55}{figure.caption.50}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces TTN Dashboard Gateway}}{57}{figure.caption.53}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces TTN Dashboard Gateway Registriert}}{57}{figure.caption.54}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Messwerte SNR pro Spreadingfactor}}{60}{figure.caption.58}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Messwerte RSSI pro Spreadingfactor}}{61}{figure.caption.59}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Messwerte SNR pro Spreadingfactor}}{62}{figure.caption.61}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Messwerte RSSI pro Spreadingfactor}}{63}{figure.caption.62}
 \addvspace {10\p@ }
