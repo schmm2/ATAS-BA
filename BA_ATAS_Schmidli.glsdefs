@@ -1,3 +1,33 @@
+\ifglsentryexists{Multipathing}{}%
+{%
+\gls@defglossaryentry{Multipathing}%
+{%
+name={Multipathing},%
+sort={Multipathing},%
+type={main},%
+first={Multipathing},%
+firstplural={Multipathings},%
+text={Multipathing},%
+plural={Multipathings},%
+description={Multipathing zu Deutsch Mehrwegempfang oder Mehrwegeempfang tritt an einem Empfänger auf, wenn elektromagnetische Wellen eines Senders von Reflektoren (z. B. Gebäuden) abgelenkt werden und auf verschiedenen Wegen beim Empfänger ankommen. Dadurch entsteht eine Vermischung des direkten Signals mit den verschiedenen zeitlich versetzten reflektierten Echosignalen\cite {multipathing}},%
+descriptionplural={Multipathing zu Deutsch Mehrwegempfang oder Mehrwegeempfang tritt an einem Empfänger auf, wenn elektromagnetische Wellen eines Senders von Reflektoren (z. B. Gebäuden) abgelenkt werden und auf verschiedenen Wegen beim Empfänger ankommen. Dadurch entsteht eine Vermischung des direkten Signals mit den verschiedenen zeitlich versetzten reflektierten Echosignalen\cite {multipathing}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{ATAS}{}%
 {%
 \gls@defglossaryentry{ATAS}%
