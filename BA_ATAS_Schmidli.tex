@@ -28,7 +28,6 @@
 \usepackage{subcaption}
 \usepackage{glossaries}
 
-
 % clear default
 \fancyhead{}
 \fancyfoot{}
@@ -108,37 +107,12 @@ Bern, {\large \today}
 \end{titlepage}
 \pagestyle{fancy}
 
+% Table of contents
 \tableofcontents
-
-% Testszenarien, Wanderungen dokumentieren 1
-
-% LoraWan Airtime, 1
-% Airtime, Payload optimierung
-% Technologien, Alternative, Warum LORA? 2
-
-
-% ONGOING
-% Testing, Batterielaufzeit
-
-% OK OK OK 
-% Technologien, MQTT, 
-% Testdaten, Vorbereitung SFP7-SFP12, 2
-% Prototyp Display, 3
-% LoraWan ADR, 3
-% Testing erweitern was soll getestet werden 1
-% Management Summary, 1
-% Atas-Node2, Antenna Design, Short 3
-% Motivation, 3, OK
-% Einleitung Projekt 2, 1 OK
-% Projekt einleitung detailiert, 1 OK
-% Bilder Atas-Node2, 2 OK
-% Bilder einzelner Atas-Node2 Module, 2 OK
-% Aufbau Gateway Doku, 1
-
 
 \chapter*{Management Summary}
 Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution transformiert. Waschmaschinen werden intelligent, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfällen in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten sogar tödlich \cite{sacaccident}. Welche Fortschritte sind zu erwarten um in der Bergwelt das Risiko zu minimieren? Wie schreitet in der Bergwelt die Digitalisierung voran? Nur selten wird darüber gesprochen. Der Fokus der großen Konzerne, die im Bereich IoT und Mobile Computing aktiv sind, liegt auf den Bereichen in denen ein grosser Umsatz zu erwarten ist. Wäre es nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert und wie viele Leben gerettet werden?\\[0.3cm]
-Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 4 Bereiche. Im ersten Teil der Thesis wird die Funktionalität und der Aufbau des Systems genauer erläutert. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im zweiten Teil geht es um die Technologien welche das System verwendet. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im vierten Schritt wird das ATAS System getestet. Im Fokus liegen hier die Neuerungen beim Prototypen sowie die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und Alltagstauglich ist.
+Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 5 Bereiche. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im ersten Teil der Thesis wird die grundsätzliche Funktionalität und der grobe Aufbau des Systems definiert. Im zweiten Teil geht es um die Technologien welche für das System verwendet werden sollen. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der finale Aufbau definiert. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im vierten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im fünften Schritt wird das ATAS System getestet. Im Fokus liegen hier die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und alltagstauglich ist.
 
 \chapter*{Motivation}
 21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war grandios.
@@ -153,14 +127,6 @@ Ich bin kein Extrembergsteiger. Ich genieße die Schweizer Alpen, bin aber nie i
 An eben diesem Tag stellten wir uns die Frage: Was wäre wenn? Was wäre passiert wenn wir von einer Lawine verschüttet worden wären? Wer hätte uns gesucht? Hätte uns überhaupt jemand gesucht? Falls meine Kollegin verschüttet wäre, wie lange würde es dauern bis die Rettungskräfte eintreffen würden? Wäre das Handynetz verfügbar gewesen? Tausende von Fragen ergaben sich.\\[0.3cm]\
 Diese Thematik beschäftigte mich noch lange. Als es darum ging ein Thema für das Bachelor Thesis Vorprojekt (Projekt 2) auszusuchen, wollte ich mich weiter mit diesen Fragen auseinandersetzen. Dank meinem Studium und der gewählten Fachrichtung 'Mobile Computing' hatte ich bereits ein, zwei Idee wie man diese Problematik angehen könnte. Das Projekt ATAS war geboren. Meine Vorstellung war es ein System zu erstellen, welches Personen in solchen Situation unterstützen, mehr noch, solche Situationen verhindern sollte.\\[0.3cm]
 
-\chapter*{Danksagung}
-Ich möchte an dieser Stelle einigen Personen danken, die mich während dieser Arbeit unterstützt haben.\\[0.3cm]
-
--Josua Röthlisberger
--Mohamed Mokdad
--Oliver Kondic
-
-
 \chapter{Einleitung}
 Ein Gipfel gehört dir erst, wenn du wieder unten bist - denn vorher gehörst du ihm.\\[0.3cm]
 \textbf{Hans lander, Italienischer Bergsteiger\cite{kammerlander}} \\[0.5cm]
@@ -174,11 +140,11 @@ Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski 
 \end{figure}
 \noindent
 Die Vorfälle sind nach Ursache gegliedert. Zusammengefasst ergeben sich 2828 Notsituationen. 178 endeten tödlich.\\[0.3cm]
-Als Blockierung werden alle Notfälle bezeichnet, bei denen Bergsteigern infolge Erschöpfung, Überforderung, Materialverlust oder anderen Missgeschicken nicht mehr in der Lage sind, ihre Tour aus eigener Kraft weiterzuführen oder abzubrechen. In der Regel sind die Betroffenen unverletzt.
+Ein nicht geringer Anteil machen Unfälle mit Lawinen aus. Wird eine Person innert 15 Minuten geborgen Leben noch 90\% der Betroffenen. Man spricht auch von der Überlebensphase. Nach 15 Minuten folgt die Erstickungsphase, die Überlebenschancen schwinden auf geringe 30\%. Je schneller ein Rettungsdienst alarmiert werden kann desto höher sind die Überlebenschancen \cite{avalancheaccident}. 
 
 \newpage
 \section{Projektidee}
-Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger, nachfolgend Gateway genannt. Der Gateway wird bei der Talstation oder im nächsten Bergdorf montiert. Der Gateway sendet die empfangenen Daten der Tracker an eine zentrale Stelle irgendwo im Internet. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
+Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger. Der Empfänger wird bei der Talstation oder im nächsten Bergdorf montiert. Die Daten werden von einer Software gesammelt und analysiert. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
 
 \section{Vorarbeiten}
 Das Projekt 2 ist eine Projektarbeit welche im Laufe des Informatikstudiums absolviert werden muss. Diese Arbeit habe ich im vorhergehenden Semester (Frühlingssemester 2017) durchgeführt. Ziel dieses Projektes, war es das in der Einleitung beschriebene System technisch umzusetzen.\\[0.3cm]
@@ -190,16 +156,12 @@ Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute Syst
 \item
 Der Tracker soll in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analysiert.
 \item Der Tracker Prototyp soll verbessert werden. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können ob das erdachte System praxistauglich ist
-\item
-Die während dieser Arbeit geleisteten Arbeiten sollen in einem Bericht dokumentiert werden.
-\item Das Wissen rund um die verwendeten Technologien soll vertieft werden.
 \end{itemize}
 
 \section{Rahmenbedingungen}
 Die Rahmenbedingungen dieses Projektes wurden gemeinsam mit dem Betreuer definiert
 \begin{itemize}
 \item Die Bachelorarbeit baut auf der Arbeits des Projekt 2 auf. Die erstellte Hard und Software wird weiterverwendet.
-\item The Things Network dient als Plattform für die LoRaWan Backen
 \item Als Programmiersprache soll C/C++ verwendet werden
 \item Auf den Einsatz eines Betriebsystemes soll zugunsten des Energieverbrauchs auf dem Tracker Node verzichtet werden
 \end{itemize}
@@ -235,7 +197,7 @@ Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Ko
 Grobes Schema des ATAS Systems. Auf der nachfolgenden Seiten sind die einzelnen Komponenten im Detail beschrieben.\\[0.3cm]
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Abstract_BA.png}
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Abstract_BA.jpg}
 	\caption[Atas Schema Grob]
 	{Atas Schema Grob}
 \end{figure}
@@ -249,21 +211,22 @@ Alpinist wird als Generalisierung für Personen, welche sich in den Bergen aufha
 Rettungsdienste wie bspw. die Rega oder die AirGlacier. Spitäler oder die lokalen Tourismusbehörden.
 
 \subsection{Komponenten}
-Das ATAS System besteht aus den nachfolgenden Komponenten. Komponenten sind als Hardware und Software zu verstehen.
+Das ATAS System besteht aus den nachfolgenden aufgelisteten Komponenten. Komponenten sind als Hardware oder Software zu verstehen.
 \subsubsection{Tracker}
-Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend genannt Tracker. Der Alpinist trägt den Tracker bei sich bspw. in einem Rucksack.\bigskip \\ 
-Der Tracker verfügt über ein Display, Taste, GPS Modul, Kommunikationsmodul und ein Lautsprecher. Der Tracker überträgt folgende Daten an den Gateway.
+Stellen Sie sich ein kleines mobiles Gerät vor. Nachfolgend nennen wir dieses Gerät Tracker. Der Alpinist trägt den Tracker bei sich bspw. in einem Rucksack. Der Tracker zeichnet auf wo sich die Person momentan befindet\\ [0.3cm] 
+Der Tracker verfügt über ein Display, Schalter, GPS Modul, Kommunikationsmodul und ein Lautsprecher.\\ [0.3cm]
+Der Tracker überträgt folgende Daten an den Gateway.
 \begin{itemize}
-	\item Hat der Alpinist ein Problem (Notrufschalter) 
-	\item Position des Trackers
+	\item Notrufsignale
+	\item GPS Position des Trackers
 \end{itemize}
-
+Befindet sich der Tracker resp. die Person in einer Gefahrenzone wird die Person über den Bildschirm und mit einem Tonsignal alarmiert.
 \subsubsection{Gateway}
 Ein Gerät welches mit den Trackern bidirektional kommuniziert. Der Gateway wird an einem Ort nahe den Bergen installiert. Als mögliche Orte kommt ein Dorf im Tal oder eine Talstation in Frage.\bigskip \\
-Der Gateway senden die empfangenen Daten an eine zentrale Datenmanager, nachfolgend \textbf{Broker} genannt.
+Der Gateway senden die empfangenen Daten an eine zentrale Datenmanager, nachfolgend \textbf{Datenhandler} genannt.
 
-\subsubsection{Broker}
-Sammelt und speichert Daten. Der Broker kommuniziert mit den Gateways. Zusätzlich bietet der Broker ein Interface zum Abfragen und senden von Daten.
+\subsubsection{Datenhandler}
+Sammelt und speichert Daten. Der Datenhandler kommuniziert mit den Gateways. Zusätzlich bietet der Datenhandler ein Interface zum Abfragen und senden von Daten an die Tracker via Gateway.
 
 \subsubsection{Webapplikation}
 Die Notfalldienste resp. Überwacher nutzen eine Webapp zum interagieren mit dem ATAS System. Die Webseite bietet folgende Funktionalitäten
@@ -276,8 +239,8 @@ Die Notfalldienste resp. Überwacher nutzen eine Webapp zum interagieren mit dem
 		Zeigt an ob sich ein Tracker in einer Gefahrenzone aufhält.	
 \end{itemize}
 
-\subsubsection{Business Logik}
-Die BusinessLogik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Broker und dem Gateway zum Tracker.
+\subsubsection{Logik}
+Die BusinessLogik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Datenhandler und dem Gateway zum Tracker.
 
 \subsection{Begriffe}
 \subsubsection{Gefahrenzonen}
@@ -296,7 +259,7 @@ In diesem Kapitel wird genauer auf die eingesetzten Technologien eingegangen. Es
 Zu beginn dieses Projektes musste festgelegt werden, welche Technologie für die Datenübertragung verwendet werden soll. Nachfolgend werden drei mögliche Technologien analysiert.
 
 \subsection{Sigfox}
-Sigfox ist eine LPWAN Lösung welche vom Netzwerk Design eher an ein herkömmliches Mobilfunknetz erinnert.
+Sigfox ist eine LPWAN Lösung welche vom Netzwerk Design eher an ein herkömmliches Mobilfunknetz erinnert. Sigfox ist eher ein geschlossenes System. Wurde das Gebiet mit Sigfox erschlossen, kann das Netzwerk gegen Bezahlung mitbenutzt werden. Der Aufbau eines eigenen Antenne scheint nicht möglich. 
 
 \subsubsection{Vorteile}
 \begin{itemize}
@@ -305,7 +268,7 @@ Sigfox ist eine LPWAN Lösung welche vom Netzwerk Design eher an ein herkömmlic
 \end{itemize}
 \subsubsection{Nachteile}
 \begin{itemize}
-	\item Sigfox ist eher ein geschlossenes System. Wurde das Gebiet mit Sigfox erschlossen, kann das Netzwerk gegen Bezahlung mitbenutzt werden. Der Aufbau eines eigenen Empfängers scheint nicht möglich. Zum jetzigen Zeitpunkt Stand 15.1.2018 wurde die Schweiz von Sigfox noch nicht erschlossen.
+	\item Zum jetzigen Zeitpunkt Stand 15.1.2018 wurde die Schweiz von Sigfox noch nicht erschlossen.
 	\item Geringe Bandbreite, ca. 100B/s
 	\item Limitierung in der Zahl der Nachrichten die gesendet werden können. Zum Endgerät (Downlink) 140x 12 Byte. Vom Endgerät an das Netzwerk (Uplink) 4x 8 Byte
 	\item Sigfox wird als Service Angeboten. Für den Dienst muss bezahlt werden.
@@ -336,19 +299,19 @@ LoRa hat drei Hauptmerkmale. Der Energieverbrauch ist gering (low-power), die Re
 
 \newpage
 \subsection{NB-IOT, LTE Cat M1}
-NB-IOT (Narrowband - Internet of Things) und LTE Cat M1 wurden als Konkurrenz zu den Populären Lösungen LoRa und Sigfox entwickelt. Auf diese Netzwerke wird hier vorerst nicht eingegangen. Die Standards wurden erst kürzlich von der Industrie aufgegriffen und werde langsam eingeführt. Die Swisscom plant erste Tests ende 2017. Der Rollout für die Nutzer soll 2018 beginnen \cite{swisscomnbiot}.
+NB-IOT (Narrowband - Internet of Things) und LTE Cat M1 wurden als Konkurrenz zu den populären Lösungen LoRa und Sigfox entwickelt. Auf diese Netzwerke wird hier vorerst nicht eingegangen. Die Standards wurden erst kürzlich von der Industrie aufgegriffen und werde langsam eingeführt. Die Swisscom plant erste Tests gegen Ende 2017. Der Rollout für die Nutzer soll im Frühjahr 2018 beginnen \cite{swisscomnbiot}.
 
 \subsection{Entscheid}
-Sigfox scheidet leider als mögliche Technolgie aus. Die Angaben zur Reichweite sind sehr beeindruckend. Die Beschränkung in der Anzahl der Downlink und Uplink Nachrichten macht es leider für das ATAS System unbrauchbar. Mit nur 140 Nachrichten kann die Position des Trackers nicht sauber ermittelt werden.\\[0.3cm]
+Sigfox scheidet als mögliche Technolgie aus. Die Angaben zur Reichweite sind zwar sehr beeindruckend, die Beschränkung in der Anzahl der Dow und Uplinks macht es leider für das ATAS System unbrauchbar. Mit nur 140 Nachrichten pro Tag, kann die Position des Trackers nicht häufig genug ermittelt werden.\\[0.3cm]
 NB-IOT \& LTE Cat M1 scheinen eine potente Mobilfunklösung für den IoT Bereich zu sein. Die Zukunft wird zeigen ob sich die Technologie gegen die bestehende Konkurrenz behaupten kann.\\[0.3cm]
 Bleibt noch LoRa. LoRa überzeugt mit der guten Reichweite und der kleinen Belastung der Batterie. Für das System ATAS wir LoRa als Datenkommunikationslösung eingesetzt.
 
 \newpage
 \section{LoRa}
-Um das Projekt durchzuführen, musste das Wissen zum Thema LoRA vertieft werden.
+Um das Projekt durchzuführen, musste das Wissen zum Thema LoRa vertieft werden.
 
 \subsection{LoRa Modulation}
-LoRa unterstützt zwei Modulationsarten, das simple Frequency Shift Key (FSK) und das Chirp Spread Spectrum (CSS) Verfahren. In dieser Arbeit setzen wir den Fokus auf CSS.\\ \bigskip
+LoRa unterstützt zwei Modulationsarten, das simple Frequency Shift Key (FSK) und das Chirp Spread Spectrum (CSS) Verfahren. In dieser Arbeit setzen wir den Fokus auf CSS.\\[0.3cm]
 Ein Chirp ist ein sinusähnliches Signal, bei welchem über die Zeit die Frequenz erhöht oder reduziert wird.
 \begin{figure}[H]
 	\centering
@@ -357,7 +320,7 @@ Ein Chirp ist ein sinusähnliches Signal, bei welchem über die Zeit die Frequen
 	{Beispiel Upchirp}
 \end{figure}
 \noindent
-Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschließend verwendet um die Nutzdaten zu kodieren.
+Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschließend verwendet um die Nutzdaten zu kodieren. Pro übertragenes Symbol wird ein Chirp generiert.
 
 \subsubsection{Bandbreite}
 Bei LoRa haben wir die Möglichkeit zwischen drei möglichen Bandbreiten zu wählen. Die Bandbreite definiert die grösse des Bereiches der zwischen der kleinste und der größten möglichen Frequenz. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. Eine Verdoppelung der Bandbreite (BW125 zu BW250) erlaubt es doppelt soviele Bytes zu senden. Nur die Bandbreiten 125KHz und 250KHz sind in Europa zulässig. %SOURCE https://www.youtube.com/watch?v=dxYY097QNs0. 
@@ -372,84 +335,86 @@ Zwei Parameter beeinflussen das Chirp Moduliertes Signal. Erstens die Bandbreite
 	\caption[Wasserfall Darstellung: Chirp Parameter]
 	{Wasserfall Darstellung: Chirp Parameter}
 \end{figure}
+
+\noindent
 Ein weiteres Beispiel eines Upchirps. Wir sehen in der Mitte die mögliche Bandbreite 125KHz und 250kHz. Die Frequenz nimmt gegen Links zu. Bei diesem Signal wird 125kHz verwendet. Der gelbe Strich zeigt uns die momentane Frequenz zum Zeitpunk x. Nach erreichen der maximalen Frequenz folgt der nächste Chirp. Dieses Intervall wird auch Sweep Rate genannt.\\[0.3cm]
 Die Einstellungsmöglichkeiten der Parameter wurden in Europa zu Gruppen, sogenannten Spreading Factors zusammengefasst. Es gibt die Faktoren SF7-SF12.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{img/spreadingfactors.png}
+	\includegraphics[width=0.48\textwidth]{img/spreadingfactors.png}
 	\caption[Wasserfall Darstellung: Spreadingfactors 7-12]
 	{Wasserfall Darstellung: Spreadingfactors 7-12}
 \end{figure}
+
 \noindent
-Wie in der Grafik ersichtlich ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine größere Distanz übertragen werden. Müssen größere Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9).  Sollen große Distanzen überwunden werden, oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadinfactor (10-12) verwendet werden.
+Wie in der Grafik ersichtlich ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine größere Distanz übertragen werden. Müssen 'größere' Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9).  Sollen große Distanzen überwunden werden, oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadingfactor (10-12) verwendet werden.
 
-\subsubsection{Vorteile}
-\begin{enumerate}
-	\item CSS benutzt die gesamte Bandbreite bspw. 125kHz um ein Signal zu übertragen. Diese Eigenschaft macht es unempfindlich gegenüber 'Channel-Noise'. Channel Noise beschreibt ein Signal auf einer bestimmten Frequenz.
-	\item Nicht betroffen von \gls{Multipathing}
-	\item Nicht betroffen vom Doppler Effekt.
-\end{enumerate} 
-
+\newpage
 \subsection{Regulationen}
 Für die Schweiz und in vielen Teilen Europas gilt für die Nutzung von LoRa die Regelung ERC/REC 70-03 \cite{regulations}. Zusammengestellt wurden die Regulationen von der CEPT, der European Conference of Postal and Telecommunications. Die Schweiz ist Mitglied dieser Organisation. Die Standardisierung selbst hat die Organisation ETSI (EN300.220) übernommen. Das Dokument beschreibt die verwendbaren Frequenzen, die maximale Übertragungsleistung (dbm) sowie den Duty Cycle.\\[0.3cm]
 Die Regulationen wurden in dieser Projektarbeit eingehalten. Die maximale Sendeleistung von 25mW resp. 14dbm wurde während den Tests nicht überschritten.
 
-\subsection{Duty Cycle}
-Der Duty Cycle oder zu Deutsch 'Auslastungsgrad' beschreibt, wie lange ein Signal oder ein System aktiv ist \cite{wikiduty}. Dieser Prozentsatz wird meist vom Gesetzgeber festgelegt. Wir müssen uns an die Einschränkungen halten, was wiederum bedeutet, dass wir nicht konstant Daten senden dürfen. Die nachfolgenden Frequenzbänder \& Duty Cycles wurden durch die ETSI definiert und können ein Europa verwendet werden\cite{lorawanfreq}.
+\subsection{Datenübertragungsrate}
+Der Duty Cycle und die damit verbundene Airtime haben einen grossen Einfluss auf die maximale Datenübertragungsrate. 
+\subsubsection{Duty Cycle}
+Der Duty Cycle oder zu Deutsch 'Auslastungsgrad' beschreibt, wie lange ein Signal oder ein System aktiv ist \cite{wikiduty}. In unserem System beispielsweise wie lange der Tracker sendet. Dieser Prozentsatz wird meist vom Gesetzgeber festgelegt. Wir müssen uns an die Einschränkungen halten, was wiederum bedeutet, dass wir nicht konstant Daten senden dürfen. Die nachfolgenden Frequenzbänder \& Duty Cycles wurden durch die ETSI definiert und können ein Europa verwendet werden\cite{lorawanfreq}.
 
 \begin{tabularx}{\linewidth}{XXXX}
 	\textbf{Band} & \textbf{Frequenz} & \textbf{Energieverbrauch} & \textbf{Duty Cycle} \\ \hline
-	g &863.0 – 868.0 MHz & 25mW&1\%\\ \hline
-	g1 &868.0 – 868.6 MHz & 25mW& 1\%\\ \hline
-	g2 &868.7 – 869.2 MHz & 25 mW& 0.1\%\\ \hline
-	g3 &869.4 – 869.65 MHz) & 500mW& 10\%\\ \hline
-	g4 &869.7 – 870.0 MHz & 5mW/25mW& 1\%\\ \hline
+	g &863.0 - 868.0 MHz & 25mW&1\%\\ \hline
+	g1 &868.0 - 868.6 MHz & 25mW& 1\%\\ \hline
+	g2 &868.7 -869.2 MHz & 25 mW& 0.1\%\\ \hline
+	g3 &869.4 - 869.65 MHz & 500mW& 10\%\\ \hline
+	g4 &869.7 - 870.0 MHz & 5mW/25mW& 1\%\\ \hline
 \end{tabularx} 
-Diese Frequenzbänder gelten für den Einsatz in Kombination mit LoRaWan.
+\noindent
+Diese Frequenzbänder gelten für den Einsatz in Kombination mit LoRaWan in Europa. In anderen Regionen der Welt gelten andere Frequenzen.
 
-%TODO EXAMPLE
+\newpage
+\subsubsection{Airtime}
+Die Airtime definiert, wie lange es dauert ein Signal vom LoRa Endgerät zum Gateway zu übertragen. Die Airtime ist abhängig von der Menge der zu übertragenden Daten und dem verwendeten Spreading Factor.\\[0.3cm]
+Die untenstehende Grafik verbildlicht diesen Zusammenhang
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/system/timeonair.png}
+	\caption[Time on Air]
+	{Time on Air}
+\end{figure}
+\noindent
+Je höher der Spreadingfactor, desto länger dauert die Übertragung. Auf die genaue Berechnung der Airtime und der gesamten Payload wird hier nicht weiter eingegangen.
 
-\subsection{Airtime}
-Die Airtime definiert, wie lange es dauert ein Signal vom LoRa Endgerät zum Gateway zu übertragen. Die Airtime ist von mehreren Faktoren abhängig
-\begin{itemize}
-	\item Nutzdatengrösse (Payload), Anzahl Bytes
-	\item Spreading Factor
-	\item Duty Cyle
-	\item Bandbreite
-	\item Coding Rate
-\end{itemize}
+\subsubsection{Berechnung}
+Wir wissen nun also, dass wir nicht beliebig oft senden dürfen. Weiter wissen wir, dass die Airtime im Endeffekt bestimmt wie lange die Übertragung dauert. Die Formel lautet nun wie folgt.
+\begin{equation*}time = \frac{airtime}{dutycylce * 1000}\end{equation*}
+Im Abschnitt 'Testing' werden wir später genau ermitteln wie häufig wir mit dem ATAS System senden können.
 
-\subsection{Datenübertragungsrate}
-Nachfolgend wird festgestellt, wie schnell wir die Daten per LoRa übertragen können. 
+\newpage
+\subsection{Coding Rate}
+Die Coding Rate definiert die Error Kodierungsrate. Eine höhere Kodierungsrate ermöglicht es das Signal auch bei Störungen (Noise) zu rekonstruieren. Ein erhöhen der Coding Rate verursacht eine größere Menge an Daten die gesendet werden $\rightarrow$ Overhead. Nutzdaten (bit) werden mehrmals übertragen. Ein Signal beinhaltet also redundante Informationen. Mögliche Coding Rate Werte im LoRa Umfeld sind 4/5 und 4/8.
+\begin{exmp}
+	Annahme: Wir setzen die Coding Rate auf 4/8\\
+	8 - 4 = 4, d.H bei 4 Bit Nützlichen Informationen fügen wir nochmals 4 Bit redundante Informationen hinzu.
+\end{exmp}
+\noindent
+Um ein möglichst gutes Signal zu erhalten, soll im ATAS System die Kodierungsrate auf 4/8 festgelegt werden.
 
-% TODO
 
 \newpage
 \section{LoRaWan}
-
-\subsection{Netzwerk Topologie}
+LoRaWan ist ein Protokoll welches auf LoRa aufbaut. Man kann es sich als das TCP/IP von LoRa vorstellen. Das Protokoll definiert die Struktur der Daten die gesendet werden.
+\subsection{Netzwerk Architektur}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/lorawantopology.jpg}
-	\caption[LoRaWan Topologie]
-	{LoRaWan Topologie}
+	\caption[LoRaWan Architektur]
+	{LoRaWan Architektur}
 \end{figure}
-
-\newpage
-\subsection{Abdeckung}
-Die Verbreitung von LoRaWan in der Schweiz ist mittlerweile sehr hoch. Unternehmen wie die Swisscom und die Schweizer Post haben begonnen große LoRaWan Netzwerke aufzubauen \cite{swisscompost}.\\[0.3cm]
-Eine Übersicht über die aktuelle Abdeckung des Swisscom , Stand (2.11.2017)  \cite{swisscomcoverage}.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/swisscomlorawan.png}
-	\caption[Swisscom LoRaWan Abdeckung]
-	{Swisscom LoRaWan Abdeckung}
-\end{figure}
-Vielott steht für Abeckung. Weisse Stellen bedeutet es existiert keine LoRaWan Abdeckung. Wie in der Grafik ersichtlich, sind die Bergregionen noch nicht erschlossen. Das Netzwerk der Swisscom kann somit für das ATAS System nicht verwendet werden.
-
-\subsection{Coding Rate}
-Die Coding Rate definiert die Error Kodierungsrate. Eine höhere Kodierungsrate ermöglicht es das Signal auch bei hohen Störungen (Noise) zu rekonstruieren. Ein erhöhen der Coding Rate verursacht eine größere Menge an Daten $\rightarrow$ generiert mehr Overhead. Mögliche Werte sind 4/5 und 4/8. Um ein möglichst gutes Signal zu erhalten, soll im ATAS System die Kodierungsrate auf 4/8 festgelegt werden.
+Ein LoRaWan Netzwerk besteht aus mehreren Komponenten\\[0.3cm]
+\textbf{Die End Nodes} sammeln Daten über Sensoren. Das können ganz unterschiedliche Sachen sein, wie zum Beispiel Feuchtigkeit in einem Raum. Die End Nodes senden Daten an die Empfänger (Gateways, Concentrator) via LoRa. Die Daten werden hier, nicht wie in einem Mobilfunknetz an nur eine Antenne, sonder an alle Empfänger gesendet.\\[0.3cm]
+\textbf{Die Gateways} leiten die erhaltenen Informationen weiter an den Netzwerk Server. Die Gateway sind meist mit dem Internet über Kabel oder Wireless verbunden.\\[0.3cm]
+\textbf{Der Netzwerk Server} verwaltet die ein kommenden Datenströme. Doppelte Pakete werden gefiltert und Sicherheitsregeln werden angewandt. Abschliessend sendet der Gateway eine Empfangsbestätigung (Acknowledgement) an den Gateway, dass er die Pakete sauber erhalten hat.\\[0.3cm]
+Zum Schluss werden die Daten an die zuständigen \textbf{Applikations Server} weitergeleitet.
 
 \newpage
 \subsection{Sicherheit}
@@ -503,22 +468,24 @@ Alle Geräte der Klasse B und C haben die Funktionalität von Klasse A implement
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/lorawan_class_a.png}
-	\caption[LoRaWan Class A]
-	{LoRaWan Class A}
+	\caption[LoRaWan Klasse A]
+	{LoRaWan Klasse A}
 \end{figure}
+\noindent
 Werden Daten außerhalb dieses Zeitfensters geschickt, werden diese nie vom Endgerät empfangen.
 
 \subsubsection{Klasse B}
 Ein Klasse B Gerät kann zusätzliche Download Receive Fenster zu definierten Zeiten öffnen. Der Gateway sendet ein Datenpaket (Beacon) an die Endgeräte um die Zeiten zu synchronisieren. Sind die Zeiten synchronisiert, weiß das LoRaWan Netzwerk ganz genau wann ein Endgerät bereit ist Daten zu empfangen. 
 
+\newpage
 \subsubsection{Klasse C}
 Klasse C Geräte haben ein nahezu permanent geöffnetes Receive Zeitfenster. Nur während einem Sendevorgang wird dieses kurzzeitig geschlossen. Durch diese Eigenschaften ist der Energievierbauch von Klasse C Geräten im Vergleich zu A \& B sehr viel größer.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/lorawan_class_c.png}
-	\caption[LoRaWan Class C]
-	{LoRaWan Class C}
+	\caption[LoRaWan Klasse C]
+	{LoRaWan Klasse C}
 \end{figure}
 
 \subsubsection{Entscheid}
@@ -531,16 +498,51 @@ Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möcht
 Der Einsatz von ADR macht im ATAS System meiner Meinung nach wenig Sinn. Dafür gibt es zwei Gründe
 \begin{itemize}
 	\item Die ADR Kommunikation generiert einen Overhead \cite{adroverhead}. Die ADR Kommunikation benötigt jeweils zwei Uplink und eine Downlink Message. 
-	\item In der Zeit welche zwischen zwei Uplinks vergeht, kann sich die Umgebung drastisch verändern. Bspw. Der Wanderer hat direkten Sichtkontakt mit dem Gateway. Das System reduziert den Spreadingfactor. 2 Minuten später befindet er sich in einem Waldstück mit einem schlechteren Empfang. Die nun gesendeten Uplink erreichen möglicherweise das Ziel nicht.
-\end{itemize}Meine Empfehlung wäre die Entwicklung eines eigenen ADR Systems. Der SF ist grundsätzlich hoch (SF11-SF12) zu halten um eine Übertragung der Daten zu garantieren. Mittels Auswertung der letzten GPS Punkte könnte das System die Geschwindigkeit der Person erkennen. Bewegt er sich langsam (laufen), könnte die Zeit zwischen den einzelnen Uplinks erhöht werden. Damit sparen wir Energie. Bewegt er sich schneller (Ski Fahren) kann die Zeit reduziert werden. 
+	\item In der Zeit welche zwischen zwei Uplinks vergeht, kann sich die Umgebung drastisch verändern. Bspw. Der Wanderer hat direkten Sichtkontakt mit dem Gateway. Das System reduziert den Spreadingfactor. 2 Minuten später befindet er sich in einem Waldstück mit einer hohen Signaldämpfung. Die nun gesendeten Uplinks erreichen möglicherweise das Ziel nicht.
+\end{itemize}Diee Entwicklung eines eigenen ADR Systems wäre hier die Lösung. Der SF ist grundsätzlich hoch (SF11-SF12) zu halten um eine Übertragung der Daten zu garantieren. Mittels Auswertung der letzten GPS Punkte könnte das System die Geschwindigkeit der Person erkennen. Bewegt er sich langsam (laufen), könnte die Zeit zwischen den einzelnen Uplinks erhöht werden. Damit sparen wir Energie. Bewegt er sich schneller (Ski Fahren) kann die Zeit reduziert werden. 
 
 \newpage
-\section{The Things Network}
-TODO PRIO 2
+\section{LoRaWan Netzwerk}
+\subsection{Evaluation}
+Ein eigenes LoRaWan Netzwerk aufzubauen ist möglich, würde aber den Umfang dieser Arbeit sprengen. Aus diesem Grund wurde entschieden auf bereits bestehende Netzwerke zurückzugreifen.\\[0.3cm]
+Die Verbreitung von LoRaWan in der Schweiz ist mittlerweile sehr hoch. Unternehmen wie die Swisscom und die Schweizer Post haben begonnen große LoRaWan Netzwerke aufzubauen \cite{swisscompost}.\\[0.3cm]
+Eine Übersicht über die aktuelle Abdeckung des Swisscom , Stand (2.11.2017)  \cite{swisscomcoverage}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/swisscomlorawan.png}
+	\caption[Swisscom LoRaWan Abdeckung]
+	{Swisscom LoRaWan Abdeckung}
+\end{figure}
+\noindent
+Vielott steht für Abeckung. Weisse Stellen bedeutet es existiert keine LoRaWan Abdeckung. Wie in der Grafik ersichtlich, sind die Städtischen Gebiete bereits erschlossen. Anders sieht es in den Bergregionen aus. Das Netzwerk der Swisscom /Post kann somit für das ATAS System nicht verwendet werden.\
 
 \newpage
-\section{MQTT}
-Durch die Wahl vom TTN Netzwerk wurde die Datenübertragungsart MQTT quasi aufgezwungen. Wird der TTN Handler nicht selber verwaltet, ist der Zugriff auf die Daten (API) nur per MQTT möglich  \cite{amqp}. Die Unterstützung von AMQP ist geplant aber noch nicht verfügbar. Das Protokoll MQTT war dem Projektteam bereits bekannt. Während dem Studium konnten bereits positive Erfahrungen mit MQTT gesammelt werden. Das Protokoll ist einfach zu verstehen und hat sich sehr einfach in das ATAS System eingliedern lassen. Die fehlende Websocket Unterstützung konnte mit wenig Aufwand über den Dienst 'CloudMQTT' realisiert werden.
+\subsection{The Things Network, TTN}
+Auf anraten von Personen aus dem nahem Umfeld welche sich bereits intensiv mit LoRaWan auseinander gesetzt haben, wird beim ATAS System das Netzwerk 'The Things Network' eingesetzt. The Things Network kurz TTN ist eine LoRaWan Plattform, welche LoRaWan Endgeräte mit Applikationen verbindet. Der Beitritt ist kostenlos. Das Projekt wird von einer grossen Community betrieben. Ein eigener Gateway kann unkompliziert aufgeschaltet und in das Netzwerk integriert werden. 
+
+\subsubsection{Architektur}
+Das TTN Netzwerk in sich besteht aus vielen einzelnen Komponenten.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/ttn_architecture.png}
+	\caption[TTN Architektur]
+	{TTN Architektur}
+\end{figure}
+
+\newpage
+\noindent
+In dieser Arbeit wird \textbf{nicht auf die Details des TTN Netzwerkes eingegangen}. Wie das System in sich funktioniert hat keinen Einfluss auf das ATAS Projekt. Das TTN Netzwerk wird als Blackbox betrachtet. Die untenstehende Grafik verbildlicht diesen Ansatz. Über das TTN Netzwerk, via Gateways (G), werden Daten an die Tracker (N) gesendet. Die Tracker senden Ihre Daten via Gateway an das TTN. Das TTN Netzwerk wiederum bietet Schnittstellen an (API) um Daten zu senden und zu empfangen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/ttn-overview.jpg}
+	\caption[TTN Blackbox]
+	{TTN Blackbox}
+\end{figure}
+\noindent
+
+\subsection{Datenschnittstelle / API}
+Durch die Wahl von TTN als LoRaWan Netzwerk muss die Datenübertragungsart MQTT genutzt. Der Zugriff auf die Datenschnittstelle (API) von TTN ist nur per MQTT möglich. Die Unterstützung von AMQP ist geplant aber noch nicht verfügbar  \cite{amqp}. Das Protokoll MQTT war dem Projektteam bereits bekannt. Während dem Studium konnten bereits positive Erfahrungen mit MQTT gesammelt werden.
 
 \chapter{Systembeschreibung - Detail}
 Die vorhergegangene Architekturbeschreibung gibt einen grobe ersten Überblick über das System. Technische Details zu  den verwendeten Technologien oder den genauen Fluss der Kommunikation waren nicht ersichtlich. In diesem Abschnitt soll nun intensiv auf diese Thematik eingegangen werden.\\[0.3cm]
@@ -554,7 +556,8 @@ Die Komponenten werden in 2 Kategorien eingeteilt. Komponenten mit einem blauen 
 	{Legende - Diagram}
 \end{figure}
 
-Die aktuell beschriebene Komponente wird als grauee Box dargestellt.
+\noindent
+Die im Absatz beschriebene Komponente wird als graue Box dargestellt und so hervorgehoben.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\textwidth]{img/system/greybox.jpg}
@@ -576,7 +579,7 @@ Die aktuell beschriebene Komponente wird als grauee Box dargestellt.
 Wie in der untenstehenden Grafik ersichtlich, besteht der Tracker aus mehreren Komponenten/Modulen. Welche Komponenten verbaut und wie diese untereinander kommunizieren, wird im Kapitel 'Prototyp' genauer behandelt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Tracker_BA.png}
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Tracker_BA.jpg}
 	\caption[Tracker Detail]
 	{Tracker Detail}
 \end{figure}
@@ -591,31 +594,32 @@ Wie in der untenstehenden Grafik ersichtlich, besteht der Tracker aus mehreren K
 	\item
 	GPS Modul: Der Tracker verfügt über ein GPS Modul. Mit dem GPS Modul kann die Position des Tracker auf der Erde ermittelt werden.
 	\item 
-	Lora Modul: Mittels Lora Modul können Daten an einen Empfänger, nachfolgend \textbf{Atas-Gateway} genannt, gesendet werden.
+	Lora Modul: Mittels Lora Modul können Daten an einen Empfänger (LoRaWan Gateway) gesendet werden.
 	\item 
 	Computer: Verarbeitet eingehenden Signale und löst entsprechende Aktionen aus.
 \end{itemize}
 
 \newpage
 \subsection{ATAS-Node}
-% TODO
+ATAS-Node ist die Software welche auf dem Tracker Gerät ausgeführt wird. ATAS-Node wurde, im Vergleich zum Vorprojekt, komplett umgebaut. Genauere Angaben, die ATAS-Node aufgebaut wurde ist im Abschnitt Prototype zu finden.2
 
+\newpage
 \section{Gateway}
 Der Gateway verbindet die Tracker mit dem \gls{TTN} Netzwerk. Er sendet Daten zu den Trackern (\gls{Downlink}) und empfängt Daten von den Trackern (\gls{Uplink}).
 \subsection{Diagramm}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Detail_Gateway_BA.png}
+	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Detail_Gateway_BA.jpg}
 	\caption[Gateway Detail]
 	{Gateway Detail}
 \end{figure}
 
 \newpage
-\section{Broker}
-Die Aufgabe des Brokers umfasst das Sammeln der Daten und deren Bereitstellung an die ATAS Applikationen ATAS-Web und ATAS-Service. Der Broker besteht aus zwei Komponenten. Die Komponenten wurde nicht selbstständig entwickelt. Für das ATAS Projekt wurden bereits existierende Dienste verwendet. Die Dienste heissen \textbf{The Things Network (TTN)} und \textbf{CloudMQTT} verwendet. Was genau für Funktionen die einzelnen Dienste bieten wird in den nachfolgenden Abschnitten erklärt.
+\section{Datenhandler}
+Die Aufgabe des Datenhandlers umfasst das Sammeln der Daten und deren Bereitstellung an die ATAS Applikationen ATAS-Web und ATAS-Service. Der Datenhandler besteht aus zwei Komponenten. Die Komponenten wurde nicht selbstständig entwickelt. Für das ATAS Projekt wurden bereits existierende Dienste verwendet. Die Dienste heissen \textbf{The Things Network (TTN)} und \textbf{CloudMQTT} verwendet. Was genau für Funktionen die einzelnen Dienste bieten wird in den nachfolgenden Abschnitten erklärt.
 
 \subsection{The Things Network (TTN)}
-The Things Network kurz TTN ist eine LoRaWan Plattform, welche LoRaWan Endgeräte mit Applikationen verbindet. TTN sendet Daten via Gateways an die Tracker. Über die Gateway empfängt das TTN Daten von den Trackern. Das TTN bietet einen Schnittstelle dem MQTT Broker um auf die Daten zuzugreifen.\\[0.3cm]
+TTN sendet Daten via Gateways an die Tracker. Über die Gateway empfängt das TTN Daten von den Trackern. Das TTN bietet einen Schnittstelle dem MQTT Broker um auf die Daten zuzugreifen.\\[0.3cm]
 \textbf{Diagramm}
 \begin{figure}[H]
 	\centering
@@ -637,19 +641,16 @@ Alle Daten welche zu CloudMQTT publiziert werden, werden nun auch automatisch zu
 \end{figure}
 
 \newpage
-\subsection{MQTT}
-Für das ATAS Projekt wurde die nachfolgende MQTT Struktur verwendet.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{img/system/ATAS_MQTT_Topic_BA.jpg}
-	\caption[MQTT Struktur]
-	{MQTT Struktur}
-\end{figure}
-
-
-\newpage
 \section{Logik}
 \subsection{ATAS-Service}
+Atas-Service calculates if a tracker is inside a dangerzone. The service is comparing the
+GPS location of the tracker with the geographical area of the dangerzone. If the tracker
+is inside a dangerzone it will send an alarm to the tracker. The alarmsignal is send to the
+TTN Network over MQTT via CloudMQTT.
+Atas-Service provides a REST interface. Dangerzones created with the webapplication are
+sent to the atas-service over REST. This allows the webapplication to get and store the
+information about dangerzones. The database used in this project is a Mongo db.
+Atas-service is a node.js application written in Javascript.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_ATASService.jpg}
@@ -702,27 +703,81 @@ Wird ein Tracker ausgewählt öffnet sich ein weiteres Menü.  Hier ersichtlich 
 	\end{subfigure}%
 	\begin{subfigure}{.45\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{img/atasweb/atas-web-node-open.png}
+		\includegraphics[width=0.7\textwidth]{img/atasweb/atas-web-node-open.png}
 		\caption[Tracker - offenes Menu]
 		{Tracker - offenes Menu}
 	\end{subfigure}%
+\end{figure}
+
+\subsubsection{Alarmierung}
+Über den roten Knopf kann eine neue Ansicht geöffnet werden. Die Ansicht gibt uns eine Übersicht über die Tracker, die sich in einer Gefahrenzone aufhalten oder den manuellen Alarm ausgelöst haben.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[width=0.4\textwidth]{img/atasweb/atas-web-alertbutton.png}
+		\caption[Knopf zum öffnen der Alarmansicht]
+		{Öffnet die Alarmansicht}
+	\end{subfigure}%
+	\begin{subfigure}{.65\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/atasweb/atas-web-alertoverview.png}
+		\caption[Übersicht Alarme]
+		{Übersicht Alarme}
+	\end{subfigure}%
+\end{figure}
+
+\newpage 
+\subsubsection{Gefahrenzonen}
+Über den grünen Knopf können manuell Gefahrenzonen angelegt werden. Mittels 'Malwerkzeug' kann eine Polygon gezeichnet werden. Die entstandene Fläche repräsentiert eine Gefahrenzone.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.2\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/atasweb/atas-web-addDangerzone.png}
+		\caption[Knopf zum hinzufügen von Gefahrenzonen]
+		{Hinzufügen Gefahrenzone}
+	\end{subfigure}%
+	\begin{subfigure}{.6\textwidth}
+		\centering
+		\includegraphics[width=0.65\textwidth]{img/atasweb/atas-web-drawing.png}
+		\caption[Neue Zone zeichnen]
+		{Neue Zone}
+	\end{subfigure}%
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/atasweb/atas-web-dangerzone.png}
+	\caption[Gefahrenzone]
+	{Gefahrenzone}
+\end{figure}%
+
+\section{Kommunikation}
+In diesem Abschnitt wird die Kommunikation zwischen den Komponenten im System aufgezeigt.
+\subsection{MQTT}
+Für das ATAS Projekt wurde die nachfolgende MQTT Struktur verwendet.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/ATAS_MQTT_Topic_BA.jpg}
+	\caption[MQTT Struktur]
+	{MQTT Struktur}
 \end{figure}
 
 \chapter{Prototyp}
 Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim des Prototypen 2 vorgegangen bin.
 
 \section{Begründung neuer Prototyp}
-Es gibt diverse Gründe für diesen Schritt
+Es gibt diverse Gründe für den Bau eines neuen Prototypen
 \begin{enumerate}
 	\item Auf dem Prototyp 1 wird ein vollwertiges Betriebssystem (Raspian, Linux Derivat) eingesetzt. Einige Funktionen bspw. das Lesen der GPS Daten werden vom System sehr vereinfacht. Dies ermöglichte mir einen raschen und unkomplizierten Aufbau der Software. Obschon ein solches 'High Level' OS eine grosse Hilfe in der Entwicklung darstellt, ist es in der Industrialisierung der Lösung eher hinderlich. Der Einsatz eines OS hat diverse Nachteile
 	\begin{itemize}
 		\item Vom OS selbst benötigen wir für den Betrieb der Atas-Node Software nur einen Bruchteil der Funktionalität. Speicher, Memory und Systemperformance wird für Systemprozesse verschwendet. 
 		\item Durch die hohe Auslastung des Systems werden stärkere Prozessoren benötigt. Der Energieverbrauch der Lösung steigt.
-		\item Mehr Software bedeutet Zwangsläufig mehr Fehlerquellen. Obschon das eingesetzte System (Raspian) als Stabil gilt, kann es aufgrund der Softwarekomplexität zu Fehlern kommen.
+		\item Mehr Software bedeutet zwangsläufig mehr Fehlerquellen. Obschon das eingesetzte System (Raspian) als Stabil gilt, kann es aufgrund der Softwarekomplexität zu Fehlern kommen.
 		\item Durch den Einsatz eines OS reduzieren wir die Sicherheit des ganzen Systems. Je mehr Interfaces ein System anbietet, desto anfälliger wird es für den unerlaubten Zugriff.
 	\end{itemize}
 	\item Der Prototyp 1 bietet und viele Anschlussmöglichkeiten. Bspw. für ein Display, USB, oder eine RJ45 Buchse. Funktionen die wiederum welche Entwicklung stark vereinfachen, aber den Energieverbrauch erhöhen und die Grösse des Systems unnötig vergrößert. 
-	\item Die Verbauten Komponenten sind nicht für eine Industrialisierte Lösung geeignet. Man könnte sogar von einem 'Bastelprojekt' sprechen. Die Komponenten hindern das Projekt daran eine professionelle Form anzunehmen.
+	\item Die Verbauten Komponenten sind nicht für eine Industrialisierte Lösung geeignet. Die Komponenten hindern das Projekt daran eine professionelle Form anzunehmen.
 \end{enumerate}
 
 \section{Ablauf Prototyping}
@@ -738,7 +793,7 @@ Mein Ziel ist es mit dem Umstieg auf anderen Komponenten, den Grundstein für de
 
 \newpage
 \section{Ablauf Vorgehen}
-Der im Projekt 2 erstellte Prototyp wurde mit sehr simplen vorgefertigten Elektronikkomponenten umgesetzt. Ziel dieser Arbeit war es in möglichst kurzer Zeit einen Prototypen aufzubauen. Während dieser Arbeit sollen nun neue Komponenten evaluiert und ein zweiter Prototyp erstellt werden. Der Ablauf dieser Phasen sieht wie folgt aus:\\[0.3cm]
+Der im Projekt 2 erstellte Prototyp wurde mit sehr simplen vorgefertigten Elektronikkomponenten umgesetzt. Ziel dieser Arbeit war es in möglichst kurzer Zeit einen funktionsfähigen Prototypen aufzubauen. Während dieser Arbeit sollen nun neue Komponenten evaluiert und ein zweiter Prototyp erstellt werden. Der Ablauf dieser Phasen sieht wie folgt aus:\\[0.3cm]
 
 \begin{figure}[H]
 	\centering
@@ -769,7 +824,7 @@ Für den Aufbau des zweiten Prototypen wurde die nachfolgende Hardware verwendet
 			\vspace{8pt}\includegraphics[width=0.07\textwidth]{img/system/schalter.png}\vspace{8pt}} \\ \hline
 \end{tabularx} 
 \noindent
-Aus Zeitgründen habe ich mich bei den Komponenten von bestehenden Projekten resp. Einträge im Internet inspirieren lassen. Es gab kein spezielles Auswahlverfahren für die restlichen Komponenten. Meiner Meinung nach nicht das beste Vorgehen. Bei einem erneuten Projekt in dieser Richtung müsste ich vorher die Kriterien für die Komponenten festlegen.
+Es gab kein spezielles Auswahlverfahren für die Komponenten. Die Auswahl wurde durch Internetrecherchen und Empfehlungen von Kollegen beeinflusst. Bei einem erneuten Projekt in dieser Richtung müsste ich vorher die Kriterien für die Komponenten festlegen.
 \newpage
 \subsection{Lora-Antenne}
 Es wurde angenommen, dass beim Kauf des Lora-Moduls eine Antenne mitgeliefert wird. Leider war dies nicht der Fall. Dieser Zwischenfall stellte eine gute Gelegenheit dar, das Wissen über die Telekommunikationswelt zu vertiefen. Es wurde entschied keine erneute Bestellung auszulösen und stattdessen  die Antenne einfach selbstständig zu bauen. Nach einer kurzen Internetrecherche stellte sich heraus , dass mit einfachen Mitteln eine zuverlässige Antenne für 868Mhz gebaut werden kann \cite{wavelengthTTN}. Ein einfaches Kabel genügt. Das Kabel muss die Länge der Wellenlänge oder einen Bruchteil bspw. 1/2 oder 1/4 der Wellenlänge haben. Die Berechnung der Wellenlänge ist mit der nachfolgenden Formel möglich \cite{wavelength}.\\[0.3cm]
@@ -831,11 +886,12 @@ Die nachfolgende Pinbelegung wurde verwendet um den ESP32 mit den übrigen Kompo
 	IO33 & Lora & DIO1\\ \hline
 \end{tabularx}
 
+\newpage
 \section{Kommunikation}
 In der nachfolgenden Übersicht wird die Kommunikationsart zwischen den Komponenten aufgezeigt.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/system/ATASNode2_Kommunikation.png}
+	\includegraphics[width=\textwidth]{img/system/ATASNode2_Kommunikation.jpg}
 	\caption[Kommunikationsart Prototyp 2]
 	{Kommunikationsart Prototyp 2}
 \end{figure}
@@ -852,28 +908,24 @@ Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert 
 
 \newpage
 \section{Software}
-Der bestehende Sourcecode des Prototyps 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die Logik der Software kann übernommen werden.
+Der bestehende Sourcecode des Prototyp 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die nachfolgenden Abschnitte beschreiben den Aufbau der Software ATAS-Node welche für den neuen Prototypen angepasst wurde. Die Logik der Software konnte grösstenteils übernommen werden. 
 
 \subsection{Entwicklungsumgebung}
 Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. In Absprache mit dem Betreuer wurde festgelegt, dass die ESP-IDF Umgebung zu verwenden sei. Die Installation der Entwicklungsumgebung ist nicht sonderlich schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
 An dieser Stelle wird auf eine detaillierte Auflistung aller Installationsschritte verzichtet. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
 Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP via USB korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
-\subsection{Bibliotheken}
-Infolge der Umstellung auf die ESP32 Umgebung mussten einige bestehenden Bibliotheken ersetzte werden. Die verwendeten Software Bibliotheken werden im Abschnitt 'Anhang' aufgeführt.
-\subsubsection{LMIC}
-Die LMIC Bibliothek hat den LoRaWan Stack implementiert und wird für die korrekte Kommunikation via LoRa Modul benötigt. Zum Zeitpunkt dieser Arbeit gibt es keine für ESP32 portierte LMIC Bibliothek. Für die LoRaWan Kommunikation wurde daher auf eine bestehende Arduino Library (Arduino-LMIC) zurückgegriffen \cite{ArduinoLMIC}. Der Funktionsumfang bleibt der selbe. Den Kommunikationsablauf selbständig zu programmieren hätte den Umfang dieser Arbeit gesprengt. Einige Entwickler berichten von Timing Problemen während der Kommunikation. 
-\begin{figure}[H]
-	\centering
-\includegraphics[width=0.8\textwidth]{img/prototype/lmic_issue.png}
-	\caption[Fehlerhafter Bildaufbau Display]
-	{Fehlerhafter Bildaufbau Display}
-\end{figure}
-Bis jetzt konnten beim ATAS Projekt keine Probleme mit der eingesetzten Library festgestellt werden. Die Arduino Library fügt sich problemlos in die ESP-IDF Umgebung ein.
 
-\newpage
 \subsection{Sourcecode}
 Hinweise wo Sie den Sourcecode einsehen können, finden Sie im Abschnitt 'Anhang'.
- 
+
+\newpage
+
+\subsection{Bibliotheken}
+Infolge der Umstellung auf die ESP32 Umgebung mussten einige bestehenden Bibliotheken ersetzte werden. Die verwendeten Software Bibliotheken werden im Abschnitt 'Anhang' aufgeführt.
+
+\subsubsection{LMIC}
+Die LMIC Bibliothek hat den LoRaWan Stack implementiert und wird für die korrekte Kommunikation via LoRa Modul benötigt. Zum Zeitpunkt dieser Arbeit gibt es keine für ESP32 portierte LMIC Bibliothek. Für die LoRaWan Kommunikation wurde daher auf eine bestehende Arduino Library (Arduino-LMIC) zurückgegriffen \cite{ArduinoLMIC}. Der Funktionsumfang bleibt der selbe. Den Kommunikationsablauf selbständig zu programmieren hätte den Umfang dieser Arbeit gesprengt. Einige Entwickler berichten von Timing Problemen während der Kommunikation. Bis jetzt konnten beim ATAS Projekt keine Probleme mit der eingesetzten Library festgestellt werden. Die Arduino Library fügt sich problemlos in die ESP-IDF Umgebung ein.
+
 \subsection{Klassendiagramm}
 Die einzelnen physikalischen Bausteine (GPS, Lora...) werden in Sofware Klassen abgebildet. Die Klassen besitzen entsprechende Methode zum auslesen resp. steuern der Komponenten. Um die Software zu visualisieren wurde ein Klassendiagramm erstellt.
 \begin{figure}[H]
@@ -882,17 +934,6 @@ Die einzelnen physikalischen Bausteine (GPS, Lora...) werden in Sofware Klassen 
 	\caption[Klassendiagramm]
 	{Klassendiagramm}
 \end{figure}
-
-\newpage
-\subsection{Herausforderung Timing}
-Die Schaltung des Prototypen wurde  so aufgebaut, dass möglichst wenig Kabel gezogen werden mussten. Infolge dessen wurden der Bildschirm  und das LoRa Modul über einen einzigen SPI Kontroller angesteuert. Relativ schnell machte sich ein Timing Problem bemerkbar. Die Software versuchte das Display zu aktualisieren und im gleichen Moment Daten per LoRa versenden. Die Kommunikation mit dem Bildschirm wurde gestört, der Bildaufbau wurde unterbrochen
-\begin{figure}[H]
-	\centering
-	%\includegraphics[width=\textwidth]{img/prototyp/spi_error.jpg}
-	\caption[Fehlerhafter Bildaufbau Display]
-	{Fehlerhafter Bildaufbau Display}
-\end{figure}
-Um die korrekte Datenübertragung sicherzustellen, wurde ein Mutex implementiert. Die Ansteuerung des Bildschirm und des LoRa Kommunikation wurde in zwei unabhängige Tasks aufgeteilt. Ist ein Task beschäftigt Daten zu senden, wird die Mutex Ressource gesperrt. Der andere Tasks muss warten, bis er wieder Daten senden kann. Mit dieser Lösung kann sichergestellt werden, dass es zukünftig keine Kommunikationskonflikte mehr geben wird.
 
 \newpage
 \subsection{Display}
@@ -962,6 +1003,34 @@ Der Notfall Modus wird vom Alpinisten, durch einen Druck auf den Notfallknopf, s
 \end{figure}%
 
 \newpage
+\subsubsection{Herausforderung Timing}
+Die Schaltung des Prototypen wurde  so aufgebaut, dass möglichst wenig Kabel gezogen werden mussten. Infolge dessen wurden der Bildschirm  und das LoRa Modul über einen einzigen SPI Kontroller angesteuert. Relativ schnell machte sich ein Timing Problem bemerkbar. Die Software versuchte das Display zu aktualisieren und im gleichen Moment Daten per LoRa versenden. Die Kommunikation mit dem Bildschirm wurde gestört, der Bildaufbau wurde unterbrochen
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/prototype/display_updateissue.jpg}
+	\caption[Fehlerhafter Bildaufbau Display]
+	{Fehlerhafter Bildaufbau Display}
+\end{figure}
+\noindent
+Um die korrekte Datenübertragung sicherzustellen, wurde in der Software ein Mutex implementiert. Die Ansteuerung des Bildschirm und des LoRa Kommunikation wurde in zwei unabhängige Tasks aufgeteilt. Ist ein Task beschäftigt Daten zu senden, wird die Mutex Ressource gesperrt. Der andere Tasks muss warten, bis er wieder Daten senden kann. Mit dieser Lösung kann sichergestellt werden, dass es zukünftig keine Kommunikationskonflikte mehr geben wird.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/displaymutex.png}
+		\caption[Mutex - Bildschrim]
+		{Mutex - Bildschirm}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/prototype/loramutex.png}
+		\caption[Mutex - Lora]
+		{Mutex - Lora}
+	\end{subfigure}%
+\end{figure}
+\newpage
+
+\newpage
 \section{Finalisierung \& Testing}
 Abschließend werden Tests mit dem neuen Tracker durchgeführt.
 
@@ -973,10 +1042,11 @@ Einer der Hauptgründe für den Bau eines neuen Prototypen, ist der Energieverbr
 	\item Bildschirm aktualisieren
 	\item Lautsprecher ein	
 \end{itemize}
-\textbf{Ausgangslage}: Das Gerät wird an ein Speisegerät angeschlossen. Die Betriebsspannung beträgt bei beiden Geräten 5V. Die beiden Prototypen verfügen über einen eingebauten Spannungswandler welche die Spannung auf 3.3V herunter regelt. Die dabei entstehenden Verlustleistung wird bei den nachfolgenden Tests ignoriert. Während des Tests sind alle Module (LoAa, GPS... ) angeschlossen, werden also mit Strom versorgt. Der Prototyp 1 verfügt über kein Display, deshalb können keine Daten für diesen Systemzustand erhoben werden. Die entsprechenden Szenarien werden beim Prototypen einstellt und die benötige Leistung werden vom Speisegerät abgelesen.\\[0.3cm]
-\textbf{Messresultate:} Auf der nächsten Seite zu finden
+\textbf{Ausgangslage}: Das Gerät wird an ein Speisegerät angeschlossen. Die Betriebsspannung beträgt bei beiden Geräten 5V. Die beiden Prototypen verfügen über einen eingebauten Spannungswandler welche die Spannung auf 3.3V herunter regelt. Die dabei entstehenden Verlustleistung wird bei den nachfolgenden Tests ignoriert. Während des Tests sind alle Module (LoRa, GPS... ) angeschlossen, werden also mit Strom versorgt. Der Prototyp 1 verfügt über kein Display, deshalb können keine Daten für diesen Systemzustand erhoben werden. Die entsprechenden Szenarien werden beim Prototypen einstellt und die benötige Leistung werden vom Speisegerät abgelesen.
+
 \newpage
 \noindent
+\textbf{Messresultate:}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/testing/energy_usage.jpg}
@@ -985,8 +1055,8 @@ Einer der Hauptgründe für den Bau eines neuen Prototypen, ist der Energieverbr
 \end{figure}
 \noindent
 Diese Grafik zeigt den gesamten Energieverbrauch des Systems während der durchgeführten Aktion.
-Wie in der Grafik ersichtlich, benötigt der Prototyp 1 im Ruhezustand ca. 4 mal soviel Energie wie der neue Prototypen. Durch den Wechsel der Hardware konnte der Energieverbrauch drastisch gesenkt werden.\\[0.3cm]
-Das senden der Daten lässt den Energieverbrauch stark ansteigen. Beim Prototypen 2 wächst der Verbrauch gar um 100\%.
+Wie in der Grafik ersichtlich, benötigt der Prototyp 1 im Ruhezustand (0.4W) ca. 4 mal soviel Energie wie der neue Prototypen (1.6W). Durch den Wechsel der Hardware konnte der Energieverbrauch drastisch gesenkt werden.\\[0.3cm]
+Das senden der Daten lässt den Energieverbrauch stark ansteigen. Beim Prototypen 2 wächst der Verbrauch gar um 100\%. Das senden via LoRa macht also einen großen Teil des Energieverbrauchs aus.
 \newpage
 \begin{figure}[H]
 \centering
@@ -1004,7 +1074,7 @@ Der Gesamtverbrauch des Systems während einer Aktion wurde mit dem Verbrauch de
 
 \newpage
 \subsection{Schlusswort}
-Die Resultate mit dem neuen Prototypen sind zufriedenstellend. Das System konnte optimiert werden. Der Prototyp 2 funktioniert einwandfrei. Dem nächsten Schritt, dem finalen Prototypen steht somit nichts mehr im Weg.
+Die Resultate mit dem neuen Prototypen sind zufriedenstellend. Das Display erweitert den Prototypen um ein wichtiges Mittel der Alarmierung. Das System konnte in Sachen Energiebedarf optimiert werden. Der Prototyp 2 funktioniert einwandfrei. Dem nächsten Schritt, dem finalen Prototypen steht somit nichts mehr im Weg.
 
 
 % ***** TESTING *****
@@ -1050,7 +1120,7 @@ Es muss definiert werden
 \end{itemize}
 
 \subsection{Schlussfolgerung}
-Abgeleitet aus der vorhergehenden Definitionen ergibt sich die folgende Aufgabenstellung im Bereich Testing.
+Wir fassen zusammen
 \begin{itemize}
 	\item
 	Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut.
@@ -1071,7 +1141,7 @@ Ausgehend von den vorangegangen Definitionen muss folgendes definiert werden.
 		\item 
 		Der Standort sollte in der nähe von möglichen Wanderrouten resp. Testbereichen liegen.
 	\end{enumerate}
-	\item Für die Tests sollten mind. 3 Routen/Wanderungen definiert werden. Dies garantiert eine vernünftige Anzahl an Messwerten.
+	\item Für die Tests sollten mind. 2 Routen/Wanderungen definiert werden. Dies garantiert eine vernünftige Anzahl an Messwerten.
 	\item Auf dem Pfad selbst werden Orte definiert wo die Verbindungstests durchgeführt werden.
 \end{itemize}
 
@@ -1096,7 +1166,7 @@ Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglic
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/niederhorn.png}\vspace{8pt}} \\ \hline
 	Höhenunterschied zum Gateway&\parbox[c]{1em}{
 		\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/testregions/niederhorn_altitude.png}\vspace{8pt}} \\ \hline
-	Mittlere Distanz zum Gateway & Xm \\ \hline
+	Mittlere Distanz zum Gateway & 15Km \\ \hline
 \end{tabularx}
 
 \newpage
@@ -1226,7 +1296,7 @@ Die Tests werden mit einem fixen Einstellungen durchgeführt
 \begin{enumerate}
 	\item Spreadingfactor SF12
 	\item Bandbreite 125KHz
-	\item Coding Rate 4/5
+	\item Coding Rate 4/8
 \end{enumerate}
 \newpage
 \subsubsection{Resultate}
@@ -1256,7 +1326,8 @@ Für diesen Test werden die folgenden Daten erhoben
 	\includegraphics[width=\textwidth]{img/testing/testing1_sf_rssi.jpg}
 	\caption[Messwerte RSSI pro Spreadingfactor]
 	{Messwerte RSSI pro Spreadingfactor}
-\end{figure}%
+\end{figure}
+\noindent
 Wie bei den Resultaten ersichtlich, ist die Annahme nicht eingetroffen. Es ist kein Muster erkennbar, das bei einem höheren SF ein besseres Signal zu erwarten ist. Ich gehe davon aus, dass für einen solchen Test mehr Messwerte von Nöten sind. Ich werde den Test also mit mehr Messwerten wiederholen müssen. Für SF7 konnten keine Pakete zugestellt werden. Entweder hatte der Gateway eine Fehlfunktion, oder die Distanz war zu Gross als dass dieser die Daten hätte empfangen können.
 \newpage
 \subsubsection{Test 2.2}
@@ -1274,15 +1345,30 @@ Wie bei den Resultaten ersichtlich, ist die Annahme nicht eingetroffen. Es ist k
 	\includegraphics[width=\textwidth]{img/testing/testing2_sf_rssi.jpg}
 	\caption[Messwerte RSSI pro Spreadingfactor]
 	{Messwerte RSSI pro Spreadingfactor}
-\end{figure}%
+\end{figure}
+\noindent
+Auch mit mehr Messwerten ist die Annahme nicht eingetroffen. Warum sich die Messwerte von der Literatur distanzieren ist zum jetzigen Zeitpunkt nicht bekannt.
 
 \newpage
-\subsection{Test 3: Isolation Schnee}
+\subsection{Test 3: Datenrate}
+\textbf{Ausgangslage:} In diesem Test soll ermittelt werden, wie häufig wir die Daten des Trackers übermitteln können. Die maximal zu übertragende Datengrösse wurde bereits in einem vorhergehenden Abschnitt definiert und beträgt \textbf{20Bytes}. Die Coding Rate wird auf 4/8 gesetzt.\\[0.3cm]
+\textbf{Vorgehen:} Pro Spreadingfactor werden Messungen durchgeführt. Die Zeitdifferenz zwischen den Übertragungen wird ermittelt.\\[0.3cm]
+\textbf{Messresultate:} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/testing/timebetweenpakets.jpg}
+	\caption[Zeit zwischen zwei Paketen]
+	{Zeit zwischen zwei Paketen}
+\end{figure}
+\noindent
+Auch bei SF12 liegt die Zeit zwischen den Übertragungen bei nur 170 Sekunden. Das bedeutet, dass wir ca. alle 3 Minuten den neue Standort übermitteln können. Beim Wandern wir diese Rate ausreichen. Ob diese Zeit für Skifahrer reicht müssten in weiteren Tests festgestellt werden.
 
 \chapter{Schlusswort}
 \section{Verbesserungen bestehendes System}
+\subsection{Automatischer Datenaustausch}
 TODO, Prio 2
-\section{Ausblick ATAS}
+\section{Ausblick}
+\subsection{Wireless Kommunikation}
 TODO, Prio 2
 \section{Rückblick Projekt}
 TODO, Prio 3
@@ -1350,6 +1436,7 @@ Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurück
 \printglossaries
 
 \begin{thebibliography}{1}
+	\bibitem{avalancheaccident} \url{http://85.25.34.248/bergmed/bergmed.php?section=15} 1.2.2018
 	\bibitem{swisscomnbiot} \url{https://www.swisscom.ch/en/about/medien/press-releases/2017/06/20170628-mm-5g-speed.html} 5.1.2018
 	\bibitem{multipathing} \url{https://de.wikipedia.org/wiki/Mehrwegempfang} 5.1.2018
 	\bibitem{wikiduty} \url{https://en.wikipedia.org/wiki/Duty_cycle} 5.1.2018
