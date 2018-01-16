@@ -115,7 +115,7 @@ Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution tra
 Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 5 Bereiche. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im ersten Teil der Thesis wird die grundsätzliche Funktionalität und der grobe Aufbau des Systems definiert. Im zweiten Teil geht es um die Technologien welche für das System verwendet werden sollen. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der finale Aufbau definiert. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im vierten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im fünften Schritt wird das ATAS System getestet. Im Fokus liegen hier die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und alltagstauglich ist.
 
 \chapter*{Motivation}
-21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel vor. Nach 3 Stunden hartem und schweißtreibenden Aufstieg gelangten wir schlussendlich zum Bergkamm. Die Aussicht war grandios.
+21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel hoch. Nach 3 Stunden hartem und schweißtreibenden Aufstieg, gelangten wir schlussendlich zum Bergkamm. Die Aussicht war der Lohn.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/alps_panorama.jpg}
@@ -124,14 +124,14 @@ Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erf
 \end{figure}
 \noindent
 Ich bin kein Extrembergsteiger. Ich genieße die Schweizer Alpen, bin aber nie in hohen(3000m+) und gefährlichen Regionen unterwegs. Die Schneebedingungen während meiner Touren sind meist ideal. Die Gefahr ist minimal. Nur selten werden Themen wie Lawinen und daraus resultierendes Unfallverhalten in der Gruppe diskutiert.\\[0.3cm]
-An eben diesem Tag stellten wir uns die Frage: Was wäre wenn? Was wäre passiert wenn wir von einer Lawine verschüttet worden wären? Wer hätte uns gesucht? Hätte uns überhaupt jemand gesucht? Falls meine Kollegin verschüttet wäre, wie lange würde es dauern bis die Rettungskräfte eintreffen würden? Wäre das Handynetz verfügbar gewesen? Tausende von Fragen ergaben sich.\\[0.3cm]\
+An eben diesem Tag stellten wir uns die Frage: Was wäre wenn? Was wäre passiert wenn wir von einer Lawine verschüttet worden wären? Wer hätte uns gesucht? Hätte uns überhaupt jemand gesucht? Falls meine Kollegin verschüttet worden wäre, wie lange würde es dauern bis die Rettungskräfte eintreffen würden? Wäre das Handynetz verfügbar gewesen? Tausende von Fragen ergaben sich.\\[0.3cm]\
 Diese Thematik beschäftigte mich noch lange. Als es darum ging ein Thema für das Bachelor Thesis Vorprojekt (Projekt 2) auszusuchen, wollte ich mich weiter mit diesen Fragen auseinandersetzen. Dank meinem Studium und der gewählten Fachrichtung 'Mobile Computing' hatte ich bereits ein, zwei Idee wie man diese Problematik angehen könnte. Das Projekt ATAS war geboren. Meine Vorstellung war es ein System zu erstellen, welches Personen in solchen Situation unterstützen, mehr noch, solche Situationen verhindern sollte.\\[0.3cm]
 
 \chapter{Einleitung}
 Ein Gipfel gehört dir erst, wenn du wieder unten bist - denn vorher gehörst du ihm.\\[0.3cm]
 \textbf{Hans lander, Italienischer Bergsteiger\cite{kammerlander}} \\[0.5cm]
 \noindent
-Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski fahren oder gehen Eisklettern. Die Anzahl der möglichen Aktivitäten ist schier grenzenlos. Immer wieder kommt es in dieser Idylle aber zu schweren Unfällen, ausgelöst durch Steinschläge, Lawinen oder Abstürze der Bergsteigenden. Der Schweizer Alpenclub (SAC) führt dazu eine jährliche Statistik \cite{sacaccident}. Nachfolgend ein kleiner Auszug aus der Bergunfallstatistik 2016. Die Grafik zeigt eine Übersicht der Anzahl Situationen bei welchen eine Rettungsdienst ausrücken musste. Zu den Rettungsdiensten zählt beispielsweise die REGA.\\
+Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski fahren oder gehen Eisklettern. Die Anzahl der möglichen Aktivitäten ist schier grenzenlos. Immer wieder kommt es in dieser Idylle zu schweren Unfällen, ausgelöst durch Steinschläge, Lawinen oder Abstürze der Bergsteigenden. Der Schweizer Alpenclub (SAC) führt dazu eine jährliche Statistik \cite{sacaccident}. Nachfolgend ein kleiner Auszug aus der Bergunfallstatistik 2016. Die Grafik zeigt eine Übersicht der Anzahl Situationen bei welchen ein Rettungsdienst ausrücken musste. Zu den Rettungsdiensten zählt beispielsweise die REGA.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/sac_accidentstatistic_2016_reason.png}
@@ -140,18 +140,18 @@ Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski 
 \end{figure}
 \noindent
 Die Vorfälle sind nach Ursache gegliedert. Zusammengefasst ergeben sich 2828 Notsituationen. 178 endeten tödlich.\\[0.3cm]
-Ein nicht geringer Anteil machen Unfälle mit Lawinen aus. Wird eine Person innert 15 Minuten geborgen Leben noch 90\% der Betroffenen. Man spricht auch von der Überlebensphase. Nach 15 Minuten folgt die Erstickungsphase, die Überlebenschancen schwinden auf geringe 30\%. Je schneller ein Rettungsdienst alarmiert werden kann desto höher sind die Überlebenschancen \cite{avalancheaccident}. 
+Ein nicht geringer Anteil davon machen Lawinen aus. Wird eine Person inert 15 Minuten geborgen, Leben noch 90\% der Betroffenen. Man spricht auch von der Überlebensphase. Nach 15 Minuten folgt die Erstickungsphase, die Überlebenschancen schwinden auf geringe 30\%. Je schneller ein Rettungsdienst alarmiert werden kann, desto höher sind die Überlebenschancen \cite{avalancheaccident}. 
 
 \newpage
 \section{Projektidee}
 Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger. Der Empfänger wird bei der Talstation oder im nächsten Bergdorf montiert. Die Daten werden von einer Software gesammelt und analysiert. Die Administratoren des Systems, beispielsweise die Rega, können schlussendlich über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
 
 \section{Vorarbeiten}
-Das Projekt 2 ist eine Projektarbeit welche im Laufe des Informatikstudiums absolviert werden muss. Diese Arbeit habe ich im vorhergehenden Semester (Frühlingssemester 2017) durchgeführt. Ziel dieses Projektes, war es das in der Einleitung beschriebene System technisch umzusetzen.\\[0.3cm]
+Das Projekt 2 ist eine Projektarbeit welche im Laufe des Informatikstudiums absolviert werden muss. Diese Arbeit habe ich im vorhergehenden Semester (Frühlingssemester 2017) durchgeführt. Ziel dieses Projektes, war es das in der Einleitung beschriebene System technisch zu konzeptionieren.\\[0.3cm]
 Diese Bachelor Thesis baut auf den Erkenntnissen und Resultaten aus dem Projekt 2 auf.
 
 \section{Aufgabenstellung}
-Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute System intensiv zu testen und zu verbessern. Die Arbeit umfasst die folgenden Aufgaben.
+Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute System intensiv zu testen und zu verbessern. Das Wissen um die verwendeten Technologien soll vertieft werden. Die Arbeit umfasst die folgenden Aufgaben.
 \begin{itemize}
 \item
 Der Tracker soll in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analysiert.
@@ -163,7 +163,7 @@ Die Rahmenbedingungen dieses Projektes wurden gemeinsam mit dem Betreuer definie
 \begin{itemize}
 \item Die Bachelorarbeit baut auf der Arbeits des Projekt 2 auf. Die erstellte Hard und Software wird weiterverwendet.
 \item Als Programmiersprache soll C/C++ verwendet werden
-\item Auf den Einsatz eines Betriebsystemes soll zugunsten des Energieverbrauchs auf dem Tracker Node verzichtet werden
+\item Auf den Einsatz eines Betriebssystems auf dem Tracker Gerät verzichtet werden
 \end{itemize}
 
 \section{Technologien}
@@ -173,14 +173,14 @@ Aus diesem Grund mussten für dieses Projekt andere Technologien gefunden werden
 Die verwendeten Technologien und der Grund für deren Einsatz werden im Kapitel 'Technologien ' genauer erklärt.
 
 \section{Anwendungsfälle}
-Dieses Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
+Dieser Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
 \begin{itemize}
 	\item 
 	Wenn in den Bergen eine Lawine ausgelöst wird, kann deren Position mit den Positionen der Tracker verglichen werden. Befindet sich ein Tracker in der Gefahrenzone, kann die Rettungsmannschaft sofort reagieren und ausrücken. Dieser Prozess läuft sofort ab und kann dabei die Überlebenschance der Opfer erhöhen. 
 	\item 
-	Wurden Personen von der Lawine begraben und der Tracker hat überlebt, könnte das Gerät weiterhin die Position senden. Kombiniert mit modernen Lawinensuchgeräten können die Einsatzkräfte gezielter nach Überlebenden suchen. Wenn keine Übertragung mehr möglich ist, wissen die Überwacher zumindest den letzten Aufenthaltsort. Das ATAS System hat nicht das Ziel Lawinensuchgeräte zu ersetzen, es ist eher als Ergänzung zu verstehen. 
+	Wurden Personen von der Lawine begraben und der Tracker bleibt funktionstüchtig, könnte das Gerät die Position weiterhin senden. Kombiniert mit modernen Lawinensuchgeräten können die Einsatzkräfte gezielter nach Überlebenden suchen. Wenn keine Übertragung mehr möglich ist, wissen die Überwacher zumindest den letzten Aufenthaltsort. Das ATAS System hat nicht das Ziel Lawinensuchgeräte zu ersetzen, es ist eher als Ergänzung zu verstehen. 
 	\item 
-	Bewegt sich Tracker auf eine Gefahrenzone zu, beispielsweise ein Gebiet mit erhöhter Steinschlaggefahr, könnte die Person frühzeitig davor gewarnt werden. 
+	Bewegt sich  ein Tracker auf eine Gefahrenzone zu, beispielsweise ein Gebiet mit erhöhter Steinschlaggefahr, könnte die Person frühzeitig davor gewarnt werden. 
 	\item 
 	Ist es zu einem Unfall gekommen, kann der Alpinist mittels Tracker ein Notsignal absetzen. Dazu muss der Benutzer nur auf den Notfallknopf drücken.
 \end{itemize}
