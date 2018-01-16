@@ -1,6 +1,6 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 14.01.2018  14:28:44
-;; Indexstyle: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/QKEK7x4uEs", Rawindex: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/HZS5koKKv4", Output: "BA_ATAS_Schmidli.gls"
+;; at 16.01.2018  17:18:13
+;; Indexstyle: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/1zex1ZCv0a", Rawindex: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/YZYgfOZMmI", Output: "BA_ATAS_Schmidli.gls"
 
 
 Building indexentry-tree:
@@ -24,12 +24,12 @@ Letter-group: "»ÊÚÚ" -> "M"
 Letter-group: "´ÃË€" -> "L"
 Letter-group: "´ÃË€æ€¼" -> "L"
 Letter-group: "ÚÚ¼" -> "T"
-Letter-group: "Ãæ¼´¨¼®" -> "D"
-Letter-group: "àÈ´¨¼®" -> "U"
 Letter-group: "´ÃË€æ€¼ —¼—Ë€¤Ú" -> "L"
 Letter-group: "¼—ÚÐ®—í" -> "N"
 Letter-group: "€ÈÈÐ®—í" -> "A"
 Letter-group: "—å€Ë" -> "D"
+Letter-group: "Ãæ¼´¨¼®" -> "D"
+Letter-group: "àÈ´¨¼®" -> "U"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "€ÈÈÐ®—í" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)

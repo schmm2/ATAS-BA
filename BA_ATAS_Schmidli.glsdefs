@@ -358,3 +358,33 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{LPWAN}{}%
+{%
+\gls@defglossaryentry{LPWAN}%
+{%
+name={LPWAN},%
+sort={LPWAN},%
+type={main},%
+first={LPWAN},%
+firstplural={LPWANs},%
+text={LPWAN},%
+plural={LPWANs},%
+description={Low Power Wide Area Network},%
+descriptionplural={Low Power Wide Area Network},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

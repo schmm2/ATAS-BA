@@ -186,13 +186,12 @@ Dieser Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
 \end{itemize}
 
 \chapter{Systembeschreibung - Grob}
-Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im Vergleich zum Projekt 2 um einige Komponenten ergänzt.
+Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im Vergleich zum Projekt 2 um einige Komponenten ergänzt. Der Link zur Projektarbeiter kann im Abschnitt 'Anhang' gefunden werden.
 
 \section{Grobe Systemarchitektur}
-Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponeneten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seite detailliert beschrieben.
+Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponenten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seite detailliert beschrieben.
 
 \newpage
-\section{Aufbau}
 \subsection{Diagram}
 Grobes Schema des ATAS Systems. Auf der nachfolgenden Seiten sind die einzelnen Komponenten im Detail beschrieben.\\[0.3cm]
 \begin{figure}[H]
@@ -205,46 +204,48 @@ Grobes Schema des ATAS Systems. Auf der nachfolgenden Seiten sind die einzelnen 
 \newpage
 \subsection{Benutzer}
 Die nachfolgenden Gruppen wurden als Benutzer des Systems identifiziert.
+
 \subsubsection{Aplinist}
 Alpinist wird als Generalisierung für Personen, welche sich in den Bergen aufhalten verwendet. Dazu gehören bspw. Wanderer, Skifahrer, Bergbauern usw.
+
 \subsubsection{Überwacher}
 Rettungsdienste wie bspw. die Rega oder die AirGlacier. Spitäler oder die lokalen Tourismusbehörden.
 
 \subsection{Komponenten}
-Das ATAS System besteht aus den nachfolgenden aufgelisteten Komponenten. Komponenten sind als Hardware oder Software zu verstehen.
+Das ATAS System besteht aus den nachfolgenden aufgelisteten Komponenten. Komponenten können Hardware oder Software sein.
+
 \subsubsection{Tracker}
 Stellen Sie sich ein kleines mobiles Gerät vor. Nachfolgend nennen wir dieses Gerät Tracker. Der Alpinist trägt den Tracker bei sich bspw. in einem Rucksack. Der Tracker zeichnet auf wo sich die Person momentan befindet\\ [0.3cm] 
 Der Tracker verfügt über ein Display, Schalter, GPS Modul, Kommunikationsmodul und ein Lautsprecher.\\ [0.3cm]
-Der Tracker überträgt folgende Daten an den Gateway.
+Der Tracker überträgt folgende Daten:
 \begin{itemize}
 	\item Notrufsignale
 	\item GPS Position des Trackers
 \end{itemize}
-Befindet sich der Tracker resp. die Person in einer Gefahrenzone wird die Person über den Bildschirm und mit einem Tonsignal alarmiert.
+Befindet sich der Tracker in einer Gefahrenzone wird die Person über den Bildschirm und mit einem Tonsignal alarmiert.
 \subsubsection{Gateway}
-Ein Gerät welches mit den Trackern bidirektional kommuniziert. Der Gateway wird an einem Ort nahe den Bergen installiert. Als mögliche Orte kommt ein Dorf im Tal oder eine Talstation in Frage.\bigskip \\
-Der Gateway senden die empfangenen Daten an eine zentrale Datenmanager, nachfolgend \textbf{Datenhandler} genannt.
+Ein Gerät welches mit den Trackern bidirektional kommuniziert. Der Gateway wird an einem Ort nahe den Bergen installiert. Als mögliche Orte kommt ein Dorf im Tal oder eine Talstation in Frage. Der Gateway senden die empfangenen Daten an eine zentrale Datenmanager, nachfolgend \textbf{Datenhandler} genannt.
 
 \subsubsection{Datenhandler}
 Sammelt und speichert Daten. Der Datenhandler kommuniziert mit den Gateways. Zusätzlich bietet der Datenhandler ein Interface zum Abfragen und senden von Daten an die Tracker via Gateway.
 
 \subsubsection{Webapplikation}
-Die Notfalldienste resp. Überwacher nutzen eine Webapp zum interagieren mit dem ATAS System. Die Webseite bietet folgende Funktionalitäten
+Die Überwacher nutzen eine Webapplikation zum interagieren mit dem ATAS System. Die Webseite bietet folgende Funktionalitäten
 \begin{itemize}
 	\item
 		Zeigt die Position der Tracker auf einer Karte an 
 	\item
 		Mittels der Webapp können Gefahrenzonen hinterlegt werden.
 	\item 
-		Zeigt an ob sich ein Tracker in einer Gefahrenzone aufhält.	
+		Zeigt an ob sich ein Tracker in einer Gefahrenzone aufhält oder ein Notrufsignal abgesetzt hat.	
 \end{itemize}
 
 \subsubsection{Logik}
-Die BusinessLogik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Datenhandler und dem Gateway zum Tracker.
+Die Logik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Datenhandler und Gateway zum Tracker.
 
 \subsection{Begriffe}
 \subsubsection{Gefahrenzonen}
-Wie in der Einleitung beschrieben, stellt der Schweizer Alpenclub Informationen zu Rettungseinsätzen zur Verfügung. Aufgrund der Statistiken wurden die folgenden Gefahren identifiziert vor welchen das ATAS System informieren soll.
+Wie in der Einleitung beschrieben, stellt der Schweizer Alpenclub Informationen zu Rettungseinsätzen zur Verfügung. Aufgrund der Statistiken wurden die folgenden Gefahren identifiziert vor welchen das ATAS System warnen soll.
 \begin{itemize}
 	\item Lawinen
 	\item Steinschlag
@@ -253,23 +254,23 @@ Wie in der Einleitung beschrieben, stellt der Schweizer Alpenclub Informationen 
 \end{itemize}
 
 \chapter{Evaluation Technologie}
-In diesem Kapitel wird genauer auf die eingesetzten Technologien eingegangen. Es wird beschrieben wofür und weshalb diese Technologien eingesetzt werden. 
+In diesem Kapitel wird genauer auf die eingesetzten Technologien eingegangen. Es wird beschrieben wofür und weshalb diese eingesetzt werden. 
 
 \section{Wireless Datenkommunikation}
-Zu beginn dieses Projektes musste festgelegt werden, welche Technologie für die Datenübertragung verwendet werden soll. Nachfolgend werden drei mögliche Technologien analysiert.
+Zu beginn dieses Projektes musste festgelegt werden, welche Technologie für die Datenübertragung verwendet werden soll. Nachfolgend werden drei mögliche Technologien analysiert. Die Technologien sind für den Einsatz im IoT Bereich optimiert. Die Übertragung benötigt wenig Energie, hat eine hohe Reichweite und meist eine geringe Bandbreite.
 
 \subsection{Sigfox}
-Sigfox ist eine LPWAN Lösung welche vom Netzwerk Design eher an ein herkömmliches Mobilfunknetz erinnert. Sigfox ist eher ein geschlossenes System. Wurde das Gebiet mit Sigfox erschlossen, kann das Netzwerk gegen Bezahlung mitbenutzt werden. Der Aufbau eines eigenen Antenne scheint nicht möglich. 
+Sigfox ist eine \gls{LPWAN} Lösung welche vom Netzwerk Design eher an ein herkömmliches Mobilfunknetz erinnert. Sigfox ist eher ein geschlossenes System. Wurde das Gebiet mit Sigfox erschlossen, kann das Netzwerk gegen Bezahlung mitbenutzt werden. Der Aufbau einer eigenen Antenne scheint nicht möglich. 
 
 \subsubsection{Vorteile}
 \begin{itemize}
 	\item Durch den geringen Energiebedarf halten batteriebetriebene Geräte länger
 	\item Große Reichweite in nicht bebauten Gebieten, bis zu 40km
+	\item Bandbreite, ca. 100B/s
 \end{itemize}
 \subsubsection{Nachteile}
 \begin{itemize}
 	\item Zum jetzigen Zeitpunkt Stand 15.1.2018 wurde die Schweiz von Sigfox noch nicht erschlossen.
-	\item Geringe Bandbreite, ca. 100B/s
 	\item Limitierung in der Zahl der Nachrichten die gesendet werden können. Zum Endgerät (Downlink) 140x 12 Byte. Vom Endgerät an das Netzwerk (Uplink) 4x 8 Byte
 	\item Sigfox wird als Service Angeboten. Für den Dienst muss bezahlt werden.
 \end{itemize}
@@ -1390,6 +1391,8 @@ Unterschriften:\> ...................................... \\
 \end{tabbing}
 
 \chapter*{Anhang}
+\section{Projekt 2}
+Mit dem nachfolgenden Link gelangen Sie zum Vorprojekt 'Projekt 2 - ATAS', dieser Arbeit:\\ \url{https://github.com/schmm2/atas-doc/raw/master/Projekt2_ATAS_Schmidli.pdf}
 \section{Software}
 Es wird kein Code direkt an dieses Dokument angehängt. Zur Verwaltung des Sourcecodes wurde die Plattform Github verwendet. Jegliche Commits vor dem 16.09.2017 gehören zur Projekt 2 Arbeit. Commits nach diesem Datum wurden im Zuge der Bachelor Thesis erstellt. 
 Folgend Sie den Links um den Sourcecode einzusehen.
@@ -1431,6 +1434,7 @@ Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurück
 \newglossaryentry{AppSKey}{name={AppSKey},description={Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite{ttnsecurity}}}
 \newglossaryentry{Downlink}{name={Downlink},description={Kommunikation vom Gateway zu Endgerät}}
 \newglossaryentry{Uplink}{name={Uplink},description={Kommunikation vom Endgerät zum Gateway}}
+\newglossaryentry{LPWAN}{name={LPWAN},description={Low Power Wide Area Network}}
 
 %Print the glossary
 \printglossaries
