@@ -63,10 +63,11 @@
 \begin{center}
 
 % Oberer Teil der Titelseite:
-\includegraphics[width=0.08\textwidth]{img/bfh_logo.png}\\[1cm]    
+\includegraphics[width=0.08\textwidth]{img/logo/bfh_logo.png}\\[1cm]    
 \textsc{\LARGE Bern University of Applied Sciences}\\[1.5cm]
 \textsc{\Large Bachelor Thesis}\\[0.2cm]
-\textsc{\Large Studiengang Informatik}\\[0.5cm]
+\textsc{\Large Studiengang Informatik}\\[0.2cm]
+\textsc{\Large Vertiefung: Mobile Computing}\\[0.5cm]
 
 % Title
 \newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
@@ -75,7 +76,7 @@
 {\huge \bfseries  }
 \HRule \\[2cm]
 
-\includegraphics[width=0.2\textwidth]{img/atas_logo.png}\\[2.5cm]    
+\includegraphics[width=0.2\textwidth]{img/logo/atas_logo.png}\\[2.5cm]    
 
 % Author und Lehrer
 \begin{minipage}{0.3\textwidth}
@@ -118,7 +119,7 @@ Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erf
 21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel hoch. Nach 3 Stunden hartem und schweißtreibenden Aufstieg, gelangten wir schlussendlich zum Bergkamm. Die Aussicht war der Lohn.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/alps_panorama.jpg}
+	\includegraphics[width=\textwidth]{img/alps/alps_panorama.jpg}
 	\caption[Motvation Alpen Panorama]
 	{Motivation Alpen Panorama}
 \end{figure}
@@ -134,7 +135,7 @@ Ein Gipfel gehört dir erst, wenn du wieder unten bist - denn vorher gehörst du
 Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski fahren oder gehen Eisklettern. Die Anzahl der möglichen Aktivitäten ist schier grenzenlos. Immer wieder kommt es in dieser Idylle zu schweren Unfällen, ausgelöst durch Steinschläge, Lawinen oder Abstürze der Bergsteigenden. Der Schweizer Alpenclub (SAC) führt dazu eine jährliche Statistik \cite{sacaccident}. Nachfolgend ein kleiner Auszug aus der Bergunfallstatistik 2016. Die Grafik zeigt eine Übersicht der Anzahl Situationen bei welchen ein Rettungsdienst ausrücken musste. Zu den Rettungsdiensten zählt beispielsweise die REGA.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/sac_accidentstatistic_2016_reason.png}
+	\includegraphics[width=\textwidth]{img/alps/sac_accidentstatistic_2016_reason.png}
 	\caption[Bergunfallstatistik 2016 - Notfallsituationen nach Unrsachen]
 	{Bergunfallstatistik 2016 - Notfallsituationen nach Ursachen}
 \end{figure}
@@ -316,7 +317,7 @@ LoRa unterstützt zwei Modulationsarten, das simple Frequency Shift Key (FSK) un
 Ein Chirp ist ein sinusähnliches Signal, bei welchem über die Zeit die Frequenz erhöht oder reduziert wird.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{img/upchirp.png}
+	\includegraphics[width=0.6\textwidth]{img/lora/upchirp.png}
 	\caption[Beispiel Upchirp]
 	{Beispiel Upchirp}
 \end{figure}
@@ -332,7 +333,7 @@ Zwei Parameter beeinflussen das Chirp Moduliertes Signal. Erstens die Bandbreite
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{img/chirp.png}
+	\includegraphics[width=0.6\textwidth]{img/lora/chirp.jpg}
 	\caption[Wasserfall Darstellung: Chirp Parameter]
 	{Wasserfall Darstellung: Chirp Parameter}
 \end{figure}
@@ -343,7 +344,7 @@ Die Einstellungsmöglichkeiten der Parameter wurden in Europa zu Gruppen, sogena
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.48\textwidth]{img/spreadingfactors.png}
+	\includegraphics[width=0.48\textwidth]{img/lora/spreadingfactors.jpg}
 	\caption[Wasserfall Darstellung: Spreadingfactors 7-12]
 	{Wasserfall Darstellung: Spreadingfactors 7-12}
 \end{figure}
@@ -378,7 +379,7 @@ Die Airtime definiert, wie lange es dauert ein Signal vom LoRa Endgerät zum Gat
 Die untenstehende Grafik verbildlicht diesen Zusammenhang
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{img/system/timeonair.png}
+	\includegraphics[width=0.6\textwidth]{img/lora/timeonair.png}
 	\caption[Time on Air]
 	{Time on Air}
 \end{figure}
@@ -406,7 +407,7 @@ LoRaWan ist ein Protokoll welches auf LoRa aufbaut. Man kann es sich als das TCP
 \subsection{Netzwerk Architektur}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/lorawantopology.jpg}
+	\includegraphics[width=\textwidth]{img/lora/lorawantopology.jpg}
 	\caption[LoRaWan Architektur]
 	{LoRaWan Architektur}
 \end{figure}
@@ -436,7 +437,7 @@ Das Installieren (Deployment) von Endgeräten wird vereinfacht. Das generieren v
 Die nachfolgende Grafik zeigt auf, wie der Kommunikationsaufbau via OTAA abläuft \cite{jaguar}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/otaa_schema.png}
+	\includegraphics[width=0.9\textwidth]{img/lora/otaa_schema.jpg}
 	\caption[OTAA Ablauf]
 	{OTAA Ablauf}
 \end{figure}
@@ -467,7 +468,7 @@ Alle Geräte der Klasse B und C haben die Funktionalität von Klasse A implement
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/lorawan_class_a.png}
+	\includegraphics[width=0.9\textwidth]{img/lora/lorawan_class_a.png}
 	\caption[LoRaWan Klasse A]
 	{LoRaWan Klasse A}
 \end{figure}
@@ -483,7 +484,7 @@ Klasse C Geräte haben ein nahezu permanent geöffnetes Receive Zeitfenster. Nur
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{img/lorawan_class_c.png}
+	\includegraphics[width=0.9\textwidth]{img/lora/lorawan_class_c.png}
 	\caption[LoRaWan Klasse C]
 	{LoRaWan Klasse C}
 \end{figure}
@@ -509,7 +510,7 @@ Die Verbreitung von LoRaWan in der Schweiz ist mittlerweile sehr hoch. Unternehm
 Eine Übersicht über die aktuelle Abdeckung des Swisscom , Stand (2.11.2017)  \cite{swisscomcoverage}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/swisscomlorawan.png}
+	\includegraphics[width=\textwidth]{img/lora/swisscomlorawan.jpg}
 	\caption[Swisscom LoRaWan Abdeckung]
 	{Swisscom LoRaWan Abdeckung}
 \end{figure}
@@ -524,7 +525,7 @@ Auf anraten von Personen aus dem nahem Umfeld welche sich bereits intensiv mit L
 Das TTN Netzwerk in sich besteht aus vielen einzelnen Komponenten.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/ttn_architecture.png}
+	\includegraphics[width=\textwidth]{img/ttn/ttn_architecture.png}
 	\caption[TTN Architektur]
 	{TTN Architektur}
 \end{figure}
@@ -535,7 +536,7 @@ In dieser Arbeit wird \textbf{nicht auf die Details des TTN Netzwerkes eingegang
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/ttn-overview.jpg}
+	\includegraphics[width=\textwidth]{img/ttn/ttn-overview.jpg}
 	\caption[TTN Blackbox]
 	{TTN Blackbox}
 \end{figure}
@@ -735,22 +736,22 @@ Wird ein Tracker ausgewählt öffnet sich ein weiteres Menü.  Hier ersichtlich 
 	\end{subfigure}%
 	\begin{subfigure}{.6\textwidth}
 		\centering
-		\includegraphics[width=0.65\textwidth]{img/atasweb/atas-web-drawing.png}
+		\includegraphics[width=0.65\textwidth]{img/atasweb/atas-web-drawing.jpg}
 		\caption[Neue Zone zeichnen]
 		{Neue Zone}
 	\end{subfigure}%
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{img/atasweb/atas-web-dangerzone.png}
+	\includegraphics[width=0.8\textwidth]{img/atasweb/atas-web-dangerzone.jpg}
 	\caption[Gefahrenzone]
 	{Gefahrenzone}
 \end{figure}%
 
-\section{Kommunikation}
-In diesem Abschnitt wird die Kommunikation zwischen den Komponenten im System aufgezeigt.
+\section{Daten Kommunikation}
+In diesem Abschnitt wird die Daten Kommunikation zwischen den Komponenten im System aufgezeigt.
 \subsection{MQTT}
-Für das ATAS Projekt wurde die nachfolgende MQTT Struktur verwendet.
+Für das ATAS Projekt wurde die nachfolgende MQTT Struktur verwendet. Als MQTT Broker dient der MQTT Handler des TTN Netzwerkes resp. der MQTT Broker von CloudMQTT.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/system/ATAS_MQTT_Topic_BA.jpg}
@@ -758,6 +759,48 @@ Für das ATAS Projekt wurde die nachfolgende MQTT Struktur verwendet.
 	{MQTT Struktur}
 \end{figure}
 
+\subsection{Datenfluss Tracker TTN}
+In diesem Abschnitt wird die Kommunikation zwischen Tracker und TTN Netzwerk genauer erläutert.\\[0.3cm]
+Die Verbindung sieht wie folgt aus:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/dataflow_tracker2ttn_connection.jpg}
+	\caption[Verbindungen Tracker \& TTN]
+	{Verbindungen Tracker \& TTN}
+\end{figure}
+
+\subsubsection{Uplink: Tracker zu TTN}
+Der Tracker sendet in einem Uplink, 4 verschiedene Informationen:
+\begin{itemize}
+	\item Breitengrad, Geo-Koordinate, auf 5 Dezimalstellen genau
+	\item Längengrad, Geo-Korrdinate, auf 5 Dezimalstellen genau
+	\item Notfallknopf Status, Eingeschalten oder Ausgeschaltet
+	\item In Gefahrenzone, dient der Kontrolle ob der Tracker die Nachricht erhalten hat
+\end{itemize}
+Die maximale gösse des Uplinks beträgt \textbf{20 Bytes}. Diese Angabe wird später im Bereich 'Testing' benötigt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/dataflow_tracker2ttn_uplink.jpg}
+	\caption[Tracker Uplink]
+	{Tracker Uplink}
+\end{figure}
+
+\subsection{Downlink: TTN zu Tracker}
+Das TTN Netzwerk sendet die Information ob sich der Tracker in einer Gefahrenzone befindet. Der gesendete Wert signalisiert ebenfalls um was für eine Gefahr es sich handelt. 5 Werte sind dabei möglich
+\begin{itemize}
+	\item 0, keine Gefahr
+	\item 1, Lawine
+	\item 2, Steinschlag
+	\item 3, Schneesturm
+	\item 4, Spalten
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/system/dataflow_tracker2ttn_downlink.jpg}
+	\caption[Tracker Uplink]
+	{Tracker Uplink}
+\end{figure}
 \chapter{Prototyp}
 Das Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie ich beim des Prototypen 2 vorgegangen bin.
 
@@ -806,17 +849,17 @@ Für den Aufbau des zweiten Prototypen wurde die nachfolgende Hardware verwendet
 \begin{tabularx}{\linewidth}{XXX}
 		\textbf{Gerätetyp} & \textbf{Model} & \textbf{Bild} \\ \hline
 		Entwicklungsboard & \makecell[l]{Espressfif ESP-WROOM-32\\ Core Dev Kit}  & \parbox[c]{1em}{
-			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/system/esp32.png}\vspace{8pt}} \\ \hline
+			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/prototype/esp32.jpg}\vspace{8pt}} \\ \hline
 		GPS Module& ublox Neo 6M & \parbox[c]{1em}{
-			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/system/gps.png}\vspace{8pt}} \\ \hline
+			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/prototype/gps.jpg}\vspace{8pt}} \\ \hline
 		Lora Modul & RFM96 & \parbox[c]{1em}{
-			\vspace{8pt}\includegraphics[width=0.18\textwidth]{img/system/lora.png}\vspace{8pt}} \\ \hline
+			\vspace{8pt}\includegraphics[width=0.18\textwidth]{img/prototype/lora.jpg}\vspace{8pt}} \\ \hline
 		Speaker & Piezo Speaker  & \parbox[c]{1em}{
-			\vspace{8pt}\includegraphics[width=0.15\textwidth]{img/system/speaker.png}\vspace{8pt}} \\ \hline
+			\vspace{8pt}\includegraphics[width=0.15\textwidth]{img/prototype/speaker.jpg}\vspace{8pt}} \\ \hline
 		Display & \makecell[l]{eink Display Waveshare \\ 1.54  Zoll 200x 200}  &\parbox[c]{1em}{
-			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/system/display.png}\vspace{8pt}} \\ \hline
+			\vspace{8pt}\includegraphics[width=0.3\textwidth]{img/prototype/display.jpg}\vspace{8pt}} \\ \hline
 		Schalter & gewöhnlicher 4 Pin Schalter & \parbox[c]{1em}{
-			\vspace{8pt}\includegraphics[width=0.07\textwidth]{img/system/schalter.png}\vspace{8pt}} \\ \hline
+			\vspace{8pt}\includegraphics[width=0.07\textwidth]{img/prototype/schalter.png}\vspace{8pt}} \\ \hline
 \end{tabularx} 
 \noindent
 Es gab kein spezielles Auswahlverfahren für die Komponenten. Die Auswahl wurde durch Internetrecherchen und Empfehlungen von Kollegen beeinflusst. Bei einem erneuten Projekt in dieser Richtung müsste ich vorher die Kriterien für die Komponenten festlegen.
@@ -855,7 +898,7 @@ Das Schema ist auf der nachfolgenden Seite abgebildet.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/prototyp_schema.png}
+	\includegraphics[width=\textwidth]{img/prototype/prototyp_schema.png}
 	\caption[Prototyp2 Schema]
 	{Prototyp 2 Schema}
 \end{figure}
@@ -896,7 +939,7 @@ In der nachfolgenden Übersicht wird die Kommunikationsart zwischen den Komponen
 Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert und verlötet resp. angeschraubt. Der Mikrocontroller wurde absichtlich nicht im Zentrum platziert, damit der Zugang zum USB Anschluss frei blieb. Abschließend wurde gemäß Schema die Komponenten untereinander verkabelt.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/system/prototyp2.jpg}
+	\includegraphics[width=\textwidth]{img/prototype/prototyp2.jpg}
 	\caption[Prototyp 2]
 	{Prototyp 2}
 \end{figure}
@@ -921,11 +964,12 @@ Infolge der Umstellung auf die ESP32 Umgebung mussten einige bestehenden Bibliot
 \subsubsection{LMIC}
 Die LMIC Bibliothek hat den LoRaWan Stack implementiert und wird für die korrekte Kommunikation via LoRa Modul benötigt. Zum Zeitpunkt dieser Arbeit gibt es keine für ESP32 portierte LMIC Bibliothek. Für die LoRaWan Kommunikation wurde daher auf eine bestehende Arduino Library (Arduino-LMIC) zurückgegriffen \cite{ArduinoLMIC}. Der Funktionsumfang bleibt der selbe. Den Kommunikationsablauf selbständig zu programmieren hätte den Umfang dieser Arbeit gesprengt. Einige Entwickler berichten von Timing Problemen während der Kommunikation. Bis jetzt konnten beim ATAS Projekt keine Probleme mit der eingesetzten Library festgestellt werden. Die Arduino Library fügt sich problemlos in die ESP-IDF Umgebung ein.
 
+\newpage
 \subsection{Klassendiagramm}
 Die einzelnen physikalischen Bausteine (GPS, Lora...) werden in Sofware Klassen abgebildet. Die Klassen besitzen entsprechende Methode zum auslesen resp. steuern der Komponenten. Um die Software zu visualisieren wurde ein Klassendiagramm erstellt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{img/classdiagram.jpg}
+	\includegraphics[width=\textwidth]{img/prototype/classdiagram.jpg}
 	\caption[Klassendiagramm]
 	{Klassendiagramm}
 \end{figure}
@@ -1098,7 +1142,7 @@ Es muss definiert werden
 	
 	\begin{minipage}{\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{img/ttn_messages}
+		\includegraphics[width=\linewidth]{img/ttn/ttn_messages}
 		\captionof{figure}{TTN Messages}
 	\end{minipage}
 
@@ -1146,7 +1190,7 @@ Der Standort für den LoRa Gateway war schnell gefunden. Ich arbeite momentan al
 \begin{tabularx}{\textwidth}{ l|X }
 		\textbf{Beschreibung} & \textbf{Bild} \\ \hline
 		Standort Hoffmann Neopac AG & \parbox[c]{1em}{
-			\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/gateway/gateway_map.png}\vspace{8pt}} \\ \hline
+			\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/gateway/gateway_map.jpg}\vspace{8pt}} \\ \hline
 		Standort Gateway auf Gebäude &  \parbox[c]{1em}{
 			\vspace{8pt}\includegraphics[width=0.6\textwidth]{img/gateway/gateway_building_front.jpg}\vspace{8pt}} \\ \hline
 \end{tabularx}
@@ -1185,7 +1229,7 @@ In diesem Abschnitt ist der Aufbau des LoRaWan Gateways beschrieben. Der Gateway
 \end{itemize}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{img/gateway/gateway.png}\\[0.3cm]
+	\includegraphics[width=\textwidth]{img/gateway/gateway.jpg}\\[0.3cm]
 	\caption[Gateway]
 	{Gateway}
 \end{figure}
@@ -1291,8 +1335,10 @@ Die Tests werden mit einem fixen Einstellungen durchgeführt
 	\item Coding Rate 4/8
 \end{enumerate}
 \newpage
-\subsubsection{Resultate}
-TODO, PRIO 1
+\subsubsection{Resultate Kategorie A}
+\subsubsection{Resultate Kategorie B}
+\subsubsection{Resultate Kategorie C}
+\subsubsection{Zusammenfassung}
 
 \newpage
 \subsection{Test 2: Spreadingfactor}
@@ -1358,7 +1404,7 @@ Auch bei SF12 liegt die Zeit zwischen den Übertragungen bei nur 170 Sekunden. D
 \chapter{Schlusswort}
 \section{Verbesserungsvorschläge}
 \subsection{Automatischer Datenaustausch}
-Zurzeit werden die Gefahrenzonen manuell über eine Webapplikation (ATAS-Web) erfasst. Die Daten können täglich ändern. Eine manuelle Bearbeitung ist daher weder effizient noch alltagstauglich. Sollte das Projekt in irgend einer Form weitergeführt werden, müssten Lieferanten für solche Gefahrenzoneninformationen gefunden werden. Die  Provider müssen Schnittstellen anbieten bspw. REST oder MQTT damit wir die Daten automatisiert in ATAS-Service importieren können. 
+Zurzeit werden die Gefahrenzonen manuell über eine Webapplikation (ATAS-Web) erfasst. Die Daten können täglich ändern. Eine manuelle Bearbeitung ist daher weder effizient noch alltagstauglich. Sollte das Projekt in irgend einer Form weitergeführt werden, müssten Lieferanten für solche Gefahrenzoneninformationen gefunden werden. Die  Provider müssen Schnittstellen anbieten bspw. REST oder MQTT damit wir die Daten automatisiert in den ATAS-Service importieren können. 
 
 \begin{figure}[H]
 	\centering
@@ -1373,8 +1419,8 @@ Die gefundenen Resultate sind auf den ersten Blick vielversprechend. LoRa bringt
 In meinen Augen muss man sich von LoRa und LoRa Wan als Kommunikationsart verabschieden und auf andere Technologien setzen. Sobald Sigfox in der Schweiz verfügbar ist, wäre es sehr interessant auch mit dieser Technologie entsprechende Tests durchzuführen. Ich befürchte aber, das eine Übertragungsart, bei welcher der Gateway in einem Tal positioniert ist, nie 100\% funktionieren wird. Als Alternative sehe ich hier Satellitentechnologien.Der Raum gegen Oben, sprich zum Satellit, ist im Normalfall aber frei. Eine Übertragung sollte immer und überall funktionieren. Diese Form der Kommunikation wirft dann natürlich neue Fragen auf. Wie hoch sind die Kosten für die Nutzung eines solches Services? Wie lange hält die Batterie über diese Kommunikationsart?
 
 \section{Rückblick Projekt}
-Nicht alles in diesem Projekt lief reibungslos. Der benötigte Aufwand für den Bereich Testing habe ich unterschätzt. Eine Wanderung, mit Messungen, Anfahrt und anschließender Auswertung der Daten hat viel mehr Zeit in Anspruch genommen als ich erwartete.\\[0.3cm]
-Nichtsdestotrotz schaue ich auf ein erfolgreiches Projekt zurück. Ich konnte auf die Arbeit aus dem Vorprojekt 'Projekt 2' gut anknüpfen. Während der Bachelorarbeit war es mir möglich, mich intensiver mit den Technologien und damit verbundenen Fragestellungen zu befassen. Die Ergebnisse der Arbeit sind sehr interessant und zeigen auf wo die Grenzen der heutigen Technik liegen. Ich bin überzeugt, dass ATAS mit der richtigen Kommunikationstechnologie ein vielversprechendes Projekt darstellt.
+Rückblickend kann ich sagen, dass es im Verlauf des Projekts bezüglich des Aufwands, zu Fehleinschätzungen gekommen ist. Eine Wanderung, mit Messungen, Anfahrt und anschließender Auswertung der Daten hat viel mehr Zeit in Anspruch genommen als im Projekt eingeplant war.\\[0.3cm]
+Nichtsdestotrotz schaue ich auf ein erfolgreiches Projekt zurück. Ich konnte an die Arbeit aus dem Vorprojekt 'Projekt 2' gut anknüpfen. Während der Bachelorarbeit war es mir möglich, mich intensiver mit den Technologien und damit verbundenen Fragestellungen zu befassen. Die Ergebnisse der Arbeit sind sehr interessant und zeigen auf wo die Grenzen der heutigen Technik liegen. Ich bin überzeugt, dass ATAS mit der richtigen Kommunikationstechnologie ein vielversprechendes Projekt darstellt.
 
 \chapter*{Selbständigkeitserklärung}
 \label{chap:selbstaendigkeitserklaerung}
@@ -1410,7 +1456,7 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 \url{https://github.com/ATAS-Group/atas-node2}
 
 \newpage
-\section{Libraries}
+\section{Software-Bibliotheken}
 Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurückgegriffen. Da ich sehr dankbar für dessen Bereitstellung bin, möchte ich diese hier namentlich erwähnen.
 
 \subsection{Atas-Node2}

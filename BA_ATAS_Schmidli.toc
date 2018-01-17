@@ -77,64 +77,70 @@
 \contentsline {subsubsection}{Tracker}{42}{section*.54}
 \contentsline {subsubsection}{Alarmierung}{42}{section*.56}
 \contentsline {subsubsection}{Gefahrenzonen}{43}{section*.58}
-\contentsline {section}{\numberline {4.7}Kommunikation}{44}{section.4.7}
+\contentsline {section}{\numberline {4.7}Daten Kommunikation}{44}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}MQTT}{44}{subsection.4.7.1}
-\contentsline {chapter}{\numberline {5}Prototyp}{45}{chapter.5}
-\contentsline {section}{\numberline {5.1}Begr\IeC {\"u}ndung neuer Prototyp}{45}{section.5.1}
-\contentsline {section}{\numberline {5.2}Ablauf Prototyping}{46}{section.5.2}
-\contentsline {section}{\numberline {5.3}Ablauf Vorgehen}{47}{section.5.3}
-\contentsline {section}{\numberline {5.4}Evaluation Hardware}{48}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Lora-Antenne}{50}{subsection.5.4.1}
-\contentsline {section}{\numberline {5.5}Zusammenbau Hardware}{52}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Schema}{52}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Mikrocontroller - Pinbelegung}{54}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}Kommunikation}{55}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Zusammenbau}{56}{subsection.5.6.1}
-\contentsline {section}{\numberline {5.7}Software}{57}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}Entwicklungsumgebung}{57}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}Sourcecode}{57}{subsection.5.7.2}
-\contentsline {subsection}{\numberline {5.7.3}Bibliotheken}{58}{subsection.5.7.3}
-\contentsline {subsubsection}{LMIC}{58}{section*.68}
-\contentsline {subsection}{\numberline {5.7.4}Klassendiagramm}{58}{subsection.5.7.4}
-\contentsline {subsection}{\numberline {5.7.5}Display}{59}{subsection.5.7.5}
-\contentsline {subsubsection}{Dashboard}{59}{section*.70}
-\contentsline {subsubsection}{Alarm}{59}{section*.72}
-\contentsline {subsubsection}{Notfall}{60}{section*.74}
-\contentsline {subsubsection}{Herausforderung Timing}{61}{section*.76}
-\contentsline {section}{\numberline {5.8}Finalisierung \& Testing}{62}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}Energieversorgung}{62}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}Schlusswort}{65}{subsection.5.8.2}
-\contentsline {chapter}{\numberline {6}Testing}{66}{chapter.6}
-\contentsline {section}{\numberline {6.1}Ablauf Vorgehen}{66}{section.6.1}
-\contentsline {section}{\numberline {6.2}Definition}{67}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Schlussfolgerung}{68}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Standort}{69}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Gateway}{70}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Testregionen}{71}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}Aufbau \& Vorbereitungen}{73}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Gateway}{73}{subsection.6.4.1}
-\contentsline {subsubsection}{Installation}{74}{section*.83}
-\contentsline {subsubsection}{TTN Registrierung}{75}{section*.84}
-\contentsline {subsection}{\numberline {6.4.2}Dashboard}{76}{subsection.6.4.2}
-\contentsline {subsubsection}{ATAS-Web}{76}{section*.87}
-\contentsline {section}{\numberline {6.5}Messungen}{78}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{78}{subsection.6.5.1}
-\contentsline {subsubsection}{Vorgehen}{78}{section*.90}
-\contentsline {subsubsection}{Resultate}{79}{section*.91}
-\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{80}{subsection.6.5.2}
-\contentsline {subsubsection}{Test 2.1}{80}{section*.92}
-\contentsline {subsubsection}{Test 2.2}{82}{section*.95}
-\contentsline {subsection}{\numberline {6.5.3}Test 3: Datenrate}{84}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}Schlusswort}{85}{chapter.7}
-\contentsline {section}{\numberline {7.1}Verbesserungsvorschl\IeC {\"a}ge}{85}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Automatischer Datenaustausch}{85}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Wireless Kommunikation}{85}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}R\IeC {\"u}ckblick Projekt}{86}{section.7.2}
-\contentsline {section}{\numberline {7.3}Projekt 2}{88}{section.7.3}
-\contentsline {section}{\numberline {7.4}Software}{88}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{88}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{88}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{88}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{88}{subsection.7.4.4}
-\contentsline {section}{\numberline {7.5}Libraries}{89}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{89}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {4.7.2}Datenfluss Tracker TTN}{44}{subsection.4.7.2}
+\contentsline {subsubsection}{Uplink: Tracker zu TTN}{45}{section*.63}
+\contentsline {subsection}{\numberline {4.7.3}Downlink: TTN zu Tracker}{45}{subsection.4.7.3}
+\contentsline {chapter}{\numberline {5}Prototyp}{46}{chapter.5}
+\contentsline {section}{\numberline {5.1}Begr\IeC {\"u}ndung neuer Prototyp}{46}{section.5.1}
+\contentsline {section}{\numberline {5.2}Ablauf Prototyping}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}Ablauf Vorgehen}{48}{section.5.3}
+\contentsline {section}{\numberline {5.4}Evaluation Hardware}{49}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Lora-Antenne}{51}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Zusammenbau Hardware}{53}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Schema}{53}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Mikrocontroller - Pinbelegung}{55}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Kommunikation}{56}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Zusammenbau}{57}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}Software}{58}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Entwicklungsumgebung}{58}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Sourcecode}{58}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Bibliotheken}{59}{subsection.5.7.3}
+\contentsline {subsubsection}{LMIC}{59}{section*.72}
+\contentsline {subsection}{\numberline {5.7.4}Klassendiagramm}{60}{subsection.5.7.4}
+\contentsline {subsection}{\numberline {5.7.5}Display}{61}{subsection.5.7.5}
+\contentsline {subsubsection}{Dashboard}{61}{section*.74}
+\contentsline {subsubsection}{Alarm}{61}{section*.76}
+\contentsline {subsubsection}{Notfall}{62}{section*.78}
+\contentsline {subsubsection}{Herausforderung Timing}{63}{section*.80}
+\contentsline {section}{\numberline {5.8}Prototyp Testing}{64}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Energieversorgung}{64}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Schlusswort}{67}{subsection.5.8.2}
+\contentsline {chapter}{\numberline {6}Testing Daten\IeC {\"u}bertragung }{68}{chapter.6}
+\contentsline {section}{\numberline {6.1}Ablauf Vorgehen}{68}{section.6.1}
+\contentsline {section}{\numberline {6.2}Definition}{69}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Schlussfolgerung}{70}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Standort}{71}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Gateway}{72}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Testregionen}{73}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Aufbau \& Vorbereitungen}{75}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Gateway}{75}{subsection.6.4.1}
+\contentsline {subsubsection}{Installation}{76}{section*.87}
+\contentsline {subsubsection}{TTN Registrierung}{77}{section*.88}
+\contentsline {subsection}{\numberline {6.4.2}Dashboard}{78}{subsection.6.4.2}
+\contentsline {subsubsection}{ATAS-Web}{78}{section*.91}
+\contentsline {section}{\numberline {6.5}Messungen}{80}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{80}{subsection.6.5.1}
+\contentsline {subsubsection}{Vorgehen}{80}{section*.94}
+\contentsline {subsubsection}{Resultate Kategorie A}{81}{section*.95}
+\contentsline {subsubsection}{Resultate Kategorie B}{81}{section*.96}
+\contentsline {subsubsection}{Resultate Kategorie C}{81}{section*.97}
+\contentsline {subsubsection}{Zusammenfassung}{81}{section*.98}
+\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{82}{subsection.6.5.2}
+\contentsline {subsubsection}{Test 2.1}{82}{section*.99}
+\contentsline {subsubsection}{Test 2.2}{84}{section*.102}
+\contentsline {subsection}{\numberline {6.5.3}Test 3: Datenrate}{86}{subsection.6.5.3}
+\contentsline {chapter}{\numberline {7}Schlusswort}{87}{chapter.7}
+\contentsline {section}{\numberline {7.1}Verbesserungsvorschl\IeC {\"a}ge}{87}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Automatischer Datenaustausch}{87}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Wireless Kommunikation}{87}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}R\IeC {\"u}ckblick Projekt}{88}{section.7.2}
+\contentsline {section}{\numberline {7.3}Projekt 2}{90}{section.7.3}
+\contentsline {section}{\numberline {7.4}Software}{90}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{90}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{90}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{90}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{90}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Software-Bibliotheken}{91}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{91}{subsection.7.5.1}
