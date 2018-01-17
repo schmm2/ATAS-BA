@@ -126,16 +126,15 @@
 \contentsline {subsubsection}{Test 2.2}{82}{section*.95}
 \contentsline {subsection}{\numberline {6.5.3}Test 3: Datenrate}{84}{subsection.6.5.3}
 \contentsline {chapter}{\numberline {7}Schlusswort}{85}{chapter.7}
-\contentsline {section}{\numberline {7.1}Verbesserungen bestehendes System}{85}{section.7.1}
+\contentsline {section}{\numberline {7.1}Verbesserungsvorschl\IeC {\"a}ge}{85}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Automatischer Datenaustausch}{85}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Ausblick}{85}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Wireless Kommunikation}{85}{subsection.7.2.1}
-\contentsline {section}{\numberline {7.3}R\IeC {\"u}ckblick Projekt}{85}{section.7.3}
-\contentsline {section}{\numberline {7.4}Projekt 2}{87}{section.7.4}
-\contentsline {section}{\numberline {7.5}Software}{87}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Atas-Webapp}{87}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Atas-Service}{87}{subsection.7.5.2}
-\contentsline {subsection}{\numberline {7.5.3}Atas-Node}{87}{subsection.7.5.3}
-\contentsline {subsection}{\numberline {7.5.4}Atas-Node2}{87}{subsection.7.5.4}
-\contentsline {section}{\numberline {7.6}Libraries}{88}{section.7.6}
-\contentsline {subsection}{\numberline {7.6.1}Atas-Node2}{88}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.1.2}Wireless Kommunikation}{85}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}R\IeC {\"u}ckblick Projekt}{86}{section.7.2}
+\contentsline {section}{\numberline {7.3}Projekt 2}{88}{section.7.3}
+\contentsline {section}{\numberline {7.4}Software}{88}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{88}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{88}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{88}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{88}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Libraries}{89}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{89}{subsection.7.5.1}

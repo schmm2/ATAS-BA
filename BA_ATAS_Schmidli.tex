@@ -290,7 +290,7 @@ LoRa hat drei Hauptmerkmale. Der Energieverbrauch ist gering (low-power), die Re
 	\item Geringe Störanfälligkeit durch den Einsatz von Spreading Factors resp. Chirp Spread Spectrum (CSS)
 	\item Frequenzbereich im ISM Band. Lizenzfreie Frequenzbereiche. Es müssen keine Gebühren bezahlt werden.
 	\item Großes Link Budget, +14dB Sender und -137db Empfänger Sensitivität $\rightarrow$ 151dB
-	\item Erfreut sich grosser Beliebtheit bei der Community. Das verwenden von LoRa gestaltet sich sehr einfach. Immer mehr Informationen und hilfreiche Ressourcen sind im Internet zu finden.
+	\item Erfreut sich großer Beliebtheit bei der Community. Immer mehr Informationen und hilfreiche Ressourcen sind im Internet zu finden.
 \end{itemize}
 \subsubsection{Nachteile}
 \begin{itemize}
@@ -321,7 +321,7 @@ Ein Chirp ist ein sinusähnliches Signal, bei welchem über die Zeit die Frequen
 	{Beispiel Upchirp}
 \end{figure}
 \noindent
-Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschließend verwendet um die Nutzdaten zu kodieren. Pro übertragenes Symbol wird ein Chirp generiert.
+Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschließend verwendet um die Daten zu kodieren.
 
 \subsubsection{Bandbreite}
 Bei LoRa haben wir die Möglichkeit zwischen drei möglichen Bandbreiten zu wählen. Die Bandbreite definiert die grösse des Bereiches der zwischen der kleinste und der größten möglichen Frequenz. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. Eine Verdoppelung der Bandbreite (BW125 zu BW250) erlaubt es doppelt soviele Bytes zu senden. Nur die Bandbreiten 125KHz und 250KHz sind in Europa zulässig. %SOURCE https://www.youtube.com/watch?v=dxYY097QNs0. 
@@ -399,7 +399,6 @@ Die Coding Rate definiert die Error Kodierungsrate. Eine höhere Kodierungsrate 
 \end{exmp}
 \noindent
 Um ein möglichst gutes Signal zu erhalten, soll im ATAS System die Kodierungsrate auf 4/8 festgelegt werden.
-
 
 \newpage
 \section{LoRaWan}
@@ -644,14 +643,9 @@ Alle Daten welche zu CloudMQTT publiziert werden, werden nun auch automatisch zu
 \newpage
 \section{Logik}
 \subsection{ATAS-Service}
-Atas-Service calculates if a tracker is inside a dangerzone. The service is comparing the
-GPS location of the tracker with the geographical area of the dangerzone. If the tracker
-is inside a dangerzone it will send an alarm to the tracker. The alarmsignal is send to the
-TTN Network over MQTT via CloudMQTT.
-Atas-Service provides a REST interface. Dangerzones created with the webapplication are
-sent to the atas-service over REST. This allows the webapplication to get and store the
-information about dangerzones. The database used in this project is a Mongo db.
-Atas-service is a node.js application written in Javascript.
+Der ATAS-Service verwaltet die erfassten Gefahrenzonen. Er empfängt die Geo-Koordinaten der Tracker und vergleicht diese mit dem Koordinaten der Gefahrenzone. Wenn sich ein Tracker in einer Gefahrenzone befindet, wird ein Alarmsignal an den Tracker gesendet. Das Signal wird mittels MQTT an CloudMQTT gesandt. Das TTN Netzwerk wird informiert und übernimmt die Zustellung der Nachricht an den Tracker.\\[0.3cm]
+ATAS-Service bietet unter anderem eine REST Schnittstelle an. Informationen zu den Gefahrenzonen können so von der WebApplikation (ATAS-Web) bezogen und gespeichert werden. Um die Datenbank zu speichern wurde eine MongoDB installiert und konfiguriert.\\[0.3cm]
+ATAS-Service selbst ist eine node.js Applikation. Die verwendete Programmiersprache ist Javascript.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_ATASService.jpg}
@@ -1032,7 +1026,7 @@ Um die korrekte Datenübertragung sicherzustellen, wurde in der Software ein Mut
 \newpage
 
 \newpage
-\section{Finalisierung \& Testing}
+\section{Prototyp Testing}
 Abschließend werden Tests mit dem neuen Tracker durchgeführt.
 
 \subsection{Energieversorgung}
@@ -1079,7 +1073,7 @@ Die Resultate mit dem neuen Prototypen sind zufriedenstellend. Das Display erwei
 
 
 % ***** TESTING *****
-\chapter{Testing}
+\chapter{Testing Datenübertragung }
 \section{Ablauf Vorgehen}
 Ein Teil des Systemaufbaus aus dem vorgängigen Projekt soll getestet werden. In diesem Kapitel wird genau beschrieben, wie beim Testing des Systems vorgegangen wird.\\[0.3cm]
 In der nächsten Abbildung sind die geplanten Schritte aufgeführt.
@@ -1195,10 +1189,7 @@ In diesem Abschnitt ist der Aufbau des LoRaWan Gateways beschrieben. Der Gateway
 	\caption[Gateway]
 	{Gateway}
 \end{figure}
-Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub und Wasser geschützt. Leider wurde hier zu wenig Zeit in die Planung investiert. Wie sollte der Pi mit Strom versorgt werden, wenn die Box geschlossen ist? Ein zusätzliches Loch musste gebohrt werden um das Kabel verlegen zu können. 
-%Um nur ein Kabel verlegen zu müssen, habe ich mir einen POE Splitter organisiert. Damit lässt sich die Energieversorgung wie auch die Datenübertragung über ein einzelnes CAT. 6 Ethernetkabel mit RJ-45 Steckern sicherstellen.
-
-% TODO BILD
+Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub und Wasser geschützt.
 
 \newpage
 \subsubsection{Installation}
@@ -1362,17 +1353,28 @@ Auch mit mehr Messwerten ist die Annahme nicht eingetroffen. Warum sich die Mess
 	{Zeit zwischen zwei Paketen}
 \end{figure}
 \noindent
-Auch bei SF12 liegt die Zeit zwischen den Übertragungen bei nur 170 Sekunden. Das bedeutet, dass wir ca. alle 3 Minuten den neue Standort übermitteln können. Beim Wandern wir diese Rate ausreichen. Ob diese Zeit für Skifahrer reicht müssten in weiteren Tests festgestellt werden.
+Auch bei SF12 liegt die Zeit zwischen den Übertragungen bei nur 170 Sekunden. Das bedeutet, dass wir ca. alle 3 Minuten den neue Standort übermitteln können. Beim Wandern wir diese Rate ausreichen. Ob diese Zeit für Skifahrer reicht müssten in weiteren Tests festgestellt werden. Würden wir, wie bereits angesprochen, eine eigen ADR Lösung implementieren könnten wir den SF auch reduzieren. Dies würde und ermöglichen schneller zu übertragen.
 
 \chapter{Schlusswort}
-\section{Verbesserungen bestehendes System}
+\section{Verbesserungsvorschläge}
 \subsection{Automatischer Datenaustausch}
-TODO, Prio 2
-\section{Ausblick}
+Zurzeit werden die Gefahrenzonen manuell über eine Webapplikation (ATAS-Web) erfasst. Die Daten können täglich ändern. Eine manuelle Bearbeitung ist daher weder effizient noch alltagstauglich. Sollte das Projekt in irgend einer Form weitergeführt werden, müssten Lieferanten für solche Gefahrenzoneninformationen gefunden werden. Die  Provider müssen Schnittstellen anbieten bspw. REST oder MQTT damit wir die Daten automatisiert in ATAS-Service importieren können. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/system/ATAS_ExternalAccess.jpg}
+	\caption[Gefahrenzonen Provider]
+	{Gefahrenzonen Provider}
+\end{figure}
+
 \subsection{Wireless Kommunikation}
-TODO, Prio 2
+Die gefundenen Resultate sind auf den ersten Blick vielversprechend. LoRa bringt die benötigte Reichweite, ist stromsparend und die Datenrate würde für dieses Projekt ausreichen. Die Tatsache, dass gewisse Positionen vom Signal her nicht abgedeckt werden können ist aber aus meiner Sicht ein klares Zeichen, dass sich die Technologie nicht eignet. Die Berge und deren Strukturen sind unberechenbar.
+\\[0.3cm]
+In meinen Augen muss man sich von LoRa und LoRa Wan als Kommunikationsart verabschieden und auf andere Technologien setzen. Sobald Sigfox in der Schweiz verfügbar ist, wäre es sehr interessant auch mit dieser Technologie entsprechende Tests durchzuführen. Ich befürchte aber, das eine Übertragungsart, bei welcher der Gateway in einem Tal positioniert ist, nie 100\% funktionieren wird. Als Alternative sehe ich hier Satellitentechnologien.Der Raum gegen Oben, sprich zum Satellit, ist im Normalfall aber frei. Eine Übertragung sollte immer und überall funktionieren. Diese Form der Kommunikation wirft dann natürlich neue Fragen auf. Wie hoch sind die Kosten für die Nutzung eines solches Services? Wie lange hält die Batterie über diese Kommunikationsart?
+
 \section{Rückblick Projekt}
-TODO, Prio 3
+Nicht alles in diesem Projekt lief reibungslos. Der benötigte Aufwand für den Bereich Testing habe ich unterschätzt. Eine Wanderung, mit Messungen, Anfahrt und anschließender Auswertung der Daten hat viel mehr Zeit in Anspruch genommen als ich erwartete.\\[0.3cm]
+Nichtsdestotrotz schaue ich auf ein erfolgreiches Projekt zurück. Ich konnte auf die Arbeit aus dem Vorprojekt 'Projekt 2' gut anknüpfen. Während der Bachelorarbeit war es mir möglich, mich intensiver mit den Technologien und damit verbundenen Fragestellungen zu befassen. Die Ergebnisse der Arbeit sind sehr interessant und zeigen auf wo die Grenzen der heutigen Technik liegen. Ich bin überzeugt, dass ATAS mit der richtigen Kommunikationstechnologie ein vielversprechendes Projekt darstellt.
 
 \chapter*{Selbständigkeitserklärung}
 \label{chap:selbstaendigkeitserklaerung}
