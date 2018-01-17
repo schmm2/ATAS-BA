@@ -123,22 +123,24 @@
 \contentsline {section}{\numberline {6.5}Messungen}{80}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{80}{subsection.6.5.1}
 \contentsline {subsubsection}{Vorgehen}{80}{section*.94}
-\contentsline {subsubsection}{Resultate}{81}{section*.95}
-\contentsline {subsubsection}{Auswertung}{81}{section*.97}
-\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{82}{subsection.6.5.2}
-\contentsline {subsubsection}{Test 2.1}{82}{section*.98}
-\contentsline {subsubsection}{Test 2.2}{84}{section*.101}
-\contentsline {subsection}{\numberline {6.5.3}Test 3: Datenrate}{86}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}Schlusswort}{87}{chapter.7}
-\contentsline {section}{\numberline {7.1}Verbesserungsvorschl\IeC {\"a}ge}{87}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Automatischer Datenaustausch}{87}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Wireless Kommunikation}{87}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}R\IeC {\"u}ckblick Projekt}{88}{section.7.2}
-\contentsline {section}{\numberline {7.3}Projekt 2}{90}{section.7.3}
-\contentsline {section}{\numberline {7.4}Software}{90}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{90}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{90}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{90}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{90}{subsection.7.4.4}
-\contentsline {section}{\numberline {7.5}Software-Bibliotheken}{91}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{91}{subsection.7.5.1}
+\contentsline {subsubsection}{Ausgangslage}{80}{section*.95}
+\contentsline {subsubsection}{Resultate}{81}{section*.96}
+\contentsline {subsubsection}{Auswertung}{82}{section*.98}
+\contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{83}{subsection.6.5.2}
+\contentsline {subsubsection}{Test 2.1}{83}{section*.100}
+\contentsline {subsubsection}{Test 2.2}{85}{section*.103}
+\contentsline {subsection}{\numberline {6.5.3}Test 3: Datenrate}{87}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.4}Ergebnisse}{88}{subsection.6.5.4}
+\contentsline {chapter}{\numberline {7}Schlusswort}{89}{chapter.7}
+\contentsline {section}{\numberline {7.1}Verbesserungsvorschl\IeC {\"a}ge}{89}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Automatischer Datenaustausch}{89}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Wireless Kommunikation}{89}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}R\IeC {\"u}ckblick Projekt}{90}{section.7.2}
+\contentsline {section}{\numberline {7.3}Projekt 2}{92}{section.7.3}
+\contentsline {section}{\numberline {7.4}Software}{92}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Atas-Webapp}{92}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Atas-Service}{92}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Atas-Node}{92}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Atas-Node2}{92}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Software-Bibliotheken}{93}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Atas-Node2}{93}{subsection.7.5.1}

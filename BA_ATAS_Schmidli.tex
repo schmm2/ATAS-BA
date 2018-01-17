@@ -1314,7 +1314,7 @@ Es werden verschiedene Testszenarien definiert.
 
 \subsection{Test 1: Praxistest}
 \subsubsection{Vorgehen}
-Das ATAS System soll geprüft werden ob es praxistauglich ist. Um dies zu überprüfen werden in den vorher definierten Testregionen Messungen durchgeführt. Es soll getestet werden, wie zuverlässig die Übertragung funktioniert.\\[0.3cm]
+Das ATAS System soll geprüft werden ob es praxistauglich ist. Um dies zu überprüfen, wird in der vorher definierten Testregion 2, Messungen durchgeführt. Es soll getestet werden, wie zuverlässig die Übertragung funktioniert.\\[0.3cm]
 Für diesen Test werden die folgenden Daten erhoben
 \begin{enumerate}
 	\item Distanz zwischen Sender und Empfänger
@@ -1328,12 +1328,14 @@ Die erhobenen Daten werden nach Sichtverhältnissen kategorisiert. Messungen sol
 	\item B: Wenig Sichtkontakt resp. teilweise blockiert. Bspw. durch Bewaldung oder Steinformationen
 	\item C: kein ein Sichtkontakt zwischen Empfänger und Sender.
 \end{enumerate}
+\subsubsection{Ausgangslage}
 Die Tests werden mit einem fixen Einstellungen durchgeführt
 \begin{enumerate}
 	\item Spreadingfactor SF12
 	\item Bandbreite 125KHz
 	\item Coding Rate 4/8
 \end{enumerate}
+Zum Zeitpunkt des Tests (13.12.2017) lag über 20cm Schnee.
 \newpage
 \subsubsection{Resultate}
 \begin{figure}[H]
@@ -1342,7 +1344,18 @@ Die Tests werden mit einem fixen Einstellungen durchgeführt
 	\caption[Test 1 Resultate]
 	{Test 1 Resultate}
 \end{figure}
+
+\newpage
 \subsubsection{Auswertung}
+Die Resultate des ersten Tests decken etwas sehr interessantes auf. Die Distanz zwischen Gateway und Tracker hat einen sehr kleinen Einfluss auf die Übertragungsqualität. Wie wir vom letzten Datenpunkt ablesen können, ist es auch mit einer Distanz von über 7Km möglich, ein Signal sauber zu übertragen. Mehr Einfluss haben die Hindernisse zwischen Sender und Empfänger. Ist ein Hindernis bspw. ein Hügel im Weg, wird die Übertragung massiv gestört.\\[0.3cm]
+Beim Datenpunkt 7 konnten keine Pakete empfangen werden. Die Messung wurde auf der Gateway abgewendeten Talseite durchgeführt. Solche großen Hindernisse vermag das Signal also nicht zu durchdringen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/testing/testing3_graphic.jpg}
+	\caption[Darstellung: Messung 7]
+	{Darstellung: Messung 7}
+\end{figure}
 
 \newpage
 \subsection{Test 2: Spreadingfactor}
@@ -1404,6 +1417,19 @@ Auch mit mehr Messwerten ist die Annahme nicht eingetroffen. Warum sich die Mess
 \end{figure}
 \noindent
 Auch bei SF12 liegt die Zeit zwischen den Übertragungen bei nur 170 Sekunden. Das bedeutet, dass wir ca. alle 3 Minuten den neue Standort übermitteln können. Beim Wandern wir diese Rate ausreichen. Ob diese Zeit für Skifahrer reicht müssten in weiteren Tests festgestellt werden. Würden wir, wie bereits angesprochen, eine eigen ADR Lösung implementieren könnten wir den SF auch reduzieren. Dies würde und ermöglichen schneller zu übertragen.
+
+\newpage
+\subsection{Ergebnisse}
+Aus den gewonnen Resultaten lässt sich bereits ableiten, ob das ATAS System praxistauglich ist. Beim ersten Tests haben wir festgestellt, dass sobald sich ein Hindernis bspw. ein Hügel oder viele Bäume zwischen Tracker und Gateway befindet, die Übertragung sehr stark gestört wird. Befinden wir uns auf der Gateway abgewendeten Talseite, kann teilweise kein Signal mehr zum Gateway durchdringen. Würden wir nun auf der anderen Seite des Berges einen weiteren Gateway installieren wäre das Problem gelöst, die Übertragung würde wieder funktionieren. Die Form erinnert zwar von der Seite betrachtet meist an ein Dreieck, in der Realität sieht es aber oft anders aus. Die Berge sind aber eine sehr dynamische Landschaft. Ein bildliches Beispiel:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/testing/testing_result.png}
+	\caption[Dynamische Berglandschaft Beispiel]
+	{Dynamische Berglandschaft Beispiel}
+\end{figure}
+\noindent
+Befindet sich der Alpinist an einer solchen Position werden viele Übertragungen fehlschlagen. Die Ortung funktioniert nicht mehr korrekt und die Sicherheit der Person kann nicht mehr gewährleistet werden. \\[0.3cm]
+\textbf{Damit kommen wir zum Schluss, dass das ATAS System, mit LoRa als Kommunikationslösung, nicht praxistauglich ist.}
 
 \chapter{Schlusswort}
 \section{Verbesserungsvorschläge}
