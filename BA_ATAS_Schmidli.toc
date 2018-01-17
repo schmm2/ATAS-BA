@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {3.2.1}LoRa Modulation}{16}{subsection.3.2.1}
 \contentsline {subsubsection}{Bandbreite}{16}{section*.20}
 \contentsline {subsubsection}{Spreading Factor}{17}{section*.21}
-\contentsline {subsection}{\numberline {3.2.2}Regulationen}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Regulierungen}{19}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Daten\IeC {\"u}bertragungsrate}{19}{subsection.3.2.3}
 \contentsline {subsubsection}{Duty Cycle}{19}{section*.24}
 \contentsline {subsubsection}{Airtime}{20}{section*.25}

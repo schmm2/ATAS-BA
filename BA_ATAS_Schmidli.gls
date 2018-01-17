@@ -39,7 +39,9 @@
 \glossentry{LoRaWan}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{8}}}\relax\glsresetentrylist
 \glossentry{LoRaWanEndDevice}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{23}}}\glsgroupskip
+\glsXpageXglsnumberformat{}{23}}}\relax\glsresetentrylist
+\glossentry{LPWAN}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{13}}}\glsgroupskip
 \glsgroupheading{M}\relax\glsresetentrylist
 \glossentry{MQTT}{\glossaryentrynumbers{\relax 
 \glsXpageXglsnumberformat{}{8}}}\glsgroupskip
