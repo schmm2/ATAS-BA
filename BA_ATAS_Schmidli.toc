@@ -123,13 +123,11 @@
 \contentsline {section}{\numberline {6.5}Messungen}{80}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{80}{subsection.6.5.1}
 \contentsline {subsubsection}{Vorgehen}{80}{section*.94}
-\contentsline {subsubsection}{Resultate Kategorie A}{81}{section*.95}
-\contentsline {subsubsection}{Resultate Kategorie B}{81}{section*.96}
-\contentsline {subsubsection}{Resultate Kategorie C}{81}{section*.97}
-\contentsline {subsubsection}{Zusammenfassung}{81}{section*.98}
+\contentsline {subsubsection}{Resultate}{81}{section*.95}
+\contentsline {subsubsection}{Auswertung}{81}{section*.97}
 \contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{82}{subsection.6.5.2}
-\contentsline {subsubsection}{Test 2.1}{82}{section*.99}
-\contentsline {subsubsection}{Test 2.2}{84}{section*.102}
+\contentsline {subsubsection}{Test 2.1}{82}{section*.98}
+\contentsline {subsubsection}{Test 2.2}{84}{section*.101}
 \contentsline {subsection}{\numberline {6.5.3}Test 3: Datenrate}{86}{subsection.6.5.3}
 \contentsline {chapter}{\numberline {7}Schlusswort}{87}{chapter.7}
 \contentsline {section}{\numberline {7.1}Verbesserungsvorschl\IeC {\"a}ge}{87}{section.7.1}
