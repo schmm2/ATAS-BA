@@ -187,13 +187,11 @@ Dieser Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
 \end{itemize}
 
 \chapter{Systembeschreibung - Grob}
-Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im Vergleich zum Projekt 2 um einige Komponenten ergänzt. Der Link zur Projektarbeit kann im Anhang gefunden werden.
-
-\section{Grobe Systemarchitektur}
+Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im Vergleich zum Projekt 2 um einige Komponenten ergänzt. Der Link zur Projektarbeit kann im Anhang gefunden werden.\\[0.3cm]
 Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponenten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seiten detailliert beschrieben.
 
 \newpage
-\subsection{Diagram}
+\section{Diagram}
 Grobes Schema des ATAS Systems. Auf der nachfolgenden Seiten sind die einzelnen Komponenten im Detail beschrieben.\\[0.3cm]
 \begin{figure}[H]
 	\centering
@@ -203,19 +201,19 @@ Grobes Schema des ATAS Systems. Auf der nachfolgenden Seiten sind die einzelnen 
 \end{figure}
 
 \newpage
-\subsection{Benutzer}
+\section{Benutzer}
 Die nachfolgenden Gruppen wurden als Benutzer des Systems identifiziert.
 
-\subsubsection{Aplinist}
+\subsection{Aplinist}
 Alpinist wird als Generalisierung für Personen, welche sich in den Bergen aufhalten verwendet. Dazu gehören bspw. Wanderer, Skifahrer, Bergbauern usw.
 
-\subsubsection{Überwacher}
+\subsection{Überwacher}
 Rettungsdienste wie bspw. die REGA oder die AirGlacier. Spitäler oder die lokalen Tourismusbehörden.
 
-\subsection{Komponenten}
+\section{Komponenten}
 Das ATAS System besteht aus den nachfolgenden aufgelisteten Komponenten. Komponenten können Hardware oder Software sein.
 
-\subsubsection{Tracker}
+\subsection{Tracker}
 Stellen Sie sich ein kleines mobiles Gerät vor. Nachfolgend nennen wir dieses Gerät Tracker. Der Alpinist trägt den Tracker bei sich bspw. in einem Rucksack. Der Tracker zeichnet auf wo sich die Person momentan befindet\\ [0.3cm] 
 Der Tracker verfügt über ein Display, Schalter, GPS Modul, Kommunikationsmodul und einen Lautsprecher.\\ [0.3cm]
 Der Tracker überträgt folgende Daten:
@@ -224,13 +222,13 @@ Der Tracker überträgt folgende Daten:
 	\item Notrufsignale
 \end{itemize}
 Befindet sich der Tracker in einer Gefahrenzone, wird die Person über den Bildschirm und mit einem Tonsignal alarmiert.
-\subsubsection{Gateway}
+\subsection{Gateway}
 Ein Gerät welches mit den Trackern bidirektional kommuniziert. Der Gateway wird an einem Ort nahe den Bergen installiert. Als mögliche Orte kommt ein Dorf im Tal oder eine Talstation in Frage. Der Gateway sendet die empfangenen Daten an einen zentralen Datenmanager, nachfolgend \textbf{Datenhandler} genannt, weiter.
 
-\subsubsection{Datenhandler}
+\subsection{Datenhandler}
 Sammelt und speichert Daten. Der Datenhandler kommuniziert mit den Gateways. Zusätzlich bietet der Datenhandler ein Interface zum Abfragen und senden von Daten an die Tracker.
 
-\subsubsection{Webapplikation}
+\subsection{Webapplikation}
 Die Überwacher nutzen eine Webapplikation zum interagieren mit dem ATAS System. Die Webseite bietet folgende Funktionalitäten
 \begin{itemize}
 	\item
@@ -241,11 +239,11 @@ Die Überwacher nutzen eine Webapplikation zum interagieren mit dem ATAS System.
 		Zeigt an, ob sich ein Tracker in einer Gefahrenzone aufhält oder ein Notrufsignal abgesetzt hat.	
 \end{itemize}
 
-\subsubsection{Logik}
+\subsection{Logik}
 Die Logik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System einen Alarm an den Tracker. Das Signal gelangt via Datenhandler und Gateway zum Tracker.
 
-\subsection{Begriffe}
-\subsubsection{Gefahrenzonen}
+\section{Begriffe}
+\subsection{Gefahrenzonen}
 Wie in der Einleitung beschrieben, stellt der Schweizer Alpen Club Informationen zu Rettungseinsätzen zur Verfügung. Aufgrund der Statistiken wurden die folgenden Gefahren identifiziert vor welchen das ATAS System warnen soll:
 \begin{itemize}
 	\item Lawinen

@@ -6,38 +6,41 @@
 \BOOKMARK [1][-]{section.1.5}{Technologien}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.6}{Anwendungsf\344lle}{chapter.1}% 7
 \BOOKMARK [0][-]{chapter.2}{Systembeschreibung - Grob}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Grobe Systemarchitektur}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Evaluation Technologie}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Wireless Datenkommunikation}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{LoRa}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{LoRaWan}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.4}{LoRaWan Netzwerk}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Systembeschreibung - Detail}{}% 15
-\BOOKMARK [1][-]{section.4.1}{\334berblick}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Tracker}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Gateway}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{Datenhandler}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.5}{Logik}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.6}{Webapplikation}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.7}{Daten Kommunikation}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{Prototyp}{}% 23
-\BOOKMARK [1][-]{section.5.1}{Begr\374ndung neuer Prototyp}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.2}{Ablauf Prototyping}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.3}{Ablauf Vorgehen}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.4}{Evaluation Hardware}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.5}{Zusammenbau Hardware}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.6}{Kommunikation}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.7}{Software}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.8}{Prototyp Testing}{chapter.5}% 31
-\BOOKMARK [0][-]{chapter.6}{Testing Daten\374bertragung }{}% 32
-\BOOKMARK [1][-]{section.6.1}{Ablauf Vorgehen}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.2}{Definition}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.3}{Standort}{chapter.6}% 35
-\BOOKMARK [1][-]{section.6.4}{Aufbau \046 Vorbereitungen}{chapter.6}% 36
-\BOOKMARK [1][-]{section.6.5}{Messungen}{chapter.6}% 37
-\BOOKMARK [0][-]{chapter.7}{Schlusswort}{}% 38
-\BOOKMARK [1][-]{section.7.1}{Verbesserungsvorschl\344ge}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.2}{R\374ckblick Projekt}{chapter.7}% 40
-\BOOKMARK [1][-]{section.7.3}{Projekt 2}{chapter.7}% 41
-\BOOKMARK [1][-]{section.7.4}{Software}{chapter.7}% 42
-\BOOKMARK [1][-]{section.7.5}{Software-Bibliotheken}{chapter.7}% 43
+\BOOKMARK [1][-]{section.2.1}{Diagram}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{Benutzer}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Komponenten}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{Begriffe}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Evaluation Technologie}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Wireless Datenkommunikation}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{LoRa}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{LoRaWan}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{LoRaWan Netzwerk}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Systembeschreibung - Detail}{}% 18
+\BOOKMARK [1][-]{section.4.1}{\334berblick}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Tracker}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{Gateway}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Datenhandler}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.5}{Logik}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.6}{Webapplikation}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.7}{Daten Kommunikation}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Prototyp}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Begr\374ndung neuer Prototyp}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Ablauf Prototyping}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Ablauf Vorgehen}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.4}{Evaluation Hardware}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.5}{Zusammenbau Hardware}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.6}{Kommunikation}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.7}{Software}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.8}{Prototyp Testing}{chapter.5}% 34
+\BOOKMARK [0][-]{chapter.6}{Testing Daten\374bertragung }{}% 35
+\BOOKMARK [1][-]{section.6.1}{Ablauf Vorgehen}{chapter.6}% 36
+\BOOKMARK [1][-]{section.6.2}{Definition}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.3}{Standort}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.4}{Aufbau \046 Vorbereitungen}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.5}{Messungen}{chapter.6}% 40
+\BOOKMARK [0][-]{chapter.7}{Schlusswort}{}% 41
+\BOOKMARK [1][-]{section.7.1}{Verbesserungsvorschl\344ge}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.2}{R\374ckblick Projekt}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.3}{Projekt 2}{chapter.7}% 44
+\BOOKMARK [1][-]{section.7.4}{Software}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.5}{Software-Bibliotheken}{chapter.7}% 46

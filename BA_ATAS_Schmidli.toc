@@ -7,57 +7,56 @@
 \contentsline {section}{\numberline {1.5}Technologien}{8}{section.1.5}
 \contentsline {section}{\numberline {1.6}Anwendungsf\IeC {\"a}lle}{8}{section.1.6}
 \contentsline {chapter}{\numberline {2}Systembeschreibung - Grob}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Grobe Systemarchitektur}{9}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Diagram}{10}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Benutzer}{11}{subsection.2.1.2}
-\contentsline {subsubsection}{Aplinist}{11}{section*.7}
-\contentsline {subsubsection}{\IeC {\"U}berwacher}{11}{section*.8}
-\contentsline {subsection}{\numberline {2.1.3}Komponenten}{11}{subsection.2.1.3}
-\contentsline {subsubsection}{Tracker}{11}{section*.9}
-\contentsline {subsubsection}{Gateway}{11}{section*.10}
-\contentsline {subsubsection}{Datenhandler}{11}{section*.11}
-\contentsline {subsubsection}{Webapplikation}{12}{section*.12}
-\contentsline {subsubsection}{Logik}{12}{section*.13}
-\contentsline {subsection}{\numberline {2.1.4}Begriffe}{12}{subsection.2.1.4}
-\contentsline {subsubsection}{Gefahrenzonen}{12}{section*.14}
+\contentsline {section}{\numberline {2.1}Diagram}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Benutzer}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Aplinist}{11}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}\IeC {\"U}berwacher}{11}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Komponenten}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Tracker}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Gateway}{11}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Datenhandler}{12}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Webapplikation}{12}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Logik}{12}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}Begriffe}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Gefahrenzonen}{12}{subsection.2.4.1}
 \contentsline {chapter}{\numberline {3}Evaluation Technologie}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Wireless Datenkommunikation}{13}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Sigfox}{13}{subsection.3.1.1}
-\contentsline {subsubsection}{Vorteile}{13}{section*.15}
-\contentsline {subsubsection}{Nachteile}{13}{section*.16}
+\contentsline {subsubsection}{Vorteile}{13}{section*.7}
+\contentsline {subsubsection}{Nachteile}{13}{section*.8}
 \contentsline {subsection}{\numberline {3.1.2}LoRa}{14}{subsection.3.1.2}
-\contentsline {subsubsection}{Vorteile}{14}{section*.17}
-\contentsline {subsubsection}{Nachteile}{14}{section*.18}
+\contentsline {subsubsection}{Vorteile}{14}{section*.9}
+\contentsline {subsubsection}{Nachteile}{14}{section*.10}
 \contentsline {subsection}{\numberline {3.1.3}NB-IOT, LTE Cat M1}{15}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Entscheid}{15}{subsection.3.1.4}
 \contentsline {section}{\numberline {3.2}LoRa}{16}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}LoRa Modulation}{16}{subsection.3.2.1}
-\contentsline {subsubsection}{Bandbreite}{16}{section*.20}
-\contentsline {subsubsection}{Spreading Factor}{17}{section*.21}
+\contentsline {subsubsection}{Bandbreite}{16}{section*.12}
+\contentsline {subsubsection}{Spreading Factor}{17}{section*.13}
 \contentsline {subsection}{\numberline {3.2.2}Regulierungen}{19}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Daten\IeC {\"u}bertragungsrate}{19}{subsection.3.2.3}
-\contentsline {subsubsection}{Duty Cycle}{19}{section*.24}
-\contentsline {subsubsection}{Airtime}{20}{section*.25}
-\contentsline {subsubsection}{Berechnung}{20}{section*.27}
+\contentsline {subsubsection}{Duty Cycle}{19}{section*.16}
+\contentsline {subsubsection}{Airtime}{20}{section*.17}
+\contentsline {subsubsection}{Berechnung}{20}{section*.19}
 \contentsline {subsection}{\numberline {3.2.4}Coding Rate}{21}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}LoRaWan}{22}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Netzwerk Architektur}{22}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Sicherheit}{23}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Endger\IeC {\"a}t Verbindungsmethoden}{23}{subsection.3.3.3}
-\contentsline {subsubsection}{ABP}{23}{section*.29}
-\contentsline {subsubsection}{OTAA}{23}{section*.30}
-\contentsline {subsubsection}{Schlussfolgerung}{25}{section*.32}
+\contentsline {subsubsection}{ABP}{23}{section*.21}
+\contentsline {subsubsection}{OTAA}{23}{section*.22}
+\contentsline {subsubsection}{Schlussfolgerung}{25}{section*.24}
 \contentsline {subsection}{\numberline {3.3.4}Frame Counters}{25}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Ger\IeC {\"a}teklassen}{26}{subsection.3.3.5}
-\contentsline {subsubsection}{Klasse A}{26}{section*.33}
-\contentsline {subsubsection}{Klasse B}{26}{section*.35}
-\contentsline {subsubsection}{Klasse C}{27}{section*.36}
-\contentsline {subsubsection}{Entscheid}{27}{section*.38}
+\contentsline {subsubsection}{Klasse A}{26}{section*.25}
+\contentsline {subsubsection}{Klasse B}{26}{section*.27}
+\contentsline {subsubsection}{Klasse C}{27}{section*.28}
+\contentsline {subsubsection}{Entscheid}{27}{section*.30}
 \contentsline {subsection}{\numberline {3.3.6}Adaptive Data Rate (ADR)}{28}{subsection.3.3.6}
 \contentsline {section}{\numberline {3.4}LoRaWan Netzwerk}{29}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Evaluation}{29}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}The Things Network, TTN}{30}{subsection.3.4.2}
-\contentsline {subsubsection}{Architektur}{30}{section*.40}
+\contentsline {subsubsection}{Architektur}{30}{section*.32}
 \contentsline {subsection}{\numberline {3.4.3}Datenschnittstelle / API}{31}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Systembeschreibung - Detail}{32}{chapter.4}
 \contentsline {section}{\numberline {4.1}\IeC {\"U}berblick}{33}{section.4.1}
@@ -73,14 +72,14 @@
 \contentsline {section}{\numberline {4.6}Webapplikation}{40}{section.4.6}
 \contentsline {subsection}{\numberline {4.6.1}ATAS-Web}{40}{subsection.4.6.1}
 \contentsline {subsection}{\numberline {4.6.2}\IeC {\"U}bersicht}{41}{subsection.4.6.2}
-\contentsline {subsubsection}{Startseite}{41}{section*.52}
-\contentsline {subsubsection}{Tracker}{42}{section*.54}
-\contentsline {subsubsection}{Alarmierung}{42}{section*.56}
-\contentsline {subsubsection}{Gefahrenzonen}{43}{section*.58}
+\contentsline {subsubsection}{Startseite}{41}{section*.44}
+\contentsline {subsubsection}{Tracker}{42}{section*.46}
+\contentsline {subsubsection}{Alarmierung}{42}{section*.48}
+\contentsline {subsubsection}{Gefahrenzonen}{43}{section*.50}
 \contentsline {section}{\numberline {4.7}Daten Kommunikation}{44}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}MQTT}{44}{subsection.4.7.1}
 \contentsline {subsection}{\numberline {4.7.2}Datenfluss Tracker TTN}{44}{subsection.4.7.2}
-\contentsline {subsubsection}{Uplink: Tracker zu TTN}{45}{section*.63}
+\contentsline {subsubsection}{Uplink: Tracker zu TTN}{45}{section*.55}
 \contentsline {subsection}{\numberline {4.7.3}Downlink: TTN zu Tracker}{45}{subsection.4.7.3}
 \contentsline {chapter}{\numberline {5}Prototyp}{46}{chapter.5}
 \contentsline {section}{\numberline {5.1}Begr\IeC {\"u}ndung neuer Prototyp}{46}{section.5.1}
@@ -97,13 +96,13 @@
 \contentsline {subsection}{\numberline {5.7.1}Entwicklungsumgebung}{58}{subsection.5.7.1}
 \contentsline {subsection}{\numberline {5.7.2}Sourcecode}{58}{subsection.5.7.2}
 \contentsline {subsection}{\numberline {5.7.3}Bibliotheken}{59}{subsection.5.7.3}
-\contentsline {subsubsection}{LMIC}{59}{section*.72}
+\contentsline {subsubsection}{LMIC}{59}{section*.64}
 \contentsline {subsection}{\numberline {5.7.4}Klassendiagramm}{60}{subsection.5.7.4}
 \contentsline {subsection}{\numberline {5.7.5}Display}{61}{subsection.5.7.5}
-\contentsline {subsubsection}{Dashboard}{61}{section*.74}
-\contentsline {subsubsection}{Alarm}{61}{section*.76}
-\contentsline {subsubsection}{Notfall}{62}{section*.78}
-\contentsline {subsubsection}{Herausforderung Timing}{63}{section*.80}
+\contentsline {subsubsection}{Dashboard}{61}{section*.66}
+\contentsline {subsubsection}{Alarm}{61}{section*.68}
+\contentsline {subsubsection}{Notfall}{62}{section*.70}
+\contentsline {subsubsection}{Herausforderung Timing}{63}{section*.72}
 \contentsline {section}{\numberline {5.8}Prototyp Testing}{64}{section.5.8}
 \contentsline {subsection}{\numberline {5.8.1}Energieversorgung}{64}{subsection.5.8.1}
 \contentsline {subsection}{\numberline {5.8.2}Schlusswort}{67}{subsection.5.8.2}
@@ -116,19 +115,19 @@
 \contentsline {subsection}{\numberline {6.3.2}Testregionen}{73}{subsection.6.3.2}
 \contentsline {section}{\numberline {6.4}Aufbau \& Vorbereitungen}{75}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Gateway}{75}{subsection.6.4.1}
-\contentsline {subsubsection}{Installation}{76}{section*.87}
-\contentsline {subsubsection}{TTN Registrierung}{77}{section*.88}
+\contentsline {subsubsection}{Installation}{76}{section*.79}
+\contentsline {subsubsection}{TTN Registrierung}{77}{section*.80}
 \contentsline {subsection}{\numberline {6.4.2}Dashboard}{78}{subsection.6.4.2}
-\contentsline {subsubsection}{ATAS-Web}{78}{section*.91}
+\contentsline {subsubsection}{ATAS-Web}{78}{section*.83}
 \contentsline {section}{\numberline {6.5}Messungen}{80}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Test 1: Praxistest}{80}{subsection.6.5.1}
-\contentsline {subsubsection}{Vorgehen}{80}{section*.94}
-\contentsline {subsubsection}{Ausgangslage}{80}{section*.95}
-\contentsline {subsubsection}{Resultate}{81}{section*.96}
-\contentsline {subsubsection}{Auswertung}{82}{section*.98}
+\contentsline {subsubsection}{Vorgehen}{80}{section*.86}
+\contentsline {subsubsection}{Ausgangslage}{80}{section*.87}
+\contentsline {subsubsection}{Resultate}{81}{section*.88}
+\contentsline {subsubsection}{Auswertung}{82}{section*.90}
 \contentsline {subsection}{\numberline {6.5.2}Test 2: Spreadingfactor}{83}{subsection.6.5.2}
-\contentsline {subsubsection}{Test 2.1}{83}{section*.100}
-\contentsline {subsubsection}{Test 2.2}{85}{section*.103}
+\contentsline {subsubsection}{Test 2.1}{83}{section*.92}
+\contentsline {subsubsection}{Test 2.2}{85}{section*.95}
 \contentsline {subsection}{\numberline {6.5.3}Test 3: Datenrate}{87}{subsection.6.5.3}
 \contentsline {subsection}{\numberline {6.5.4}Ergebnisse}{88}{subsection.6.5.4}
 \contentsline {chapter}{\numberline {7}Schlusswort}{89}{chapter.7}
