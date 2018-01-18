@@ -388,3 +388,63 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{DevEUI}{}%
+{%
+\gls@defglossaryentry{DevEUI}%
+{%
+name={DevEUI},%
+sort={DevEUI},%
+type={main},%
+first={DevEUI},%
+firstplural={DevEUIs},%
+text={DevEUI},%
+plural={DevEUIs},%
+description={eindeutige Identifikationsnummer, 64bit},%
+descriptionplural={eindeutige Identifikationsnummer, 64bit},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ADR}{}%
+{%
+\gls@defglossaryentry{ADR}%
+{%
+name={ADR},%
+sort={ADR},%
+type={main},%
+first={ADR},%
+firstplural={ADRs},%
+text={ADR},%
+plural={ADRs},%
+description={LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll},%
+descriptionplural={LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

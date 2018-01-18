@@ -12,3 +12,4 @@
 (indexentry :tkey (("TTN" "\\glossentry{TTN}") ) :locref "{}{36}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Downlink" "\\glossentry{Downlink}") ) :locref "{}{36}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Uplink" "\\glossentry{Uplink}") ) :locref "{}{36}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("DevEUI" "\\glossentry{DevEUI}") ) :locref "{}{74}" :attr "pageglsnumberformat" ) 

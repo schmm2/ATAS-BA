@@ -1,11 +1,12 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 18.01.2018  14:18:23
-;; Indexstyle: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/7MKncEiYRC", Rawindex: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/n8mz5af5Pe", Output: "BA_ATAS_Schmidli.gls"
+;; at 18.01.2018  19:01:10
+;; Indexstyle: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/9n7QuwtdjX", Rawindex: "/var/folders/gq/mllpwvmd72b7wh7_gxc24pq80000gn/T/EmzUyjv0Ib", Output: "BA_ATAS_Schmidli.gls"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
@@ -34,6 +35,7 @@ Letter-group: "€ÈÈÐ®—í" -> "A"
 Letter-group: "—å€Ë" -> "D"
 Letter-group: "Ãæ¼´¨¼®" -> "D"
 Letter-group: "àÈ´¨¼®" -> "U"
+Letter-group: "—å—à¨" -> "D"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "€ÈÈÐ®—í" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
