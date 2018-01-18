@@ -32,6 +32,8 @@
 \fancyhead{}
 \fancyfoot{}
 
+\newcommand{\source}[1]{\caption*{Quelle: {#1}} }
+
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt} % optional
@@ -137,11 +139,12 @@ Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski 
 	\centering
 	\includegraphics[width=\textwidth]{img/alps/sac_accidentstatistic_2016_reason.png}
 	\caption[Bergunfallstatistik 2016 - Notfallsituationen nach Unrsachen]
-	{Bergunfallstatistik 2016 - Notfallsituationen nach Ursachen}
+	{Bergunfallstatistik 2016 - Notfallsituationen nach Ursachen: Quelle: Webseite SAC \cite{sacaccident}}
 \end{figure}
 \noindent
-Die Vorfälle sind nach Ursache gegliedert. Zusammengefasst ergeben sich 2828 Notsituationen. 178 endeten tödlich.\\[0.3cm]
-Ein nicht geringer Anteil davon machen Lawinen aus. Wird eine Person inert 15 Minuten geborgen, Leben noch 90\% der Betroffenen. Man spricht auch von der Überlebensphase. Nach 15 Minuten folgt die Erstickungsphase, die Überlebenschancen schwinden auf geringe 30\%. Je schneller ein Rettungsdienst alarmiert werden kann, desto höher sind die Überlebenschancen \cite{avalancheaccident}. 
+Die Vorfälle sind nach Ursache gegliedert. Zusammengefasst ergeben sich 2828 Notsituationen. 178 endeten tödlich.
+\section{Lawinen}
+Ein geringer aber sehr tragischer Anteil davon machen Lawinen aus. Wird eine Person inert 15 Minuten geborgen, Leben noch 90\% der Betroffenen. Man spricht auch von der Überlebensphase. Nach 15 Minuten folgt die Erstickungsphase, die Überlebenschancen schwinden auf geringe 30\%. Je schneller ein Rettungsdienst alarmiert werden kann, desto höher sind die Überlebenschancen \cite{avalancheaccident}. 
 
 \newpage
 \section{Projektidee}
@@ -312,32 +315,32 @@ Um das Projekt durchzuführen, musste das Wissen zum Thema LoRa vertieft werden.
 
 \subsection{LoRa Modulation}
 LoRa unterstützt zwei Modulationsarten, das simple Frequency Shift Key (FSK) und das Chirp Spread Spectrum (CSS) Verfahren. In dieser Arbeit setzen wir den Fokus auf CSS.\\[0.3cm]
-Ein Chirp ist ein sinusähnliches Signal, bei welchem über die Zeit die Frequenz erhöht oder reduziert wird.
+Ein Chirp ist ein Sinussignal, bei welchem über die Zeit die Frequenz erhöht oder reduziert wird.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/lora/upchirp.png}
 	\caption[Beispiel Upchirp]
-	{Beispiel Upchirp}
+	{Beispiel Upchirp, Quelle: Wikipedia CSS \cite{CSS}}
 \end{figure}
 \noindent
-Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschliessend verwendet um die Daten zu kodieren.
+Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchirp, bei einer Reduktion von einem Downchirp. Das Chirp Signal ist das Trägersignal und wird anschließend verwendet um die Daten zu kodieren.
 
 \subsubsection{Bandbreite}
-Bei LoRa haben wir die Möglichkeit zwischen drei möglichen Bandbreiten zu wählen. Die Bandbreite definiert die grösse des Bereiches der zwischen der kleinste und der grössten möglichen Frequenz. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. In Europa sind nur die Bandbreiten 125KHz und 250KHz zulässig \cite{lorabandwitdh}. 
+Bei LoRa haben wir die Möglichkeit zwischen drei Bandbreiten zu wählen. Die Bandbreite definiert die Grösse des Bereiches der zwischen der kleinsten und der grössten möglichen Frequenz liegt. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. In Europa sind nur die Bandbreiten 125KHz und 250KHz zulässig \cite{lorabandwitdh}. 
 
 \newpage
 \subsubsection{Spreading Factor}
-Zwei Parameter beeinflussen das Chirp Modulierte Signal. Erstens die Bandbreite und zweitens die sog. Sweep Rate.
+Zwei Parameter beeinflussen das Chirp modulierte Signal. Erstens die Bandbreite und zweitens die sog. Sweep Rate.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/lora/chirp.jpg}
 	\caption[Wasserfall Darstellung: Chirp Parameter]
-	{Wasserfall Darstellung: Chirp Parameter}
+	{Wasserfall Darstellung: Chirp Parameter, Quelle: Youtube Video LoRa \cite{lorabandwidth}}
 \end{figure}
 
 \noindent
-Ein weiteres Beispiel eines Upchirps. Wir sehen in der Mitte die mögliche Bandbreite 125KHz und 250kHz. Bei diesem Signal wird 125kHz verwendet. Die Frequenz nimmt gegen Links zu. Der gelbe Strich zeigt uns die momentane Frequenz zum Zeitpunk x. Nach erreichen der maximalen Frequenz folgt der nächste Chirp. Dieses Intervall wird auch Sweep Rate genannt.
+Ein weiteres Beispiel eines Upchirps. Bei diesem Signal wird 125kHz verwendet. Die Frequenz nimmt gegen Links zu. Der gelbe Strich zeigt uns die momentane Frequenz zum Zeitpunk x. Nach erreichen der maximalen Frequenz folgt der nächste Chirp. Dieses Intervall wird auch Sweep Rate genannt.
 
 \newpage
 \noindent
@@ -347,21 +350,21 @@ Die Einstellungsmöglichkeiten der Parameter wurden in Europa zu Gruppen, sogena
 	\centering
 	\includegraphics[width=0.48\textwidth]{img/lora/spreadingfactors.jpg}
 	\caption[Wasserfall Darstellung: Spreadingfactors 7-12]
-	{Wasserfall Darstellung: Spreadingfactors 7-12}
+	{Wasserfall Darstellung: Spreadingfactors 7-12, Quelle: Youtube Video LoRa \cite{lorabandwidth}}
 \end{figure}
 
 \noindent
-Wie in der Grafik ersichtlich ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger, ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine grössere Distanz übertragen werden. Müssen 'grössere' Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9).  Sollen grosse Distanzen überwunden werden oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadingfactor (10-12) verwendet werden.
+Wie in der Grafik ersichtlich, ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger, ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine grössere Distanz übertragen werden. Müssen 'grössere' Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9). Sollen grosse Distanzen überwunden werden oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadingfactor (10-12) verwendet werden.
 
 \newpage
 \subsection{Regulierungen}
-Für die Schweiz und in vielen Teilen Europas gilt für die Nutzung von LoRa die Regelung ERC/REC 70-03 \cite{regulations}. Zusammengestellt wurden die Regulationen von der CEPT, der European Conference of Postal and Telecommunications. Die Schweiz ist Mitglied dieser Organisation. Die Standardisierung selbst hat die Organisation ETSI (EN300.220) übernommen. Das Dokument beschreibt die verwendbaren Frequenzen, die maximale Übertragungsleistung (dbm) sowie den Duty Cycle.\\[0.3cm]
+Für die Schweiz und in vielen Teilen Europas gilt für die Nutzung von LoRa die Regelung ERC/REC 70-03 \cite{regulations}. Zusammengestellt wurden die Regulationen von der CEPT (European Conference of Postal and Telecommunications). Die Schweiz ist Mitglied dieser Organisation. Die Standardisierung selbst hat die Organisation ETSI (EN300.220) übernommen. Das Dokument beschreibt die verwendbaren Frequenzen, die maximale Übertragungsleistung (dbm) sowie den Duty Cycle.\\[0.3cm]
 Die Regulationen wurden in dieser Projektarbeit eingehalten. Die maximale Sendeleistung von 25mW resp. 14dbm wurde während den Tests nicht überschritten.
 
 \subsection{Datenübertragungsrate}
-Der Duty Cycle und die damit verbundene Airtime haben einen grossen Einfluss auf die maximale Datenübertragungsrate. 
+Der Duty Cycle und die damit verbundene Airtime haben einen grossen Einfluss auf die Datenübertragungsrate. 
 \subsubsection{Duty Cycle}
-Der Duty Cycle oder zu Deutsch 'Auslastungsgrad' beschreibt, wie lange ein Signal oder ein System aktiv ist \cite{wikiduty}. In unserem System beispielsweise wie lange der Tracker sendet. Dieser Prozentsatz wird meist vom Gesetzgeber festgelegt. Wir müssen uns an die Einschränkungen halten, was wiederum bedeutet, dass wir nicht konstant Daten senden dürfen. Die nachfolgenden Frequenzbänder \& Duty Cycles wurden durch die ETSI definiert und können in Europa verwendet werden\cite{lorawanfreq}.
+Der Duty Cycle oder zu Deutsch 'Auslastungsgrad' beschreibt, wie lange ein Signal oder ein System aktiv ist \cite{wikiduty}. In unserem System beispielsweise wie lange der Tracker sendet. Dieser Prozentsatz wird meist vom Gesetzgeber festgelegt. Wir müssen uns an die Einschränkungen halten, was wiederum bedeutet, dass wir nicht konstant Daten senden dürfen. Die nachfolgenden Frequenz und Sub-Bänder wurden durch die ETSI definiert und können in Europa verwendet werden\cite{lorawanfreq}.
 
 \begin{tabularx}{\linewidth}{XXXX}
 	\textbf{Band} & \textbf{Frequenz} & \textbf{Energieverbrauch} & \textbf{Duty Cycle} \\ \hline
@@ -372,7 +375,7 @@ Der Duty Cycle oder zu Deutsch 'Auslastungsgrad' beschreibt, wie lange ein Signa
 	g4 &869.7 - 870.0 MHz & 5mW/25mW& 1\%\\ \hline
 \end{tabularx} 
 \noindent
-Diese Frequenzbänder gelten für den Einsatz in Kombination mit LoRaWan in Europa. In anderen Regionen der Welt gelten andere Frequenzen.
+Diese Frequenzbänder gelten für den Einsatz in Kombination mit LoRaWan in Europa. In anderen Regionen der Welt gelten andere Frequenzen. Für das ATAS Projekt wird der Duty Cycle auf 1\% festgelegt. Dies erlaubt uns die nötigen Daten in entsprechender kurzen Zeit zu übermitteln.
 
 \newpage
 \subsubsection{Airtime}
@@ -382,7 +385,7 @@ Die untenstehende Grafik verbildlicht diesen Zusammenhang.
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/lora/timeonair.png}
 	\caption[Time on Air]
-	{Time on Air}
+	{Time on Air, Quelle: Understanding the Limits of LoRaWAN \cite{loradatarate}}
 \end{figure}
 \noindent
 Je höher der Spreadingfactor, desto länger dauert die Übertragung. Auf die genaue Berechnung der Airtime und der gesamten Payload wird hier nicht weiter eingegangen.
@@ -410,17 +413,18 @@ LoRaWan ist ein Protokoll welches auf LoRa aufbaut. Das Protokoll definiert die 
 	\centering
 	\includegraphics[width=\textwidth]{img/lora/lorawantopology.jpg}
 	\caption[LoRaWan Architektur]
-	{LoRaWan Architektur}
-\end{figure}
+	{LoRaWan Architektur, Quelle: Blog \cite{lorawanarchitecture}}
+\end{figure} 
 Ein LoRaWan Netzwerk besteht aus mehreren Komponenten\\[0.3cm]
 \textbf{Die End Nodes} sammeln Daten über Sensoren. Das können ganz unterschiedliche Sachen sein, wie zum Beispiel Feuchtigkeit in einem Raum. Die End Nodes senden Daten an die Empfänger (Gateways, Concentrator) via LoRa. Die Daten werden hier, nicht wie in einem Mobilfunknetz an nur eine Antenne, sonder an alle Empfänger gesendet.\\[0.3cm]
 \textbf{Die Gateways} leiten die erhaltenen Informationen weiter an den Netzwerk Server. Die Gateway sind meist mit dem Internet über Kabel oder Wireless verbunden.\\[0.3cm]
-\textbf{Der Netzwerk Server} verwaltet die ein kommenden Datenströme. Doppelte Pakete werden gefiltert und Sicherheitsregeln werden angewandt. Abschliessend sendet der Gateway eine Empfangsbestätigung (Acknowledgement) an den Gateway, dass er die Pakete sauber erhalten hat.\\[0.3cm]
+\textbf{Der Netzwerk Server} verwaltet die ein-kommenden Datenströme. Doppelte Pakete werden gefiltert und Sicherheitsregeln werden angewandt. Abschliessend sendet der Gateway eine Empfangsbestätigung (Acknowledgement) an den Gateway, dass er die Pakete sauber erhalten hat.\\[0.3cm]
 Zum Schluss werden die Daten an die zuständigen \textbf{Applikations Server} weitergeleitet.
 
 \newpage
 \subsection{Sicherheit}
-Durch bereits eingebaute Sicherheitsmechanismen in LoRaWan sind die übertragenen Daten geschützt. Die Daten werden End zu End mit AES-128Bit verschlüsselt.
+Durch bereits eingebaute Sicherheitsmechanismen in LoRaWan sind die übertragenen Daten geschützt. Die Daten werden End zu End mit AES-128Bit verschlüsselt \cite{ttnsecuirty}.
+
 \subsection{Endgerät Verbindungsmethoden}
 ABP (Activation By Personalization) und OTAA (Over-The-Air-Activation) sind Verbindungsmethoden für \gls{LoRaWanEndDevice} in einem LoraWan Netzwerk.\cite{jaguar}. Die verwendete Methode definiert also wie sich ein Endgerät mit dem LoRaWan Netzwerk verbindet. \\[0.3cm]
 Die beiden Methoden bieten verschiedene Vor und Nachteile.
@@ -440,7 +444,7 @@ Die nachfolgende Grafik zeigt auf, wie der Kommunikationsaufbau via OTAA abläuf
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/lora/otaa_schema.png}
 	\caption[OTAA Ablauf]
-	{OTAA Ablauf}
+	{OTAA Ablauf, Quelle: Webseite Jaguar-Network \protect\cite{jaguar}}
 \end{figure}
 
 \begin{enumerate}
@@ -471,7 +475,7 @@ Alle Geräte der Klasse B und C haben die Funktionalität von Klasse A implement
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/lora/lorawan_class_a.png}
 	\caption[LoRaWan Klasse A]
-	{LoRaWan Klasse A}
+	{LoRaWan Klasse A, Quelle: Webseite \cite{loraclass}}
 \end{figure}
 \noindent
 Werden Daten ausserhalb dieses Zeitfensters geschickt, werden diese nie vom Endgerät empfangen.
@@ -487,7 +491,7 @@ Klasse C Geräte haben ein nahezu permanent geöffnetes Receive Zeitfenster. Nur
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/lora/lorawan_class_c.png}
 	\caption[LoRaWan Klasse C]
-	{LoRaWan Klasse C}
+	{LoRaWan Klasse C, Quelle: Webseite \cite{loraclass}}
 \end{figure}
 
 \subsubsection{Entscheid}
@@ -495,7 +499,7 @@ Der Energieverbrauch von Klasse A Geräten ist im Vergleich von B \& C geringer.
 
 \newpage
 \subsection{Adaptive Data Rate (ADR)}
-Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll. Gemäss TTN \cite{ADRTTN} sollte ADR nur für statische Nodes oder für mobile Nodes zur Erkennung von Stops (keine Bewegung) verwendet werden. Gemäss TTN ist ADR also nicht unbedingt für die Atas-Tracker geeignet. Die Tracker sind ja meistens in Bewegung bspw. durch Laufen, Ski fahren usw. Dennoch wurde mein Interesse geweckt und ich wollte genauer wissen warum dieses Feature nicht empfohlen wird.\\[0.3cm]
+Ist Adaptive Data Rate aktiv (ADR), entscheidet das LoraWan Endgerät selbständig ob und wie die Kommunikation optimiert werden soll. Gemäss TTN \cite{ADRTTN} sollte ADR nur für statische Nodes oder für mobile Nodes zur Erkennung von Stops (keine Bewegung) verwendet werden. Gemäss TTN ist ADR also nicht unbedingt für die ATAS-Tracker geeignet. Die Tracker sind ja meistens in Bewegung bspw. durch Laufen, Ski fahren usw. Dennoch wurde mein Interesse geweckt und ich wollte genauer wissen warum dieses Feature nicht empfohlen wird.\\[0.3cm]
 Sobald ein LoraWan Endgerät dem Netzwerk mitteilt, dass es ADR verwenden möchte, beginnt das TTN Daten aufzuzeichnen. Die letzten 20 Messdaten die der Node gesendet hat werden analysiert. Ist der Node nahe dem Gateway wird der Spreadingfactor (SF) heruntergeschraubt bspw. von SF10 auf SF7. Damit wird Airtime und Energie gespart. Entfernt sich der Node vom Gateway wird SNR und damit RSSI schlechter. Das System erhöht nun automatisch  den SF um eine bessere Übertragung sicherzustellen.\\[0.3cm]
 Der Einsatz von ADR macht im ATAS System meiner Meinung nach wenig Sinn. Dafür gibt es zwei Gründe:
 \begin{itemize}
@@ -513,7 +517,7 @@ Eine Übersicht über die aktuelle Abdeckung des Swisscom und der Post, Stand (2
 	\centering
 	\includegraphics[width=\textwidth]{img/lora/swisscomlorawan.jpg}
 	\caption[Swisscom LoRaWan Abdeckung]
-	{Swisscom LoRaWan Abdeckung}
+	{Swisscom LoRaWan Abdeckung, Quelle: Swisscom LPWAN Webseite \cite{swisscomcoverage}}
 \end{figure}
 \noindent
 Violett steht für Abeckung. Weisse Stellen bedeutet es existiert keine LoRaWan Abdeckung. Wie in der Grafik ersichtlich, sind die Städtischen Gebiete bereits erschlossen. Anders sieht es in den Bergregionen aus. Das Netzwerk der Swisscom und der Post kann somit für das ATAS System nicht verwendet werden.\
@@ -528,7 +532,7 @@ Das TTN Netzwerk in sich besteht aus vielen einzelnen Komponenten.
 	\centering
 	\includegraphics[width=\textwidth]{img/ttn/ttn_architecture.png}
 	\caption[TTN Architektur]
-	{TTN Architektur}
+	{TTN Architektur, Quelle: TTN Webseite - Home \cite{ttnhome}}
 \end{figure}
 
 \newpage
@@ -539,12 +543,12 @@ In dieser Arbeit wird \textbf{nicht auf die Details des TTN Netzwerkes eingegang
 	\centering
 	\includegraphics[width=\textwidth]{img/ttn/ttn-overview.jpg}
 	\caption[TTN Blackbox]
-	{TTN Blackbox}
+	{TTN Blackbox, Quelle: TTN Webseite \cite{ttnwiki}}
 \end{figure}
 \noindent
 
 \subsection{Datenschnittstelle / API}
-Durch die Wahl von TTN als LoRaWan Netzwerk muss die Datenübertragungsart MQTT genutzt. Der Zugriff auf die Datenschnittstelle (API) von TTN ist nur per MQTT möglich. Die Unterstützung von AMQP ist geplant aber noch nicht verfügbar  \cite{amqp}. Das Protokoll MQTT war dem Projektteam bereits bekannt. Während dem Studium konnten bereits positive Erfahrungen mit MQTT gesammelt werden.
+Durch die Wahl von TTN als LoRaWan Netzwerk muss die Datenübertragungsart MQTT genutzt. Der Zugriff auf die Datenschnittstelle (API) von TTN ist nur per MQTT möglich. Die Unterstützung von AMQP ist geplant aber noch nicht verfügbar \cite{amqp}. Das Protokoll MQTT war dem Projektteam bereits bekannt. Während dem Studium konnten bereits positive Erfahrungen mit MQTT gesammelt werden.
 
 \chapter{Systembeschreibung - Detail}
 Die vorhergegangene Architekturbeschreibung gibt einen grobe ersten Überblick über das System. Technische Details zu  den verwendeten Technologien oder den genauen Fluss der Kommunikation waren nicht ersichtlich. In diesem Abschnitt soll nun intensiv auf diese Thematik eingegangen werden.\\[0.3cm]
@@ -632,7 +636,7 @@ TTN sendet Daten via Gateways an die Tracker. Über die Gateways empfängt das T
 
 \newpage
 \subsection{CloudMQTT}
-Der MQTT Broker des TTN Netzwerkes bietet nur die Möglichkeiten die Daten via MQTT abzurufen. Ein Zugriff via MQTT über Websockets wird nicht unterstützt. Im Internet fand ich recht schnell den Service 'Cloud' MQTT.   CloudMQTT spiegelt den TTN MQTT Broker, bietet aber zusätzlich ein Websocket Interface. Atas-Web und Atas-Service können nun via CloudMQTT Daten an die Tracker senden und empfangen.\\[0.3cm]
+Der MQTT Broker des TTN Netzwerkes bietet nur die Möglichkeiten die Daten via MQTT abzurufen. Ein Zugriff via MQTT über Websockets wird nicht unterstützt. Im Internet fand ich recht schnell den Service 'Cloud' MQTT.   CloudMQTT spiegelt den TTN MQTT Broker, bietet aber zusätzlich ein Websocket Interface. ATAS-Web und ATAS-Service können nun via CloudMQTT Daten an die Tracker senden und empfangen.\\[0.3cm]
 Alle Daten welche zu CloudMQTT publiziert werden, werden nun auch automatisch zum TTN MQTT Broker publiziert (Published). Alle MQTT Topics welche vom CloudMQTT abonniert werden, werden auch vom TTN MQTT Broker abonniert (Subscribe).  \\[0.3cm]
 \textbf{Diagramm}
 \begin{figure}[H]
@@ -786,7 +790,7 @@ Die maximale gösse des Uplinks beträgt \textbf{20 Bytes}. Diese Angabe wird sp
 	{Tracker Uplink}
 \end{figure}
 
-\subsection{Downlink: TTN zu Tracker}
+\subsubsection{Downlink: TTN zu Tracker}
 Das TTN Netzwerk sendet die Information ob sich der Tracker in einer Gefahrenzone befindet. Der gesendete Wert signalisiert ebenfalls um was für eine Gefahr es sich handelt. 5 Werte sind dabei möglich
 \begin{itemize}
 	\item 0, keine Gefahr
@@ -950,7 +954,7 @@ Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert 
 Der bestehende Sourcecode des Prototyp 1 kann leider nicht eins zu eins übernommen werden. Die Software ist sehr stark für die Raspberry Pi Umgebung angepasst und ist daher nicht mit dem ESP32 Umfeld kompatibel. Die Software muss portiert werden. Die nachfolgenden Abschnitte beschreiben den Aufbau der Software ATAS-Node welche für den neuen Prototypen angepasst wurde. Die Logik der Software konnte grösstenteils übernommen werden. 
 
 \subsection{Entwicklungsumgebung}
-Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino\cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. In Absprache mit dem Betreuer wurde festgelegt, dass die ESP-IDF Umgebung zu verwenden sei. Die Installation der Entwicklungsumgebung ist nicht sonderlich schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
+Duch den Umstieg vom Rapberry Pi auf den Mikrocontroller ESP32 hat sich im Bereich der Entwicklungsumgebung einiges verändert. Die ESP32 Plattform unterstützt, Stand heute (16.11.2017), zwei Entwicklungsumgebungen. Das wäre einerseits ESP-IDF (IoT Development Framework) sowie Arduino \cite{espidfarduino}. Die beiden Umgebungen sind miteinander kombinierbar. So kann in der IDF Umfeld die Arduino Unterstützung als Komponente importiert werden. Bestehende für Arduino konzipierte Bibliotheken können dadurch ebenfalls verwendet werden. In Absprache mit dem Betreuer wurde festgelegt, dass die ESP-IDF Umgebung zu verwenden sei. Die Installation der Entwicklungsumgebung ist nicht sonderlich schwer, bedingt aber einige manuelle Schritte. Die Umgebung besteht aus einer Reihe von Tools (Toolchain) zum Kompilieren, Fehlersuche und dem Flashen des Mikrocontrollers.\\[0.3cm]
 An dieser Stelle wird auf eine detaillierte Auflistung aller Installationsschritte verzichtet. Die Installation wurde gemäss der Anleitung auf der Webseite der Firma Espressif durchgeführt \cite{espidfinstallation}.\\[0.3cm]
 Als Hostsystem wurde ein macOS System verwendet. Damit das System den ESP via USB korrekt erkennen konnte, musste ein zusätzlicher Treiber installiert werden \cite{espidfdriver}. 
 
@@ -1135,7 +1139,7 @@ Die einzelnen Schritte werden auf den kommenden Seiten detailliert erklärt.
 Es muss definiert werden
 \begin{itemize}
 	\item Welche Komponenten geprüft werden sollen.\\[0.3cm]
-	Während der Arbeit soll die Kommunikation zwischen dem Tracker (Atas-Node) und dem Gateway getestet werden.
+	Während der Arbeit soll die Kommunikation zwischen dem Tracker (ATAS-Node) und dem Gateway getestet werden.
 	\item Welche Aspekte der Komponente sollen betrachtet werden.\\[0.3cm]
 	Der Fokus liegt auf der \textbf{Zuverlässigkeit} der Übertragung. Mich interessiert, wie sicher es ist, dass eine Meldung ihr Ziel erreicht. 
 	\item Mit welchen Mitteln resp. Messinstrumenten gemessen wird.\\[0.3cm]	
@@ -1165,7 +1169,7 @@ Wir fassen zusammen:
 	\item
 	Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut.
 	\item 
-	Da das TTN Dashboard uns keine vernünftige Lösung bietet die Daten auszuwerten, soll eine eigene Lösung entwickelt werden. Die Komponenten Atas-Web und Atas-Service müssen entsprechend erweitert werden.
+	Da das TTN Dashboard uns keine vernünftige Lösung bietet die Daten auszuwerten, soll eine eigene Lösung entwickelt werden. Die Komponenten ATAS-Web und ATAS-Service müssen entsprechend erweitert werden.
 	\item Abschliessend werden mehrere Tests durchgeführt. Die Verbindung wird aufgebaut und mittels neu entwickeltem Dashboard geprüft.
 \end{itemize}
 
@@ -1475,14 +1479,14 @@ Das Vorprojekt 'Projekt 2 - ATAS', dieser Arbeit:\\ \url{https://github.com/schm
 \section{Software}
 Es wird kein Code direkt an dieses Dokument angehängt. Zur Verwaltung des Sourcecodes wurde die Plattform Github verwendet. Jegliche Commits vor dem 16.09.2017 gehören zur Projekt 2 Arbeit. Commits nach diesem Datum wurden im Zuge der Bachelor Thesis erstellt. 
 Folgend Sie den Links um den Sourcecode einzusehen.
-\subsection{Atas-Webapp}
+\subsection{ATAS-Webapp}
 \url{https://github.com/schmm2/atas-webapp}
-\subsection{Atas-Service}
+\subsection{ATAS-Service}
 \url{https://github.com/schmm2/atas-service}
-\subsection{Atas-Node}
+\subsection{ATAS-Node}
 Software welche auf dem 1. Prototypen eingesetzt wird\\
 \url{https://github.com/schmm2/atas-node}
-\subsection{Atas-Node2}
+\subsection{ATAS-Node2}
 Software welche auf dem 2. Prototypen eingesetzt wird\\
 \url{https://github.com/ATAS-Group/atas-node2}
 
@@ -1490,7 +1494,7 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 \section{Software-Bibliotheken}
 Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurückgegriffen. Da ich sehr dankbar für dessen Bereitstellung bin, möchte ich diese hier namentlich erwähnen.
 
-\subsection{Atas-Node2}
+\subsection{ATAS-Node2}
 \begin{tabularx}{\linewidth}{llX}
 	\textbf{Bibliothek} & \textbf{Verwendungszweck} & \textbf{Url} \\ \hline
 	LMIC-Arduino & LoRaWan Kommunikation & \url{https://github.com/matthijskooijman/arduino-lmic}\\ \hline
@@ -1501,18 +1505,15 @@ Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurück
 \listoffigures
 
 % Glossary
-\newglossaryentry{Multipathing}{name={Multipathing},description={Multipathing zu Deutsch Mehrwegempfang oder Mehrwegeempfang tritt an einem Empfänger auf, wenn elektromagnetische Wellen eines Senders von Reflektoren (z. B. Gebäuden) abgelenkt werden und auf verschiedenen Wegen beim Empfänger ankommen. Dadurch entsteht eine Vermischung des direkten Signals mit den verschiedenen zeitlich versetzten reflektierten Echosignalen\cite{multipathing}}}
 \newglossaryentry{ATAS}{name={ATAS},description={Aplinist Tracking \& Alerting System}}
 \newglossaryentry{TTN}{name={TTN},description={The Things Network, LoraWan Netzwerk}}
 \newglossaryentry{MQTT}{name={MQTT},description={Message Queuing Telemetry Transport)}}
 \newglossaryentry{LoRa}{name={LoRA},description={Long Range, Low Power long Range Wireless}}
 \newglossaryentry{LoRaWan}{name={LoRaWan},description={Low Power Wide Area Network, MAC Protocl}}
-\newglossaryentry{LoRaWanEndDevice}{name={LoRaWan Endgerät},description={LoRaWan Endgerät. Atas-Node ist ein LoRaWan Endgerät}}
-%\newglossaryentry{AppEUI}{name={AppEUI},description={Eindeutige ID einer Applikation. 64Bit lang. Wird genutzt um ein Endgerät einer Applikation zuzuweisen}}
-%\newglossaryentry{DevEUI}{name={DevEUI},description={Eindeutige ID eines Endgerätes.}}
+\newglossaryentry{LoRaWanEndDevice}{name={LoRaWan Endgerät},description={LoRaWan Endgerät. Der ATAS Tracker ist ein LoRaWan Endgerät}}
 \newglossaryentry{DevAddr}{name={DevAddr},description={Logische Geräte Adresse, analog einer IP Adresse in einem IP Netzwerk.}}
 \newglossaryentry{NetSKey}{name={NetSKey},description={Wird für die Verschlüsselung der Kommunikation zwischen Endgerät und Netzwerkanbieter bspw. TTN verwendet. Mittels Schlüssel kann die Datenintegrität sichergestellt werden d.H. Manipulierte Nachrichten werden erkannt}}
-\newglossaryentry{AppSKey}{name={AppSKey},description={Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.\cite{ttnsecurity}}}
+\newglossaryentry{AppSKey}{name={AppSKey},description={Mittels AppSKey werden die Nutzdaten separat nochmals verschlüsselt. Nur der Nutzer des Netzwerks kann die Daten lesen das Transportnetzwerk bspw. TTN kann diese nicht einsehen.}}
 \newglossaryentry{Downlink}{name={Downlink},description={Kommunikation vom Gateway zu Endgerät}}
 \newglossaryentry{Uplink}{name={Uplink},description={Kommunikation vom Endgerät zum Gateway}}
 \newglossaryentry{LPWAN}{name={LPWAN},description={Low Power Wide Area Network}}
@@ -1522,34 +1523,38 @@ Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurück
 \printglossaries
 
 \begin{thebibliography}{1}
+	\bibitem{sacaccident} \url{http://www.sac-cas.ch/unterwegs/sicherheit/bergnotfallstatistik.html} 1.2.2018
+	\bibitem{kammerlander} \url{https://www.bergwelten.com/a/die-schoensten-zitate-rund-ums-bergsteigen} 1.1.2018
 	\bibitem{avalancheaccident} \url{http://85.25.34.248/bergmed/bergmed.php?section=15} 1.2.2018
+	\bibitem{avalanche} \url{http://www.oegan.at/notfallmedizin/index.php?option=com_content&view=article&id=76:unterkuehlung-als-ueberlebenschance&catid=42&Itemid=118} 1.01.2018
+	\bibitem{loradatarate} \url{https://arxiv.org/pdf/1607.08011.pdf} 4.1.2018
 	\bibitem{swisscomnbiot} \url{https://www.swisscom.ch/en/about/medien/press-releases/2017/06/20170628-mm-5g-speed.html} 5.1.2018
-	\bibitem{multipathing} \url{https://de.wikipedia.org/wiki/Mehrwegempfang} 5.1.2018
+	\bibitem{CSS}\url{https://en.wikipedia.org/wiki/Chirp_spread_spectrum} 10.1.2018
+	\bibitem{lorabandwidth} \url{https://www.youtube.com/watch?v=dxYY097QNs0} 10.1.2018
+	\bibitem{regulations} \url{http://www.erodocdb.dk/Docs/doc98/official/pdf/REC7003e.pdf} 1.1.2018
 	\bibitem{wikiduty} \url{https://en.wikipedia.org/wiki/Duty_cycle} 5.1.2018
+	\bibitem{lorawanarchitecture} \url{https://blog.surf.nl/en/lora-the-internet-of-things/} 4.1.2018
+	\bibitem{ttnsecuirty} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/Security} 27.07.2017
+	\bibitem{jaguar} \url{https://www.jaguar-network.com/en/news/lorawan-in-a-nutshell-2-internet-of-things-iot}, 27.07.2017		
+	\bibitem{multipathing} \url{https://de.wikipedia.org/wiki/Mehrwegempfang} 5.1.2018
+	\bibitem{lorawan_classes} \url{https://www.rs-online.com/designspark/learning-lorawan-basics} 1.1.2018
+	\bibitem{loraclass} \url{http://blog.csdn.net/iotisan/article/details/69939241} 1.1.2018
+	\bibitem{ADRTTN} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/ADR} 27.07.2017
 	\bibitem{swisscompost} \url{https://www.swisscom.ch/en/business/enterprise/themen/connectivity/lpn-post-swisscom.html} 5.1.2018
 	\bibitem{swisscomcoverage} \url{http://lpn.swisscom.ch/e/our-coverage/} 5.1.2018
-	\bibitem{loradatarate} \url{https://arxiv.org/pdf/1607.08011.pdf} 4.1.2018
-	\bibitem{ArduinoLMIC} \url{https://github.com/matthijskooijman/arduino-lmic} 212.2018
-	\bibitem{ttnprivatehandler} \url{https://www.thethingsnetwork.org/article/setting-up-a-private-handler-connected-to-the-public-community-network} 2.2.2018
+	\bibitem{ttnhome} \url{https://www.thethingsnetwork.org/wiki/Backend/Home} 7.1.2018
+	\bibitem{ttnwiki} \url{https://www.thethingsnetwork.org/wiki/Home} 7.1.2018
 	\bibitem{amqp} \url{https://www.thethTTNingsnetwork.org/docs/applications/apis.html} 2.1.2018
-	\bibitem{lorawan_classes} \url{https://www.rs-online.com/designspark/learning-lorawan-basics} 1.1.2018
-	\bibitem{adroverhead} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/ADR} 1.1.2018
-	\bibitem{regulations} \url{http://www.erodocdb.dk/Docs/doc98/official/pdf/REC7003e.pdf} 1.1.2018
-	\bibitem{ttnzürich} \url{https://github.com/ttn-zh/ic880a-gateway/wiki} 1.1.2018
-	\bibitem{ic880} \url{https://wireless-solutions.de/products/radiomodules/ic880a} 1.2.2018
-	\bibitem{kammerlander} \url{https://www.bergwelten.com/a/die-schoensten-zitate-rund-ums-bergsteigen} 1.1.2018
-	\bibitem{sacaccident} \url{http://www.sac-cas.ch/unterwegs/sicherheit/bergnotfallstatistik.html} 1.2.2018
 	\bibitem{wavelengthTTN} \url{https://www.thethingsnetwork.org/forum/t/antenna-length-for-868-and-433-mhz/5378} 2.1.2018
 	\bibitem{wavelength} \url{https://en.m.wikipedia.org/wiki/Wavelength} 2.1.2018\\
-	\bibitem{avalanche} \url{http://www.oegan.at/notfallmedizin/index.php?option=com_content&view=article&id=76:unterkuehlung-als-ueberlebenschance&catid=42&Itemid=118} 1.01.2018
-	\bibitem{ttnsecuirty} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/Security} 27.07.2017
-	\bibitem{jaguar} \url{https://www.jaguar-network.com/en/news/lorawan-in-a-nutshell-2-internet-of-things-iot}, 27.07.2017
-	\bibitem{ADRTTN} \url{https://www.thethingsnetwork.org/wiki/LoRaWAN/ADR} 27.07.2017
 	\bibitem{autodesk} \url{https://www.autodesk.com/products/eagle} 27.07.2017
 	\bibitem{espidfarduino} \url{http://iot-bits.com/documentation/esp32-tutorial-and-example-programs/} 20.12.2017
 	\bibitem{espidfinstallation} \url{https://dl.espressif.com/doc/esp-idf/latest/get-started/index.html} 27.12.2017
 	\bibitem{espidfdriver} \url{https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers} 27.12.2017
-	\bibitem{lorabandwidth} \url{https://www.youtube.com/watch?v=dxYY097QNs0} 10.1.2018
+	\bibitem{ArduinoLMIC} \url{https://github.com/matthijskooijman/arduino-lmic} 212.2018
+	\bibitem{ic880} \url{https://wireless-solutions.de/products/radiomodules/ic880a} 1.2.2018
+	\bibitem{ttnzürich} \url{https://github.com/ttn-zh/ic880a-gateway/wiki} 1.1.2018
+	
 \end{thebibliography}
 
 \end{document}
