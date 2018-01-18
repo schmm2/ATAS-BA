@@ -27,6 +27,7 @@
 \usepackage{csquotes}
 \usepackage{subcaption}
 \usepackage{glossaries}
+\usepackage{pdfpages}
 
 % clear default
 \fancyhead{}
@@ -684,7 +685,7 @@ Die Startseite der Applikation.
 \end{figure}
 Die Ansicht besteht aus verschiedenen Komponenten:
 \begin{itemize}
-	\item A: Auf der Karte wird die Position der Tracker dargestellt. 
+	\item A: Auf der Karte wird die Position der Tracker dargestellt
 	\item B: Suche nach Orten
 	\item C: Anzeige der Tracker in Notsituationen
 	\item D: Manuelles hinzufügen von Gefahrenzonen
@@ -693,7 +694,7 @@ Die Ansicht besteht aus verschiedenen Komponenten:
 
 \newpage
 \subsubsection{Tracker}
-Wird ein Tracker ausgewählt öffnet sich ein weiteres Menü.  Hier ersichtlich sind nebst der Tracker ID auch die genauen GPS Koordinaten. Über einen Alarmknopf kann ein Alarm auf dem Tracker ausgelöst werden.
+Wird ein Tracker ausgewählt, öffnet sich ein weiteres Menü.  Hier sind nebst der Tracker ID auch die genauen GPS Koordinaten ersichtlich. Über einen Alarmknopf kann ein Alarm auf dem Tracker ausgelöst werden.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{.45\textwidth}
@@ -711,7 +712,7 @@ Wird ein Tracker ausgewählt öffnet sich ein weiteres Menü.  Hier ersichtlich 
 \end{figure}
 
 \subsubsection{Alarmierung}
-Über den roten Knopf kann eine neue Ansicht geöffnet werden. Die Ansicht gibt uns eine Übersicht über die Tracker, die sich in einer Gefahrenzone aufhalten oder den manuellen Alarm ausgelöst haben.
+Über den roten Knopf kann eine neue Ansicht geöffnet werden. Diese Ansicht gibt uns eine Übersicht über die Tracker, welche sich in einer Gefahrenzone aufhalten oder den manuellen Alarm (Notfall) ausgelöst haben.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{.3\textwidth}
@@ -723,14 +724,14 @@ Wird ein Tracker ausgewählt öffnet sich ein weiteres Menü.  Hier ersichtlich 
 	\begin{subfigure}{.65\textwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/atasweb/atas-web-alertoverview.png}
-		\caption[Übersicht Alarme]
-		{Übersicht Alarme}
+		\caption[Übersicht der Alarme]
+		{Übersicht der Alarme}
 	\end{subfigure}%
 \end{figure}
 
 \newpage 
 \subsubsection{Gefahrenzonen}
-Über den grünen Knopf können manuell Gefahrenzonen angelegt werden. Mittels 'Malwerkzeug' kann eine Polygon gezeichnet werden. Die entstandene Fläche repräsentiert eine Gefahrenzone.
+Über den grünen Knopf können Gefahrenzonen angelegt werden. Mittels 'Malwerkzeug' kann eine Polygon gezeichnet werden. Die entstandene Fläche repräsentiert eine Gefahrenzone.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{.2\textwidth}
@@ -754,7 +755,7 @@ Wird ein Tracker ausgewählt öffnet sich ein weiteres Menü.  Hier ersichtlich 
 \end{figure}%
 
 \section{Daten Kommunikation}
-In diesem Abschnitt wird die Daten Kommunikation zwischen den Komponenten im System aufgezeigt.
+In diesem Abschnitt wird die Datenkommunikation zwischen den Komponenten im System aufgezeigt.
 \subsection{MQTT}
 Für das ATAS Projekt wurde die nachfolgende MQTT Struktur verwendet. Als MQTT Broker dient der MQTT Handler des TTN Netzwerkes resp. der MQTT Broker von CloudMQTT.
 \begin{figure}[H]
@@ -777,9 +778,9 @@ Die Verbindung sieht wie folgt aus:
 \subsubsection{Uplink: Tracker zu TTN}
 Der Tracker sendet in einem Uplink, 4 verschiedene Informationen:
 \begin{itemize}
-	\item Breitengrad, Geo-Koordinate, auf 5 Dezimalstellen genau
-	\item Längengrad, Geo-Korrdinate, auf 5 Dezimalstellen genau
-	\item Notfallknopf Status, Eingeschalten oder Ausgeschaltet
+	\item Breitengrad, Geo-Koordinate, auf 5 Dezimalstellen genau bspw. 47.13456
+	\item Längengrad, Geo-Korrdinate, auf 5 Dezimalstellen genau bspw. 7.65431
+	\item Notfallknopf Status, Eingeschalten (1) oder Ausgeschaltet (0)
 	\item In Gefahrenzone, dient der Kontrolle ob der Tracker die Nachricht erhalten hat
 \end{itemize}
 Die maximale gösse des Uplinks beträgt \textbf{20 Bytes}. Diese Angabe wird später im Bereich 'Testing' benötigt.
@@ -1436,6 +1437,10 @@ Aus den gewonnen Resultaten lässt sich bereits ableiten, ob das ATAS System pra
 Befindet sich der Alpinist an einer solchen Position werden viele Übertragungen fehlschlagen. Die Ortung funktioniert nicht mehr korrekt und die Sicherheit der Person kann nicht mehr gewährleistet werden. \\[0.3cm]
 \textbf{Damit kommen wir zum Schluss, dass das ATAS System, mit LoRa als Kommunikationslösung, nicht praxistauglich ist.}
 
+%\newpage
+%\subsubsection{Test 4: Wetterbedingungen}
+%\textbf{Ausgangslage}: 
+
 \chapter{Schlusswort}
 \section{Verbesserungsvorschläge}
 \subsection{Automatischer Datenaustausch}
@@ -1457,21 +1462,6 @@ In meinen Augen muss man sich von LoRa und LoRa Wan als Kommunikationsart verabs
 Rückblickend kann ich sagen, dass es im Verlauf des Projekts bezüglich des Aufwands, zu Fehleinschätzungen gekommen ist. Eine Wanderung, mit Messungen, Anfahrt und anschliessender Auswertung der Daten hat viel mehr Zeit in Anspruch genommen als im Projekt eingeplant war.\\[0.3cm]
 Nichtsdestotrotz schaue ich auf ein erfolgreiches Projekt zurück. Ich konnte an die Arbeit aus dem Vorprojekt 'Projekt 2' gut anknüpfen. Während der Bachelorarbeit war es mir möglich, mich intensiver mit den Technologien und damit verbundenen Fragestellungen zu befassen. Die Ergebnisse der Arbeit sind sehr interessant und zeigen auf wo die Grenzen der heutigen Technik liegen. Ich bin überzeugt, dass ATAS mit der richtigen Kommunikationstechnologie ein vielversprechendes Projekt darstellt.
 
-\chapter*{Selbständigkeitserklärung}
-\label{chap:selbstaendigkeitserklaerung}
-
-\vspace*{10mm} 
-
-Ich bestätige, dass ich die vorliegende Arbeit selbstständig und ohne Benutzung anderer als der im Literaturverzeichnis angegebenen Quellen und Hilfsmittel angefertigt habe. Sämtliche Textstellen, die nicht von mir stammen, sind als Zitate gekennzeichnet und mit dem genauen Hinweis auf ihre Herkunft versehen. 
-
-\vspace{15mm}
-
-\begin{tabbing}
-xxxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\kill
-Ort, Datum:\> Bern, 15.01.2018 \\ \\
-Namen Vornamen:\> Martin Schmidli  \\ \\ \\ \\ 
-Unterschriften:\> ...................................... \\
-\end{tabbing}
 
 \chapter*{Anhang}
 \section{Projekt 2}
@@ -1489,6 +1479,9 @@ Software welche auf dem 1. Prototypen eingesetzt wird\\
 \subsection{ATAS-Node2}
 Software welche auf dem 2. Prototypen eingesetzt wird\\
 \url{https://github.com/ATAS-Group/atas-node2}
+
+\newpage
+\includepdf[pages={1}]{Erklaerung.pdf}
 
 \newpage
 \section{Software-Bibliotheken}
