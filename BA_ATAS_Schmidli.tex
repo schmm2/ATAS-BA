@@ -277,10 +277,10 @@ Sigfox ist eine \gls{LPWAN} (Low Power Wide Area Network) Lösung welche vom Net
 \end{itemize}
 
 \subsection{LoRa}
-LoRA steht für Long Range und ist eine Wide-Area Netzwerk Lösung. Die Lösung besteht meist aus zwei Schichten
+LoRa steht für Long Range und ist eine Wide-Area Netzwerk Lösung. Die Lösung besteht meist aus zwei Schichten
 \begin{itemize}
-	\item LoRA. Link Layer, Physikalische Schicht. LoRa definiert, wie die Daten im Medium (Luft) übertragen werden.
-	\item LoRAWan. Media Access Control (MAC) Protokoll. Definiert das Format der Daten.
+	\item LoRa. Link Layer, Physikalische Schicht. LoRa definiert, wie die Daten im Medium (Luft) übertragen werden.
+	\item LoRaWan. Media Access Control (MAC) Protokoll. Definiert das Format der Daten.
 \end{itemize}
 LoRa hat drei Hauptmerkmale. Der Energieverbrauch ist gering (low-power), die Reichweite ist hoch (long-range) und die maximale Übertragungsrate ist gering (low-throughput).
 \subsubsection{Vorteile}
@@ -295,7 +295,7 @@ LoRa hat drei Hauptmerkmale. Der Energieverbrauch ist gering (low-power), die Re
 \end{itemize}
 \subsubsection{Nachteile}
 \begin{itemize}
-	\item Geringe Verbreitung je nach Region
+	\item Geringe Verbreitung, je nach Region
 	\item Geringe Bandbreite, von 0.3Kb/s zu 27Kb/s mit CSS, 50Kb/s mit FSK Modulation \cite{loradatarate}
 \end{itemize}
 
@@ -305,7 +305,7 @@ NB-IOT (Narrowband - Internet of Things) und LTE Cat M1 wurden als Konkurrenz zu
 
 \subsection{Entscheid}
 Sigfox scheidet als mögliche Technolgie aus. Die Angaben zur Reichweite sind zwar sehr beeindruckend, die Beschränkung in der Anzahl der Down- und Uplinks macht es leider für das ATAS System unbrauchbar. Mit nur 140 Nachrichten pro Tag, kann die Position des Trackers nicht häufig genug ermittelt werden.\\[0.3cm]
-NB-IOT \& LTE Cat M1 scheinen eine potente Mobilfunklösung für den IoT Bereich zu sein. Die Zukunft wird zeigen ob sich die Technologie gegen die bestehende Konkurrenz behaupten kann.\\[0.3cm]
+NB-IOT \& LTE Cat M1 scheinen eine potente Mobilfunklösung für den IoT Bereich zu sein. Die Zukunft wird zeigen, ob sich die Technologie gegen die bestehende Konkurrenz behaupten kann.\\[0.3cm]
 Bleibt noch LoRa. LoRa überzeugt mit der guten Reichweite und der kleinen Belastung der Batterie. Für das System ATAS wir LoRa als Datenkommunikationslösung eingesetzt.
 
 \newpage
@@ -325,11 +325,11 @@ Ein Chirp ist ein sinusähnliches Signal, bei welchem über die Zeit die Frequen
 Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschliessend verwendet um die Daten zu kodieren.
 
 \subsubsection{Bandbreite}
-Bei LoRa haben wir die Möglichkeit zwischen drei möglichen Bandbreiten zu wählen. Die Bandbreite definiert die grösse des Bereiches der zwischen der kleinste und der grössten möglichen Frequenz. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. Nur die Bandbreiten 125KHz und 250KHz sind in Europa zulässig \cite{lorabandwitdh}. 
+Bei LoRa haben wir die Möglichkeit zwischen drei möglichen Bandbreiten zu wählen. Die Bandbreite definiert die grösse des Bereiches der zwischen der kleinste und der grössten möglichen Frequenz. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. In Europa sind nur die Bandbreiten 125KHz und 250KHz zulässig \cite{lorabandwitdh}. 
 
 \newpage
 \subsubsection{Spreading Factor}
-Zwei Parameter beeinflussen das Chirp Moduliertes Signal. Erstens die Bandbreite und zweitens die sog. Sweep Rate.
+Zwei Parameter beeinflussen das Chirp Modulierte Signal. Erstens die Bandbreite und zweitens die sog. Sweep Rate.
 
 \begin{figure}[H]
 	\centering
@@ -353,7 +353,7 @@ Die Einstellungsmöglichkeiten der Parameter wurden in Europa zu Gruppen, sogena
 \end{figure}
 
 \noindent
-Wie in der Grafik ersichtlich ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine grössere Distanz übertragen werden. Müssen 'grössere' Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9).  Sollen grosse Distanzen überwunden werden, oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadingfactor (10-12) verwendet werden.
+Wie in der Grafik ersichtlich ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger, ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine grössere Distanz übertragen werden. Müssen 'grössere' Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9).  Sollen grosse Distanzen überwunden werden oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadingfactor (10-12) verwendet werden.
 
 \newpage
 \subsection{Regulierungen}
