@@ -1,3 +1,4 @@
+(indexentry :tkey (("IoT" "\\glossentry{IoT}") ) :locref "{}{3}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("ATAS" "\\glossentry{ATAS}") ) :locref "{}{3}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("MQTT" "\\glossentry{MQTT}") ) :locref "{}{8}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("LoRA" "\\glossentry{LoRa}") ) :locref "{}{8}" :attr "pageglsnumberformat" ) 

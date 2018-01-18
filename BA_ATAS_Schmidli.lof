@@ -3,7 +3,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Bergunfallstatistik 2016 - Notfallsituationen nach Unrsachen}}{6}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Atas Schema Grob}}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces ATAS Schema Grob}}{10}{figure.caption.6}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Beispiel Upchirp}}{16}{figure.caption.19}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Wasserfall Darstellung: Chirp Parameter}}{17}{figure.caption.22}
@@ -31,7 +31,7 @@
 \contentsline {figure}{\numberline {4.15}{\ignorespaces MQTT Struktur}}{44}{figure.caption.61}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Verbindungen Tracker \& TTN}}{44}{figure.caption.62}
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Tracker Uplink}}{45}{figure.caption.64}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Tracker Uplink}}{45}{figure.caption.65}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Tracker Downlink}}{45}{figure.caption.65}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Prototyping Ablauf}}{47}{figure.caption.66}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Flowchart Prototyp 2}}{48}{figure.caption.67}

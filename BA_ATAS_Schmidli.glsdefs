@@ -388,3 +388,33 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{IoT}{}%
+{%
+\gls@defglossaryentry{IoT}%
+{%
+name={IoT},%
+sort={IoT},%
+type={main},%
+first={IoT},%
+firstplural={IoTs},%
+text={IoT},%
+plural={IoTs},%
+description={Internet of Things},%
+descriptionplural={Internet of Things},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

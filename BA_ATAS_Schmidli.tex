@@ -112,11 +112,11 @@ Bern, {\large \today}
 \tableofcontents
 
 \chapter*{Management Summary}
-Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution transformiert. Waschmaschinen werden intelligent, Roboter putzen das Haus, Autos fahren selbstständig. Das Thema IoT und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfällen in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten sogar tödlich \cite{sacaccident}. Welche Fortschritte sind zu erwarten um in der Bergwelt das Risiko zu minimieren? Wie schreitet in der Bergwelt die Digitalisierung voran? Nur selten wird darüber gesprochen. Der Fokus der großen Konzerne, die im Bereich IoT und Mobile Computing aktiv sind, liegt auf den Bereichen in denen ein grosser Umsatz zu erwarten ist. Wäre es nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert und wie viele Leben gerettet werden?\\[0.3cm]
-Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erfundenes System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 5 Bereiche. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im ersten Teil der Thesis wird die grundsätzliche Funktionalität und der grobe Aufbau des Systems definiert. Im zweiten Teil geht es um die Technologien welche für das System verwendet werden sollen. Warum wurde diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der finale Aufbau definiert. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im vierten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weißt einige Schwachstellen auf und musste verbessert werden. Im fünften Schritt wird das ATAS System getestet. Im Fokus liegen hier die Datenübertragung zwischen den Komponenten. Am Ende werde ich ein Fazit aus den Tests ziehen und bewerten, ob dieses System einen praktischen Nutzen bietet und alltagstauglich ist.
+Viele Bereiche des öffentlichen Lebens wurden durch die digitale Revolution transformiert. Waschmaschinen werden intelligent, Roboter putzen das Haus, Autos fahren selbstständig. Die Themen \gls{IoT} und Mobile Computing sind allgegenwärtig. Was aber passiert in der Bergwelt? Im Jahr 2016 kam es zu über 2800 Unfällen in den Schweizer Alpen. Viele Personen wurden verletzt, 178 endeten sogar tödlich \cite{sacaccident}. Welche Fortschritte sind zu erwarten, um in der Bergwelt das Risiko zu minimieren? Wie schreitet in der Bergwelt die Digitalisierung voran? Nur selten wird darüber gesprochen. Der Fokus der grossen Konzerne, die im Bereich IoT und Mobile Computing aktiv sind, liegt auf den Bereichen in denen ein grosser Umsatz zu erwarten ist. Wäre es nicht auch wichtig in die Sicherheit in den Bergen zu investieren? Wie viele Unfälle könnten verhindert und wie viele Leben gerettet werden?\\[0.3cm]
+Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein System welches auf der Basis von IoT Technologien versucht die Wahrscheinlichkeit für einen Unfall in den Bergen zu verkleinern. Das während dem Bachelor Thesis Vorprojekt (Projekt 2) erstellte Konzept, bildet die Grundlage für diese Thesis.\\[0.3cm] Der Bericht gliedert sich in 5 Bereiche. Der Bericht startet mit einer groben Systembeschreibung und wird im Verlauf der Thesis detaillierter. Im ersten Teil der Thesis wird die grundsätzliche Funktionalität und der grobe Aufbau des Systems definiert. Im zweiten Teil geht es um die Technologien welche für das System verwendet wurden. Warum wurden diese gewählt und wie werden diese eingesetzt. Im dritten Teil wird der finale Aufbau definiert. Im Vordergrund stehen hier die Aufgabe der einzelnen Komponenten (Hard und Software) und deren Kommunikation untereinander. Im vierten Teil wird der Aufbau eines neuen Hardware Prototypen beschrieben. Der im Vorprojekt aufgebaute Prototyp weist einige Schwachstellen auf und musste verbessert werden. Im fünften Schritt wird das ATAS System getestet. Im Fokus liegen hier die Datenübertragung zwischen den Komponenten. Am Ende wird ein Fazit aus den Tests gezogen und bewerten, ob dieses System einen praktischen Nutzen bietet und alltagstauglich ist.
 
 \chapter*{Motivation}
-21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel hoch. Nach 3 Stunden hartem und schweißtreibenden Aufstieg, gelangten wir schlussendlich zum Bergkamm. Die Aussicht war der Lohn.
+21.01.2017. Region Zweisimmen. Es war ein schöner Tag für eine Schneeschuhwanderung. Meine Kollegin und ich machten uns bereit. Wir schlüpften in die Schneeschuhe, packten die Skistöcke und zogen los. Meter für Meter kämpften wir uns den Weg zum Gipfel hoch. Nach 3 Stunden hartem und schweisstreibenden Aufstieg, gelangten wir schlussendlich zum Bergkamm. Die Aussicht war der Lohn.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/alps/alps_panorama.jpg}
@@ -124,15 +124,15 @@ Genau bei diesem Punkt setzt das \gls{ATAS} Projekt an. ATAS ist ein von mir erf
 	{Motivation Alpen Panorama}
 \end{figure}
 \noindent
-Ich bin kein Extrembergsteiger. Ich genieße die Schweizer Alpen, bin aber nie in hohen(3000m+) und gefährlichen Regionen unterwegs. Die Schneebedingungen während meiner Touren sind meist ideal. Die Gefahr ist minimal. Nur selten werden Themen wie Lawinen und daraus resultierendes Unfallverhalten in der Gruppe diskutiert.\\[0.3cm]
-An eben diesem Tag stellten wir uns die Frage: Was wäre wenn? Was wäre passiert wenn wir von einer Lawine verschüttet worden wären? Wer hätte uns gesucht? Hätte uns überhaupt jemand gesucht? Falls meine Kollegin verschüttet worden wäre, wie lange würde es dauern bis die Rettungskräfte eintreffen würden? Wäre das Handynetz verfügbar gewesen? Tausende von Fragen ergaben sich.\\[0.3cm]\
-Diese Thematik beschäftigte mich noch lange. Als es darum ging ein Thema für das Bachelor Thesis Vorprojekt (Projekt 2) auszusuchen, wollte ich mich weiter mit diesen Fragen auseinandersetzen. Dank meinem Studium und der gewählten Fachrichtung 'Mobile Computing' hatte ich bereits mehrere Idee wie man diese Problematik angehen könnte. Das Projekt ATAS war geboren. Meine Vorstellung war es ein System zu erstellen, welches Personen in solchen Situation unterstützen, mehr noch, solche Situationen verhindern sollte.\\[0.3cm]
+Ich bin kein Extrembergsteiger. Ich geniesse die Schweizer Alpen, bin aber nie in hohen(3000m+) und gefährlichen Regionen unterwegs. Die Schneebedingungen während meiner Touren sind meist ideal. Die Gefahr ist minimal. Nur selten werden Themen wie Lawinen und daraus resultierendes Unfallverhalten in der Gruppe diskutiert.\\[0.3cm]
+An eben diesem Tag stellten wir uns die Frage: Was wäre wenn? Was wäre passiert, wenn wir von einer Lawine verschüttet worden wären? Wer hätte uns gesucht? Hätte uns überhaupt jemand gesucht? Wie lange würde es dauern bis die Rettungskräfte eintreffen? Wäre das Handynetz verfügbar gewesen? Tausende von Fragen ergaben sich.\\[0.3cm]\
+Diese Thematik beschäftigte mich noch lange. Als es darum ging ein Thema für das Bachelor Thesis Vorprojekt (Projekt 2) auszusuchen, wollte ich mich weiter mit diesen Fragen auseinandersetzen. Dank meinem Studium und der gewählten Fachrichtung 'Mobile Computing' hatte ich bereits mehrere Ideen wie man diese Problematik angehen könnte. Das Projekt ATAS war geboren. Meine Vorstellung war es ein System zu erstellen, welches Personen in solchen Situation unterstützen, mehr noch, solche Situationen verhindern sollte.\\[0.3cm]
 
 \chapter{Einleitung}
 Ein Gipfel gehört dir erst, wenn du wieder unten bist - denn vorher gehörst du ihm.\\[0.3cm]
 \textbf{Hans lander, Italienischer Bergsteiger\cite{kammerlander}} \\[0.5cm]
 \noindent
-Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski fahren oder gehen Eisklettern. Die Anzahl der möglichen Aktivitäten ist schier grenzenlos. Immer wieder kommt es in dieser Idylle zu schweren Unfällen, ausgelöst durch Steinschläge, Lawinen oder Abstürze der Bergsteigenden. Der Schweizer Alpenclub (SAC) führt dazu eine jährliche Statistik \cite{sacaccident}. Nachfolgend ein kleiner Auszug aus der Bergunfallstatistik 2016. Die Grafik zeigt eine Übersicht der Anzahl Situationen bei welchen ein Rettungsdienst ausrücken musste. Zu den Rettungsdiensten zählt beispielsweise die REGA.\\
+Die Berge sind eine faszinierende Landschaft. Viele Menschen gehen wandern, Ski fahren oder gehen Eisklettern. Die Anzahl der möglichen Aktivitäten ist schier grenzenlos. Immer wieder kommt es in dieser Idylle zu schweren Unfällen, ausgelöst durch Steinschläge, Lawinen oder Abstürze der Bergsteigenden. Der Schweizer Alpen Club (SAC) führt dazu eine jährliche Statistik \cite{sacaccident}. Nachfolgend ein kleiner Auszug aus der Bergunfallstatistik 2016. Die Grafik zeigt eine Übersicht der Anzahl Situationen bei welchen ein Rettungsdienst ausrücken musste. Zu den Rettungsdiensten zählt beispielsweise die REGA.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/alps/sac_accidentstatistic_2016_reason.png}
@@ -145,7 +145,7 @@ Ein nicht geringer Anteil davon machen Lawinen aus. Wird eine Person inert 15 Mi
 
 \newpage
 \section{Projektidee}
-Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches an Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger. Der Empfänger wird bei der Talstation oder im nächsten Bergdorf montiert. Die Daten werden von einer Software gesammelt und analysiert. Die Administratoren des Systems, beispielsweise die Rega, können in Echtzeit über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
+Stellen Sie sich ein kleines mobiles Gerät vor, nachfolgend Tracker genannt, welches an Skifahrern, Wanderer usw. abgegeben werden kann. Das Gerät sendet die Position der Person an einen Empfänger. Der Empfänger wird bei der Talstation oder im nächsten Bergdorf montiert. Die Daten werden von einer Software gesammelt und analysiert. Die Administratoren des Systems, beispielsweise die REGA, können in Echtzeit über eine Webseite die aktuelle Position der Personen in den Bergen mitverfolgen und überwachen.
 
 \section{Vorarbeiten}
 Das Projekt 2 ist eine Projektarbeit welche im Laufe des Informatikstudiums absolviert wird. Diese Arbeit habe ich im vorhergehenden Semester (Frühlingssemester 2017) durchgeführt. Ziel dieses Projektes, war es das in der Einleitung beschriebene System technisch zu konzeptionieren.\\[0.3cm]
@@ -156,13 +156,13 @@ Ziel der Bachelorarbeit soll es sein, dass während dem Projekt2 aufgebaute Syst
 \begin{itemize}
 \item
 Der Tracker soll in realer Umgebung getestet werden bspw. während einer Wanderung. Die Messdaten werden erfasst und analysiert.
-\item Der Tracker Prototyp soll verbessert werden. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können ob das erdachte System praxistauglich ist.
+\item Der Tracker Prototyp soll verbessert werden. Die dazu erforderlichen Massnahmen werden während der Bachelorarbeit spezifiziert und umgesetzt. Am Ende der Arbeit soll eine klare Aussage gemacht werden können, ob das erdachte System praxistauglich ist.
 \end{itemize}
 
 \section{Rahmenbedingungen}
 Die Rahmenbedingungen dieses Projektes wurden gemeinsam mit dem Betreuer definiert:
 \begin{itemize}
-\item Die Bachelorarbeit baut auf der Arbeits des Projekt 2 auf. Die erstellte Hard und Software wird weiterverwendet.
+\item Die Bachelorarbeit baut auf der Arbeit des Projekt 2 auf. Die erstellte Hard und Software wird weiterverwendet.
 \item Als Programmiersprache soll C/C++ verwendet werden.
 \item Auf den Einsatz eines Betriebssystems auf dem Tracker Gerät verzichtet werden.
 \end{itemize}
@@ -190,7 +190,7 @@ Dieser Abschnitt soll Ihnen erläutern, wie das ATAS System genutzt werden kann.
 Um die nachfolgenden Kapitel zu verstehen, ist es sehr wichtig, sich mit der im Projekt 2 erstellten Systemarchitektur und die Terminologie vertraut zu machen. Die Architektur wurde im Vergleich zum Projekt 2 um einige Komponenten ergänzt. Der Link zur Projektarbeit kann im Anhang gefunden werden.
 
 \section{Grobe Systemarchitektur}
-Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponenten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seite detailliert beschrieben.
+Dieser Abschnitt bietet Ihnen einen groben Überblick über die Benutzer, die Komponenten und deren Beziehung innerhalb des ATAS Systems. Alle Einheiten werden auf den nachfolgenden Seiten detailliert beschrieben.
 
 \newpage
 \subsection{Diagram}
@@ -198,8 +198,8 @@ Grobes Schema des ATAS Systems. Auf der nachfolgenden Seiten sind die einzelnen 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/system/ATAS_SystemOverview_Abstract_BA.jpg}
-	\caption[Atas Schema Grob]
-	{Atas Schema Grob}
+	\caption[ATAS Schema Grob]
+	{ATAS Schema Grob}
 \end{figure}
 
 \newpage
@@ -210,20 +210,20 @@ Die nachfolgenden Gruppen wurden als Benutzer des Systems identifiziert.
 Alpinist wird als Generalisierung für Personen, welche sich in den Bergen aufhalten verwendet. Dazu gehören bspw. Wanderer, Skifahrer, Bergbauern usw.
 
 \subsubsection{Überwacher}
-Rettungsdienste wie bspw. die Rega oder die AirGlacier. Spitäler oder die lokalen Tourismusbehörden.
+Rettungsdienste wie bspw. die REGA oder die AirGlacier. Spitäler oder die lokalen Tourismusbehörden.
 
 \subsection{Komponenten}
 Das ATAS System besteht aus den nachfolgenden aufgelisteten Komponenten. Komponenten können Hardware oder Software sein.
 
 \subsubsection{Tracker}
 Stellen Sie sich ein kleines mobiles Gerät vor. Nachfolgend nennen wir dieses Gerät Tracker. Der Alpinist trägt den Tracker bei sich bspw. in einem Rucksack. Der Tracker zeichnet auf wo sich die Person momentan befindet\\ [0.3cm] 
-Der Tracker verfügt über ein Display, Schalter, GPS Modul, Kommunikationsmodul und ein Lautsprecher.\\ [0.3cm]
+Der Tracker verfügt über ein Display, Schalter, GPS Modul, Kommunikationsmodul und einen Lautsprecher.\\ [0.3cm]
 Der Tracker überträgt folgende Daten:
 \begin{itemize}
 	\item GPS Position des Trackers
 	\item Notrufsignale
 \end{itemize}
-Befindet sich der Tracker in einer Gefahrenzone wird die Person über den Bildschirm und mit einem Tonsignal alarmiert.
+Befindet sich der Tracker in einer Gefahrenzone, wird die Person über den Bildschirm und mit einem Tonsignal alarmiert.
 \subsubsection{Gateway}
 Ein Gerät welches mit den Trackern bidirektional kommuniziert. Der Gateway wird an einem Ort nahe den Bergen installiert. Als mögliche Orte kommt ein Dorf im Tal oder eine Talstation in Frage. Der Gateway sendet die empfangenen Daten an einen zentralen Datenmanager, nachfolgend \textbf{Datenhandler} genannt, weiter.
 
@@ -234,19 +234,19 @@ Sammelt und speichert Daten. Der Datenhandler kommuniziert mit den Gateways. Zus
 Die Überwacher nutzen eine Webapplikation zum interagieren mit dem ATAS System. Die Webseite bietet folgende Funktionalitäten
 \begin{itemize}
 	\item
-		Zeigt die Position der Tracker auf einer Karte an 
+		Zeigt die Position der Tracker auf einer Karte an. 
 	\item
 		Mittels der Webapp können Gefahrenzonen hinterlegt werden.
 	\item 
-		Zeigt an ob sich ein Tracker in einer Gefahrenzone aufhält oder ein Notrufsignal abgesetzt hat.	
+		Zeigt an, ob sich ein Tracker in einer Gefahrenzone aufhält oder ein Notrufsignal abgesetzt hat.	
 \end{itemize}
 
 \subsubsection{Logik}
-Die Logik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System eine Alarm an den Tracker. Das Signal gelangt via Datenhandler und Gateway zum Tracker.
+Die Logik umfasst Software welche berechnet, ob sich ein Tracker in einer Gefahrenzone aufhält. Wenn sich der Tracker in einer Gefahrenzone aufhält, senden das System einen Alarm an den Tracker. Das Signal gelangt via Datenhandler und Gateway zum Tracker.
 
 \subsection{Begriffe}
 \subsubsection{Gefahrenzonen}
-Wie in der Einleitung beschrieben, stellt der Schweizer Alpenclub Informationen zu Rettungseinsätzen zur Verfügung. Aufgrund der Statistiken wurden die folgenden Gefahren identifiziert vor welchen das ATAS System warnen soll:
+Wie in der Einleitung beschrieben, stellt der Schweizer Alpen Club Informationen zu Rettungseinsätzen zur Verfügung. Aufgrund der Statistiken wurden die folgenden Gefahren identifiziert vor welchen das ATAS System warnen soll:
 \begin{itemize}
 	\item Lawinen
 	\item Steinschlag
@@ -255,18 +255,18 @@ Wie in der Einleitung beschrieben, stellt der Schweizer Alpenclub Informationen 
 \end{itemize}
 
 \chapter{Evaluation Technologie}
-In diesem Kapitel wird genauer auf die eingesetzten Technologien eingegangen. Es wird beschrieben wofür und weshalb diese eingesetzt werden. 
+In diesem Kapitel wird genauer auf die eingesetzten Technologien eingegangen. Es wird beschrieben, wofür und weshalb diese eingesetzt werden. 
 
 \section{Wireless Datenkommunikation}
 Zu beginn dieses Projektes musste festgelegt werden, welche Technologie für die Datenübertragung verwendet werden soll. Nachfolgend werden drei mögliche Technologien analysiert. Die Technologien sind für den Einsatz im IoT Bereich optimiert. Die Übertragung benötigt wenig Energie, hat eine hohe Reichweite und meist eine geringe Bandbreite.
 
 \subsection{Sigfox}
-Sigfox ist eine \gls{LPWAN} (Low Power Wide Area Network) Lösung welche vom Netzwerk Design eher an ein herkömmliches Mobilfunknetz erinnert. Sigfox ist eher ein geschlossenes System. Wurde das Gebiet mit Sigfox erschlossen, kann das Netzwerk gegen Bezahlung mitbenutzt werden. Der Aufbau einer eigenen Antenne scheint nicht möglich. 
+Sigfox ist eine \gls{LPWAN} (Low Power Wide Area Network) Lösung welche vom Netzwerk Design eher an ein herkömmliches Mobilfunknetz erinnert. Sigfox ist ein geschlossenes System. Wurde das Gebiet mit Sigfox erschlossen, kann das Netzwerk gegen Bezahlung mitbenutzt werden. Der Aufbau einer eigenen Antenne scheint nicht möglich. 
 
 \subsubsection{Vorteile}
 \begin{itemize}
 	\item Durch den geringen Energiebedarf halten batteriebetriebene Geräte länger
-	\item Große Reichweite in nicht bebauten Gebieten, bis zu 40km
+	\item Grosse Reichweite in nicht bebauten Gebieten, bis zu 40km
 	\item Bandbreite, ca. 100b/s
 \end{itemize}
 \subsubsection{Nachteile}
@@ -287,11 +287,11 @@ LoRa hat drei Hauptmerkmale. Der Energieverbrauch ist gering (low-power), die Re
 \begin{itemize}
 	\item Durch den geringen Energiebedarf halten batteriebetriebene Geräte länger
 	\item Die Kosten für die Installation eines Lora resp. LoRaWan Gateways sind gering +- 300.-
-	\item Große Reichweite in nicht bebauten Gebieten, bis zu 15km
+	\item Grosse Reichweite in nicht bebauten Gebieten, bis zu 15km
 	\item Geringe Störanfälligkeit durch den Einsatz von Spreading Factors resp. Chirp Spread Spectrum (CSS)
 	\item Frequenzbereich im ISM Band. Lizenzfreie Frequenzbereiche. Es müssen keine Gebühren bezahlt werden.
-	\item Großes Link Budget, +14dB Sender und -137db Empfänger Sensitivität $\rightarrow$ 151dB
-	\item Erfreut sich großer Beliebtheit. Immer mehr Informationen und hilfreiche Ressourcen sind im Internet zu finden.
+	\item Grosses Link Budget, +14dB Sender und -137db Empfänger Sensitivität $\rightarrow$ 151dB
+	\item Erfreut sich grosser Beliebtheit. Immer mehr Informationen und hilfreiche Ressourcen sind im Internet zu finden.
 \end{itemize}
 \subsubsection{Nachteile}
 \begin{itemize}
@@ -322,10 +322,10 @@ Ein Chirp ist ein sinusähnliches Signal, bei welchem über die Zeit die Frequen
 	{Beispiel Upchirp}
 \end{figure}
 \noindent
-Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschließend verwendet um die Daten zu kodieren.
+Wie im Bild ersichtlich erhöht sich die Frequenz des Signals. Bei einer Erhöhung der Frequenz reden wir von einem Upchrip, bei einer Reduktion von einem Downchirp. Das Chirp Signal wird anschliessend verwendet um die Daten zu kodieren.
 
 \subsubsection{Bandbreite}
-Bei LoRa haben wir die Möglichkeit zwischen drei möglichen Bandbreiten zu wählen. Die Bandbreite definiert die grösse des Bereiches der zwischen der kleinste und der größten möglichen Frequenz. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. Nur die Bandbreiten 125KHz und 250KHz sind in Europa zulässig \cite{lorabandwitdh}. 
+Bei LoRa haben wir die Möglichkeit zwischen drei möglichen Bandbreiten zu wählen. Die Bandbreite definiert die grösse des Bereiches der zwischen der kleinste und der grössten möglichen Frequenz. Die Bandbreiten sind 125kHz, 250kHz und 500kHz. Nur die Bandbreiten 125KHz und 250KHz sind in Europa zulässig \cite{lorabandwitdh}. 
 
 \newpage
 \subsubsection{Spreading Factor}
@@ -353,7 +353,7 @@ Die Einstellungsmöglichkeiten der Parameter wurden in Europa zu Gruppen, sogena
 \end{figure}
 
 \noindent
-Wie in der Grafik ersichtlich ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine größere Distanz übertragen werden. Müssen 'größere' Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9).  Sollen große Distanzen überwunden werden, oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadingfactor (10-12) verwendet werden.
+Wie in der Grafik ersichtlich ist die Sweep Rate bei SF12 viel langsamer als bei SF7. Pro Schritt zwischen den SF (SF7 zu SF8) halbiert sich der Datendurchsatz. Das Senden einer Nachricht dauert länger ist aber einfacher zu dekodieren. Das Signal wird weniger anfällig gegenüber Störungen und kann damit über eine grössere Distanz übertragen werden. Müssen 'grössere' Datenmengen oder in einem kleineren Zeitintervall versendet werden, bietet es sich an einen kleineren Spreadingfactor zu wählen (7-9).  Sollen grosse Distanzen überwunden werden, oder gibt es in der Region viele Störsignale, sollte ein hoher Spreadingfactor (10-12) verwendet werden.
 
 \newpage
 \subsection{Regulierungen}
@@ -396,7 +396,7 @@ Im Abschnitt 'Testing' werden wir später genau ermitteln wie häufig wir mit de
 
 \newpage
 \subsection{Coding Rate}
-Die Coding Rate definiert die Error Kodierungsrate. Eine höhere Kodierungsrate ermöglicht es das Signal auch bei Störungen (Noise) zu rekonstruieren. Ein erhöhen der Coding Rate verursacht eine größere Menge an Daten die gesendet werden $\rightarrow$ Overhead. Nutzdaten (bit) werden mehrmals übertragen. Ein Signal beinhaltet also redundante Informationen. Mögliche Coding Rate Werte im LoRa Umfeld sind 4/5 und 4/8.
+Die Coding Rate definiert die Error Kodierungsrate. Eine höhere Kodierungsrate ermöglicht es das Signal auch bei Störungen (Noise) zu rekonstruieren. Ein erhöhen der Coding Rate verursacht eine grössere Menge an Daten die gesendet werden $\rightarrow$ Overhead. Nutzdaten (bit) werden mehrmals übertragen. Ein Signal beinhaltet also redundante Informationen. Mögliche Coding Rate Werte im LoRa Umfeld sind 4/5 und 4/8.
 \begin{exmp}
 	Annahme: Wir setzen die Coding Rate auf 4/8\\
 	8 - 4 = 4, d.H bei 4 Bit Nützlichen Informationen fügen wir nochmals 4 Bit redundante Informationen hinzu.
@@ -476,14 +476,14 @@ Alle Geräte der Klasse B und C haben die Funktionalität von Klasse A implement
 	{LoRaWan Klasse A}
 \end{figure}
 \noindent
-Werden Daten außerhalb dieses Zeitfensters geschickt, werden diese nie vom Endgerät empfangen.
+Werden Daten ausserhalb dieses Zeitfensters geschickt, werden diese nie vom Endgerät empfangen.
 
 \subsubsection{Klasse B}
-Ein Klasse B Gerät kann zusätzliche Download Receive Fenster zu definierten Zeiten öffnen. Der Gateway sendet ein Datenpaket (Beacon) an die Endgeräte um die Zeiten zu synchronisieren. Sind die Zeiten synchronisiert, weiß das LoRaWan Netzwerk ganz genau wann ein Endgerät bereit ist Daten zu empfangen. 
+Ein Klasse B Gerät kann zusätzliche Download Receive Fenster zu definierten Zeiten öffnen. Der Gateway sendet ein Datenpaket (Beacon) an die Endgeräte um die Zeiten zu synchronisieren. Sind die Zeiten synchronisiert, weiss das LoRaWan Netzwerk ganz genau wann ein Endgerät bereit ist Daten zu empfangen. 
 
 \newpage
 \subsubsection{Klasse C}
-Klasse C Geräte haben ein nahezu permanent geöffnetes Receive Zeitfenster. Nur während einem Sendevorgang wird dieses kurzzeitig geschlossen. Durch diese Eigenschaften ist der Energievierbauch von Klasse C Geräten im Vergleich zu A \& B sehr viel größer.
+Klasse C Geräte haben ein nahezu permanent geöffnetes Receive Zeitfenster. Nur während einem Sendevorgang wird dieses kurzzeitig geschlossen. Durch diese Eigenschaften ist der Energievierbauch von Klasse C Geräten im Vergleich zu A \& B sehr viel grösser.
 
 \begin{figure}[H]
 	\centering
@@ -509,7 +509,7 @@ Der Einsatz von ADR macht im ATAS System meiner Meinung nach wenig Sinn. Dafür 
 \section{LoRaWan Netzwerk}
 \subsection{Evaluation}
 Ein eigenes LoRaWan Netzwerk aufzubauen ist möglich, würde aber den Umfang dieser Arbeit sprengen. Aus diesem Grund wurde entschieden auf bereits bestehende Netzwerke zurückzugreifen.\\[0.3cm]
-Die Verbreitung von LoRaWan in der Schweiz ist mittlerweile sehr hoch. Unternehmen wie die Swisscom und die Schweizer Post haben begonnen große LoRaWan Netzwerke aufzubauen \cite{swisscompost}.\\[0.3cm]
+Die Verbreitung von LoRaWan in der Schweiz ist mittlerweile sehr hoch. Unternehmen wie die Swisscom und die Schweizer Post haben begonnen grosse LoRaWan Netzwerke aufzubauen \cite{swisscompost}.\\[0.3cm]
 Eine Übersicht über die aktuelle Abdeckung des Swisscom und der Post, Stand (2.11.2017)  \cite{swisscomcoverage}.
 \begin{figure}[H]
 	\centering
@@ -801,8 +801,8 @@ Das TTN Netzwerk sendet die Information ob sich der Tracker in einer Gefahrenzon
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/system/dataflow_tracker2ttn_downlink.jpg}
-	\caption[Tracker Uplink]
-	{Tracker Uplink}
+	\caption[Tracker Downlink]
+	{Tracker Downlink}
 \end{figure}
 \chapter{Prototyp}
 Die Bachelorarbeit wird in 2 Hauptaufgaben aufgeteilt.\textbf{ Testing} und das erstellen eines zweiten Prototyps nachfolgend genannt \textbf{Prototyp 2}. Dieses Kapitel beschreibt, wie beim Entwickeln des Prototypen 2 vorgegangen bin.
@@ -817,7 +817,7 @@ Es gibt diverse Gründe für den Bau eines neuen Prototypen:
 		\item Mehr Software bedeutet zwangsläufig mehr Fehlerquellen. Obschon das eingesetzte System (Raspian) als Stabil gilt, kann es aufgrund der Softwarekomplexität zu Fehlern kommen.
 		\item Durch den Einsatz eines OS reduzieren wir die Sicherheit des ganzen Systems. Je mehr Interfaces ein System anbietet, desto anfälliger wird es für den unerlaubten Zugriff.
 	\end{itemize}
-	\item Der Prototyp 1 bietet viele Anschlussmöglichkeiten. Bspw. für ein Display, USB, oder eine RJ45 Buchse. Funktionen welche die  Entwicklung stark vereinfachen, aber den Energieverbrauch erhöhen und die Grösse des Systems unnötig vergrößern. 
+	\item Der Prototyp 1 bietet viele Anschlussmöglichkeiten. Bspw. für ein Display, USB, oder eine RJ45 Buchse. Funktionen welche die  Entwicklung stark vereinfachen, aber den Energieverbrauch erhöhen und die Grösse des Systems unnötig vergrössern. 
 	\item Die Verbauten Komponenten sind nicht für eine Industrialisierte Lösung geeignet. Die Komponenten hindern das Projekt daran eine professionelle Form anzunehmen.
 \end{enumerate}
 
@@ -895,7 +895,7 @@ Die Komponenten werden zusammengebaut und untereinander verbunden. Zur besseren 
 \subsection{Schema}
 Die Kommunikation unter den Komponenten wurde im Laufe der Projektarbeit immer unübersichtlicher. Um mir die Arbeit zu erleichtern, wurde ein Schema mit den Komponenten erstellt.\\[0.3cm]
 Vor der Arbeit hatte ich noch nie ein Schema gezeichnet und musste mich zuerst einige Stunden in die Materie einarbeiten. Auf anraten einiger Kollegen, mit Erfahrung im Elektronik Umfeld, sowie der frei verfügbaren Lernressourcen und Vorlagen, fiel meine Wahl auf das Programm \textbf{Eagle} der Firma Autodesk \cite{autodesk}. Dank der guten Dokumentation und den Lernvideos auf diversen Plattformen bspw. Youtube kam ich beim Zeichnen schnell vorwärts. \\[0.3cm] 
-Ich begann damit Vorlagen der Elektronischen Bausteine/Chips finden. Die Vorlagen zu Lora, GPS, ESP, Schalter und Piezo Lautsprecher konnte ich teilweise vom Hersteller oder von der Community herunterladen und in Eagle importieren. Für das Display musste ich ein bestehende Vorlage eines Displays anpassen. Ich habe dabei die Größe und die Pinbelegung verändert, damit das Element wie das verwendete Display (Waveshare eInk 200x200) aussieht. \\[0.3cm]
+Ich begann damit Vorlagen der Elektronischen Bausteine/Chips finden. Die Vorlagen zu Lora, GPS, ESP, Schalter und Piezo Lautsprecher konnte ich teilweise vom Hersteller oder von der Community herunterladen und in Eagle importieren. Für das Display musste ich ein bestehende Vorlage eines Displays anpassen. Ich habe dabei die Grösse und die Pinbelegung verändert, damit das Element wie das verwendete Display (Waveshare eInk 200x200) aussieht. \\[0.3cm]
 Das Schema ist auf der nachfolgenden Seite abgebildet.
 \newpage
 
@@ -939,7 +939,7 @@ In der nachfolgenden Übersicht wird die Kommunikationsart zwischen den Komponen
 
 \newpage
 \subsection{Zusammenbau}
-Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert und verlötet resp. angeschraubt. Der Mikrocontroller wurde absichtlich nicht im Zentrum platziert, damit der Zugang zum USB Anschluss frei blieb. Abschließend wurde gemäß Schema die Komponenten untereinander verkabelt.\\
+Die Komponenten wurden auf einer Entwicklungsplatine (PCB Breadboard) platziert und verlötet resp. angeschraubt. Der Mikrocontroller wurde absichtlich nicht im Zentrum platziert, damit der Zugang zum USB Anschluss frei blieb. Abschliessend wurde gemäss Schema die Komponenten untereinander verkabelt.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/prototype/prototyp2.jpg}
@@ -1074,10 +1074,10 @@ Um die korrekte Datenübertragung sicherzustellen, wurde in der Software ein Mut
 
 \newpage
 \section{Prototyp Testing}
-Abschließend werden Tests mit dem neuen Tracker durchgeführt.
+Abschliessend werden Tests mit dem neuen Tracker durchgeführt.
 
 \subsection{Energieversorgung}
-Einer der Hauptgründe für den Bau eines neuen Prototypen, ist der Energieverbrauch. In einem abschließenden Test soll nun festgestellt werden, wie sich der Energiebedarf des ersten zum zweiten Prototypen verändert hat. Folgende Szenarien resp. Systemzustände sollen geprüft werden:
+Einer der Hauptgründe für den Bau eines neuen Prototypen, ist der Energieverbrauch. In einem abschliessenden Test soll nun festgestellt werden, wie sich der Energiebedarf des ersten zum zweiten Prototypen verändert hat. Folgende Szenarien resp. Systemzustände sollen geprüft werden:
 \begin{itemize}
 	\item Ruhezustand
 	\item Daten senden via LoRa
@@ -1098,7 +1098,7 @@ Einer der Hauptgründe für den Bau eines neuen Prototypen, ist der Energieverbr
 \noindent
 Diese Grafik zeigt den gesamten Energieverbrauch des Systems während der durchgeführten Aktion.
 Wie in der Grafik ersichtlich, benötigt der Prototyp 1 im Ruhezustand (0.4W) ca. 4 mal soviel Energie wie der neue Prototypen (1.6W). Durch den Wechsel der Hardware konnte der Energieverbrauch drastisch gesenkt werden.\\[0.3cm]
-Das senden der Daten lässt den Energieverbrauch stark ansteigen. Beim Prototypen 2 wächst der Verbrauch gar um 100\%. Das senden via LoRa macht also einen großen Teil des Energieverbrauchs aus.
+Das senden der Daten lässt den Energieverbrauch stark ansteigen. Beim Prototypen 2 wächst der Verbrauch gar um 100\%. Das senden via LoRa macht also einen grossen Teil des Energieverbrauchs aus.
 \newpage
 \begin{figure}[H]
 \centering
@@ -1168,7 +1168,7 @@ Wir fassen zusammen:
 	Es muss eine Testumgebung aufgebaut und die Verbindung getestet werden. Um von den bestehenden TTN Gateways unabhängig zu sein, wird ein \textbf{eigener Gateway} aufgebaut.
 	\item 
 	Da das TTN Dashboard uns keine vernünftige Lösung bietet die Daten auszuwerten, soll eine eigene Lösung entwickelt werden. Die Komponenten Atas-Web und Atas-Service müssen entsprechend erweitert werden.
-	\item Abschließend werden mehrere Tests durchgeführt. Die Verbindung wird aufgebaut und mittels neu entwickeltem Dashboard geprüft.
+	\item Abschliessend werden mehrere Tests durchgeführt. Die Verbindung wird aufgebaut und mittels neu entwickeltem Dashboard geprüft.
 \end{itemize}
 
 \newpage
@@ -1200,7 +1200,7 @@ Der Standort für den LoRa Gateway war schnell gefunden. Ich arbeite momentan al
 
 \newpage
 \subsection{Testregionen}
-Im ersten Teil meiner Arbeit konzentrierte ich mich stark auf den Aufbau des Prototypen. Für die Testphase wurde im Projekt zu wenig Zeit eingeplant, was sich im Verlauf des Projekts als Problematisch herausgestellt hat. Der Winter ließ, wie sonst nicht üblich, nicht lange auf sich warten. Bereits Mitte Oktober beginn es zu schneien. Wanderrouten/ Regionen welche ich für das Testing verwenden wollte, bspw. der Nordaufstieg Stockhorn, wurden wegen zu hoher Lawinengefahr geschlossen.\\[0.3cm]
+Im ersten Teil meiner Arbeit konzentrierte ich mich stark auf den Aufbau des Prototypen. Für die Testphase wurde im Projekt zu wenig Zeit eingeplant, was sich im Verlauf des Projekts als Problematisch herausgestellt hat. Der Winter liess, wie sonst nicht üblich, nicht lange auf sich warten. Bereits Mitte Oktober beginn es zu schneien. Wanderrouten/ Regionen welche ich für das Testing verwenden wollte, bspw. der Nordaufstieg Stockhorn, wurden wegen zu hoher Lawinengefahr geschlossen.\\[0.3cm]
 Nichtsdestotrotz konnte ich 2 Testregionen definieren, welche einfach zugänglich und soweit gefahrlos passierbar waren.
 \begin{tabularx}{\textwidth}{ l|X }
 	\textbf{Region 1: Niederhorn} & \textbf{Bild} \\ \hline
@@ -1240,7 +1240,7 @@ Durch den Einsatz einer IP67 Box sind die elektronischen Komponenten gegen Staub
 
 \newpage
 \subsubsection{Installation}
-Die Webressourcen der TTN Community von Zürich waren bei der Installation eine große Hilfe \cite{ttnzürich}. Das Raspberry PI und das iC880 Board wurden gemäß der Webseite verkabelt.\\[0.3cm]
+Die Webressourcen der TTN Community von Zürich waren bei der Installation eine grosse Hilfe \cite{ttnzürich}. Das Raspberry PI und das iC880 Board wurden gemäss der Webseite verkabelt.\\[0.3cm]
 Die Community hat ein sehr simples Installationsskript zusammengestellt um die Gateway Software automatisiert zu installieren. Folgende Schritte wurden auf dem Raspberr PI durchgeführt.
 \lstset{language=C++}
 \begin{lstlisting}
@@ -1351,7 +1351,7 @@ Zum Zeitpunkt des Tests (13.12.2017) lag über 20cm Schnee.
 \newpage
 \subsubsection{Auswertung}
 Die Resultate des ersten Tests decken etwas sehr interessantes auf. Die Distanz zwischen Gateway und Tracker hat einen sehr kleinen Einfluss auf die Übertragungsqualität. Wie wir vom letzten Datenpunkt ablesen können, ist es auch mit einer Distanz von über 7Km möglich, ein Signal sauber zu übertragen. Mehr Einfluss haben die Hindernisse zwischen Sender und Empfänger. Ist ein Hindernis bspw. ein Hügel im Weg, wird die Übertragung massiv gestört.\\[0.3cm]
-Beim Datenpunkt 7 konnten keine Pakete empfangen werden. Die Messung wurde auf der Gateway abgewendeten Talseite durchgeführt. Solche großen Hindernisse vermag das Signal also nicht zu durchdringen.
+Beim Datenpunkt 7 konnten keine Pakete empfangen werden. Die Messung wurde auf der Gateway abgewendeten Talseite durchgeführt. Solche grossen Hindernisse vermag das Signal also nicht zu durchdringen.
 
 \begin{figure}[H]
 	\centering
@@ -1370,8 +1370,8 @@ Für diesen Test werden die folgenden Daten erhoben:
 	\item RSSI
 \end{enumerate}
 \subsubsection{Test 2.1}
-\textbf{Ausgangslage:} Die Messungen werden in der Region 1 durchgeführt. Der Standort wird nicht gewechselt. Die Distanz zwischen Gateway und Tracker bleiben also gleich. Es werden pro Spreading Factor (7-12), 10 Messungen durchgeführt. Der kleinste wie auch der größte Messwert werden entfernt. Damit soll verhindert werden, dass Ausreißer die Statistik stören. Damit bleiben uns 8 Messpunkte. \\[0.3cm]
-\textbf{Annahme:} Gemäß Literatur müsste klar erkennbar werden, dass bei einem höheren SF Wert, das Signal mit weniger Störung übertragen werden kann, dH. Das Signal stärker beim Gateway eintrifft.\\[0.3cm]
+\textbf{Ausgangslage:} Die Messungen werden in der Region 1 durchgeführt. Der Standort wird nicht gewechselt. Die Distanz zwischen Gateway und Tracker bleiben also gleich. Es werden pro Spreading Factor (7-12), 10 Messungen durchgeführt. Der kleinste wie auch der grösste Messwert werden entfernt. Damit soll verhindert werden, dass Ausreisser die Statistik stören. Damit bleiben uns 8 Messpunkte. \\[0.3cm]
+\textbf{Annahme:} Gemäss Literatur müsste klar erkennbar werden, dass bei einem höheren SF Wert, das Signal mit weniger Störung übertragen werden kann, dH. Das Signal stärker beim Gateway eintrifft.\\[0.3cm]
 \textbf{Die Messresultate:}
 \begin{figure}[H]
 	\centering
@@ -1452,7 +1452,7 @@ Die gefundenen Resultate sind auf den ersten Blick vielversprechend. LoRa bringt
 In meinen Augen muss man sich von LoRa und LoRa Wan als Kommunikationsart verabschieden und auf andere Technologien setzen. Sobald Sigfox in der Schweiz verfügbar ist, wäre es sehr interessant auch mit dieser Technologie entsprechende Tests durchzuführen. Ich befürchte aber, das eine Übertragungsart, bei welcher der Gateway in einem Tal positioniert ist, nie 100\% funktionieren wird. Als Alternative sehe ich hier Satellitentechnologien.Der Raum gegen Oben, sprich zum Satellit, ist im Normalfall aber frei. Eine Übertragung sollte immer und überall funktionieren. Diese Form der Kommunikation wirft dann natürlich neue Fragen auf. Wie hoch sind die Kosten für die Nutzung eines solches Services? Wie lange hält die Batterie über diese Kommunikationsart?
 
 \section{Rückblick Projekt}
-Rückblickend kann ich sagen, dass es im Verlauf des Projekts bezüglich des Aufwands, zu Fehleinschätzungen gekommen ist. Eine Wanderung, mit Messungen, Anfahrt und anschließender Auswertung der Daten hat viel mehr Zeit in Anspruch genommen als im Projekt eingeplant war.\\[0.3cm]
+Rückblickend kann ich sagen, dass es im Verlauf des Projekts bezüglich des Aufwands, zu Fehleinschätzungen gekommen ist. Eine Wanderung, mit Messungen, Anfahrt und anschliessender Auswertung der Daten hat viel mehr Zeit in Anspruch genommen als im Projekt eingeplant war.\\[0.3cm]
 Nichtsdestotrotz schaue ich auf ein erfolgreiches Projekt zurück. Ich konnte an die Arbeit aus dem Vorprojekt 'Projekt 2' gut anknüpfen. Während der Bachelorarbeit war es mir möglich, mich intensiver mit den Technologien und damit verbundenen Fragestellungen zu befassen. Die Ergebnisse der Arbeit sind sehr interessant und zeigen auf wo die Grenzen der heutigen Technik liegen. Ich bin überzeugt, dass ATAS mit der richtigen Kommunikationstechnologie ein vielversprechendes Projekt darstellt.
 
 \chapter*{Selbständigkeitserklärung}
@@ -1473,7 +1473,7 @@ Unterschriften:\> ...................................... \\
 
 \chapter*{Anhang}
 \section{Projekt 2}
-Mit dem nachfolgenden Link gelangen Sie zum Vorprojekt 'Projekt 2 - ATAS', dieser Arbeit:\\ \url{https://github.com/schmm2/atas-doc/raw/master/Projekt2_ATAS_Schmidli.pdf}
+Das Vorprojekt 'Projekt 2 - ATAS', dieser Arbeit:\\ \url{https://github.com/schmm2/atas-doc/raw/master/Projekt2_ATAS_Schmidli.pdf}
 \section{Software}
 Es wird kein Code direkt an dieses Dokument angehängt. Zur Verwaltung des Sourcecodes wurde die Plattform Github verwendet. Jegliche Commits vor dem 16.09.2017 gehören zur Projekt 2 Arbeit. Commits nach diesem Datum wurden im Zuge der Bachelor Thesis erstellt. 
 Folgend Sie den Links um den Sourcecode einzusehen.
@@ -1493,10 +1493,12 @@ Software welche auf dem 2. Prototypen eingesetzt wird\\
 Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurückgegriffen. Da ich sehr dankbar für dessen Bereitstellung bin, möchte ich diese hier namentlich erwähnen.
 
 \subsection{Atas-Node2}
-\begin{tabularx}{\linewidth}{XXX}
+\begin{tabularx}{\linewidth}{llX}
 	\textbf{Bibliothek} & \textbf{Verwendungszweck} & \textbf{Url} \\ \hline
 	LMIC-Arduino & LoRaWan Kommunikation & \url{https://github.com/matthijskooijman/arduino-lmic}\\ \hline
-\end{tabularx} 
+	GxEFD & Ansteuerung Display & \url{https://github.com/ZinggJM/GxEPD}\\ \hline
+	Adafruit GFX & Ansteuerung Display & \url{https://github.com/adafruit/Adafruit-GFX-Library}\\ \hline
+\end{tabularx}
 
 \listoffigures
 
@@ -1516,6 +1518,7 @@ Für den Aufbau der ATAS Umgebung wurde auf diverse Softwarebibliotheken zurück
 \newglossaryentry{Downlink}{name={Downlink},description={Kommunikation vom Gateway zu Endgerät}}
 \newglossaryentry{Uplink}{name={Uplink},description={Kommunikation vom Endgerät zum Gateway}}
 \newglossaryentry{LPWAN}{name={LPWAN},description={Low Power Wide Area Network}}
+\newglossaryentry{IoT}{name={IoT},description={Internet of Things}}
 
 %Print the glossary
 \printglossaries
